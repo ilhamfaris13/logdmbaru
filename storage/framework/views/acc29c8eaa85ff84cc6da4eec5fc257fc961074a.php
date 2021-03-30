@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('content'); ?>
 <section class="content">
 <div class="main-container container-fluid">
@@ -89,9 +87,7 @@
     </div>
     </section>
 <script>
-$(document).ready(function() {
-$('.mdb-select').materialSelect();
-});
+
 </script>
 <?php $__env->stopSection(); ?>
 

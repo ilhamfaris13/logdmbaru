@@ -112,7 +112,8 @@ class kegiatanController extends Controller
              $decoded_image = base64_decode($encoded_image);
              file_put_contents($filename, $decoded_image);
              // Text of the alter to confirm that the data is posted
-             return response()->json(['success'=>'Data is successfully added']);
+             //return response()->json(['success'=>'Data is successfully added']);
+             return Redirect::to('/kegiatan')->with('success', 'Berhasil Menambahkan Data ');
     }
 
     /**

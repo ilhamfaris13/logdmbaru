@@ -18,20 +18,21 @@
 
       <br>
         <div class="container">
-          <span class="success" style="color:green; margin-top:10px; margin-bottom: 10px;"></span>
+         
           <div class="form-group">
             <label>Name:</label>
             <input type="text" name="name" class="form-control" placeholder="Enter Name" required="">
         </div>
+        <span class="success" style="color:green; margin-top:10px; margin-bottom: 10px;"></span>
           <div class="jumbotron">
 
             <h1 class="display-6">Signature pad library</h1>
-            <p class="lead">Simple form made with Laravel framework and Ajax POST method</p>
+           
 
             <div class="alert alert-success" style="display:none"></div>
 
               <div class="wrapper">
-                <canvas id="signature-pad" class="signature-pad" width=400 height=200></canvas>
+                <canvas id="signature-pad" class="signature-pad" width=600 height=200></canvas>
               </div>
 
               <br>
@@ -84,7 +85,7 @@
                   if(response) {
             $('.success').text(response.success);
            
-          }
+                      }
                      jQuery('.alert').show();
                      jQuery('.alert').html(response.success);
                   }});

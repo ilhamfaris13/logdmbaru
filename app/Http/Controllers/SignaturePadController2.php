@@ -74,18 +74,26 @@ class SignaturePadController2 extends Controller
         $filename = date('mdYHis') . "-signature.png";
         $file= $folderPath . $filename;
         #create or update your data here
+        DB::table('kegiatan_log')
+        ->where('id', $request->get('id'))
+        ->update(
+            [
+            'ttdp' => $filename,
+            'status' => 1
+            ]           
+        );
        // dd($data);
-        DB::insert('insert into testdb (name) values (?)',[
+      /*   DB::insert('insert into testdb (name,id_user) values (?,?)',[
             $filename,
-           
-        ]);
+           $request->get('id'),
+        ]); */
         // We decode the image and store it in public folder
         $data_uri = $request->signature;
         
         $encoded_image = explode(",", $data_uri)[1];
         $decoded_image = base64_decode($encoded_image);
         file_put_contents($file, $decoded_image);
-        return response()->json(['success'=>'Ajax request submitted successfully']);
+        return response()->json(['success'=>'Verifikasi berhasil']);
     }
 
     /**

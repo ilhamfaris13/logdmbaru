@@ -1,5 +1,7 @@
 @extends('admin.master')
-
+@push('meta')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+@endpush
 @section('content')
 <section class="content">
   <!-- main -->
@@ -36,7 +38,7 @@
                   <thead>
                   
                     <tr>
-                      <th>NO.</th>
+                      <th>AKSI</th>
                       @if( Auth::user()->level == "dm")
                       @else
                       <th> NAMA</th>
@@ -50,7 +52,7 @@
                       <th> KETERANGAN</th>
                       <th> DOSEN</th>
                       <th> TTDP</th>
-                      <th> </th>
+                     
                       <th hidden> </th>
                      
                     </tr>
@@ -58,7 +60,13 @@
                   <tbody>
                   @foreach($logs as $key => $log)
                     <tr class="data-row">
-                      <td class="align-middle iteration">{{ ++$key }}</td>
+                    @if( Auth::user()->level == "dosen")
+                      <td class="align-middle">
+                      @if($log->status == 0)
+                        <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Verifikasi</button>
+                      @else  
+                      <span class="badge bg-green">Sudah di Verifikasi</span>
+                      @endif
                       @if( Auth::user()->level == "dm")
                       @else
                       <td class="align-middle name">{{ $log->nama }}</td>
@@ -73,13 +81,7 @@
                       <td class="align-middle word-break dosen">{{ $log->dosen }}</td>
                       <td class="align-middle id" ><img src="/upload/{{ $log->ttdp }}" width="100" height="100"></td>
                       <td class="align-middle foto" hidden>{{ $log->profile_photo_path }}</td>
-                      @if( Auth::user()->level == "dosen")
-                      <td class="align-middle">
-                      @if($log->status == 0)
-                        <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Verifikasi</button>
-                      @else  
-                      <span class="badge bg-green">Sudah di Verifikasi</span>
-                      @endif
+                     
                       </td>
                       @else
                       <!--status-->
@@ -192,7 +194,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="edit-modal-label">Edit Data</h5>
+        <h5 class="modal-title" id="edit-modal-label">Verifikasi Data</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -204,11 +206,10 @@
             <strong>{{ $message }}</strong>
              </div>
             @endif
-            <form id="edit-form" method="POST" action="{{ route('signaturepad.upload') }}">
-            @csrf
+          
             <div class="card text-black bg-light mb-0">
             <div class="card-header">
-              <h2 class="m-0">Verifikasi</h2>
+              <h2 class="m-0">Profil DM</h2>
             </div>
             <div class="card-body">
             <div class="row"> 
@@ -283,52 +284,31 @@
               </div>
               <!-- /description -->
               
-              <!-- Signatur --> 
-              <div class="form-group">
-              <label class="col-form-label" for="modal-input-signature">Tanda Tangan:</label>
-              <br>
-                <div id="sig" ></div>
-                <br>
-                <button id="clear" class="btn btn-danger btn-sm"><i class="fa fa fa-undo"></i></button>
-                
-                <textarea class="signature-pad" id="signature64" name="signed" style="display: none"></textarea>
-                
-              </div>
-                <br/>
-                <button class="btn btn-success btn-md">Save</button>                            
-              </div>
-              <!-- Signatur --> 
+             
             </div>
               </div>
               <div class="row"> 
               <div class="col-md-12">
               <div class="form-group">
-                
+              <label class="col-form-label" for="modal-input-sig" >Tanda Tangan </label>
+              <div class="jumbotron">
+                <span class="success" style="color:green; margin-top:10px; margin-bottom: 10px;"></span>
+                <div class="alert alert-success" style="display:none"></div>
+      
+                <div class="wrapper">
+                  <canvas id="signature-pad" class="signature-pad"></canvas>
+                </div>
+
+                <br>
+                <button class="btn btn-primary" id="simpan">Save</button>
+                <button class="btn btn-secondary" id="hapus">Clear</button>
+              </div>
+              <!-- Signaturepad -->
               </div>
               </div>
               </div>
             </div>
             
-            
-            
-            </form>
-
-            <div class="jumbotron">
-
-                <h1 class="display-6">Signature pad library</h1>
-                <p class="lead">Simple form made with Laravel framework and Ajax POST method</p>
-    
-                <div class="alert alert-success" style="display:none"></div>
-    
-                  <div class="wrapper">
-                    <canvas id="signature-pad" class="signature-pad" width=400 height=200></canvas>
-                  </div>
-    
-                  <br>
-                  <button class="btn btn-primary" id="simpan">Save</button>
-                  <button class="btn btn-secondary" id="hapus">Clear</button>
-    
-                </div>
       </div>
       
       
@@ -338,6 +318,7 @@
 <!-- /Attachment Modal -->
 
  <script>
+ 
  $(document).ready(function() {
   /**
    * for showing edit item popup
@@ -382,8 +363,47 @@
     $("#modal-input-keterangan").val(keterangan);
     $("#modal-input-jenis").val(jenis);
     $("#modal-input-description").val(description);
-    
 
+
+    $.ajaxSetup({
+              headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+            });
+            
+            var canvas = document.getElementById('signature-pad');
+               var coba = "coba";
+               var signaturePad = new SignaturePad(canvas, {
+              
+               });
+               var saveButton = document.getElementById('simpan');
+               var clearButton = document.getElementById('hapus');
+               
+               saveButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                $.ajax({
+                  url: "{{ url('/signature/post') }}",
+                  method: 'post',
+                  data: {
+                    
+                     signature: signaturePad.toDataURL('image/png'),
+                     id:id,
+                  },
+                  success: function(response){
+                    window.location.href = "{{ url('/kegiatan') }}";
+                  //  console.log(response);
+                  if(response) {
+            //$('.success').text(response.success);
+                    jQuery('.alert').show();
+                     jQuery('.alert').html(response.success);
+                      }
+                     
+                  }});
+               });
+               clearButton.addEventListener('click', function () {
+                  signaturePad.clear();
+                  
+                });
   })
 
   // on modal hide
@@ -393,15 +413,7 @@
   })
 })
  </script>
- <script type="text/javascript">
-    var sig = $('#sig').signature({syncField: '#signature64', syncFormat: 'PNG'});
-    $('#clear').click(function(e) {
-        e.preventDefault();
-        sig.signature('clear');
-        $("#signature64").val('');
-    });
-    
-</script>
+
 <script src="{{ url('js/app.js') }} " charset="utf-8"></script>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js"
                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -439,12 +451,5 @@
     
   });
 </script>
-<script>
-    var sig = $('#signature-pad').signature({syncField: '#signature-pad', syncFormat: 'PNG'});
-    $('#hapus').click(function(e) {
-        e.preventDefault();
-        sig.signature('hapus');
-        $("#signature-pad").val('');
-    });
- </script>
+
 @endsection

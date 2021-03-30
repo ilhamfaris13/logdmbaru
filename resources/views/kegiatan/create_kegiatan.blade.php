@@ -88,9 +88,7 @@
     </div>
     </section>
 <script>
-$(document).ready(function() {
-$('.mdb-select').materialSelect();
-});
+
 </script>
 @endsection
 

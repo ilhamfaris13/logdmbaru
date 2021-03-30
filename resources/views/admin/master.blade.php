@@ -7,6 +7,7 @@
   <title>Absensi Dokter Muda Universitas Hangtuah | Fakultas Kedokteran</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  @stack('meta')
 <!-- DataTables -->
 <link rel="stylesheet" href="/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -109,7 +110,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="{{url('/signaturepad')}}" class="nav-link">
+            <a href="{{url('/kegiatan')}}" class="nav-link">
               <i class="nav-icon fa fa-briefcase"></i>
               <p>
                 Daftar Kegiatan
