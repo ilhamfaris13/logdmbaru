@@ -111,7 +111,11 @@
             </a>
           </li>
           <li class="nav-item ">
+          <?php if( Auth::user()->level == "dosen"): ?>
             <a href="<?php echo e(url('/kegiatan')); ?>" class="nav-link">
+            <?php else: ?>
+            <a href="<?php echo e(url('/signaturepad')); ?>" class="nav-link">
+            <?php endif; ?>
               <i class="nav-icon fa fa-briefcase"></i>
               <p>
                 Daftar Kegiatan

@@ -110,7 +110,11 @@
             </a>
           </li>
           <li class="nav-item ">
+          @if( Auth::user()->level == "dosen")
             <a href="{{url('/kegiatan')}}" class="nav-link">
+            @else
+            <a href="{{url('/signaturepad')}}" class="nav-link">
+            @endif
               <i class="nav-icon fa fa-briefcase"></i>
               <p>
                 Daftar Kegiatan
