@@ -124,10 +124,10 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="<?php echo e(url('/tatatertib')); ?>" class="nav-link">
+            <a href="<?php echo e(url('/panduan')); ?>" class="nav-link">
               <i class="nav-icon fa fa-book"></i>
               <p>
-                Tata Tertib
+                Panduan User
                 <i class="right fas fa-angle-right"></i>
               </p>
             </a>

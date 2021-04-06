@@ -10,6 +10,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SyncDatabaseController;
 use App\Http\Controllers\Redirect;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\PanduanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -83,7 +84,10 @@ Route::get('syncdb',[SyncDatabaseController::class, 'index']);
 Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 Route::get('/dm/pdf', [SignaturePadController::class, 'createPDF']);
 Route::get('pdfview', [SignaturePadController::class, 'pdfView']);
+
+Route::get('panduan', [PanduanController::class, 'index']);
 /*
+
 
 Custom AUTH
 

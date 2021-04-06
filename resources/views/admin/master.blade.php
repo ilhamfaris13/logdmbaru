@@ -123,10 +123,10 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="{{url('/tatatertib')}}" class="nav-link">
+            <a href="{{url('/panduan')}}" class="nav-link">
               <i class="nav-icon fa fa-book"></i>
               <p>
-                Tata Tertib
+                Panduan User
                 <i class="right fas fa-angle-right"></i>
               </p>
             </a>
