@@ -9,11 +9,12 @@
 </head>
 <body>
 	<style type="text/css">
-	table {
+  
+	/* table {
 			border-style: double;
 			border-width: 3px;
 			border-color: white;
-		}
+		} */
 		table tr .text2 {
 			text-align: right;
 			font-size: 13px;
@@ -25,9 +26,7 @@
 		table tr td {
 			font-size: 13px;
 		}
-    img {
-  border-radius: 50%;
-}
+   
 }
         
 	</style>
@@ -36,6 +35,7 @@
   <table>
     <tr>
       <td><img src="{{ public_path('/assets/dist/img/logo-uht-1.png') }}" width="90" height="90"></td>
+      <!-- <td><img src="{{ public_path('/assets/dist/img/logo-uht-1.png') }}" width="90" height="90"></td> -->
       <td>
       <center>
         <font size="4">Fakultas Kedokteran </font><br>
@@ -56,21 +56,15 @@
   <!-- Kop Header -->
   <table border="0">
     <tr>
-      <td rowspan="2"><img style="border-radius: 50%;"class=""
+      <td rowspan="2"><img style="width: 150px; border-radius: 75px; border: 2px solid white; margin: 0px 20px"class=""
+        src="storage/{{Auth::user()->profile_photo_path}}"
+         height="170px" width="150px" alt="Avatar"></td>
+         <td style="margin: 0px 20px;" rowspan="2">
+         <!-- <td rowspan="2"><img style="width: 150px; border-radius: 75px; border: 2px solid white;" class=""
         src="{{ public_path('storage/'.Auth::user()->profile_photo_path.'') }}"
          height="170px" width="150px" alt="Avatar"></td>
-         <td>
-          <h3 class="profile-username ">Fakultas Kedokteran Universitas Hang Tuah Surabaya</h3>
-
-          <p class="text-muted ">Profil Akun</p>
-         </td>
-         
-    </tr>
-   
-    
-    <tr>
-      <td>
-        <ul class="list-group list-group-unbordered mb-3">
+         <td> -->
+         <ul >
         @foreach($user as $key => $users)
       <li class="list-group-item">
           <b>Nama :</b> <a class="float-right">{{Auth::user()->name}}</a>
@@ -83,12 +77,13 @@
         </li>
        @endforeach
       </ul>
-    </td>
+         </td>
+         
     </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
+   
+    
+    
+  
   </table>
   <!-- Profile -->
   <div class="row">

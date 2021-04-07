@@ -282,12 +282,10 @@
                 <input type="text" name="keterangan" class="form-control" id="modal-input-keterangan" disabled>
               </div>
               <!-- /description -->
-              
-             
             </div>
               </div>
               <div class="row"> 
-              <div class="col-md-12">
+              <div class="col-md-6">
               <div class="form-group">
               <label class="col-form-label" for="modal-input-sig" >Tanda Tangan </label>
               <div class="jumbotron">
@@ -295,7 +293,7 @@
                 <div class="alert alert-success" style="display:none"></div>
       
                 <div class="wrapper">
-                  <canvas id="signature-pad" class="signature-pad"></canvas>
+                  <canvas id="signature-pad" class="signature-pad" style="border:1px;"></canvas>
                 </div>
 
                 <br>
