@@ -16,6 +16,10 @@ class kegiatanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         //
@@ -23,6 +27,8 @@ class kegiatanController extends Controller
         $dosen = DB::table('users')
         ->join('dosen','dosen.NIP','=','users.username')
         ->select('dosen.NAMA')
+        ->get();
+        $jenis = DB::table('table_jenis')
         ->get();
         $logs = DB::table('kegiatan_log')
          ->join('users','users.id','=','kegiatan_log.id_user')
@@ -47,7 +53,7 @@ class kegiatanController extends Controller
          // ActivityLog::all();
  
          
-         return view('/kegiatan/index',compact('logs','verif'));
+         return view('/kegiatan/index',compact('logs','verif','jenis'));
     }
 
     /**
@@ -66,13 +72,16 @@ class kegiatanController extends Controller
         ->get();
         $dosen = DB::table('dosen')
         ->get();
+        $jenis = DB::table('table_jenis')
+        ->get();
         //dd(count($dosen));
         // ActivityLog::all();
-        return view('/kegiatan/create_kegiatan',compact('logs','rs','stase','dosen'));
+        return view('/kegiatan/create_kegiatan',compact('logs','rs','stase','dosen','jenis'));
     }
     public function create(Request $request)
     {
         $user = Auth::user();
+        //dd($request);
         DB::insert('insert into kegiatan_log (jenis,tempat,tanggal,nama,ttdp,keterangan,datamasuk,id_user,rumah_sakit,stase,status,id_dosen) values (?,?,?,?,?,?,?,?,?,?,?,?)',[
             $request->get('jenis'),
             $request->get('tempat'),

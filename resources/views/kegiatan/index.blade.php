@@ -63,7 +63,11 @@
                     @if( Auth::user()->level == "dosen")
                       <td class="align-middle">
                       @if($log->status == 0)
+                        @if($log->jenis == "Presentasi Kasus / Responsi")
+                        <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Nilai</button>
+                        @else
                         <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Verifikasi</button>
+                        @endif
                       @else  
                       <span class="badge bg-green">Sudah di Verifikasi</span>
                       @endif
@@ -312,8 +316,9 @@
       
     </div>
   </div>
+  <!-- /Attachment Modal -->
 </section>
-<!-- /Attachment Modal -->
+
 
  <script>
  
@@ -332,6 +337,11 @@
   })
 
   // on modal show
+  /*
+  *
+  EDIT MODAL
+  *
+  */
   $('#edit-modal').on('show.bs.modal', function() {
     var el = $(".edit-item-trigger-clicked"); // See how its usefull right here? 
     var row = el.closest(".data-row");
@@ -403,6 +413,12 @@
                   
                 });
   })
+  /*
+  *
+  END EDIT MODAL
+  *
+  */
+  
 
   // on modal hide
   $('#edit-modal').on('hide.bs.modal', function() {

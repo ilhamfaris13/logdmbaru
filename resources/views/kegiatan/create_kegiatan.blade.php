@@ -25,13 +25,15 @@
             <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Jenis Kepaniteraan </label>
                 <select name="jenis" class="form-control" id="jenis">
-                <option value="Tugas Jaga Ruang" >Tugas Jaga Ruang</option>
+                <!-- <option value="Tugas Jaga Ruang" >Tugas Jaga Ruang</option>
                 <option value="Keterampilan / Kegiatan di Poliklinik" >Keterampilan / Kegiatan di Poliklinik</option>
                 <option value="Unit Gawat Darurat" >Unit Gawat Darurat</option>
                 <option value="Kegiatan Asistensi di Ruang Oprasi" >Kegiatan Asistensi di Ruang Oprasi</option>
                 <option value="Kegiatan Kuliah Pakar" >Kegiatan Kuliah Pakar</option>
-                <option value="Tugas pada Dinas Luar" >Tugas pada Dinas Luar</option>
-                  
+                <option value="Tugas pada Dinas Luar" >Tugas pada Dinas Luar</option> -->
+                @foreach($jenis as $key => $rss)
+                  <option value="{{$rss->jenis}}" >{{$rss->jenis}}</option>
+                  @endforeach
                 </select>
               </div>
               <!-- id -->

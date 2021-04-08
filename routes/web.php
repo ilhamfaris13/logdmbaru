@@ -11,6 +11,7 @@ use App\Http\Controllers\SyncDatabaseController;
 use App\Http\Controllers\Redirect;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\PanduanController;
+use App\Http\Controllers\PenilaianController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -81,11 +82,37 @@ Route::get('syncdb',[SyncDatabaseController::class, 'index']);
 | 
 |--------------------------------------------------------------------------
 */
+/*
+|--------------------------------------------------------------------------
+| Generate PDF
+*/
 Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 Route::get('/dm/pdf', [SignaturePadController::class, 'createPDF']);
 Route::get('pdfview', [SignaturePadController::class, 'pdfView']);
-
+/*
+| 
+|--------------------------------------------------------------------------
+*/
+/*
+|--------------------------------------------------------------------------
+| Panduan
+*/
 Route::get('panduan', [PanduanController::class, 'index']);
+
+/*
+| 
+|--------------------------------------------------------------------------
+*/
+/*
+|--------------------------------------------------------------------------
+| Penialaian
+*/
+Route::get('penilaian',[PenilaianController::class, 'index']);
+Route::get('responsi',[PenilaianController::class, 'show']);
+/*
+| 
+|--------------------------------------------------------------------------
+*/
 /*
 
 

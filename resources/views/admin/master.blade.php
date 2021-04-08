@@ -122,6 +122,41 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Penilaian
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Presentasi Kasus/Responsi</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Karya Tulis/Referat</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ujian Akhir CO-SCHAAP</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Prolonged Exam</p>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-item ">
             <a href="{{url('/panduan')}}" class="nav-link">
               <i class="nav-icon fa fa-book"></i>
@@ -131,6 +166,7 @@
               </p>
             </a>
           </li>
+          
           
       </nav>
       <!-- /.sidebar-menu -->
