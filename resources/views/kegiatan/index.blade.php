@@ -63,11 +63,11 @@
                     @if( Auth::user()->level == "dosen")
                       <td class="align-middle">
                       @if($log->status == 0)
-                        @if($log->jenis == "Presentasi Kasus / Responsi")
-                        <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Nilai</button>
-                        @else
+                       
+                        
+                        
                         <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Verifikasi</button>
-                        @endif
+                       
                       @else  
                       <span class="badge bg-green">Sudah di Verifikasi</span>
                       @endif

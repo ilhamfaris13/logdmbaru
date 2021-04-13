@@ -22,35 +22,35 @@ class PenilaianController extends Controller
     public function index()
     {
         $userAuth = Auth::user();
-        $dosen = DB::table('users')
-        ->join('dosen','dosen.NIP','=','users.username')
-        ->select('dosen.NAMA')
+       $dosen = DB::table('users')
+       ->join('dosen','dosen.NIP','=','users.username')
+       ->select('dosen.NAMA')
+       ->get();
+       $logs = DB::table('kegiatan_log')
+        ->join('users','users.id','=','kegiatan_log.id_user')
+        ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+        ->join('stase','stase.id','=','kegiatan_log.stase')
+        ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+        ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+        ->where('kegiatan_log.status', '=',0)
+        ->where('kegiatan_log.jenis', '=','Presentasi Kasus / Responsi')
+        ->where('kegiatan_log.id_user', '=',$userAuth->id)
+        ->orWhere('kegiatan_log.id_dosen', '=',$userAuth->username)
+        ->where('kegiatan_log.jenis', '=','Presentasi Kasus / Responsi')
         ->get();
-        $jenis = DB::table('table_jenis')
+
+        $verif = DB::table('kegiatan_log')
+        ->join('users','users.id','=','kegiatan_log.id_user')
+        ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+        ->join('stase','stase.id','=','kegiatan_log.stase')
+        ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+        ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+        ->where('kegiatan_log.id_user', '=',$userAuth->id)
+        ->where('kegiatan_log.status', '=',1)
         ->get();
-        $logs = DB::table('kegiatan_log')
-         ->join('users','users.id','=','kegiatan_log.id_user')
-         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
-         ->join('stase','stase.id','=','kegiatan_log.stase')
-         ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
-         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
-         ->where('kegiatan_log.status', '=',0)
-         ->where('kegiatan_log.id_user', '=',$userAuth->id)
-         ->orWhere('kegiatan_log.id_dosen', '=',$userAuth->username)
-         ->get();
+        // ActivityLog::all();
  
-         $verif = DB::table('kegiatan_log')
-         ->join('users','users.id','=','kegiatan_log.id_user')
-         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
-         ->join('stase','stase.id','=','kegiatan_log.stase')
-         ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
-         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
-         ->where('kegiatan_log.id_user', '=',$userAuth->id)
-         ->where('kegiatan_log.status', '=',1)
-         ->get();
-         // ActivityLog::all();
- 
-        return view('/penilaian/index',compact('verif'));
+        return view('/penilaian/responsi',compact('logs','verif'));
     }
 
     /**
@@ -71,7 +71,43 @@ class PenilaianController extends Controller
      */
     public function store(Request $request)
     {
-        //
+          //
+        // We create a variable to define the name of the file
+        //dd($request);
+        $data = $request->all();
+        $folderPath = public_path('upload/');
+        $filename = date('mdYHis') . "-signature.png";
+        $file= $folderPath . $filename;
+        #create or update your data here
+        DB::table('kegiatan_log')
+        ->where('id', $request->get('id'))
+        ->update(
+            [
+            'ttdp' => $filename,
+            'status' => 1
+            ]           
+        );
+        $id_kegiatan = DB::table('kegiatan_log')
+        ->select('id')
+        ->where('ttdp','=', $filename)
+        ->first();
+        DB::insert('insert into responsi_karya_tulis (id_kegiatan,penilaian) values (?,?)',[
+            $id_kegiatan->id,
+            $request->get('nilai'),
+           
+        ]);
+       // dd($data);
+      /*   DB::insert('insert into testdb (name,id_user) values (?,?)',[
+            $filename,
+           $request->get('id'),
+        ]); */
+        // We decode the image and store it in public folder
+        $data_uri = $request->signature;
+        
+        $encoded_image = explode(",", $data_uri)[1];
+        $decoded_image = base64_decode($encoded_image);
+        file_put_contents($file, $decoded_image);
+        return response()->json(['success'=>'Verifikasi berhasil']);
     }
 
     /**
@@ -94,7 +130,7 @@ class PenilaianController extends Controller
         ->get();
         //dd(count($dosen));
         // ActivityLog::all();
-        return view('/penilaian/responsi',compact('logs','rs','stase','dosen','jenis'));
+        //return view('/penilaian/responsi',compact('logs','rs','stase','dosen','jenis'));
     }
 
     /**

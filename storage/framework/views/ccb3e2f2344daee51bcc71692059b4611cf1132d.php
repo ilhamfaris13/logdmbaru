@@ -62,11 +62,11 @@
                     <?php if( Auth::user()->level == "dosen"): ?>
                       <td class="align-middle">
                       <?php if($log->status == 0): ?>
-                        <?php if($log->jenis == "Presentasi Kasus / Responsi"): ?>
-                        <button type="button" class="btn btn-warning" id="edit-item" data-item-id="<?php echo e($log->id); ?>">Nilai</button>
-                        <?php else: ?>
+                       
+                        
+                        
                         <button type="button" class="btn btn-warning" id="edit-item" data-item-id="<?php echo e($log->id); ?>">Verifikasi</button>
-                        <?php endif; ?>
+                       
                       <?php else: ?>  
                       <span class="badge bg-green">Sudah di Verifikasi</span>
                       <?php endif; ?>

@@ -28,8 +28,11 @@ class SignaturePadController2 extends Controller
          ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
          ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
          ->where('kegiatan_log.status', '=',0)
+         
          ->where('kegiatan_log.id_user', '=',$userAuth->id)
+         ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
          ->orWhere('kegiatan_log.id_dosen', '=',$userAuth->username)
+         ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
          ->get();
  
          $verif = DB::table('kegiatan_log')

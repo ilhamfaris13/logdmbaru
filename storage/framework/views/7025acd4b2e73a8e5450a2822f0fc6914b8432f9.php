@@ -133,7 +133,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?php echo e(url('/responsi')); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Presentasi Kasus/Responsi</p>
                 </a>

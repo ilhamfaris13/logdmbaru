@@ -108,7 +108,9 @@ Route::get('panduan', [PanduanController::class, 'index']);
 | Penialaian
 */
 Route::get('penilaian',[PenilaianController::class, 'index']);
-Route::get('responsi',[PenilaianController::class, 'show']);
+Route::get('responsi',[PenilaianController::class, 'index']);
+Route::get('/responsi/post',[SignaturePadController2::class, 'create']);
+Route::post('/responsi/post',[PenilaianController::class, 'store'])->name('responsi.store');
 /*
 | 
 |--------------------------------------------------------------------------
