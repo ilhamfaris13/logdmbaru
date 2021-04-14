@@ -70,6 +70,15 @@
                       <?php else: ?>  
                       <span class="badge bg-green">Sudah di Verifikasi</span>
                       <?php endif; ?>
+                      <?php else: ?>
+                      <!--status-->
+                      <?php if($log->status == 0): ?>
+                      <td class="align-middle word-break description"><span class="badge bg-red">Belum Verifikasi</span></td>
+                      <?php else: ?>
+                      <td class="align-middle word-break description"><span class="badge bg-green">Sudah Verifikasi</span></td>
+                      <?php endif; ?>
+                      <!--status-->
+                      <?php endif; ?>
                       <?php if( Auth::user()->level == "dm"): ?>
                       <?php else: ?>
                       <td class="align-middle name"><?php echo e($log->nama); ?></td>
@@ -86,15 +95,7 @@
                       <td class="align-middle foto" hidden><?php echo e($log->profile_photo_path); ?></td>
                      
                       </td>
-                      <?php else: ?>
-                      <!--status-->
-                      <?php if($log->status == 0): ?>
-                      <td class="align-middle word-break description"><span class="badge bg-red">Belum Verifikasi</span></td>
-                      <?php else: ?>
-                      <td class="align-middle word-break description"><span class="badge bg-green">Sudah Verifikasi</span></td>
-                      <?php endif; ?>
-                      <!--status-->
-                      <?php endif; ?>
+                     
 
                     </tr>
                     

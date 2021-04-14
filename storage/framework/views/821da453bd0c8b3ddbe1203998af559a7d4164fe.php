@@ -11,7 +11,7 @@
     <div class="col-12">
     <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Buku Kegiatan Kepaniteraan</h3>
+                <h3 class="card-title">Presentasi Kasus/Responsi dan Karya Tulis Referat</h3>
                 
               </div>
               
@@ -27,7 +27,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Daftar Buku Kegiatan Kepaniteraan</h3>
+                <h3 class="card-title">Presentasi Kasus/Responsi dan Karya Tulis Referat</h3>
                 
               </div>
              
@@ -45,7 +45,7 @@
                       <th> NIM</th>
                       <?php endif; ?>
                       <th> JENIS KEPANITERAAN</th>
-                      <th> TEMPAT/ TINDAKAN / KASUS</th>
+                      <th> KASUS / JUDUL</th>
                       <th> RUMAH SAKIT</th>
                       <th> STASE</th>
                       <th> TANGGAL</th>

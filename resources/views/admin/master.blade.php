@@ -122,6 +122,18 @@
               </p>
             </a>
           </li>
+          <!-- PENILAIAN -->
+          @if( Auth::user()->level == "dm")
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Karya Tulis/Referat
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            </li>
+          @else
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
@@ -134,7 +146,7 @@
               <li class="nav-item">
                 <a href="{{url('/responsi')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Presentasi Kasus/Responsi</p>
+                  <p>Responsi dan Referat</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -157,6 +169,8 @@
               </li>
             </ul>
           </li>
+          @endif
+          <!-- /PENILIAIAN -->
           <li class="nav-item ">
             <a href="{{url('/panduan')}}" class="nav-link">
               <i class="nav-icon fa fa-book"></i>
@@ -166,7 +180,7 @@
               </p>
             </a>
           </li>
-          
+         
           
       </nav>
       <!-- /.sidebar-menu -->

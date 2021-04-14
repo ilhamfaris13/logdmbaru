@@ -71,6 +71,15 @@
                       @else  
                       <span class="badge bg-green">Sudah di Verifikasi</span>
                       @endif
+                      @else
+                      <!--status-->
+                      @if($log->status == 0)
+                      <td class="align-middle word-break description"><span class="badge bg-red">Belum Verifikasi</span></td>
+                      @else
+                      <td class="align-middle word-break description"><span class="badge bg-green">Sudah Verifikasi</span></td>
+                      @endif
+                      <!--status-->
+                      @endif
                       @if( Auth::user()->level == "dm")
                       @else
                       <td class="align-middle name">{{ $log->nama }}</td>
@@ -87,15 +96,7 @@
                       <td class="align-middle foto" hidden>{{ $log->profile_photo_path }}</td>
                      
                       </td>
-                      @else
-                      <!--status-->
-                      @if($log->status == 0)
-                      <td class="align-middle word-break description"><span class="badge bg-red">Belum Verifikasi</span></td>
-                      @else
-                      <td class="align-middle word-break description"><span class="badge bg-green">Sudah Verifikasi</span></td>
-                      @endif
-                      <!--status-->
-                      @endif
+                     
 
                     </tr>
                     

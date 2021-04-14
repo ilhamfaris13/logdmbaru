@@ -12,6 +12,8 @@ use App\Http\Controllers\Redirect;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\PenilaianController;
+use App\Http\Controllers\BimbinganController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -115,6 +117,21 @@ Route::post('/responsi/post',[PenilaianController::class, 'store'])->name('respo
 | 
 |--------------------------------------------------------------------------
 */
+/*
+|--------------------------------------------------------------------------
+| Bimbingan
+*/
+Route::get('bimbingan',[BimbinganController::class, 'index']);
+Route::post('create_bimbingan',[BimbinganController::class, 'create'])->name('bimbingan.create');
+Route::get('/signature/post',[SignaturePadController2::class, 'create']);
+Route::post('/bimbingan/post',[BimbinganController::class, 'store'])->name('bimbingan.store');
+Route::get('create_bimbingan',[BimbinganController::class, 'view']);
+/*
+| 
+|--------------------------------------------------------------------------
+*/
+
+
 /*
 
 
