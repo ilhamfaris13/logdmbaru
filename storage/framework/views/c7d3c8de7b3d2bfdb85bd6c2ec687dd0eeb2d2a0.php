@@ -11,11 +11,11 @@
     <div class="col-12">
     <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Buku Kegiatan Kepaniteraan</h3>
+                <h3 class="card-title">Bimbingan Soal UKDI</h3>
                 
               </div>
               
-                  <a href="<?php echo e(url('/create_kegiatan')); ?>" class="btn btn-success" > Buat Baru <i class="fa fa-plus"></i></a>
+                  <a href="<?php echo e(url('/create_bimbingan')); ?>" class="btn btn-success" > Buat Baru <i class="fa fa-plus"></i></a>
                  
                   </div>
     </div>
@@ -27,7 +27,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Daftar Buku Kegiatan Kepaniteraan</h3>
+                <h3 class="card-title">Daftar Bimbingan Soal UKDI</h3>
                 
               </div>
              
@@ -49,7 +49,7 @@
                       <th> RUMAH SAKIT</th>
                       <th> STASE</th>
                       <th> TANGGAL</th>
-                      <th> KETERANGAN</th>
+                      <th> JUMLAH SOAL</th>
                       <th> DOSEN</th>
                       <th> TTDP</th>
                      

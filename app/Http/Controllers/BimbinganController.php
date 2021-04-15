@@ -26,8 +26,8 @@ class BimbinganController extends Controller
          ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
          ->join('stase','stase.id','=','kegiatan_log.stase')
          ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
-         ->leftjoin('bimbingan_ukdi','bimbingan_ukdi.id_kegiatan','=','kegiatan_log.id')
-         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*','bimbingan_ukdi.*')
+         //->leftjoin('bimbingan_ukdi','bimbingan_ukdi.id_kegiatan','=','kegiatan_log.id')
+         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
          ->where('kegiatan_log.status', '=',0)
          ->where('kegiatan_log.id_user', '=',$userAuth->id)
          ->where('kegiatan_log.jenis', '=',"Bimbingan Soal UKDI")
@@ -72,11 +72,11 @@ class BimbinganController extends Controller
             'status'=>'0',
             'id_dosen'=>$request->get('dosen')
         ]);
-        DB::insert('insert into bimbingan_ukdi (id_kegiatan,jumlah_soal) values (?,?)',[
+        /* DB::insert('insert into bimbingan_ukdi (id_kegiatan,jumlah_soal) values (?,?)',[
             $last_id,
-            $request->get('jumlah_soal'),
+            $request->get('keterangan'),
             
-        ]);
+        ]); */
         //dd($last_id);
        // return back()->with('success', 'success Full upload signature');
        return Redirect::to('/bimbingan')->with('success', 'Berhasil Menambahkan Data ');
@@ -90,9 +90,9 @@ class BimbinganController extends Controller
      */
     public function store(Request $request)
     {
-         //
+           //
         // We create a variable to define the name of the file
-        
+        //dd($request);
         $data = $request->all();
         $folderPath = public_path('upload/');
         $filename = date('mdYHis') . "-signature.png";
@@ -106,6 +106,7 @@ class BimbinganController extends Controller
             'status' => 1
             ]           
         );
+       
        // dd($data);
       /*   DB::insert('insert into testdb (name,id_user) values (?,?)',[
             $filename,

@@ -13,6 +13,7 @@ use App\Http\Controllers\PDFController;
 use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\PenilaianController;
 use App\Http\Controllers\BimbinganController;
+use App\Http\Controllers\KetrampilanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -123,14 +124,26 @@ Route::post('/responsi/post',[PenilaianController::class, 'store'])->name('respo
 */
 Route::get('bimbingan',[BimbinganController::class, 'index']);
 Route::post('create_bimbingan',[BimbinganController::class, 'create'])->name('bimbingan.create');
-Route::get('/signature/post',[SignaturePadController2::class, 'create']);
+Route::get('/bimbingan/post',[SignaturePadController2::class, 'create']);
 Route::post('/bimbingan/post',[BimbinganController::class, 'store'])->name('bimbingan.store');
 Route::get('create_bimbingan',[BimbinganController::class, 'view']);
 /*
 | 
 |--------------------------------------------------------------------------
 */
-
+/*
+|--------------------------------------------------------------------------
+| Ketrampilan
+*/
+Route::get('ketrampilan',[KetrampilanController::class, 'index']);
+Route::post('create_ketrampilan',[KetrampilanController::class, 'create'])->name('ketrampilan.create');
+Route::get('/ketrampilan/post',[SignaturePadController2::class, 'create']);
+Route::post('/ketrampilan/post',[KetrampilanController::class, 'store'])->name('ketrampilan.store');
+Route::get('create_ketrampilan',[KetrampilanController::class, 'view']);
+/*
+| 
+|--------------------------------------------------------------------------
+*/
 
 /*
 

@@ -265,7 +265,7 @@
               
               <!-- description -->
               <div class="form-group">
-                <label class="col-form-label" for="modal-input-tempat">Tempat/Tindakan/Kasus</label>
+                <label class="col-form-label" for="modal-input-tempat">Tempat/Tindakan/Kasus/Level SKDI</label>
                 <input type="text" name="tempat" class="form-control" id="modal-input-tempat" disabled>
               </div>
               <!-- /description -->
@@ -283,7 +283,7 @@
               <!-- /description -->
               <!-- description -->
               <div class="form-group">
-                <label class="col-form-label" for="modal-input-keterangan">Keterangan</label>
+                <label class="col-form-label" for="modal-input-keterangan">Keterangan/Jumlah Soal/Jenis Ketrampilan</label>
                 <input type="text" name="keterangan" class="form-control" id="modal-input-keterangan" disabled>
               </div>
               <!-- /description -->

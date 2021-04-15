@@ -23,8 +23,9 @@
             <div class="card-body">
             <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Jenis Kepaniteraan </label>
-                <select name="jenis" class="form-control" id="jenis">
-                <!-- <option value="Tugas Jaga Ruang" >Tugas Jaga Ruang</option>
+                <select name="jenis" class="form-control" id="jenis" onChange="SelectRedirect();" >
+               <!-- <select name="jenis" class="form-control" id="jenis" onChange="SelectRedirect();" >
+                 <option value="Tugas Jaga Ruang" >Tugas Jaga Ruang</option>
                 <option value="Keterampilan / Kegiatan di Poliklinik" >Keterampilan / Kegiatan di Poliklinik</option>
                 <option value="Unit Gawat Darurat" >Unit Gawat Darurat</option>
                 <option value="Kegiatan Asistensi di Ruang Oprasi" >Kegiatan Asistensi di Ruang Oprasi</option>
@@ -88,9 +89,30 @@
     </div>
     </div>
     </section>
-<script>
+    <script language="javascript">
+      function SelectRedirect(){
+      // ON selection of section this function will work
+      //alert( document.getElementById('s1').value);
 
-</script>
+      switch(document.getElementById('jenis').value)
+      {
+      case "Bimbingan Soal UKDI":
+      window.location="<?php echo e(url('/create_bimbingan')); ?>";
+      break;
+      case "Ketramplian Klinis":
+      window.location="<?php echo e(url('/create_ketrampilan')); ?>";
+      break;
+
+
+
+      /// Can be extended to other different selections of SubCategory //////
+      default:
+      //window.location="../"; // if no selection matches then redirected to home page
+      break;
+      }// end of switch 
+      }
+      ////////////////// 
+    </script>
 <?php $__env->stopSection(); ?>
 
 

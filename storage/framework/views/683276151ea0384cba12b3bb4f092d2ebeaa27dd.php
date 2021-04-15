@@ -26,15 +26,16 @@
             <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Jenis Kepaniteraan </label>
                 <select name="jenis" class="form-control" id="jenis">
-                <!-- <option value="Tugas Jaga Ruang" >Tugas Jaga Ruang</option>
+                <option value="Bimbingan Soal UKDI" selected>Bimbingan Soal UKDI</option>
+               <!--  <option value="Tugas Jaga Ruang" >Tugas Jaga Ruang</option>
                 <option value="Keterampilan / Kegiatan di Poliklinik" >Keterampilan / Kegiatan di Poliklinik</option>
                 <option value="Unit Gawat Darurat" >Unit Gawat Darurat</option>
                 <option value="Kegiatan Asistensi di Ruang Oprasi" >Kegiatan Asistensi di Ruang Oprasi</option>
                 <option value="Kegiatan Kuliah Pakar" >Kegiatan Kuliah Pakar</option>
-                <option value="Tugas pada Dinas Luar" >Tugas pada Dinas Luar</option> -->
+                <option value="Tugas pada Dinas Luar" >Tugas pada Dinas Luar</option>
                 <?php $__currentLoopData = $jenis; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rss): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <option value="<?php echo e($rss->jenis); ?>" ><?php echo e($rss->jenis); ?></option>
-                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> -->
                 </select>
               </div>
               <!-- id -->
@@ -50,13 +51,10 @@
               </div>
               <!-- /name -->
               <div class="form-group">
-                <label class="col-form-label" for="modal-input-id">Keterangan </label>
-                <input type="text" name="keterangan" class="form-control" id="keterangan" required>
+                <label class="col-form-label" for="modal-input-id">Jumlah Soal </label>
+                <input type="number" name="keterangan" class="form-control" id="keterangan" required>
               </div>
-              <div class="form-group">
-                <label class="col-form-label" for="modal-input-jumlah">Jumlah Soal </label>
-                <input type="text" name="jumlah_soal" class="form-control" id="jumlah_soal" required>
-              </div>
+              
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Rumah Sakit </label>
                 <select name="rumahsakit" class="form-control" id="rumahsakit">

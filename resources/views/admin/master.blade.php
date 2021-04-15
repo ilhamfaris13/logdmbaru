@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Absensi Dokter Muda Universitas Hangtuah | Fakultas Kedokteran</title>
+  <title>E-Log Book Dokter Muda Fakultas Kedokteran |  Universitas Hangtuah</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   @stack('meta')
@@ -129,6 +129,15 @@
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Karya Tulis/Referat
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            </li>
+            <li class="nav-item">
+            <a href="{{url('/bimbingan')}}" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Soal UKDI
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
