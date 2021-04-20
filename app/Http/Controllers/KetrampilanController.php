@@ -26,7 +26,7 @@ class KetrampilanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         $user = Auth::user();
         //dd($request);
@@ -52,7 +52,7 @@ class KetrampilanController extends Controller
         ]); */
         //dd($last_id);
        // return back()->with('success', 'success Full upload signature');
-       return Redirect::to('/bimbingan')->with('success', 'Berhasil Menambahkan Data ');
+       return Redirect::to('/kegiatan')->with('success', 'Berhasil Menambahkan Data ');
     }
 
     /**

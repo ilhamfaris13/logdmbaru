@@ -15,7 +15,7 @@
 
 					</div>
 					<?php endif; ?>
-          <form id="edit-form" method="POST" action="<?php echo e(route('bimbingan.create')); ?>">
+          <form id="edit-form" method="POST" action="<?php echo e(route('ketrampilan.create')); ?>">
                         <?php echo csrf_field(); ?>
             <div class="card text-black bg-light mb-0">
                 <div class="card-header">
@@ -52,7 +52,7 @@
               <!-- /name -->
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Jenis Ketrampilan </label>
-                <input type="number" name="keterangan" class="form-control" id="keterangan" required>
+                <input type="text" name="keterangan" class="form-control" id="keterangan" required>
               </div>
               
               <div class="form-group">

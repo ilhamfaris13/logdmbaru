@@ -14,6 +14,7 @@ use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\PenilaianController;
 use App\Http\Controllers\BimbinganController;
 use App\Http\Controllers\KetrampilanController;
+use App\Http\Controllers\UjianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -140,6 +141,19 @@ Route::post('create_ketrampilan',[KetrampilanController::class, 'create'])->name
 Route::get('/ketrampilan/post',[SignaturePadController2::class, 'create']);
 Route::post('/ketrampilan/post',[KetrampilanController::class, 'store'])->name('ketrampilan.store');
 Route::get('create_ketrampilan',[KetrampilanController::class, 'view']);
+/*
+| 
+|--------------------------------------------------------------------------
+*/
+/*
+|--------------------------------------------------------------------------
+| Ujian
+*/
+Route::get('ujian',[UjianController::class, 'index']);
+Route::post('create_ujian',[UjianController::class, 'create'])->name('ujian.create');
+Route::get('/ujian/post',[UjianController::class, 'create']);
+Route::post('/ujian/post',[UjianController::class, 'store'])->name('ujian.store');
+Route::get('create_ujian',[UjianController::class, 'view']);
 /*
 | 
 |--------------------------------------------------------------------------

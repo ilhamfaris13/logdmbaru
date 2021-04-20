@@ -125,21 +125,13 @@
           </li>
           <!-- PENILAIAN -->
           <?php if( Auth::user()->level == "dm"): ?>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Karya Tulis/Referat
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            </li>
+         
             <li class="nav-item">
             <a href="<?php echo e(url('/bimbingan')); ?>" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Soal UKDI
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-right"></i>
               </p>
             </a>
             </li>
@@ -159,12 +151,7 @@
                   <p>Responsi dan Referat</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Karya Tulis/Referat</p>
-                </a>
-              </li>
+              
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
