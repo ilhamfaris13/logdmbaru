@@ -111,6 +111,32 @@ class UjianController extends Controller
     public function store(Request $request)
     {
         //
+          //
+        // We create a variable to define the name of the file
+        //dd($request);
+        $data = $request->all();
+        $folderPath = public_path('upload/');
+        $filename = date('mdYHis') . "-signature.png";
+        $file= $folderPath . $filename;
+        #create or update your data here
+        DB::table('ujian_akhir')
+        ->where('id', $request->get('id'))
+        ->update(
+            [
+            'ttd_penguji_1' => $filename,
+            //'status' => 1
+            ]           
+        );
+      
+
+
+        // We decode the image and store it in public folder
+        $data_uri = $request->signature;
+        
+        $encoded_image = explode(",", $data_uri)[1];
+        $decoded_image = base64_decode($encoded_image);
+        file_put_contents($file, $decoded_image);
+        return response()->json(['success'=>'Verifikasi berhasil']);
     }
 
     /**

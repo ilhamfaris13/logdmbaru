@@ -306,7 +306,7 @@
                saveButton.addEventListener('click', function (event) {
                 event.preventDefault();
                 $.ajax({
-                  url: "{{ url('/signature/post') }}",
+                  url: "{{ url('/ujian/post') }}",
                   method: 'post',
                   data: {
                     
@@ -314,7 +314,7 @@
                      id:id,
                   },
                   success: function(response){
-                    window.location.href = "{{ url('/kegiatan') }}";
+                    window.location.href = "{{ url('/ujian') }}";
                   //  console.log(response);
                   if(response) {
             //$('.success').text(response.success);

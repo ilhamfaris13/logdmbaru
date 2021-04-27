@@ -306,7 +306,7 @@
                saveButton.addEventListener('click', function (event) {
                 event.preventDefault();
                 $.ajax({
-                  url: "<?php echo e(url('/signature/post')); ?>",
+                  url: "<?php echo e(url('/ujian/post')); ?>",
                   method: 'post',
                   data: {
                     
@@ -314,7 +314,7 @@
                      id:id,
                   },
                   success: function(response){
-                    window.location.href = "<?php echo e(url('/kegiatan')); ?>";
+                    window.location.href = "<?php echo e(url('/ujian')); ?>";
                   //  console.log(response);
                   if(response) {
             //$('.success').text(response.success);
