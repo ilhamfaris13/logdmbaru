@@ -52,7 +52,9 @@
                       <th> CATATAN</th>
                       <th> PENGUJI 1</th>
                       <th> PENGUJI 2</th>
-                     
+                      <th> TTD PENGUJI 1</th>
+                      <th> TTD PENGUJI 2</th>
+                      <th hidden> </th>
                       <th hidden> </th>
                      
                     </tr>
@@ -62,14 +64,35 @@
                     <tr class="data-row">
                     @if( Auth::user()->level == "dosen")
                       <td class="align-middle">
-                      <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Verifikasi</button>
+                      <!-- PENGUJI -->
+                      @if($log->ttd_penguji_1 != 'wait.png' AND $log->ttd_penguji_2 != 'wait.png')
+                      <span class="badge bg-green">Sudah Verifikasi</span>
+                      @elseif($log->ttd_penguji_1 == 'wait.png' AND $log->ttd_penguji_2 == 'wait.png')
+                      <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Verif</button>
+                      @elseif($log->ttd_penguji_1 != 'wait.png' AND $log->ttd_penguji_2 == 'wait.png')
+                      <span class="badge bg-red">Penguji 1 Sudah Verifikasi</span>
+                        @if(Auth::user()->name == $log->dosen1)
+                        @else
+                          <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Verif</button>
+                        @endif
+                      @elseif($log->ttd_penguji_1 == 'wait.png' AND $log->ttd_penguji_2 != 'wait.png')
+                      <span class="badge bg-green">Penguji 2 Sudah Verifikasi</span>
+                        @if(Auth::user()->name == $log->dosen2)
+                        @else
+                          <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Verif</button>
+                        @endif
+                      @else
+                      @endif
+                      <!-- PENGUJI -->
+                      
+                      </td>
                       @else
                     
                       @endif
                       @if( Auth::user()->level == "dm")
                       @else
                       <td class="align-middle name">{{ $log->nama }}</td>
-                      <td class="align-middle name">{{ $log->username }}</td>
+                      <td class="align-middle nim">{{ $log->username }}</td>
                       @endif
                       <td class="align-middle jenis">{{ $log->jenis }}</td>
                       <td class="align-middle word-break tempat">{{ $log->kasus }}</td>
@@ -77,13 +100,17 @@
                       <td class="align-middle word-break stase">{{ $log->stase_ }}</td>
                       <td class="align-middle tanggal">{{date('d-m-Y', strtotime($log->tanggal))}}</td>
                       <td class="align-middle keterangan">{{$log->catatan}}</td>
-                      <td class="align-middle word-break dosen">{{ $log->dosen1 }}</td>
-                      <td class="align-middle word-break dosen">{{ $log->dosen2 }}</td>
-                      <td class="align-middle id" ><img src="/upload/{{ $log->ttd_penguji_1 }}" width="100" height="100"></td>
+                      <td class="align-middle word-break dosen1">{{ $log->dosen1 }}</td>
+                      <td class="align-middle word-break dosen2">{{ $log->dosen2 }}</td>
+                      <td class="align-middle ttd1" ><img src="/upload/{{ $log->ttd_penguji_1 }}" width="100" height="100"></td>
+                      <td class="align-middle ttd2" ><img src="/upload/{{ $log->ttd_penguji_2 }}" width="100" height="100"></td>
                       <td class="align-middle foto" hidden>{{ $log->profile_photo_path }}</td>
                      
-                      </td>
-                     
+                      @if(Auth::user()->name ==  $log->dosen1  )
+                      <td class="align-middle word-break stsdosen" hidden>penguji_1</td>
+                      @else
+                      <td class="align-middle word-break stsdosen" hidden>penguji_2</td>
+                      @endif
 
                     </tr>
                     
@@ -203,6 +230,12 @@
                 <input type="text" name="keterangan" class="form-control" id="modal-input-keterangan" disabled>
               </div>
               <!-- /description -->
+              <!-- description -->
+              <div class="form-group">
+                
+                <input type="text" name="stsdosen" class="form-control" id="modal-input-stsdosen" hidden>
+              </div>
+              <!-- /description -->
             </div>
               </div>
               <div class="row"> 
@@ -274,6 +307,7 @@
     var keterangan = row.children(".keterangan").text();
     var jenis = row.children(".jenis").text();
     var description = row.children(".description").text();
+    var stsdosen = row.children(".stsdosen").text();
    
     // fill the data in the input fields
     $("#modal-input-id").val(id);
@@ -287,6 +321,7 @@
     $("#modal-input-keterangan").val(keterangan);
     $("#modal-input-jenis").val(jenis);
     $("#modal-input-description").val(description);
+    $("#modal-input-stsdosen").val(stsdosen);
 
 
     $.ajaxSetup({
@@ -312,6 +347,7 @@
                     
                      signature: signaturePad.toDataURL('image/png'),
                      id:id,
+                     stsdosen:stsdosen
                   },
                   success: function(response){
                     window.location.href = "{{ url('/ujian') }}";

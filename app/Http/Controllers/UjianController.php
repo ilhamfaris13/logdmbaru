@@ -29,7 +29,7 @@ class UjianController extends Controller
          ->join('stase','stase.id','=','ujian_akhir.stase')
          ->join('dosen as d','d.nip','=','ujian_akhir.penguji_1')
          ->join('dosen as a','a.nip','=','ujian_akhir.penguji_2')
-         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','d.NAMA as dosen1','a.NAMA as dosen2','ujian_akhir.*')
+         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','d.NAMA as dosen1','a.NAMA as dosen2','ujian_akhir.*','d.nip as nip')
          //->where('kegiatan_log.status', '=',0)
          
          ->where('ujian_akhir.id_user', '=',$userAuth->id)
@@ -119,6 +119,8 @@ class UjianController extends Controller
         $filename = date('mdYHis') . "-signature.png";
         $file= $folderPath . $filename;
         #create or update your data here
+        if ($request->get('stsdosen') == "penguji_1")
+        {
         DB::table('ujian_akhir')
         ->where('id', $request->get('id'))
         ->update(
@@ -127,6 +129,19 @@ class UjianController extends Controller
             //'status' => 1
             ]           
         );
+        }
+        else
+        {
+        DB::table('ujian_akhir')
+        ->where('id', $request->get('id'))
+        ->update(
+            [
+            'ttd_penguji_2' => $filename,
+            //'status' => 1
+            ]           
+        );
+        }
+        
       
 
 

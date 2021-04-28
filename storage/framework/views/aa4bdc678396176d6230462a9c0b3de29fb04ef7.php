@@ -52,7 +52,9 @@
                       <th> CATATAN</th>
                       <th> PENGUJI 1</th>
                       <th> PENGUJI 2</th>
-                     
+                      <th> TTD PENGUJI 1</th>
+                      <th> TTD PENGUJI 2</th>
+                      <th hidden> </th>
                       <th hidden> </th>
                      
                     </tr>
@@ -62,14 +64,35 @@
                     <tr class="data-row">
                     <?php if( Auth::user()->level == "dosen"): ?>
                       <td class="align-middle">
-                      <button type="button" class="btn btn-warning" id="edit-item" data-item-id="<?php echo e($log->id); ?>">Verifikasi</button>
+                      <!-- PENGUJI -->
+                      <?php if($log->ttd_penguji_1 != 'wait.png' AND $log->ttd_penguji_2 != 'wait.png'): ?>
+                      <span class="badge bg-green">Sudah Verifikasi</span>
+                      <?php elseif($log->ttd_penguji_1 == 'wait.png' AND $log->ttd_penguji_2 == 'wait.png'): ?>
+                      <button type="button" class="btn btn-warning" id="edit-item" data-item-id="<?php echo e($log->id); ?>">Verif</button>
+                      <?php elseif($log->ttd_penguji_1 != 'wait.png' AND $log->ttd_penguji_2 == 'wait.png'): ?>
+                      <span class="badge bg-red">Penguji 1 Sudah Verifikasi</span>
+                        <?php if(Auth::user()->name == $log->dosen1): ?>
+                        <?php else: ?>
+                          <button type="button" class="btn btn-warning" id="edit-item" data-item-id="<?php echo e($log->id); ?>">Verif</button>
+                        <?php endif; ?>
+                      <?php elseif($log->ttd_penguji_1 == 'wait.png' AND $log->ttd_penguji_2 != 'wait.png'): ?>
+                      <span class="badge bg-green">Penguji 2 Sudah Verifikasi</span>
+                        <?php if(Auth::user()->name == $log->dosen2): ?>
+                        <?php else: ?>
+                          <button type="button" class="btn btn-warning" id="edit-item" data-item-id="<?php echo e($log->id); ?>">Verif</button>
+                        <?php endif; ?>
+                      <?php else: ?>
+                      <?php endif; ?>
+                      <!-- PENGUJI -->
+                      
+                      </td>
                       <?php else: ?>
                     
                       <?php endif; ?>
                       <?php if( Auth::user()->level == "dm"): ?>
                       <?php else: ?>
                       <td class="align-middle name"><?php echo e($log->nama); ?></td>
-                      <td class="align-middle name"><?php echo e($log->username); ?></td>
+                      <td class="align-middle nim"><?php echo e($log->username); ?></td>
                       <?php endif; ?>
                       <td class="align-middle jenis"><?php echo e($log->jenis); ?></td>
                       <td class="align-middle word-break tempat"><?php echo e($log->kasus); ?></td>
@@ -77,13 +100,17 @@
                       <td class="align-middle word-break stase"><?php echo e($log->stase_); ?></td>
                       <td class="align-middle tanggal"><?php echo e(date('d-m-Y', strtotime($log->tanggal))); ?></td>
                       <td class="align-middle keterangan"><?php echo e($log->catatan); ?></td>
-                      <td class="align-middle word-break dosen"><?php echo e($log->dosen1); ?></td>
-                      <td class="align-middle word-break dosen"><?php echo e($log->dosen2); ?></td>
-                      <td class="align-middle id" ><img src="/upload/<?php echo e($log->ttd_penguji_1); ?>" width="100" height="100"></td>
+                      <td class="align-middle word-break dosen1"><?php echo e($log->dosen1); ?></td>
+                      <td class="align-middle word-break dosen2"><?php echo e($log->dosen2); ?></td>
+                      <td class="align-middle ttd1" ><img src="/upload/<?php echo e($log->ttd_penguji_1); ?>" width="100" height="100"></td>
+                      <td class="align-middle ttd2" ><img src="/upload/<?php echo e($log->ttd_penguji_2); ?>" width="100" height="100"></td>
                       <td class="align-middle foto" hidden><?php echo e($log->profile_photo_path); ?></td>
                      
-                      </td>
-                     
+                      <?php if(Auth::user()->name ==  $log->dosen1  ): ?>
+                      <td class="align-middle word-break stsdosen" hidden>penguji_1</td>
+                      <?php else: ?>
+                      <td class="align-middle word-break stsdosen" hidden>penguji_2</td>
+                      <?php endif; ?>
 
                     </tr>
                     
@@ -203,6 +230,12 @@
                 <input type="text" name="keterangan" class="form-control" id="modal-input-keterangan" disabled>
               </div>
               <!-- /description -->
+              <!-- description -->
+              <div class="form-group">
+                
+                <input type="text" name="stsdosen" class="form-control" id="modal-input-stsdosen" hidden>
+              </div>
+              <!-- /description -->
             </div>
               </div>
               <div class="row"> 
@@ -274,6 +307,7 @@
     var keterangan = row.children(".keterangan").text();
     var jenis = row.children(".jenis").text();
     var description = row.children(".description").text();
+    var stsdosen = row.children(".stsdosen").text();
    
     // fill the data in the input fields
     $("#modal-input-id").val(id);
@@ -287,6 +321,7 @@
     $("#modal-input-keterangan").val(keterangan);
     $("#modal-input-jenis").val(jenis);
     $("#modal-input-description").val(description);
+    $("#modal-input-stsdosen").val(stsdosen);
 
 
     $.ajaxSetup({
@@ -312,6 +347,7 @@
                     
                      signature: signaturePad.toDataURL('image/png'),
                      id:id,
+                     stsdosen:stsdosen
                   },
                   success: function(response){
                     window.location.href = "<?php echo e(url('/ujian')); ?>";
