@@ -15,6 +15,7 @@ use App\Http\Controllers\PenilaianController;
 use App\Http\Controllers\BimbinganController;
 use App\Http\Controllers\KetrampilanController;
 use App\Http\Controllers\UjianController;
+use App\Http\Controllers\ExamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -154,6 +155,22 @@ Route::post('create_ujian',[UjianController::class, 'create'])->name('ujian.crea
 Route::get('/ujian/post',[UjianController::class, 'create']);
 Route::post('/ujian/post',[UjianController::class, 'store'])->name('ujian.store');
 Route::get('create_ujian',[UjianController::class, 'view']);
+/*
+| 
+|--------------------------------------------------------------------------
+*/
+
+/*
+
+/*
+|--------------------------------------------------------------------------
+| Prolonged
+*/
+Route::get('prolonged',[ExamController::class, 'index']);
+Route::post('create_prolonged',[ExamController::class, 'create'])->name('prolonged.create');
+Route::get('/prolonged/post',[ExamController::class, 'create']);
+Route::post('/prolonged/post',[ExamController::class, 'store'])->name('prolonged.store');
+Route::get('create_prolonged',[ExamController::class, 'view']);
 /*
 | 
 |--------------------------------------------------------------------------

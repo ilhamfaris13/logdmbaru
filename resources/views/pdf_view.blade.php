@@ -27,7 +27,11 @@
 			font-size: 13px;
 		}
    
+    #pageFooter:after {
+    counter-increment: page;
+    content: counter(page);
 }
+
         
 	</style>
   
@@ -86,6 +90,7 @@
   
   </table>
   <!-- Profile -->
+  
   <div class="row">
     <div class="col-12">
       <div class="card">
@@ -143,7 +148,7 @@
     <!-- col -->
   </div>
   <!-- row -->
-
+  <div style="page-break-before:always">&nbsp;</div> 
   <div class="row">
     <div class="col-12">
       <div class="card">
@@ -201,7 +206,7 @@
     <!-- col -->
   </div>
   <!-- row -->
-
+  <div style="page-break-before:always">&nbsp;</div> 
   <div class="row">
     <div class="col-12">
       <div class="card">
@@ -259,7 +264,7 @@
     <!-- col -->
   </div>
   <!-- row -->
-
+  <div style="page-break-before:always">&nbsp;</div> 
 
   <div class="row">
     <div class="col-12">
@@ -318,7 +323,7 @@
     <!-- col -->
   </div>
   <!-- row -->
-
+  <div style="page-break-before:always">&nbsp;</div> 
   <div class="row">
     <div class="col-12">
       <div class="card">
@@ -377,7 +382,7 @@
     <!-- col -->
   </div>
   <!-- row -->
-
+  <div style="page-break-before:always">&nbsp;</div> 
   <div class="row">
     <div class="col-12">
       <div class="card">
@@ -435,8 +440,372 @@
     <!-- col -->
   </div>
   <!-- row -->
+  <div style="page-break-before:always">&nbsp;</div> 
+  <!-- Presentasi Kasus / Responsi -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+         
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class='table table-bordered'>
+            <caption>
+              <center>
+                <h3 class="card-title">Presentasi Kasus / Responsi</h3>
+                </center>
+            </caption>
+            <thead>  
+                    <tr>
+                      <th> TEMPAT/ TINDAKAN / KASUS</th>
+                      <th> RUMAH SAKIT</th>
+                      <th> STASE</th>
+                      <th> TANGGAL</th>
+                      <th> TTDP</th>
+                      
+                     
+                    </tr>
+                  </thead>
+            <tbody>
+              @php $i=1 @endphp
+              @foreach($data7 as $log)
+              <tr >
+                        <td >{{ $log->tempat }}</td>
+                        <td >{{ $log->rumah_sakit_ }}</td>
+                        <td >{{ $log->stase_ }}</td>
+                        <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
+                        <td >
+                            <span>
+                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
+                            </span>
+                            <br>
+                        <span>
+                            {{ $log->dosen }}
+                        </span>
+                        </td>
+                          
+                         
+        
+                        </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        <!-- card Body -->
+      </div>
+      <!-- card -->
+    </div>
+    <!-- col -->
+  </div>
+  <!-- row -->
+  <div style="page-break-before:always">&nbsp;</div> 
+<!-- Karya Tulis / Referat -->
+<div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+         
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class='table table-bordered'>
+            <caption>
+              <center>
+                <h3 class="card-title">Karya Tulis / Referat</h3>
+                </center>
+            </caption>
+            <thead>  
+                    <tr>
+                      <th> TEMPAT/ TINDAKAN / KASUS</th>
+                      <th> RUMAH SAKIT</th>
+                      <th> STASE</th>
+                      <th> TANGGAL</th>
+                      <th> TTDP</th>
+                      
+                     
+                    </tr>
+                  </thead>
+            <tbody>
+              @php $i=1 @endphp
+              @foreach($data8 as $log)
+              <tr >
+                        <td >{{ $log->tempat }}</td>
+                        <td >{{ $log->rumah_sakit_ }}</td>
+                        <td >{{ $log->stase_ }}</td>
+                        <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
+                        <td >
+                            <span>
+                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
+                            </span>
+                            <br>
+                        <span>
+                            {{ $log->dosen }}
+                        </span>
+                        </td>
+                          
+                         
+        
+                        </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        <!-- card Body -->
+      </div>
+      <!-- card -->
+    </div>
+    <!-- col -->
+  </div>
+  <!-- row -->
+  <div style="page-break-before:always">&nbsp;</div> 
+  <!-- Bimbingan Soal UKDI -->
+<div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+         
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class='table table-bordered'>
+            <caption>
+              <center>
+                <h3 class="card-title">Bimbingan Soal UKDI</h3>
+                </center>
+            </caption>
+            <thead>  
+                    <tr>
+                      <th> TEMPAT/ TINDAKAN / KASUS</th>
+                      <th> RUMAH SAKIT</th>
+                      <th> STASE</th>
+                      <th> TANGGAL</th>
+                      <th> TTDP</th>
+                      
+                     
+                    </tr>
+                  </thead>
+            <tbody>
+              @php $i=1 @endphp
+              @foreach($data9 as $log)
+              <tr >
+                        <td >{{ $log->tempat }}</td>
+                        <td >{{ $log->rumah_sakit_ }}</td>
+                        <td >{{ $log->stase_ }}</td>
+                        <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
+                        <td >
+                            <span>
+                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
+                            </span>
+                            <br>
+                        <span>
+                            {{ $log->dosen }}
+                        </span>
+                        </td>
+                          
+                         
+        
+                        </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        <!-- card Body -->
+      </div>
+      <!-- card -->
+    </div>
+    <!-- col -->
+  </div>
+  <!-- row -->
+  <div style="page-break-before:always">&nbsp;</div> 
+  <!-- Ketramplian Klinis -->
+<div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+         
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class='table table-bordered'>
+            <caption>
+              <center>
+                <h3 class="card-title">Ketramplian Klinis</h3>
+                </center>
+            </caption>
+            <thead>  
+                    <tr>
+                      <th> TEMPAT/ TINDAKAN / KASUS</th>
+                      <th> RUMAH SAKIT</th>
+                      <th> STASE</th>
+                      <th> TANGGAL</th>
+                      <th> TTDP</th>
+                      
+                     
+                    </tr>
+                  </thead>
+            <tbody>
+              @php $i=1 @endphp
+              @foreach($data10 as $log)
+              <tr >
+                        <td >{{ $log->tempat }}</td>
+                        <td >{{ $log->rumah_sakit_ }}</td>
+                        <td >{{ $log->stase_ }}</td>
+                        <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
+                        <td >
+                            <span>
+                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
+                            </span>
+                            <br>
+                        <span>
+                            {{ $log->dosen }}
+                        </span>
+                        </td>
+                          
+                         
+        
+                        </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        <!-- card Body -->
+      </div>
+      <!-- card -->
+    </div>
+    <!-- col -->
+  </div>
+  <!-- row -->
+  <div style="page-break-before:always">&nbsp;</div> 
+  <!-- Prolonged Exam -->
+<div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+         
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class='table table-bordered'>
+            <caption>
+              <center>
+                <h3 class="card-title">Prolonged Exam</h3>
+                </center>
+            </caption>
+            <thead>  
+                    <tr>
+                      <th> TEMPAT/ TINDAKAN / KASUS</th>
+                      <th> RUMAH SAKIT</th>
+                      <th> STASE</th>
+                      <th> TANGGAL</th>
+                      <th> TTDP</th>
+                      
+                     
+                    </tr>
+                  </thead>
+            <tbody>
+              @php $i=1 @endphp
+              @foreach($data11 as $log)
+              <tr >
+                        <td >{{ $log->tempat }}</td>
+                        <td >{{ $log->rumah_sakit_ }}</td>
+                        <td >{{ $log->stase_ }}</td>
+                        <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
+                        <td >
+                            <span>
+                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
+                            </span>
+                            <br>
+                        <span>
+                            {{ $log->dosen }}
+                        </span>
+                        </td>
+                          
+                         
+        
+                        </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        <!-- card Body -->
+      </div>
+      <!-- card -->
+    </div>
+    <!-- col -->
+  </div>
+  <!-- row -->
 
-  
+  <div style="page-break-before:always">&nbsp;</div> 
+  <!-- Ujian Akhir CO-SCHAAP -->
+<div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+         
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class='table table-bordered'>
+            <caption>
+              <center>
+                <h3 class="card-title">Ujian Akhir CO-SCHAAP</h3>
+                </center>
+            </caption>
+            <thead>  
+                    <tr>
+                      <th> TEMPAT/ TINDAKAN / KASUS</th>
+                      <th> PEMBIMBING 1</th>
+                      <th> PEMBIMBING 2</th>
+                      <th> TANGGAL</th>
+                      
+                      
+                     
+                    </tr>
+                  </thead>
+            <tbody>
+              @php $i=1 @endphp
+              @foreach($data12 as $log)
+              <tr >
+                        <td >{{ $log->kasus }}</td>
+                        <td >
+                        <span>
+                            <img src="{{ public_path('upload/'.$log->ttd_penguji_1.'') }}" width="100" height="100">
+                            </span>
+                            <br>
+                        <span>
+                        {{ $log->dosen1}}
+                        </span>
+                        </td>
+                        
+                        <td >
+                        <span>
+                            <img src="{{ public_path('upload/'.$log->ttd_penguji_2.'') }}" width="100" height="100">
+                            </span>
+                            <br>
+                        <span>
+                            {{ $log->dosen1 }}
+                        </span>
+                        {{ $log->dosen2}}</td>
+                        
+                        <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
+                       
+                          
+                         
+        
+                        </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        <!-- card Body -->
+      </div>
+      <!-- card -->
+    </div>
+    <!-- col -->
+  </div>
+  <!-- row -->
+  </div>
 	<script>
     $(function () {
       $("#example1").DataTable({

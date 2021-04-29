@@ -33,9 +33,9 @@ class ExamController extends Controller
          ->where('kegiatan_log.status', '=',0)
          
          ->where('kegiatan_log.id_user', '=',$userAuth->id)
-         ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         ->where('kegiatan_log.jenis', '=',"Prolonged Exam")
          ->orWhere('kegiatan_log.id_dosen', '=',$userAuth->username)
-         ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         ->where('kegiatan_log.jenis', '=',"Prolonged Exam")
          ->get();
  
          $verif = DB::table('kegiatan_log')
@@ -50,7 +50,7 @@ class ExamController extends Controller
          // ActivityLog::all();
  
          
-         return view('dashboard1',compact('logs','verif'));
+         return view('prolonged/index',compact('logs','verif'));
     }
 
     /**
@@ -72,6 +72,33 @@ class ExamController extends Controller
     public function store(Request $request)
     {
         //
+        // We create a variable to define the name of the file
+        
+        $data = $request->all();
+        $folderPath = public_path('upload/');
+        $filename = date('mdYHis') . "-signature.png";
+        $file= $folderPath . $filename;
+        #create or update your data here
+        DB::table('kegiatan_log')
+        ->where('id', $request->get('id'))
+        ->update(
+            [
+            'ttdp' => $filename,
+            'status' => 1
+            ]           
+        );
+       // dd($data);
+      /*   DB::insert('insert into testdb (name,id_user) values (?,?)',[
+            $filename,
+           $request->get('id'),
+        ]); */
+        // We decode the image and store it in public folder
+        $data_uri = $request->signature;
+        
+        $encoded_image = explode(",", $data_uri)[1];
+        $decoded_image = base64_decode($encoded_image);
+        file_put_contents($file, $decoded_image);
+        return response()->json(['success'=>'Verifikasi berhasil']);
     }
 
     /**

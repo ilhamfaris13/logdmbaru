@@ -102,11 +102,15 @@
       case "Ketramplian Klinis":
       window.location="<?php echo e(url('/create_ketrampilan')); ?>";
       break;
+      case "Ujian Akhir CO-SCHAAP":
+      window.location="<?php echo e(url('/create_ujian')); ?>";
+      break;
 
 
 
       /// Can be extended to other different selections of SubCategory //////
       default:
+      window.location="<?php echo e(url('/create_kegiatan')); ?>";
       //window.location="../"; // if no selection matches then redirected to home page
       break;
       }// end of switch 

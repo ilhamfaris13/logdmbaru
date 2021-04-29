@@ -24,9 +24,11 @@
             <div class="card-body">
             <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Jenis  </label>
-                <select name="jenis" class="form-control" id="jenis">
+                <select name="jenis" class="form-control" id="jenis" onChange="SelectRedirect();" >
                 <option value="Ujian Akhir CO-SCHAAP" selected>Ujian Akhir CO-SCHAAP</option>
-                <option value="Prolonged Exam" >Prolonged Exam</option>
+                @foreach($jenis as $key => $rss)
+                  <option value="{{$rss->jenis}}" >{{$rss->jenis}}</option>
+                  @endforeach
                <!--  <option value="Tugas Jaga Ruang" >Tugas Jaga Ruang</option>
                 <option value="Keterampilan / Kegiatan di Poliklinik" >Keterampilan / Kegiatan di Poliklinik</option>
                 <option value="Unit Gawat Darurat" >Unit Gawat Darurat</option>
@@ -100,8 +102,33 @@
     </div>
     </div>
     </section>
-<script>
+    <script language="javascript">
+      function SelectRedirect(){
+      // ON selection of section this function will work
+      //alert( document.getElementById('s1').value);
 
-</script>
+      switch(document.getElementById('jenis').value)
+      {
+      case "Bimbingan Soal UKDI":
+      window.location="{{url('/create_bimbingan')}}";
+      break;
+      case "Ketramplian Klinis":
+      window.location="{{url('/create_ketrampilan')}}";
+      break;
+      case "Ujian Akhir CO-SCHAAP":
+      window.location="{{url('/create_ujian')}}";
+      break;
+
+
+
+      /// Can be extended to other different selections of SubCategory //////
+      default:
+      window.location="{{url('/create_kegiatan')}}";
+      //window.location="../"; // if no selection matches then redirected to home page
+      break;
+      }// end of switch 
+      }
+      ////////////////// 
+    </script>
 @endsection
 
