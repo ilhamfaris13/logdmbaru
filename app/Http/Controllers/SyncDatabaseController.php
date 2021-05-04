@@ -24,6 +24,19 @@ class SyncDatabaseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function selectSearch(Request $request)
+    {
+    	$icd = [];
+
+        if($request->has('q')){
+            $search = $request->q;
+            $icd =DB::table('icd')
+            ->select("KODE", "ALIAS")
+            ->where('DESKRIPSI', 'LIKE', "%$search%")
+            ->get();
+        }
+        return response()->json($icd);
+    }
     public function create(Request $request)
     {
         //

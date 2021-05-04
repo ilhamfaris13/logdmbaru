@@ -83,6 +83,7 @@ Route::post('/kegiatan/store',[SignaturePadController2::class, 'store'])->name('
 Route::post('syncdb',[SyncDatabaseController::class, 'create'])->name('sync.create');
 //Route::post('syncdb',[SyncDatabaseController::class, 'create_dosen'])->name('sync.create_dosen');
 Route::get('syncdb',[SyncDatabaseController::class, 'index']);
+Route::get('ajax-autocomplete-search', [SyncDatabaseController::class,'selectSearch']);
 /*
 | 
 |--------------------------------------------------------------------------

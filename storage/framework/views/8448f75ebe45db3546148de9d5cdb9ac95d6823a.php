@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 
 <head>
     <meta charset="utf-8">
@@ -26,16 +26,17 @@
             </div>
         </div>
     <div style="font-size: 15px; font-weight: bold" class="panel-body">
-                    @foreach ($errors->all() as $error)
-					<h4>{{ $error }}</h4>
-					@endforeach
-					@if (session('status'))
+                    <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+					<h4><?php echo e($error); ?></h4>
+					<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+					<?php if(session('status')): ?>
 					<div>
-					 {{ session('status') }}
+					 <?php echo e(session('status')); ?>
+
 					</div>
-					@endif
-          <form id="edit-form" method="POST" action="{{ route('sync.create') }}">
-                        @csrf
+					<?php endif; ?>
+          <form id="edit-form" method="POST" action="<?php echo e(route('sync.create')); ?>">
+                        <?php echo csrf_field(); ?>
             
               <div class="form-group">
               <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Syncronize DM" />
@@ -66,3 +67,4 @@
     });
 </script>
 
+<?php /**PATH C:\xampp\htdocs\log_dm\logdm\resources\views/syncdb.blade.php ENDPATH**/ ?>
