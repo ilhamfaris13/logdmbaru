@@ -15,6 +15,7 @@ use App\Http\Controllers\PenilaianController;
 use App\Http\Controllers\BimbinganController;
 use App\Http\Controllers\KetrampilanController;
 use App\Http\Controllers\UjianController;
+use App\Http\Controllers\RekmedisController;
 use App\Http\Controllers\ExamController;
 
 /*
@@ -81,6 +82,7 @@ Route::post('/kegiatan/store',[SignaturePadController2::class, 'store'])->name('
 | Sync Database Controller
 */
 Route::post('syncdb',[SyncDatabaseController::class, 'create'])->name('sync.create');
+Route::post('syncdb/multi',[SyncDatabaseController::class, 'multi'])->name('sync.multi');
 //Route::post('syncdb',[SyncDatabaseController::class, 'create_dosen'])->name('sync.create_dosen');
 Route::get('syncdb',[SyncDatabaseController::class, 'index']);
 Route::get('ajax-autocomplete-search', [SyncDatabaseController::class,'selectSearch']);
@@ -172,6 +174,20 @@ Route::post('create_prolonged',[ExamController::class, 'create'])->name('prolong
 Route::get('/prolonged/post',[ExamController::class, 'create']);
 Route::post('/prolonged/post',[ExamController::class, 'store'])->name('prolonged.store');
 Route::get('create_prolonged',[ExamController::class, 'view']);
+/*
+| 
+|--------------------------------------------------------------------------
+*/
+
+/*
+|--------------------------------------------------------------------------
+| Rekam Medis
+*/
+Route::get('rekmedis',[RekmedisController::class, 'index']);
+Route::post('create',[RekmedisController::class, 'create'])->name('rekmedis.create');
+Route::get('/rekmedis/post',[RekmedisController::class, 'create']);
+Route::post('/rekmedis/post',[RekmedisController::class, 'store'])->name('rekmedis.store');
+Route::get('/rekmedis/create',[RekmedisController::class, 'view']);
 /*
 | 
 |--------------------------------------------------------------------------

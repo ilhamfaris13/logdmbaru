@@ -15,8 +15,9 @@ class SyncDatabaseController extends Controller
      */
     public function index()
     {
-        //
-        return view('syncdb');
+        $icd = DB::table('icd')
+        ->get();
+        return view('syncdb',compact('icd'));
     }
 
     /**
@@ -24,6 +25,15 @@ class SyncDatabaseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function multi(Request $request)
+    {
+        $input = $request->all();
+        $input['cat'] = json_encode($input['cat']);
+    
+        Post::create($input);
+    
+        dd('Post created successfully.',  $request->all());
+    }
     public function selectSearch(Request $request)
     {
     	$icd = [];

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel 8 Ajax Autocomplete Dynamic Search with select2</title>
+    <title>Ajax Autocomplete Dynamic Search with select2</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
@@ -19,7 +19,7 @@
   <div class="container-fluid">
   <div class="row">
             <div class="col-md-12 text-center mt-5">
-                <h2>Laravel 8 AJAX Autocomplete Search with Select2</h2>
+                <h2>AJAX Autocomplete Search with Select2</h2>
             </div>
             <div class="col-md-8 mt-5 offset-2">
                 <select class="livesearch form-control p-3" name="livesearch"></select>
@@ -34,7 +34,7 @@
 					 {{ session('status') }}
 					</div>
 					@endif
-          <form id="edit-form" method="POST" action="{{ route('sync.create') }}">
+           <form id="edit-form" method="POST" action="{{ route('sync.create') }}">
                         @csrf
             
               <div class="form-group">
@@ -42,9 +42,44 @@
              </div>
             </div>               
         </form>
+        <form method="post" action="{{ route('sync.multi') }}" >
+            @csrf
+           
+        <table id="example2" class="table table-responsive table-bordered table-hover">
+                  <thead>
+                  
+                    <tr>
+                        <th>KODE</th>
+                        <th> ALIAS</th>
+                        <th> CEK</th>
+                        
+                    </tr>
+                  </thead>
+                  <tbody>
+                  @foreach($icd as $key => $log)
+                    <tr class="data-row">
+                    <td>{{$log->KODE}}</td>
+                    <td>{{$log->ALIAS}}</td>
+                
+                    <td><!-- This input -->
+                        <input type="checkbox" name="selected_values[]" value="{{$log->ID}}">
+                    </td>
+                    </tr>
+                    
+                    @endforeach
+                  </tbody>
+                  <tfoot>
+                  </tfoot>
+                </table>
+        <button type="submit" name="button">Get me some selected people</button>
+        </form>
     </div>
     </div>
     <script type="text/javascript">
+    
+    $(document).ready(function() {
+        $('select').selectpicker();
+    });
     $('.livesearch').select2({
         placeholder: 'Select ICD',
         ajax: {
@@ -64,5 +99,33 @@
             cache: true
         }
     });
+</script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": false,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": false,
+    });
+
+    $('#tabel1').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": false,
+    });
+    
+  });
 </script>
 
