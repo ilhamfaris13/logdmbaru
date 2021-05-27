@@ -41,6 +41,7 @@ class kegiatanController extends Controller
          ->where('kegiatan_log.id_user', '=',$userAuth->id)
          ->orWhere('kegiatan_log.id_dosen', '=',$userAuth->username)
          ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         ->orderBy('kegiatan_log.status','asc')
          ->get();
  
          $verif = DB::table('kegiatan_log')

@@ -62,9 +62,6 @@
                     <?php if( Auth::user()->level == "dosen"): ?>
                       <td class="align-middle">
                       <?php if($log->status == 0): ?>
-                       
-                        
-                        
                         <button type="button" class="btn btn-warning" id="edit-item" data-item-id="<?php echo e($log->id); ?>">Verifikasi</button>
                        
                       <?php else: ?>  
@@ -447,7 +444,7 @@
       "paging": true,
       "lengthChange": true,
       "searching": true,
-      "ordering": true,
+      "ordering": false,
       "info": true,
       "autoWidth": false,
       "responsive": false,
@@ -457,7 +454,7 @@
       "paging": true,
       "lengthChange": true,
       "searching": true,
-      "ordering": true,
+      "ordering": false,
       "info": true,
       "autoWidth": false,
       "responsive": false,

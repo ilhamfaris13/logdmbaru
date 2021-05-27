@@ -36,6 +36,7 @@ class ExamController extends Controller
          ->where('kegiatan_log.jenis', '=',"Prolonged Exam")
          ->orWhere('kegiatan_log.id_dosen', '=',$userAuth->username)
          ->where('kegiatan_log.jenis', '=',"Prolonged Exam")
+         ->orderBy('kegiatan_log.status','asc')
          ->get();
  
          $verif = DB::table('kegiatan_log')

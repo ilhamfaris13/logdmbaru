@@ -63,9 +63,6 @@
                     @if( Auth::user()->level == "dosen")
                       <td class="align-middle">
                       @if($log->status == 0)
-                       
-                        
-                        
                         <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Verifikasi</button>
                        
                       @else  
@@ -448,7 +445,7 @@
       "paging": true,
       "lengthChange": true,
       "searching": true,
-      "ordering": true,
+      "ordering": false,
       "info": true,
       "autoWidth": false,
       "responsive": false,
@@ -458,7 +455,7 @@
       "paging": true,
       "lengthChange": true,
       "searching": true,
-      "ordering": true,
+      "ordering": false,
       "info": true,
       "autoWidth": false,
       "responsive": false,

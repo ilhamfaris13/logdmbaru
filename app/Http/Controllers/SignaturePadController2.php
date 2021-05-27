@@ -33,6 +33,7 @@ class SignaturePadController2 extends Controller
          ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
          ->orWhere('kegiatan_log.id_dosen', '=',$userAuth->username)
          ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         
          ->get();
  
          $verif = DB::table('kegiatan_log')

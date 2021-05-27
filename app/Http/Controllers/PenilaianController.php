@@ -39,6 +39,7 @@ class PenilaianController extends Controller
         ->orWhere('kegiatan_log.id_dosen', '=',$userAuth->username)
         ->where('kegiatan_log.jenis', '=','Presentasi Kasus / Responsi')
         ->orwhere('kegiatan_log.jenis', '=','Karya Tulis / Referat')
+        ->orderBy('kegiatan_log.status','asc')
         ->get();
 
         $verif = DB::table('kegiatan_log')
