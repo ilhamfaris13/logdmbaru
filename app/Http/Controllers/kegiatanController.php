@@ -25,8 +25,9 @@ class kegiatanController extends Controller
         //
         $userAuth = Auth::user();
         $dosen = DB::table('users')
-        ->join('dosen','dosen.NIP','=','users.username')
-        ->select('dosen.NAMA')
+       /*  ->join('dosen','dosen.NIP','=','users.username')
+        ->select('dosen.NAMA') */
+        ->select('name as NAMA')
         ->get();
         $jenis = DB::table('table_jenis')
         ->get();

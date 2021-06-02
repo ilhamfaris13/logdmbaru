@@ -28,7 +28,6 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Presentasi Kasus/Responsi dan Karya Tulis Referat</h3>
-                
               </div>
              
               <!-- /.card-header -->

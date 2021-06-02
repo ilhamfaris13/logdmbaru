@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
-
+use DB;
 class CreateNewUser implements CreatesNewUsers
 {
     use PasswordValidationRules;
@@ -28,7 +28,14 @@ class CreateNewUser implements CreatesNewUsers
             'password' => $this->passwordRules(),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
         ])->validate();
-
+        DB::insert('insert into dosen (NAMA,NIP,NIDN,KETERANGAN,Status,RS) values (?,?,?,?,?,?)',[
+            $input['name'],
+            $input['username'],
+            $input['username'],
+            '',
+            '',
+            '',
+        ]);
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],
@@ -36,5 +43,6 @@ class CreateNewUser implements CreatesNewUsers
             'level' => $input['level'],
             'password' => Hash::make($input['password']),
         ]);
+       
     }
 }

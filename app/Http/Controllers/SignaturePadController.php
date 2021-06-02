@@ -23,10 +23,11 @@ class SignaturePadController extends Controller
     public function index()
     {
         $userAuth = Auth::user();
-       $dosen = DB::table('users')
-       ->join('dosen','dosen.NIP','=','users.username')
-       ->select('dosen.NAMA')
-       ->get();
+        $dosen = DB::table('users')
+        /*  ->join('dosen','dosen.NIP','=','users.username')
+         ->select('dosen.NAMA') */
+         ->select('name as NAMA')
+         ->get();
        $logs = DB::table('kegiatan_log')
         ->join('users','users.id','=','kegiatan_log.id_user')
         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')

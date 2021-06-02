@@ -20,9 +20,10 @@ class UjianController extends Controller
     {
         $userAuth = Auth::user();
         $dosen = DB::table('users')
-        ->join('dosen','dosen.NIP','=','users.username')
-        ->select('dosen.NAMA')
-        ->get();
+        /*  ->join('dosen','dosen.NIP','=','users.username')
+         ->select('dosen.NAMA') */
+         ->select('name as NAMA')
+         ->get();
         $logs = DB::table('ujian_akhir')
          ->join('users','users.id','=','ujian_akhir.id_user')
          ->join('rumah_sakit','rumah_sakit.id','=','ujian_akhir.rumah_sakit')

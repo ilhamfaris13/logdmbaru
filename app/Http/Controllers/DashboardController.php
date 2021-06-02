@@ -23,13 +23,14 @@ class DashboardController extends Controller
         ->where('user.nim_profesi_dokter', '=',$userAuth->username)
         ->get();*/
         if($userAuth->level == 'dm'){
-            $user=DB::table('users')
+        $user=DB::table('users')
         ->join('user','users.username','=','user.User')
         ->select('users.*','user.kelompok','user.nama')
         ->where('user.User', '=',$userAuth->username)
         ->get();
         return view('dashboard',compact('user'));
-        } elseif($userAuth->level =='dosen') {
+        } 
+        elseif($userAuth->level =='dosen') {
         $user=DB::table('users')
         ->join('dosen','dosen.nip','=','users.username')
         ->select('dosen.nip','dosen.nidn')
