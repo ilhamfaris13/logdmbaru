@@ -38,6 +38,15 @@ class DashboardController extends Controller
         ->get();
         return view('dashboard',compact('user'));
         }
+        elseif($userAuth->level =='admin') {
+            $user=DB::table('users')
+            ->where('username', '=',$userAuth->username)
+            ->get();
+            $user2=DB::table('users')
+            //->where('username', '=',$userAuth->username)
+            ->get();
+            return view('admindashboard',compact('user','user2'));
+        }
         
     }
 }

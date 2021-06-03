@@ -30,9 +30,7 @@
                     <b>Kelompok</b> <a class="float-right">{{$users->kelompok}}</a>
                   </li>
                   @else
-                  <li class="list-group-item">
-                    <b>NIDN</b> <a class="float-right">{{$users->nidn}}</a>
-                  </li>
+               
                   @endif
                   
                 </ul>

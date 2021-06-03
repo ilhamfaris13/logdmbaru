@@ -112,6 +112,7 @@
             </a>
           </li>
           <li class="nav-item ">
+         
           <?php if( Auth::user()->level == "dosen"): ?>
             <a href="<?php echo e(url('/kegiatan')); ?>" class="nav-link">
             <?php else: ?>
@@ -126,7 +127,6 @@
           </li>
           <!-- PENILAIAN -->
           <?php if( Auth::user()->level == "dm"): ?>
-         
             <li class="nav-item">
             <a href="<?php echo e(url('/bimbingan')); ?>" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
@@ -169,6 +169,7 @@
           </li>
           <?php endif; ?>
           <!-- /PENILIAIAN -->
+         
           <li class="nav-item ">
             <a href="<?php echo e(url('/panduan')); ?>" class="nav-link">
               <i class="nav-icon fa fa-book"></i>

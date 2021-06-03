@@ -17,6 +17,7 @@ use App\Http\Controllers\KetrampilanController;
 use App\Http\Controllers\UjianController;
 use App\Http\Controllers\RekmedisController;
 use App\Http\Controllers\ExamController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -162,7 +163,20 @@ Route::get('create_ujian',[UjianController::class, 'view']);
 | 
 |--------------------------------------------------------------------------
 */
-
+/*
+|--------------------------------------------------------------------------
+| Ujian
+*/
+Route::get('admin', [AdminController::class, 'index']);
+//Route::get('register', [AdminController::class, 'index']);
+Route::post('create_user',[AdminController::class, 'create'])->name('user.create');
+Route::get('/admin/post',[AdminController::class, 'create']);
+Route::post('/admin/post',[AdminController::class, 'store'])->name('user.store');
+Route::get('create_user',[AdminController::class, 'view']);
+/*
+| 
+|--------------------------------------------------------------------------
+*/
 /*
 
 /*

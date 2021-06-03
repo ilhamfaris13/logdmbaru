@@ -28,9 +28,7 @@
                     <b>Kelompok</b> <a class="float-right"><?php echo e($users->kelompok); ?></a>
                   </li>
                   <?php else: ?>
-                  <li class="list-group-item">
-                    <b>NIDN</b> <a class="float-right"><?php echo e($users->nidn); ?></a>
-                  </li>
+               
                   <?php endif; ?>
                   
                 </ul>

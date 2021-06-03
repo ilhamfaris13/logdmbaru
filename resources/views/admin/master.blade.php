@@ -111,6 +111,7 @@
             </a>
           </li>
           <li class="nav-item ">
+         
           @if( Auth::user()->level == "dosen")
             <a href="{{url('/kegiatan')}}" class="nav-link">
             @else
@@ -125,7 +126,6 @@
           </li>
           <!-- PENILAIAN -->
           @if( Auth::user()->level == "dm")
-         
             <li class="nav-item">
             <a href="{{url('/bimbingan')}}" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
@@ -168,6 +168,7 @@
           </li>
           @endif
           <!-- /PENILIAIAN -->
+         
           <li class="nav-item ">
             <a href="{{url('/panduan')}}" class="nav-link">
               <i class="nav-icon fa fa-book"></i>
