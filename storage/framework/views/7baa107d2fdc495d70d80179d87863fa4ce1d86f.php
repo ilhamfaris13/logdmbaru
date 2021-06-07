@@ -62,7 +62,7 @@
     <tr>
       <td rowspan="2"><img style="width: 150px; border-radius: 75px; border: 2px solid white; margin: 0px 20px"class=""
         src="storage/<?php echo e(Auth::user()->profile_photo_path); ?>"
-         height="170px" width="150px" alt="Avatar"></td>
+           alt="Avatar"></td>
          <td style="margin: 0px 20px;" rowspan="2">
          <!-- <td rowspan="2"><img style="width: 150px; border-radius: 75px; border: 2px solid white;" class=""
         src="<?php echo e(public_path('storage/'.Auth::user()->profile_photo_path.'')); ?>"
@@ -769,7 +769,7 @@
                       <th> PEMBIMBING 1</th>
                       <th> PEMBIMBING 2</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      
                       
                      
                     </tr>
@@ -802,16 +802,7 @@
                         <?php echo e($log->dosen2); ?></td>
                         
                         <td ><?php echo e(date('d-m-Y', strtotime($log->tanggal))); ?></td>
-                        <td >
-                            <span>
-                            <img src="<?php echo e(public_path('upload/'.$log->ttd_penguji_1.'')); ?>" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            <?php echo e($log->dosen1); ?>
-
-                        </span>
-                        </td>
+                       
                           
                          
         

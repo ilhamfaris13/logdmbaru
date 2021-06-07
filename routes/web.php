@@ -172,6 +172,7 @@ Route::get('admin', [AdminController::class, 'index']);
 Route::post('create_user',[AdminController::class, 'create'])->name('user.create');
 Route::get('/admin/post',[AdminController::class, 'create']);
 Route::post('/admin/post',[AdminController::class, 'store'])->name('user.store');
+Route::get('/admin/delete/{id}',[AdminController::class, 'destroy'])->name('admin.delete');
 Route::get('create_user',[AdminController::class, 'view']);
 /*
 | 

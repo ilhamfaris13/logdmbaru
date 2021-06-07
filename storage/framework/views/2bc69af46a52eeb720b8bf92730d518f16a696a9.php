@@ -57,12 +57,12 @@
                     </tr>
                   </thead>
                   <tbody>
-                  <?php $__currentLoopData = $user2; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <?php $__currentLoopData = $logs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr class="data-row">
                    
-                    <td class="align-middle "><?php echo e($log->name); ?></td>
+                    <td class="align-middle "><?php echo e($log->nama); ?></td>
                     <td class="align-middle word-break "><?php echo e($log->username); ?></td>
-                    <td class="align-middle word-break "><?php echo e($log->level); ?></td>
+                    <td class="align-middle word-break "><?php echo e($log->tanggal); ?></td>
                   
                     </tr>
                     
@@ -96,11 +96,11 @@
 
     $('#tabel1').DataTable({
       "paging": true,
-      "lengthChange": true,
+      "lengthChange": false,
       "searching": true,
       "ordering": false,
       "info": true,
-      "autoWidth": false,
+      "autoWidth": true,
       "responsive": false,
     });
     
