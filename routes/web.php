@@ -168,8 +168,11 @@ Route::get('create_ujian',[UjianController::class, 'view']);
 | Ujian
 */
 Route::get('admin', [AdminController::class, 'index']);
+Route::get('admin/edit/{id}', [AdminController::class, 'show']);
 //Route::get('register', [AdminController::class, 'index']);
-Route::post('create_user',[AdminController::class, 'create'])->name('user.create');
+Route::post('create_user',[AdminController::class, 'create'])->name('admin.create');
+Route::post('edit_user',[AdminController::class, 'edit'])->name('admin.edit');
+Route::post('reset_user',[AdminController::class, 'reset'])->name('admin.reset');
 Route::get('/admin/post',[AdminController::class, 'create']);
 Route::post('/admin/post',[AdminController::class, 'store'])->name('user.store');
 Route::get('/admin/delete/{id}',[AdminController::class, 'destroy'])->name('admin.delete');

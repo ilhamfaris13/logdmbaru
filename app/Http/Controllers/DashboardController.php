@@ -44,6 +44,7 @@ class DashboardController extends Controller
             ->get();
             $user2=DB::table('users')
             //->where('username', '=',$userAuth->username)
+            ->orderBy('id','desc')
             ->get();
             $logs = DB::table('kegiatan_log')
             ->join('users','users.id','=','kegiatan_log.id_user')

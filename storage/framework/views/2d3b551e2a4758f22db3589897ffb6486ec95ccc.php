@@ -15,7 +15,7 @@
                   
                   <tr>
                     <th> NAMA</th>
-                    <th> USERNAME</th>
+                    <th> LEVEL</th>
                     
                     <th> UBAH</th>
                   </tr>
@@ -25,12 +25,11 @@
                     <tr class="data-row">
                    
                     <td class="align-middle "><?php echo e($log->name); ?></td>
-                    <td class="align-middle word-break "><?php echo e($log->level); ?></td>
-                   
+                    <td class="align-middle word-break" style="text-transform: capitalize;"><?php echo e($log->level); ?></td>
                     <td class="align-middle">
-                    <a class="btn btn-primary btn-sm"><i class="far fa-eye"></i></a>
+                    <a class="btn btn-primary btn-sm" href="admin/edit/<?php echo e($log->id); ?>" target="_blank"><i class="far fa-eye"></i></a>
                     <a class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
-                    <a class="btn btn-danger btn-sm" href="/admin/delete/<?php echo e($log->id); ?>"><i class="far fa-trash-alt"></i></a>
+                    
                     </td>
                   
                     </tr>
@@ -45,29 +44,34 @@
                 <h3 class="card-title">Tambah User</h3>
             </div>
             <div class="card-body">
-            <form >
+            <form method="POST" action="<?php echo e(route('admin.create')); ?>" >
+            <?php echo csrf_field(); ?>
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Username </label>
+                    <label class="col-form-label" for="modal-input-username">Username </label>
                     <input type="text" name="username" class="form-control" id="username" required>
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Nama </label>
+                    <label class="col-form-label" for="modal-input-nama">Nama </label>
                     <input type="text" name="nama" class="form-control" id="nama" required>
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Email </label>
+                    <label class="col-form-label" for="modal-input-email">Email </label>
                     <input type="email" name="email" class="form-control" id="email" required>
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Level</label>
-                    <input type="text" name="level" class="form-control" id="level" required>
+                    <label class="col-form-label" for="modal-input-level">Level</label>
+                    <select name="level" class="form-control" id="level">
+                    <option value="admin" >Admin</option>
+                    <option value="dosen" >Dosen/Dokter</option>
+                    <option value="dm" >Dokter Muda</option>
+                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Password</label>
+                    <label class="col-form-label" for="modal-input-password">Password</label>
                     <input type="password" name="password" class="form-control" id="password" required>
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Confirm Password</label>
+                    <label class="col-form-label" for="modal-input-cpassword">Confirm Password</label>
                     <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" required>
                 </div>
                 <div class="form-group">
@@ -85,7 +89,7 @@
                 <h3 class="card-title">Daftar Kegiatan DM</h3>
             </div>
             <div class="card-body">
-            <table id="example1" class="table table-bordered table-hover">
+            <table id="example2" class="table table-bordered table-hover">
                 <thead>
                   
                   <tr>
@@ -105,7 +109,7 @@
                     <td class="align-middle">
                     <a class="btn btn-primary btn-sm"><i class="far fa-eye"></i></a>
                     <a class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
-                    <a class="btn btn-danger btn-sm" href="/admin/delete/<?php echo e($log->id); ?>"><i class="far fa-trash-alt"></i></a>
+                    <a class="btn btn-danger btn-sm" href="/admin/delete/<?php echo e($log->id); ?>" ><i class="far fa-trash-alt"></i></a>
                     </td>
                   
                     </tr>
@@ -155,4 +159,4 @@
 <?php $__env->stopSection(); ?>
 
 
-<?php echo $__env->make('admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\log_dm\logdm\resources\views/admin/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('admin.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\log_dm\logdm\resources\views/admin/index.blade.php ENDPATH**/ ?>

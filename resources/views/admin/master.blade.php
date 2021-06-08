@@ -198,7 +198,50 @@
     <div class="alert alert-success alert-dismissible">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
     <h4><i class="icon fa fa-check"></i>Berhasil</h4>
+    <hr>
+    <p class="mb-0">
     {!! session('success') !!}
+    </p>
+    </div>
+    @endif
+    @if (session('failed'))
+    <div class="alert alert-danger alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4><i class="icon fa fa-times-circle"></i>Gagal</h4>
+    <hr>
+    <p class="mb-0">
+    {!! session('failed') !!}
+    </p>
+    </div>
+    @endif
+    @if (session('delete'))
+    <div class="alert alert-danger alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4><i class="icon fa fa-times-circle"></i>Sukses Menghapus Data</h4>
+    <hr>
+    <p class="mb-0">
+    {!! session('delete') !!}
+    </p>
+    </div>
+    @endif
+    @if (session('warning'))
+    <div class="alert alert-warning alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4><i class="icon fa fa-exclamation-triangle"></i>Peringatan</h4>
+    <hr>
+    <p class="mb-0">
+    {!! session('warning') !!}
+    </p>
+    </div>
+    @endif
+    @if (session('info'))
+    <div class="alert alert-info alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4><i class="icon fa fa-check"></i>Perhatian</h4>
+    <hr>
+    <p class="mb-0">
+    {!! session('info') !!}
+    </p>
     </div>
     @endif
     </section>

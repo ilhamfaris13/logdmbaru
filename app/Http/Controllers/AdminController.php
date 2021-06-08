@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 class AdminController extends Controller
 {
@@ -15,6 +16,7 @@ class AdminController extends Controller
     public function index()
     {
         $user2 = DB::table('users')
+        ->orderBy('id','desc')
         ->get();
         $logs = DB::table('kegiatan_log')
          ->join('users','users.id','=','kegiatan_log.id_user')
@@ -35,9 +37,20 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        //$user = Auth::user();
+        
+        DB::insert('insert into users (name,username,email,password,level) values (?,?,?,?,?)',[
+            $request->get('nama'),
+            $request->get('username'),
+            $request->get('email'),
+            Hash::make($request->get('password')),
+            $request->get('level'),
+            
+        ]);
+       // return back()->with('success', 'success Full upload signature');
+       return redirect()->back()->with('success', 'Berhasil Menambah User ');
     }
 
     /**
@@ -59,7 +72,22 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        //
+        $user2 = DB::table('users')
+        ->where('id','=', $id)
+        ->get();
+        //dd($user2);
+        $logs = DB::table('kegiatan_log')
+         ->join('users','users.id','=','kegiatan_log.id_user')
+         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+         ->join('stase','stase.id','=','kegiatan_log.stase')
+         ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+         ->where('kegiatan_log.status', '=',0)
+         //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         ->orderBy('kegiatan_log.status','asc')
+         ->get();
+        return view('admin.edit',compact('user2','logs'));
     }
 
     /**
@@ -68,9 +96,31 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        DB::table('users')
+        ->where('id', $request->get('id'))
+        ->update(
+            [
+            'name' => $request->get('nama'),
+            'username' => $request->get('username'),
+            'email' => $request->get('email'),
+            'level' => $request->get('level')
+            ]  );    
+       // return back()->with('success', 'success Full upload signature');
+       return redirect('admin')->with('success', 'Berhasil Merubah User ');
+    }
+    public function reset(Request $request)
+    {
+        //dd($request);
+        DB::table('users')
+        ->where('id', $request->get('id'))
+        ->update(
+            [
+            'password' => Hash::make($request->get('username'))
+            ]  );    
+       // return back()->with('success', 'success Full upload signature');
+       return redirect('admin')->with('success', 'Berhasil Reset Password ');
     }
 
     /**

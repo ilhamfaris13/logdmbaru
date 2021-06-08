@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('admin.app')
 @section('content')
 <section class="content">
 <div class="container-fluid">
@@ -15,7 +15,7 @@
                   
                   <tr>
                     <th> NAMA</th>
-                    <th> USERNAME</th>
+                    <th> LEVEL</th>
                     
                     <th> UBAH</th>
                   </tr>
@@ -25,12 +25,11 @@
                     <tr class="data-row">
                    
                     <td class="align-middle ">{{ $log->name }}</td>
-                    <td class="align-middle word-break ">{{ $log->level }}</td>
-                   
+                    <td class="align-middle word-break" style="text-transform: capitalize;">{{ $log->level }}</td>
                     <td class="align-middle">
-                    <a class="btn btn-primary btn-sm"><i class="far fa-eye"></i></a>
+                    <a class="btn btn-primary btn-sm" href="admin/edit/{{$log->id}}" target="_blank"><i class="far fa-eye"></i></a>
                     <a class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
-                    <a class="btn btn-danger btn-sm" href="/admin/delete/{{ $log->id }}"><i class="far fa-trash-alt"></i></a>
+                    
                     </td>
                   
                     </tr>
@@ -45,29 +44,34 @@
                 <h3 class="card-title">Tambah User</h3>
             </div>
             <div class="card-body">
-            <form >
+            <form method="POST" action="{{ route('admin.create') }}" >
+            @csrf
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Username </label>
+                    <label class="col-form-label" for="modal-input-username">Username </label>
                     <input type="text" name="username" class="form-control" id="username" required>
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Nama </label>
+                    <label class="col-form-label" for="modal-input-nama">Nama </label>
                     <input type="text" name="nama" class="form-control" id="nama" required>
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Email </label>
+                    <label class="col-form-label" for="modal-input-email">Email </label>
                     <input type="email" name="email" class="form-control" id="email" required>
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Level</label>
-                    <input type="text" name="level" class="form-control" id="level" required>
+                    <label class="col-form-label" for="modal-input-level">Level</label>
+                    <select name="level" class="form-control" id="level">
+                    <option value="admin" >Admin</option>
+                    <option value="dosen" >Dosen/Dokter</option>
+                    <option value="dm" >Dokter Muda</option>
+                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Password</label>
+                    <label class="col-form-label" for="modal-input-password">Password</label>
                     <input type="password" name="password" class="form-control" id="password" required>
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label" for="modal-input-id">Confirm Password</label>
+                    <label class="col-form-label" for="modal-input-cpassword">Confirm Password</label>
                     <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" required>
                 </div>
                 <div class="form-group">
@@ -105,7 +109,7 @@
                     <td class="align-middle">
                     <a class="btn btn-primary btn-sm"><i class="far fa-eye"></i></a>
                     <a class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
-                    <a class="btn btn-danger btn-sm" href="/admin/delete/{{ $log->id }}"><i class="far fa-trash-alt"></i></a>
+                    <a class="btn btn-danger btn-sm" href="/admin/delete/{{ $log->id }}" ><i class="far fa-trash-alt"></i></a>
                     </td>
                   
                     </tr>
