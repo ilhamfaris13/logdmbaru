@@ -28,7 +28,12 @@ class DashboardController extends Controller
         ->select('users.*','user.kelompok','user.nama')
         ->where('user.User', '=',$userAuth->username)
         ->get();
-        return view('dashboard',compact('user'));
+        $mata=DB::table('mata')
+        ->where('Id_User', '=',$userAuth->id)
+        //->where('username', '=',$userAuth->username)
+        ->orderBy('id_mata','desc')
+        ->get();
+        return view('dashboard',compact('user','mata'));
         } 
         elseif($userAuth->level =='dosen') {
         $user=DB::table('users')
@@ -46,6 +51,10 @@ class DashboardController extends Controller
             //->where('username', '=',$userAuth->username)
             ->orderBy('id','desc')
             ->get();
+            $mata=DB::table('mata')
+            //->where('username', '=',$userAuth->username)
+            ->orderBy('id','desc')
+            ->get();
             $logs = DB::table('kegiatan_log')
             ->join('users','users.id','=','kegiatan_log.id_user')
             ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
@@ -57,7 +66,7 @@ class DashboardController extends Controller
             ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
             ->orderBy('kegiatan_log.status','asc')
             ->get();
-            return view('/admin/index',compact('user','user2','logs'));
+            return view('/admin/index',compact('user','user2','logs','mata'));
         }
         
     }

@@ -29,6 +29,13 @@
                   <li class="list-group-item">
                     <b>Kelompok</b> <a class="float-right">{{$users->kelompok}}</a>
                   </li>
+                  @foreach($mata as $key => $matas)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$matas->Keluhan_Utama}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://localhost:8086/mata_view.php?editid1={{$matas->Id_Mata}}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>
+                  
+                  @endforeach
                   @else
                
                   @endif

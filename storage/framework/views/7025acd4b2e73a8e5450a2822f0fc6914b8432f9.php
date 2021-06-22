@@ -199,8 +199,55 @@
     <div class="alert alert-success alert-dismissible">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
     <h4><i class="icon fa fa-check"></i>Berhasil</h4>
+    <hr>
+    <p class="mb-0">
     <?php echo session('success'); ?>
 
+    </p>
+    </div>
+    <?php endif; ?>
+    <?php if(session('failed')): ?>
+    <div class="alert alert-danger alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4><i class="icon fa fa-times-circle"></i>Gagal</h4>
+    <hr>
+    <p class="mb-0">
+    <?php echo session('failed'); ?>
+
+    </p>
+    </div>
+    <?php endif; ?>
+    <?php if(session('delete')): ?>
+    <div class="alert alert-danger alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4><i class="icon fa fa-times-circle"></i>Sukses Menghapus Data</h4>
+    <hr>
+    <p class="mb-0">
+    <?php echo session('delete'); ?>
+
+    </p>
+    </div>
+    <?php endif; ?>
+    <?php if(session('warning')): ?>
+    <div class="alert alert-warning alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4><i class="icon fa fa-exclamation-triangle"></i>Peringatan</h4>
+    <hr>
+    <p class="mb-0">
+    <?php echo session('warning'); ?>
+
+    </p>
+    </div>
+    <?php endif; ?>
+    <?php if(session('info')): ?>
+    <div class="alert alert-info alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4><i class="icon fa fa-check"></i>Perhatian</h4>
+    <hr>
+    <p class="mb-0">
+    <?php echo session('info'); ?>
+
+    </p>
     </div>
     <?php endif; ?>
     </section>

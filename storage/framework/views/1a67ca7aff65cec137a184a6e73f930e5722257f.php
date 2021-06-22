@@ -27,6 +27,13 @@
                   <li class="list-group-item">
                     <b>Kelompok</b> <a class="float-right"><?php echo e($users->kelompok); ?></a>
                   </li>
+                  <?php $__currentLoopData = $mata; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $matas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($matas->Keluhan_Utama); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://localhost:8086/mata_view.php?editid1=<?php echo e($matas->Id_Mata); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>
+                  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                   <?php else: ?>
                
                   <?php endif; ?>
