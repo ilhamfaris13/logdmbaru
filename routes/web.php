@@ -206,11 +206,12 @@ Route::post('create',[RekmedisController::class, 'create'])->name('rekmedis.crea
 Route::get('/rekmedis/post',[RekmedisController::class, 'create']);
 Route::post('/rekmedis/post',[RekmedisController::class, 'store'])->name('rekmedis.store');
 Route::get('/rekmedis/create',[RekmedisController::class, 'view']);
+Route::post('redirect_rm',[RekmedisController::class, 'Redirect'])->name('rm.redirect');
 /*
 | 
 |--------------------------------------------------------------------------
 */
-
+Route::post('redirect_rm',[RekmedisController::class, 'Redirect'])->name('rm.redirect');
 /*
 
 

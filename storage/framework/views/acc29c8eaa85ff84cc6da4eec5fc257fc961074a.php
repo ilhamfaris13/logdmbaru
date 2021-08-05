@@ -40,6 +40,11 @@
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Tempat / Tindakan / Kasus </label>
                 <input type="text" name="tempat" class="form-control" id="tempat" required>
+              <!--   <select name="tempat" class="form-control" id="tempat">
+                <?php $__currentLoopData = $mata; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $matas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <option value="<?php echo e($matas->Id_Mata); ?>" ><?php echo e($matas->Nomor_Rm); ?></option>
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </select> -->
               </div>
               <!-- /id -->
               <!-- name -->

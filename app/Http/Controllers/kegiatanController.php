@@ -56,8 +56,12 @@ class kegiatanController extends Controller
          ->get();
          // ActivityLog::all();
  
-         
-         return view('/kegiatan/index',compact('logs','verif','jenis'));
+         $mata=DB::table('mata')
+         ->where('Id_User', '=',$userAuth->id)
+         //->where('username', '=',$userAuth->username)
+         ->orderBy('Id_Mata','desc')
+         ->get();
+         return view('/kegiatan/index',compact('logs','verif','jenis','mata'));
     }
     
 
@@ -69,6 +73,7 @@ class kegiatanController extends Controller
     public function view()
     {
         //
+        $userAuth = Auth::user();
         $logs = DB::table('kegiatan_log')
         ->get();
         $rs = DB::table('rumah_sakit')
@@ -79,9 +84,14 @@ class kegiatanController extends Controller
         ->get();
         $jenis = DB::table('table_jenis')
         ->get();
+        $mata=DB::table('mata')
+        ->where('Id_User', '=',$userAuth->id)
+        //->where('username', '=',$userAuth->username)
+        ->orderBy('Id_Mata','desc')
+        ->get();
         //dd(count($dosen));
         // ActivityLog::all();
-        return view('/kegiatan/create_kegiatan',compact('logs','rs','stase','dosen','jenis'));
+        return view('/kegiatan/create_kegiatan',compact('logs','rs','stase','dosen','jenis','mata'));
     }
     public function create(Request $request)
     {

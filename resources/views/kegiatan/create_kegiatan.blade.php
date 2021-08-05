@@ -41,6 +41,11 @@
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Tempat / Tindakan / Kasus </label>
                 <input type="text" name="tempat" class="form-control" id="tempat" required>
+              <!--   <select name="tempat" class="form-control" id="tempat">
+                @foreach($mata as $key => $matas)
+                  <option value="{{$matas->Id_Mata}}" >{{$matas->Nomor_Rm}}</option>
+                  @endforeach
+                </select> -->
               </div>
               <!-- /id -->
               <!-- name -->
