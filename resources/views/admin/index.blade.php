@@ -2,8 +2,11 @@
 @section('content')
 <section class="content">
 <div class="container-fluid">
+  <!-- ROW 1 -->
   <div class="row">
+    <!-- COL 1 -->
   <div class="col-6 col-md-6">
+    <!-- COL1-CARD 1 -->
   <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Daftar User</h3>
@@ -14,6 +17,7 @@
                 <thead>
                   
                   <tr>
+                  <th> NIM</th>
                     <th> NAMA</th>
                     <th> LEVEL</th>
                     
@@ -23,7 +27,7 @@
                 <tbody>
                   @foreach($user2 as $key => $log)
                     <tr class="data-row">
-                   
+                    <td class="align-middle ">{{ $log->username }}</td>
                     <td class="align-middle ">{{ $log->name }}</td>
                     <td class="align-middle word-break" style="text-transform: capitalize;">{{ $log->level }}</td>
                     <td class="align-middle">
@@ -39,6 +43,8 @@
             </table>
             </div>
         </div>
+        <!-- END COL1-CARD 1 -->
+        <!-- COL1-CARD 2 -->
     <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Tambah User</h3>
@@ -61,6 +67,7 @@
                 <div class="form-group">
                     <label class="col-form-label" for="modal-input-level">Level</label>
                     <select name="level" class="form-control" id="level">
+                    <option value="" disabled selected>Pilih</option>
                     <option value="admin" >Admin</option>
                     <option value="dosen" >Dosen/Dokter</option>
                     <option value="dm" >Dokter Muda</option>
@@ -80,14 +87,15 @@
             </form>
             </div>
         </div>
-        
+        <!-- END COL1-CARD 2 -->
     </div>
-   
+   <!-- COL 2 -->
     <div class="col-6 col-md-6">
+      <!-- COL 2- CARD 1 -->
     <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Daftar Kegiatan DM</h3>
-            </div>
+        <div class="card-header">
+            <h3 class="card-title">Daftar Kegiatan DM</h3>
+        </div>
             <div class="card-body">
             <table id="example2" class="table table-bordered table-hover">
                 <thead>
@@ -119,6 +127,24 @@
             </table>
             </div>
         </div>
+        <!-- END COL 2- CARD 1 -->
+        <!-- COL 2- CARD 2 -->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Sinkron Database</h3>
+        </div>
+            <div class="card-body">
+            <form id="edit-form" method="POST" action="{{ route('sync.create') }}">
+                        @csrf
+            
+              <div class="form-group">
+              <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Syncronize DM" />
+             </div>
+            </div>               
+        </form>
+            </div>
+        </div>
+        <!-- END COL 2- CARD 1 -->
     </div>
     
   </div>

@@ -56,12 +56,8 @@ class kegiatanController extends Controller
          ->get();
          // ActivityLog::all();
  
-         $mata=DB::table('mata')
-         ->where('Id_User', '=',$userAuth->id)
-         //->where('username', '=',$userAuth->username)
-         ->orderBy('Id_Mata','desc')
-         ->get();
-         return view('/kegiatan/index',compact('logs','verif','jenis','mata'));
+         
+         return view('/kegiatan/index',compact('logs','verif','jenis'));
     }
     
 

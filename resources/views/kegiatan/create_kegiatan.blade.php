@@ -43,7 +43,7 @@
                 <input type="text" name="tempat" class="form-control" id="tempat" required>
               <!--   <select name="tempat" class="form-control" id="tempat">
                 @foreach($mata as $key => $matas)
-                  <option value="{{$matas->Id_Mata}}" >{{$matas->Nomor_Rm}}</option>
+                  <option value="{{$matas->Nomor_Rm}}" >{{$matas->Nomor_Rm}}</option>
                   @endforeach
                 </select> -->
               </div>

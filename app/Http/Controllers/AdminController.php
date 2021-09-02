@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Auth;
 class AdminController extends Controller
 {
     /**
@@ -15,8 +16,14 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $user2 = DB::table('users')
-        ->orderBy('id','desc')
+        $userAuth = Auth::user();
+        if($userAuth->level == 'dm'){
+            abort(403, 'Unauthorized action.');
+        } elseif($userAuth->level == 'dosen'){
+            abort(403, 'Unauthorized action.');
+        } elseif($userAuth->level == 'admin'){
+            $user2 = DB::table('users')
+        ->orderBy('id','asc')
         ->get();
         $logs = DB::table('kegiatan_log')
          ->join('users','users.id','=','kegiatan_log.id_user')
@@ -30,6 +37,9 @@ class AdminController extends Controller
          ->orderBy('kegiatan_log.status','asc')
          ->get();
         return view('admin.index',compact('user2','logs'));
+        } else{
+            abort(403, 'Tidak Diizinkan');
+        }
     }
 
     /**

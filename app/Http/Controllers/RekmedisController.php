@@ -19,8 +19,7 @@ class RekmedisController extends Controller
     public function index()
     {
         //
-        $userAuth = Auth::user();
-        return view('rm_view');
+        return view('/rekmedis/index');
     }
 
     /**
@@ -31,18 +30,6 @@ class RekmedisController extends Controller
     public function create(Request $request)
     {
         dd($request);
-    }
-    public function Redirect(Request $request)
-    {
-        //dd($request);
-        $userAuth = Auth::user();
-        $mata=DB::table('mata')
-         ->where('Nomor_Rm', '=',$request->rm)
-         //->where('username', '=',$userAuth->username)
-         ->orderBy('Id_Mata','desc')
-         ->first();
-         //dd($mata->Id_Mata);
-         return Redirect::to('http://localhost/new_test/output/mata1_view.php?editid1='.$mata->Id_Mata.'&');
     }
     public function view()
     {

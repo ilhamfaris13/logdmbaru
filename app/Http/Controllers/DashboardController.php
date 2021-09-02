@@ -24,9 +24,9 @@ class DashboardController extends Controller
         ->get();*/
         if($userAuth->level == 'dm'){
         $user=DB::table('users')
-        ->join('user','users.username','=','user.User')
-        ->select('users.*','user.kelompok','user.nama')
-        ->where('user.User', '=',$userAuth->username)
+        ->join('dm','users.username','=','dm.nim_profesi_dokter')
+        ->select('users.*','dm.kelompok','dm.NAMA')
+        ->where('dm.nim_profesi_dokter', '=',$userAuth->username)
         ->get();
         $mata=DB::table('mata')
         ->where('Id_User', '=',$userAuth->id)
@@ -44,29 +44,24 @@ class DashboardController extends Controller
         return view('dashboard',compact('user'));
         }
         elseif($userAuth->level =='admin') {
-            $user=DB::table('users')
-            ->where('username', '=',$userAuth->username)
-            ->get();
-            $user2=DB::table('users')
-            //->where('username', '=',$userAuth->username)
-            ->orderBy('id','desc')
-            ->get();
-            $mata=DB::table('mata')
-            //->where('username', '=',$userAuth->username)
-            ->orderBy('id','desc')
-            ->get();
-            $logs = DB::table('kegiatan_log')
-            ->join('users','users.id','=','kegiatan_log.id_user')
-            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
-            ->join('stase','stase.id','=','kegiatan_log.stase')
-            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
-            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
-            ->where('kegiatan_log.status', '=',0)
-            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
-            ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
-            ->orderBy('kegiatan_log.status','asc')
-            ->get();
-            return view('/admin/index',compact('user','user2','logs','mata'));
+            $user2 = DB::table('users')
+        ->orderBy('id','desc')
+        ->get();
+        $logs = DB::table('kegiatan_log')
+         ->join('users','users.id','=','kegiatan_log.id_user')
+         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+         ->join('stase','stase.id','=','kegiatan_log.stase')
+         ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+         ->where('kegiatan_log.status', '=',0)
+         //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         ->orderBy('kegiatan_log.status','asc')
+         ->get();
+        return view('admin.index',compact('user2','logs'));
+        }
+        else{
+            abort(403, 'Tidak Diizinkan');
         }
         
     }
