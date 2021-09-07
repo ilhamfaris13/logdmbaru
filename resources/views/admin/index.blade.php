@@ -138,7 +138,15 @@
                         @csrf
             
               <div class="form-group">
-              <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Syncronize DM" />
+              <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Sinkron User DM" />
+             </div>
+                      
+        </form>
+        <form id="edit-form" method="POST" action="{{ route('sync.create_dosen') }}">
+                        @csrf
+            
+              <div class="form-group">
+              <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Sinkron User Dosen/Dokter" />
              </div>
             </div>               
         </form>

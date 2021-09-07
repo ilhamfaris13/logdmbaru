@@ -75,7 +75,8 @@ class SyncDatabaseController extends Controller
                  'username' => $u->nim_profesi_dokter,
                  'email' => $u->nim_profesi_dokter . '@hangtuah.ac.id',
                  'password' => Hash::make($u->nim_profesi_dokter),
-                 'level' => 'dm']
+                 'level' => 'dm',
+                 'profile_photo_path' => 'default.png']
                  
               ];
               DB::table('users')->insertOrIgnore($array);
@@ -94,39 +95,49 @@ class SyncDatabaseController extends Controller
     }
     public function create_dosen(Request $request)
     {
-        //
         $old_users = Dm::get();
-        //$old_users2 = DB::table('user')->get();
+        $old_users2 = DB::table('dm')->get();
         $old_users3 = DB::table('dosen')->get();
-        dd($old_users3);
-        foreach ($old_users3 as $u){
+        //dd($old_users3);
+        /*foreach ($old_users3 as $u){
             //echo $u->NAMA;
             //dd($u->NIM_Profesi_Dokter);
             DB::insert('insert into users (name,username,email,password,level) values (?,?,?,?,?)',[
                 $u->NAMA,
-                $u->User,
-                $u->User . '@gmail.com',
-                Hash::make($u->User),
-                'dm' 
-
-                
-            ]);
-        }
-        /*foreach ($old_users2 as $u){
-            //echo $u->NAMA;
-            //dd($u->NIM_Profesi_Dokter);
-            DB::insert('insert into users (name,username,email,password,level) values (?,?,?,?,?)',[
-                $u->NAMA,
-                $u->User,
-                $u->User . '@gmail.com',
-                Hash::make($u->User),
-                'dm' 
+                $u->NIP,
+                $u->NIP . '@gmail.com',
+                Hash::make($u->NIP),
+                'dosen' 
 
                 
             ]);
         }*/
+        foreach ($old_users3 as $u){
+            //echo $u->NAMA;
+            //dd($u->NIM_Profesi_Dokter);
+            $array = [
+                ['name' => $u->NAMA,
+                 'username' => $u->NIP,
+                 'email' => $u->NIP . '@hangtuah.ac.id',
+                 'password' => Hash::make($u->NIP),
+                 'level' => 'dosen',
+                 'profile_photo_path' => 'default.png'
+                 ]
+                 
+              ];
+              DB::table('users')->insertOrIgnore($array);
+            /* DB::insertOrIgnore('insert into users (name,username,email,password,level) values (?,?,?,?,?)',[
+                $u->NAMA,
+                $u->nim_profesi_dokter,
+                $u->nim_profesi_dokter . '@hangtuah.ac.id',
+                Hash::make($u->nim_profesi_dokter),
+                'dm'  
+
+                
+            ]);*/
+        }
        // dd($old_users2);
-        return back()->with('success', 'success sinkron');
+        return back()->with('success', 'success sinkron Dosen');
     }
 
     /**

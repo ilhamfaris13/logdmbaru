@@ -34,6 +34,7 @@ Route::get('/',[DashboardController::class, 'index'], function () {
     //return view('welcome');
     return view('dashboard');
 });
+Route::post('/upload/foto', [DashboardController::class, 'proses_upload']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[DashboardController::class, 'index'], function () {
     return view('dashboard');
 })->name('dashboard');
@@ -42,6 +43,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[DashboardCont
 |--------------------------------------------------------------------------
 | Dashboard Controller
 */
+//Route::get('/', DashboardController::class, 'index');
+//Route::post('/upload/foto', DashboardController::class, 'proses_upload');
 //Route::get('dashboard', [DashboardController::class, 'index']);
 /*
 | 
@@ -84,7 +87,7 @@ Route::post('/kegiatan/store',[SignaturePadController2::class, 'store'])->name('
 */
 Route::post('syncdb',[SyncDatabaseController::class, 'create'])->name('sync.create');
 Route::post('syncdb/multi',[SyncDatabaseController::class, 'multi'])->name('sync.multi');
-//Route::post('syncdb',[SyncDatabaseController::class, 'create_dosen'])->name('sync.create_dosen');
+Route::post('syncdosen',[SyncDatabaseController::class, 'create_dosen'])->name('sync.create_dosen');
 Route::get('syncdb',[SyncDatabaseController::class, 'index']);
 Route::get('ajax-autocomplete-search', [SyncDatabaseController::class,'selectSearch']);
 /*
@@ -206,12 +209,11 @@ Route::post('create',[RekmedisController::class, 'create'])->name('rekmedis.crea
 Route::get('/rekmedis/post',[RekmedisController::class, 'create']);
 Route::post('/rekmedis/post',[RekmedisController::class, 'store'])->name('rekmedis.store');
 Route::get('/rekmedis/create',[RekmedisController::class, 'view']);
-Route::post('redirect_rm',[RekmedisController::class, 'Redirect'])->name('rm.redirect');
 /*
 | 
 |--------------------------------------------------------------------------
 */
-Route::post('redirect_rm',[RekmedisController::class, 'Redirect'])->name('rm.redirect');
+
 /*
 
 

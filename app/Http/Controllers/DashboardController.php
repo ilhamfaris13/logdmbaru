@@ -33,7 +33,47 @@ class DashboardController extends Controller
         //->where('username', '=',$userAuth->username)
         ->orderBy('id_mata','desc')
         ->get();
-        return view('dashboard',compact('user','mata'));
+        $ipd=DB::table('kegiatan_log')
+        ->where('stase', '=',1)
+        ->count();
+        $ika=DB::table('kegiatan_log')
+        ->where('stase', '=',2)
+        ->count();
+        $bedah=DB::table('kegiatan_log')
+        ->where('stase', '=',3)
+        ->count();
+        $kulit=DB::table('kegiatan_log')
+        ->where('stase', '=',4)
+        ->count();
+        $tht=DB::table('kegiatan_log')
+        ->where('stase', '=',5)
+        ->count();
+        $mata1=DB::table('kegiatan_log')
+        ->where('stase', '=',6)
+        ->count();
+        $saraf=DB::table('kegiatan_log')
+        ->where('stase', '=',7)
+        ->count();
+        $jiwa=DB::table('kegiatan_log')
+        ->where('stase', '=',8)
+        ->count();
+        $forensik=DB::table('kegiatan_log')
+        ->where('stase', '=',9)
+        ->count();
+        $anestesi=DB::table('kegiatan_log')
+        ->where('stase', '=',10)
+        ->count();
+        $radiologi=DB::table('kegiatan_log')
+        ->where('stase', '=',11)
+        ->count();
+        $rehab=DB::table('kegiatan_log')
+        ->where('stase', '=',12)
+        ->count();
+        $farmasi=DB::table('kegiatan_log')
+        ->where('stase', '=',28)
+        ->count();
+       
+        return view('dashboard',compact('user','mata','ipd','ika','bedah','kulit','tht','mata1','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi'));
         } 
         elseif($userAuth->level =='dosen') {
         $user=DB::table('users')
@@ -65,4 +105,21 @@ class DashboardController extends Controller
         }
         
     }
+    public function proses_upload(Request $request){
+        $userAuth = Auth::user();
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+      	        // isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = public_path('upload/profile');
+                // upload file
+		$file->move($tujuan_upload,$userAuth->username . ".jpg");
+        $foto = DB::table('users')
+        ->where('id', $userAuth->id)
+        ->update(
+            [
+            'profile_photo_path' => $userAuth->username . ".jpg"
+            ]           
+        );
+        return back()->with('success', 'Sukses Merubah Foto');
+	}
 }

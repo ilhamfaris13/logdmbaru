@@ -60,8 +60,12 @@
   <!-- Kop Header -->
   <table border="0">
     <tr>
-      <td rowspan="2"><img style="width: 150px; border-radius: 75px; border: 2px solid white; margin: 0px 20px"class=""
-        src="storage/{{Auth::user()->profile_photo_path}}"
+      <!-- <td rowspan="2"><img style="width: 150px; border-radius: 75px; border: 2px solid white; margin: 0px 20px"class=""
+        src="/upload/profile/{{ Auth::user()->profile_photo_path}}"
+           alt="Avatar"></td>
+         <td style="margin: 0px 20px;" rowspan="2"> -->
+         <td rowspan="2"><img style="width: 150px; border-radius: 75px; border: 2px solid white; margin: 0px 20px"class=""
+        src="{{ public_path('/upload/profile/'.Auth::user()->profile_photo_path) }}"
            alt="Avatar"></td>
          <td style="margin: 0px 20px;" rowspan="2">
          <!-- <td rowspan="2"><img style="width: 150px; border-radius: 75px; border: 2px solid white;" class=""

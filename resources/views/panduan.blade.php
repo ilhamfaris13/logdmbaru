@@ -58,12 +58,12 @@
                     <tr class="data-row" id = "logindm">
                         <td class="align-middle word-break dosen">1</td>
                         <td class="align-middle foto" >Login DM Username dan password = NIM</td>
-                        <td class=" id" ><img src="/assets/dist/img/1.png" height = "600" width = "1000"></td> 
+                        <td class=" id" ><img src="/gambar/1.png" height = "600" width = "1000"></td> 
                     </tr>
                     <tr class="data-row">   
                         <td class="align-middle word-break dosen">2</td>
                         <td class="align-middle foto" > Dosen Username dan Password = NIP</td>
-                        <td class="align-middle id" ><img src="/assets/dist/img/2.png"  height = "600" width = "1000"></td> 
+                        <td class="align-middle id" ><img src="{{ public_path('/assets/dist/img/2.png') }}"  height = "600" width = "1000"></td> 
                     </tr>
                     <tr class="data-row">   
                         <td class="align-middle word-break dosen">3</td>

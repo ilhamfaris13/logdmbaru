@@ -89,7 +89,7 @@
      
      
         <div class="image" >
-          <img src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="img-circle ">
+        <img src="/upload/profile/{{ Auth::user()->profile_photo_path}}" alt="{{ Auth::user()->name }}" class="img-circle ">
         </div>
         <div class="info">
           <a href="{{url('/user/profile')}}" class="d-block">{{ Auth::user()->name }}</a>
