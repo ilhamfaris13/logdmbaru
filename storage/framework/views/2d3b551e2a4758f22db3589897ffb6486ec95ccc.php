@@ -2,128 +2,88 @@
 <?php $__env->startSection('content'); ?>
 <section class="content">
 <div class="container-fluid">
+  <!-- ROW 1 -->
   <div class="row">
-  <div class="col-6 col-md-6">
-  <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Daftar User</h3>
-            </div>
-            <div class="card-body">
-            
-            <table id="tabel1" class="table table-bordered table-hover">
-                <thead>
-                  
-                  <tr>
-                    <th> NAMA</th>
-                    <th> LEVEL</th>
-                    
-                    <th> UBAH</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php $__currentLoopData = $user2; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <tr class="data-row">
-                   
-                    <td class="align-middle "><?php echo e($log->name); ?></td>
-                    <td class="align-middle word-break" style="text-transform: capitalize;"><?php echo e($log->level); ?></td>
-                    <td class="align-middle">
-                    <a class="btn btn-primary btn-sm" href="admin/edit/<?php echo e($log->id); ?>" target="_blank"><i class="far fa-eye"></i></a>
-                    <a class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
-                    
-                    </td>
-                  
-                    </tr>
-                    
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                  </tbody>
-            </table>
-            </div>
+    <!-- COL 1 -->
+    <div class="col-6 col-md-6">
+      <!-- COL1-CARD 1 -->
+      <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Dashboard Admin</h3>
         </div>
-    <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Tambah User</h3>
+        <div class="card-body">
+          <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>150</h3>
+
+                <p>DM</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-            <div class="card-body">
-            <form method="POST" action="<?php echo e(route('admin.create')); ?>" >
-            <?php echo csrf_field(); ?>
-                <div class="form-group">
-                    <label class="col-form-label" for="modal-input-username">Username </label>
-                    <input type="text" name="username" class="form-control" id="username" required>
-                </div>
-                <div class="form-group">
-                    <label class="col-form-label" for="modal-input-nama">Nama </label>
-                    <input type="text" name="nama" class="form-control" id="nama" required>
-                </div>
-                <div class="form-group">
-                    <label class="col-form-label" for="modal-input-email">Email </label>
-                    <input type="email" name="email" class="form-control" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label class="col-form-label" for="modal-input-level">Level</label>
-                    <select name="level" class="form-control" id="level">
-                    <option value="admin" >Admin</option>
-                    <option value="dosen" >Dosen/Dokter</option>
-                    <option value="dm" >Dokter Muda</option>
-                     </select>
-                </div>
-                <div class="form-group">
-                    <label class="col-form-label" for="modal-input-password">Password</label>
-                    <input type="password" name="password" class="form-control" id="password" required>
-                </div>
-                <div class="form-group">
-                    <label class="col-form-label" for="modal-input-cpassword">Confirm Password</label>
-                    <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" required>
-                </div>
-                <div class="form-group">
-              <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Submit" />
-             </div>
-            </form>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                <p>KEGIATAN</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>44</h3>
+
+                <p>USER</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h3>65</h3>
+
+                <p>DOSEN</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
         </div>
-        
+        <!-- /.row -->
+        </div>
+      </div>
+          <!-- END COL1-CARD 1 -->
     </div>
    
-    <div class="col-6 col-md-6">
-    <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Daftar Kegiatan DM</h3>
-            </div>
-            <div class="card-body">
-            <table id="example2" class="table table-bordered table-hover">
-                <thead>
-                  
-                  <tr>
-                    <th> NAMA</th>
-                    <th> USERNAME</th>
-                    
-                    <th> UBAH</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php $__currentLoopData = $logs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <tr class="data-row">
-                   
-                    <td class="align-middle "><?php echo e($log->nama); ?></td>
-                    <td class="align-middle word-break "><?php echo e($log->id); ?></td>
-                   
-                    <td class="align-middle">
-                    <a class="btn btn-primary btn-sm"><i class="far fa-eye"></i></a>
-                    <a class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
-                    <a class="btn btn-danger btn-sm" href="/admin/delete/<?php echo e($log->id); ?>" ><i class="far fa-trash-alt"></i></a>
-                    </td>
-                  
-                    </tr>
-                    
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                  </tbody>
-            </table>
-            </div>
-        </div>
-    </div>
-    
   </div>
-  
 </div>
+
 
 
 

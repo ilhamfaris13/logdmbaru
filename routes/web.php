@@ -18,6 +18,7 @@ use App\Http\Controllers\UjianController;
 use App\Http\Controllers\RekmedisController;
 use App\Http\Controllers\ExamController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MasterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -168,7 +169,7 @@ Route::get('create_ujian',[UjianController::class, 'view']);
 */
 /*
 |--------------------------------------------------------------------------
-| Ujian
+| Admin
 */
 Route::get('admin', [AdminController::class, 'index']);
 Route::get('admin/edit/{id}', [AdminController::class, 'show']);
@@ -180,6 +181,14 @@ Route::get('/admin/post',[AdminController::class, 'create']);
 Route::post('/admin/post',[AdminController::class, 'store'])->name('user.store');
 Route::get('/admin/delete/{id}',[AdminController::class, 'destroy'])->name('admin.delete');
 Route::get('create_user',[AdminController::class, 'view']);
+
+Route::get('masterdm', [MasterController::class, 'index']);
+Route::get('masterdosen', [MasterController::class, 'index_dosen']);
+Route::get('masterstase', [MasterController::class, 'index_stase']);
+Route::get('masterrs', [MasterController::class, 'index_rs']);
+Route::get('mastersinkron', [MasterController::class, 'index_db']);
+Route::get('masteruser', [MasterController::class, 'index_user']);
+Route::get('masterkegiatan', [MasterController::class, 'index_kegiatan']);
 /*
 | 
 |--------------------------------------------------------------------------

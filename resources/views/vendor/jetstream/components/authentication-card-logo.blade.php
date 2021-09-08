@@ -1,1 +1,1 @@
-<img src="/assets/dist/img/logo-uht-1.png" width="100" height="100">
+<img src="/assets/dist/img/logo atas bawah.png" width="500" height="500">

@@ -89,7 +89,8 @@
      
      
         <div class="image" >
-          <img src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" class="img-circle ">
+          
+          <img src="/upload/profile/{{ Auth::user()->profile_photo_path}}" alt="{{ Auth::user()->name }}" class="img-circle ">
         </div>
         <div class="info">
           <a href="{{url('/user/profile')}}" class="d-block">{{ Auth::user()->name }}</a>
@@ -110,7 +111,77 @@
               </p>
             </a>
           </li>
-          
+         
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Data Master
+                <i class="right fas fa-angle-down"></i>
+              </p>
+            </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                  <li class="nav-item">
+                    <a href="{{url('/masterdm')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Master Dokter Muda</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{url('/masterdosen')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Master Dosen/Dokter</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{url('/masterstase')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Stase</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{url('/masterrs')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>RS Jejaring</p>
+                    </a>
+                  </li>
+                  
+                </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-database"></i>
+              <p>
+                Database
+                <i class="right fas fa-angle-down"></i>
+              </p>
+            </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                  <li class="nav-item">
+                    <a href="{{url('/mastersinkron')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Sinkron Database</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{url('/masteruser')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>User</p>
+                    </a>
+                  </li>
+                  
+                  
+                </ul>
+          </li>
+          <li class="nav-item ">
+            <a href="{{url('/masterkegiatan')}}" class="nav-link">
+              <i class="nav-icon fa fa-book-open"></i>
+              <p>
+                Buku Kegiatan
+                <i class="right fas fa-angle-right"></i>
+              </p>
+            </a>
+          </li>
          </ul>
           
       </nav>
