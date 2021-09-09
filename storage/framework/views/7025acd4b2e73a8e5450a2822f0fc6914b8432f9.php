@@ -90,7 +90,7 @@
      
      
         <div class="image" >
-          <img src="<?php echo e(Auth::user()->profile_photo_url); ?>" alt="<?php echo e(Auth::user()->name); ?>" class="img-circle ">
+          <img src="/upload/profile/<?php echo e(Auth::user()->profile_photo_path); ?>" alt="<?php echo e(Auth::user()->name); ?>" class="img-circle ">
         </div>
         <div class="info">
           <a href="<?php echo e(url('/user/profile')); ?>" class="d-block"><?php echo e(Auth::user()->name); ?></a>

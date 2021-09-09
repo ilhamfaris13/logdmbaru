@@ -361,7 +361,7 @@
     $("#modal-input-name").val(name);
     $("#modal-input-tempat").val(tempat);
     $("#modal-input-nim").val(nim);
-    $("#modal-input-foto").attr("src","/storage/"+foto);
+    $("#modal-input-foto").attr("src","/upload/profile/"+foto);
     $("#modal-input-rs").val(rs);
     $("#modal-input-stase").val(stase);
     $("#modal-input-tanggal").val(tanggal);

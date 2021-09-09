@@ -13,16 +13,13 @@ class MasterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-         //
-        //$user;
         $userAuth = Auth::user();
-        /*$user=DB::table('users')
-        ->join('user','users.username','=','user.nim_profesi_dokter')
-        ->select('users.*','user.kelompok','user.nama')
-        ->where('user.nim_profesi_dokter', '=',$userAuth->username)
-        ->get();*/
         if($userAuth->level == 'dm'){
             abort(403, 'Tidak Diizinkan');
         } 
@@ -34,6 +31,27 @@ class MasterController extends Controller
             ->orderBy('Id_dm','desc')
             ->get();
             
+            return view('admin.master_dm',compact('user2'));
+        }
+        else{
+            abort(403, 'Tidak Diizinkan');
+        }
+    }
+    public function index_dm_f($kelompok)
+    {
+        $userAuth = Auth::user();
+        if($userAuth->level == 'dm'){
+            abort(403, 'Tidak Diizinkan');
+        } 
+        elseif($userAuth->level =='dosen') {
+            abort(403, 'Tidak Diizinkan');
+        }
+        elseif($userAuth->level =='admin') {
+            $user2 = DB::table('dm')
+            ->where('Kelompok','=',$kelompok)
+            ->orderBy('Id_dm','desc')
+            ->get();
+           // dd($user2);
             return view('admin.master_dm',compact('user2'));
         }
         else{

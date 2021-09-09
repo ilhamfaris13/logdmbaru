@@ -183,6 +183,7 @@ Route::get('/admin/delete/{id}',[AdminController::class, 'destroy'])->name('admi
 Route::get('create_user',[AdminController::class, 'view']);
 
 Route::get('masterdm', [MasterController::class, 'index']);
+Route::get('masterdm/{filter}', [MasterController::class, 'index_dm_f']);
 Route::get('masterdosen', [MasterController::class, 'index_dosen']);
 Route::get('masterstase', [MasterController::class, 'index_stase']);
 Route::get('masterrs', [MasterController::class, 'index_rs']);
