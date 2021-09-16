@@ -211,7 +211,7 @@ class MasterController extends Controller
             abort(403, 'Tidak Diizinkan');
         }
         elseif($userAuth->level =='admin') {
-            $user2 = DB::table('users')
+        $user2 = DB::table('users')
         ->orderBy('id','desc')
         ->get();
         $user2 = DB::table('users')
@@ -222,11 +222,12 @@ class MasterController extends Controller
          ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
          ->join('stase','stase.id','=','kegiatan_log.stase')
          ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
-         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
-         ->where('kegiatan_log.status', '=',0)
+         ->select('users.username','users.name')
+         //->where('kegiatan_log.status', '=',0)
          //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
-         ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
          ->orderBy('kegiatan_log.status','asc')
+         ->distinct()
          ->get();
             return view('admin.master_kegiatan',compact('user2','logs'));
         }
@@ -234,7 +235,46 @@ class MasterController extends Controller
             abort(403, 'Tidak Diizinkan');
         }
     }
-
+    public function index_detail_kegiatan($id)
+    {
+         //
+        //$user;
+        $userAuth = Auth::user();
+        /*$user=DB::table('users')
+        ->join('user','users.username','=','user.nim_profesi_dokter')
+        ->select('users.*','user.kelompok','user.nama')
+        ->where('user.nim_profesi_dokter', '=',$userAuth->username)
+        ->get();*/
+        if($userAuth->level == 'dm'){
+            abort(403, 'Tidak Diizinkan');
+        } 
+        elseif($userAuth->level =='dosen') {
+            abort(403, 'Tidak Diizinkan');
+        }
+        elseif($userAuth->level =='admin') {
+            
+            $user2 = DB::table('users')
+            ->orderBy('id','desc')
+            ->where('id','=',$id)
+            ->get();
+            $logs = DB::table('kegiatan_log')
+             ->join('users','users.id','=','kegiatan_log.id_user')
+             ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+             ->join('stase','stase.id','=','kegiatan_log.stase')
+             ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+             ->select('users.username','users.name')
+             //->where('kegiatan_log.status', '=',0)
+             //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+             //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+             ->orderBy('kegiatan_log.status','asc')
+             ->distinct()
+             ->get();
+                return view('admin.detail_kegiatan',compact('user2','logs'));
+        }
+        else{
+            abort(403, 'Tidak Diizinkan');
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *

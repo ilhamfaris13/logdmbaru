@@ -190,6 +190,7 @@ Route::get('masterrs', [MasterController::class, 'index_rs']);
 Route::get('mastersinkron', [MasterController::class, 'index_db']);
 Route::get('masteruser', [MasterController::class, 'index_user']);
 Route::get('masterkegiatan', [MasterController::class, 'index_kegiatan']);
+Route::get('detail_kegiatan/{id}', [MasterController::class, 'index_detail_kegiatan']);
 /*
 | 
 |--------------------------------------------------------------------------

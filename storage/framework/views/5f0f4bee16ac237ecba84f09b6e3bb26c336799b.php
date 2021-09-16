@@ -59,7 +59,7 @@
                       <td class="align-middle iteration"><?php echo e(++$key); ?></td>
                       <?php if( Auth::user()->level == "dm"): ?>
                       <?php else: ?>
-                      <td class="align-middle name"><?php echo e($log->nama); ?></td>
+                      <td class="align-middle name"><?php echo e($log->nama); ?> </td>
                       <td class="align-middle nim"><?php echo e($log->username); ?></td>
                       <?php endif; ?>
                       <td class="align-middle jenis"><?php echo e($log->jenis); ?></td>
@@ -70,7 +70,7 @@
                       <td class="align-middle keterangan"><?php echo e($log->keterangan); ?></td>
                       <td class="align-middle word-break dosen"><?php echo e($log->dosen); ?></td>
                       <td class="align-middle id" ><img src="/upload/<?php echo e($log->ttdp); ?>" width="100" height="100"></td>
-                      <td class="align-middle foto" hidden><?php echo e($log->profile_photo_path); ?></td>
+                      <td class="align-middle foto" hidden>/upload/profile/<?php echo e($log->profile_photo_path); ?></td>
                       <?php if( Auth::user()->level == "dosen"): ?>
                       <td class="align-middle">
                       <?php if($log->status == 0): ?>
@@ -354,7 +354,7 @@
     $("#modal-input-name").val(name);
     $("#modal-input-tempat").val(tempat);
     $("#modal-input-nim").val(nim);
-    $("#modal-input-foto").attr("src","/storage/"+foto);
+    $("#modal-input-foto").attr("src",""+foto);
     $("#modal-input-rs").val(rs);
     $("#modal-input-stase").val(stase);
     $("#modal-input-tanggal").val(tanggal);
