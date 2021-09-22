@@ -222,7 +222,7 @@ class MasterController extends Controller
          ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
          ->join('stase','stase.id','=','kegiatan_log.stase')
          ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
-         ->select('users.username','users.name')
+         ->select('users.username','users.name','users.id')
          //->where('kegiatan_log.status', '=',0)
          //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
          //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")

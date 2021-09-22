@@ -24,7 +24,7 @@
                   <?php $__currentLoopData = $logs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr class="data-row">
                     <td class="align-middle">
-                      <a class="btn btn-primary btn-sm" href="#" target="_blank"><i class="far fa-eye"></i></a>
+                      <a class="btn btn-primary btn-sm" href="/detail_kegiatan/<?php echo e($log->id); ?>" target="_blank"><i class="far fa-eye"></i></a>
                       <a class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
                     </td>
                     <td class="align-middle "><?php echo e($log->name); ?></td>
