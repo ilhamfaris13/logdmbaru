@@ -42,7 +42,7 @@
                 <input type="text" name="tempat" class="form-control" id="tempat" required>
               <!--   <select name="tempat" class="form-control" id="tempat">
                 <?php $__currentLoopData = $mata; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $matas): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                  <option value="<?php echo e($matas->Id_Mata); ?>" ><?php echo e($matas->Nomor_Rm); ?></option>
+                  <option value="<?php echo e($matas->Nomor_Rm); ?>" ><?php echo e($matas->Nomor_Rm); ?></option>
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </select> -->
               </div>
@@ -115,7 +115,7 @@
 
       /// Can be extended to other different selections of SubCategory //////
       default:
-      window.location="<?php echo e(url('/create_kegiatan')); ?>";
+      //window.location="<?php echo e(url('/create_kegiatan')); ?>";
       //window.location="../"; // if no selection matches then redirected to home page
       break;
       }// end of switch 

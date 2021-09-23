@@ -116,7 +116,7 @@
 
       /// Can be extended to other different selections of SubCategory //////
       default:
-      window.location="{{url('/create_kegiatan')}}";
+      //window.location="{{url('/create_kegiatan')}}";
       //window.location="../"; // if no selection matches then redirected to home page
       break;
       }// end of switch 

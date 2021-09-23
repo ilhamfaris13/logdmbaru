@@ -45,13 +45,26 @@
         <div class="col-md-6">
             <div class="card card-primary card-outline">
                 <div class="card-body box-profile">
-                
+                <div class="card-footer p-0">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      STASE yang di Ambil <span class="float-right badge bg-success">15</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      Kelompok <span class="float-right badge bg-info">45-UH</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
                 </div>
             </div>
         </div>
         @endforeach
         <!-- COL -->
-        <div class="col-md-6">
+        <div class="col-md-12">
         <div class="card">
               <div class="card-header border-transparent">
                 <h3 class="card-title">STASE : IPD/ITEKNA</h3>
@@ -66,74 +79,32 @@
                 </div>
               </div>
               <!-- /.card-header -->
-              <div class="card-body p-0">
+              <div class="card-body p-2">
                 <div class="table-responsive">
-                  <table class="table m-0">
+                  <table class="table m-0" id="example1">
                     <thead>
                     <tr>
-                      <th>Order ID</th>
-                      <th>Item</th>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
                       <th>Status</th>
-                      <th>Popularity</th>
+                      <th>Tanggal</th>
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($logs as $key => $log)
                     <tr>
-                      <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                      <td>Call of Duty IV</td>
-                      <td><span class="badge badge-success">Shipped</span></td>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
                       <td>
-                        <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
                       </td>
                     </tr>
-                    <tr>
-                      <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                      <td>Samsung Smart TV</td>
-                      <td><span class="badge badge-warning">Pending</span></td>
-                      <td>
-                        <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                      <td>iPhone 6 Plus</td>
-                      <td><span class="badge badge-danger">Delivered</span></td>
-                      <td>
-                        <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                      <td>Samsung Smart TV</td>
-                      <td><span class="badge badge-info">Processing</span></td>
-                      <td>
-                        <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                      <td>Samsung Smart TV</td>
-                      <td><span class="badge badge-warning">Pending</span></td>
-                      <td>
-                        <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                      <td>iPhone 6 Plus</td>
-                      <td><span class="badge badge-danger">Delivered</span></td>
-                      <td>
-                        <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                      <td>Call of Duty IV</td>
-                      <td><span class="badge badge-success">Shipped</span></td>
-                      <td>
-                        <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                      </td>
-                    </tr>
+                    @endforeach
                     </tbody>
                   </table>
                 </div>
@@ -141,13 +112,825 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer clearfix">
-                <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
-                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a>
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
               </div>
               <!-- /.card-footer -->
             </div>
             <!-- /.card -->
         </div>
+         <!-- /.col -->
+         <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">ILMU KESEHATAN ANAK (IKA)</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-2">
+                <div class="table-responsive" >
+                  <table class="table m-0" id="example2">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($ika as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+         <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">BEDAH</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-2">
+                <div class="table-responsive">
+                  <table class="table m-0" id="example3">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($bedah as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+         <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">KULIT</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-2">
+                <div class="table-responsive">
+                  <table class="table m-0" id="example4">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($kulit as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+         <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">THT</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-2">
+                <div class="table-responsive">
+                  <table class="table m-0" id="example5">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($tht as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+         <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">MATA</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-2">
+                <div class="table-responsive">
+                  <table class="table m-0" id="example6">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($mata as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+         <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">SARAF</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-2">
+                <div class="table-responsive">
+                  <table class="table m-0" id="example7">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($saraf as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+         <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">JIWA</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-2">
+                <div class="table-responsive">
+                  <table class="table m-0" id="example8">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($jiwa as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+          <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">FORENSIK</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-2">
+                <div class="table-responsive">
+                  <table class="table m-0" id="example9">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($forensik as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+          <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">ANESTESI</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-2">
+                <div class="table-responsive">
+                  <table class="table m-0" id="example10">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($anestesi as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+          <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">RADIOLOGI</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-2">
+                <div class="table-responsive">
+                  <table class="table m-0" id="example11">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($radiologi as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+          <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">REHAB MEDIK</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-2">
+                <div class="table-responsive">
+                  <table class="table m-0" id="example12">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($rehab as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+          <!-- COL -->
+        <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">FARMASI</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-02">
+                <div class="table-responsive">
+                  <table class="table m-0"id="example13">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($farmasi as $key => $log)
+                    <tr>
+                      <td>{{ $log->rumah_sakit_ }}</td>
+                      <td>{{ $log->dosen }}</td>
+                        @if($log->status == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        @endif
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">{{date('d-m-Y', strtotime($log->tanggal))}}</div>
+                      </td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
     </div>
 </div>
+
+<script>
+  $(function () {
+    $('#example1').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+
+    $('#example3').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+    $('#example4').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+    $('#example5').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+
+    $('#example6').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+    $('#example7').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+    $('#example8').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+
+    $('#example9').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+    $('#example10').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+    $('#example11').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+
+    $('#example12').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+    $('#example13').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": false,
+    });
+    
+  });
+</script>
     @endsection
