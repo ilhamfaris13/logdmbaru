@@ -172,9 +172,9 @@
          
           <li class="nav-item ">
             <a href="<?php echo e(url('/panduan')); ?>" class="nav-link">
-              <i class="nav-icon fa fa-book"></i>
+              <i class="nav-icon fa fa-info-circle"></i>
               <p>
-                Panduan User
+                Pusat Bantuan
                 <i class="right fas fa-angle-right"></i>
               </p>
             </a>

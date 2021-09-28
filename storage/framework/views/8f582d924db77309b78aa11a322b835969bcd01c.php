@@ -3,7 +3,7 @@
 <?php $__env->startSection('content'); ?>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <!-- Profile Image -->
             <div class="card card-primary card-outline">
               <div class="card-body box-profile">
@@ -42,26 +42,9 @@
             <!-- /.card -->
         </div>
         <!-- COL -->
-        <div class="col-md-6">
-            <div class="card card-primary card-outline">
-                <div class="card-body box-profile">
-                <div class="card-footer p-0">
-                <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      STASE yang di Ambil <span class="float-right badge bg-success">15</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      Kelompok <span class="float-right badge bg-info">45-UH</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-                </div>
-            </div>
-        </div>
+        <!-- <div class="col-md-6">
+          
+        </div> -->
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         <!-- COL -->
         <div class="col-md-12">
