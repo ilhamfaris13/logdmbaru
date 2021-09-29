@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Dm;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
 class SyncDatabaseController extends Controller
 {
     /**
@@ -46,6 +48,21 @@ class SyncDatabaseController extends Controller
             ->get();
         }
         return response()->json($icd);
+    }
+    public function folder(Request $request)
+    {
+        //
+        //File:makeDirectory(public_path(). "test");
+        $path = public_path('test');
+
+   
+
+    if(!File::isDirectory($path)){
+
+        File::makeDirectory($path, 0777, true, true);
+
+    }
+        return back()->with('success', 'success sinkron');
     }
     public function create(Request $request)
     {

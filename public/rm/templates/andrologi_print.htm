@@ -1,0 +1,6199 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="left"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pdflink_block}
+<span data-itemtype="print_pdf" data-itemid="print_pdf" {$item_print_pdf} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	pdflink" data-pdfpage="print" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Andrologi.pdf" 
+data-pagetype="print" 
+{$pdflink_attrs} >
+							PDF View			</a>
+</span>
+{END pdflink_block}
+		</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel andrologi print}</h2>
+	 
+		{BEGIN printtabheader}
+<span data-itemtype="print_subheader" data-itemid="print_subheader" {$item_print_subheader} data-pageid="{$pageid}" >
+{$printtabheader_text}
+</span>
+{END printtabheader}
+		</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c4" data-pageid="{$pageid}"	{$cell_top_c4}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class="			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="print_pages" data-itemid="print_pages" {$item_print_pages} data-pageid="{$pageid}" data-small >
+	{$print_pages_labelprint_pages}
+</span>	 
+		{BEGIN inline_cancel}
+<span data-itemtype="grid_inline_cancel" data-itemid="grid_inline_cancel" {$item_grid_inline_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="Cancel" class="btn-link   
+	 glyphicon glyphicon-remove" {$inlinerevertlink_attrs} title="Cancel" >		
+				
+								</a>
+</span>
+{END inline_cancel}
+	 
+		{BEGIN inlineadd_link}
+<span data-itemtype="inline_add" data-itemid="inline_add" {$item_inline_add} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$inlineaddlink_attrs} >
+							Inline Add			</a>
+</span>
+{END inlineadd_link}
+			{END firstAboveGridCell}	
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}<table data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes}  rnr-b-grid rnr-gridtable" 
+	cellpadding="0" 
+	data-body-height="1"
+>
+						<thead>
+			{BEGIN grid_header}
+					
+		 
+						<tr {$rowattrs} {$row_grid_0} class="{$rowclass} 
+									{$gridHeader_class}
+									
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lama_perkawinan_1_class}
+			"
+
+			data-field="lama_perkawinan_1"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lama_perkawinan_1_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field94" {$item_simple_grid_field94} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lama_perkawinan_1">
+	{$label andrologi lama_perkawinan_1 }	</span>
+{END lama_perkawinan_1_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+				 
+					{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lama_perkawinan_2_class}
+			"
+
+			data-field="lama_perkawinan_2"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lama_perkawinan_2_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field95" {$item_simple_grid_field95} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lama_perkawinan_2">
+	{$label andrologi lama_perkawinan_2 }	</span>
+{END lama_perkawinan_2_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+				 
+					{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lama_perkawinan_3_class}
+			"
+
+			data-field="lama_perkawinan_3"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lama_perkawinan_3_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field96" {$item_simple_grid_field96} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lama_perkawinan_3">
+	{$label andrologi lama_perkawinan_3 }	</span>
+{END lama_perkawinan_3_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+				 
+					{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$anak_perkawinan_1_class}
+			"
+
+			data-field="anak_perkawinan_1"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN anak_perkawinan_1_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field97" {$item_simple_grid_field97} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="anak_perkawinan_1">
+	{$label andrologi anak_perkawinan_1 }	</span>
+{END anak_perkawinan_1_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+				 
+					{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$anak_perkawinan_2_class}
+			"
+
+			data-field="anak_perkawinan_2"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN anak_perkawinan_2_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field98" {$item_simple_grid_field98} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="anak_perkawinan_2">
+	{$label andrologi anak_perkawinan_2 }	</span>
+{END anak_perkawinan_2_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+				 
+					{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$anak_perkawinan_3_class}
+			"
+
+			data-field="anak_perkawinan_3"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN anak_perkawinan_3_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field99" {$item_simple_grid_field99} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="anak_perkawinan_3">
+	{$label andrologi anak_perkawinan_3 }	</span>
+{END anak_perkawinan_3_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+				 
+					{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Libido_class}
+			"
+
+			data-field="Libido"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Libido_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field100" {$item_simple_grid_field100} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Libido">
+	{$label andrologi Libido }	</span>
+{END Libido_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+				 
+					{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Frekwensi_koitus_class}
+			"
+
+			data-field="Frekwensi_koitus"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Frekwensi_koitus_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field101" {$item_simple_grid_field101} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Frekwensi_koitus">
+	{$label andrologi Frekwensi_koitus }	</span>
+{END Frekwensi_koitus_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+				 
+					{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Dispareuni_class}
+			"
+
+			data-field="Dispareuni"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Dispareuni_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field102" {$item_simple_grid_field102} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dispareuni">
+	{$label andrologi Dispareuni }	</span>
+{END Dispareuni_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+				 
+					{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Orgasmus_class}
+			"
+
+			data-field="Orgasmus"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Orgasmus_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field103" {$item_simple_grid_field103} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Orgasmus">
+	{$label andrologi Orgasmus }	</span>
+{END Orgasmus_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+				 
+					{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Reflux_Post_Coital_class}
+			"
+
+			data-field="Reflux_Post_Coital"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Reflux_Post_Coital_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field104" {$item_simple_grid_field104} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Reflux_Post_Coital">
+	{$label andrologi Reflux_Post_Coital }	</span>
+{END Reflux_Post_Coital_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+				 
+					{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Ejakulasi_Dini_class}
+			"
+
+			data-field="Ejakulasi_Dini"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejakulasi_Dini_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field105" {$item_simple_grid_field105} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejakulasi_Dini">
+	{$label andrologi Ejakulasi_Dini }	</span>
+{END Ejakulasi_Dini_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+				 
+					{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Ejakulasi_Nocturnal_class}
+			"
+
+			data-field="Ejakulasi_Nocturnal"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejakulasi_Nocturnal_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field106" {$item_simple_grid_field106} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejakulasi_Nocturnal">
+	{$label andrologi Ejakulasi_Nocturnal }	</span>
+{END Ejakulasi_Nocturnal_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+				 
+					{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Ejakulasi_Nyeri_class}
+			"
+
+			data-field="Ejakulasi_Nyeri"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejakulasi_Nyeri_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field107" {$item_simple_grid_field107} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejakulasi_Nyeri">
+	{$label andrologi Ejakulasi_Nyeri }	</span>
+{END Ejakulasi_Nyeri_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+				 
+					{BEGIN cellblock_grid_headcell_field14}
+	<th
+	
+	{$cell_grid_headcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Puber_class}
+			"
+
+			data-field="Puber"
+	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Puber_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field108" {$item_simple_grid_field108} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Puber">
+	{$label andrologi Puber }	</span>
+{END Puber_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field14}
+				 
+					{BEGIN cellblock_grid_headcell_field15}
+	<th
+	
+	{$cell_grid_headcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Masturbasi_class}
+			"
+
+			data-field="Masturbasi"
+	
+	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Masturbasi_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field109" {$item_simple_grid_field109} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Masturbasi">
+	{$label andrologi Masturbasi }	</span>
+{END Masturbasi_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field15}
+				 
+					{BEGIN cellblock_grid_headcell_field16}
+	<th
+	
+	{$cell_grid_headcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Koitus_pranikah_class}
+			"
+
+			data-field="Koitus_pranikah"
+	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Koitus_pranikah_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field110" {$item_simple_grid_field110} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Koitus_pranikah">
+	{$label andrologi Koitus_pranikah }	</span>
+{END Koitus_pranikah_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field16}
+				 
+					{BEGIN cellblock_grid_headcell_field17}
+	<th
+	
+	{$cell_grid_headcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Lain_lain_class}
+			"
+
+			data-field="Lain_lain"
+	
+	data-cellId="grid_headcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Lain_lain_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field111" {$item_simple_grid_field111} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Lain_lain">
+	{$label andrologi Lain_lain }	</span>
+{END Lain_lain_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field17}
+				 
+					{BEGIN cellblock_grid_headcell_field18}
+	<th
+	
+	{$cell_grid_headcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Peny_Hub_Seksual_class}
+			"
+
+			data-field="Peny_Hub_Seksual"
+	
+	data-cellId="grid_headcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Peny_Hub_Seksual_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field112" {$item_simple_grid_field112} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Peny_Hub_Seksual">
+	{$label andrologi Peny_Hub_Seksual }	</span>
+{END Peny_Hub_Seksual_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field18}
+				 
+					{BEGIN cellblock_grid_headcell_field19}
+	<th
+	
+	{$cell_grid_headcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Hernia_class}
+			"
+
+			data-field="Hernia"
+	
+	data-cellId="grid_headcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hernia_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field113" {$item_simple_grid_field113} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hernia">
+	{$label andrologi Hernia }	</span>
+{END Hernia_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field19}
+				 
+					{BEGIN cellblock_grid_headcell_field20}
+	<th
+	
+	{$cell_grid_headcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Hidrokel_class}
+			"
+
+			data-field="Hidrokel"
+	
+	data-cellId="grid_headcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hidrokel_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field114" {$item_simple_grid_field114} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hidrokel">
+	{$label andrologi Hidrokel }	</span>
+{END Hidrokel_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field20}
+				 
+					{BEGIN cellblock_grid_headcell_field21}
+	<th
+	
+	{$cell_grid_headcell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Trauma_class}
+			"
+
+			data-field="Trauma"
+	
+	data-cellId="grid_headcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Trauma_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field115" {$item_simple_grid_field115} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Trauma">
+	{$label andrologi Trauma }	</span>
+{END Trauma_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field21}
+				 
+					{BEGIN cellblock_grid_headcell_field22}
+	<th
+	
+	{$cell_grid_headcell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Kelainan_bawaan_class}
+			"
+
+			data-field="Kelainan_bawaan"
+	
+	data-cellId="grid_headcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Kelainan_bawaan_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field116" {$item_simple_grid_field116} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Kelainan_bawaan">
+	{$label andrologi Kelainan_bawaan }	</span>
+{END Kelainan_bawaan_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field22}
+				 
+					{BEGIN cellblock_grid_headcell_field23}
+	<th
+	
+	{$cell_grid_headcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Penyakit_Paru_kronis_class}
+			"
+
+			data-field="Penyakit_Paru_kronis"
+	
+	data-cellId="grid_headcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Penyakit_Paru_kronis_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field117" {$item_simple_grid_field117} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Penyakit_Paru_kronis">
+	{$label andrologi Penyakit_Paru_kronis }	</span>
+{END Penyakit_Paru_kronis_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field23}
+				 
+					{BEGIN cellblock_grid_headcell_field24}
+	<th
+	
+	{$cell_grid_headcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Penyakit_hidung_kronis_class}
+			"
+
+			data-field="Penyakit_hidung_kronis"
+	
+	data-cellId="grid_headcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Penyakit_hidung_kronis_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field118" {$item_simple_grid_field118} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Penyakit_hidung_kronis">
+	{$label andrologi Penyakit_hidung_kronis }	</span>
+{END Penyakit_hidung_kronis_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field24}
+				 
+					{BEGIN cellblock_grid_headcell_field25}
+	<th
+	
+	{$cell_grid_headcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Tuberkulosa_class}
+			"
+
+			data-field="Tuberkulosa"
+	
+	data-cellId="grid_headcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Tuberkulosa_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field119" {$item_simple_grid_field119} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tuberkulosa">
+	{$label andrologi Tuberkulosa }	</span>
+{END Tuberkulosa_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field25}
+				 
+					{BEGIN cellblock_grid_headcell_field26}
+	<th
+	
+	{$cell_grid_headcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Diabetes_mellitus_class}
+			"
+
+			data-field="Diabetes_mellitus"
+	
+	data-cellId="grid_headcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Diabetes_mellitus_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field120" {$item_simple_grid_field120} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Diabetes_mellitus">
+	{$label andrologi Diabetes_mellitus }	</span>
+{END Diabetes_mellitus_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field26}
+				 
+					{BEGIN cellblock_grid_headcell_field27}
+	<th
+	
+	{$cell_grid_headcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Gondongan_parotitis_class}
+			"
+
+			data-field="Gondongan_parotitis"
+	
+	data-cellId="grid_headcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Gondongan_parotitis_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field121" {$item_simple_grid_field121} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Gondongan_parotitis">
+	{$label andrologi Gondongan_parotitis }	</span>
+{END Gondongan_parotitis_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field27}
+				 
+					{BEGIN cellblock_grid_headcell_field28}
+	<th
+	
+	{$cell_grid_headcell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Penyakit_Saraf_class}
+			"
+
+			data-field="Penyakit_Saraf"
+	
+	data-cellId="grid_headcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Penyakit_Saraf_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field122" {$item_simple_grid_field122} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Penyakit_Saraf">
+	{$label andrologi Penyakit_Saraf }	</span>
+{END Penyakit_Saraf_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field28}
+				 
+					{BEGIN cellblock_grid_headcell_field29}
+	<th
+	
+	{$cell_grid_headcell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Panas_dlm_6_bln_class}
+			"
+
+			data-field="Panas_dlm_6_bln"
+	
+	data-cellId="grid_headcell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Panas_dlm_6_bln_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field123" {$item_simple_grid_field123} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Panas_dlm_6_bln">
+	{$label andrologi Panas_dlm_6_bln }	</span>
+{END Panas_dlm_6_bln_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field29}
+				 
+					{BEGIN cellblock_grid_headcell_field30}
+	<th
+	
+	{$cell_grid_headcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Status_keluarga_class}
+			"
+
+			data-field="Status_keluarga"
+	
+	data-cellId="grid_headcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Status_keluarga_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field124" {$item_simple_grid_field124} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Status_keluarga">
+	{$label andrologi Status_keluarga }	</span>
+{END Status_keluarga_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field30}
+				 
+					{BEGIN cellblock_grid_headcell_field31}
+	<th
+	
+	{$cell_grid_headcell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Saudara_kandung_suami_class}
+			"
+
+			data-field="Saudara_kandung_suami"
+	
+	data-cellId="grid_headcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saudara_kandung_suami_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field125" {$item_simple_grid_field125} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saudara_kandung_suami">
+	{$label andrologi Saudara_kandung_suami }	</span>
+{END Saudara_kandung_suami_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field31}
+				 
+					{BEGIN cellblock_grid_headcell_field32}
+	<th
+	
+	{$cell_grid_headcell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Saudara_kandung_istri_class}
+			"
+
+			data-field="Saudara_kandung_istri"
+	
+	data-cellId="grid_headcell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saudara_kandung_istri_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field126" {$item_simple_grid_field126} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saudara_kandung_istri">
+	{$label andrologi Saudara_kandung_istri }	</span>
+{END Saudara_kandung_istri_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field32}
+				 
+					{BEGIN cellblock_grid_headcell_field33}
+	<th
+	
+	{$cell_grid_headcell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Lingkungan_sosial_class}
+			"
+
+			data-field="Lingkungan_sosial"
+	
+	data-cellId="grid_headcell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Lingkungan_sosial_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field127" {$item_simple_grid_field127} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Lingkungan_sosial">
+	{$label andrologi Lingkungan_sosial }	</span>
+{END Lingkungan_sosial_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field33}
+				 
+					{BEGIN cellblock_grid_headcell_field34}
+	<th
+	
+	{$cell_grid_headcell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Pekerjaan_class}
+			"
+
+			data-field="Pekerjaan"
+	
+	data-cellId="grid_headcell_field34" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pekerjaan_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field128" {$item_simple_grid_field128} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pekerjaan">
+	{$label andrologi Pekerjaan }	</span>
+{END Pekerjaan_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field34}
+				 
+					{BEGIN cellblock_grid_headcell_field35}
+	<th
+	
+	{$cell_grid_headcell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Keluarga_class}
+			"
+
+			data-field="Keluarga"
+	
+	data-cellId="grid_headcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Keluarga_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field129" {$item_simple_grid_field129} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Keluarga">
+	{$label andrologi Keluarga }	</span>
+{END Keluarga_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field35}
+				 
+					{BEGIN cellblock_grid_headcell_field36}
+	<th
+	
+	{$cell_grid_headcell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Rokok_class}
+			"
+
+			data-field="Rokok"
+	
+	data-cellId="grid_headcell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Rokok_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field130" {$item_simple_grid_field130} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rokok">
+	{$label andrologi Rokok }	</span>
+{END Rokok_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field36}
+				 
+					{BEGIN cellblock_grid_headcell_field37}
+	<th
+	
+	{$cell_grid_headcell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Alkohol_class}
+			"
+
+			data-field="Alkohol"
+	
+	data-cellId="grid_headcell_field37" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Alkohol_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field131" {$item_simple_grid_field131} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Alkohol">
+	{$label andrologi Alkohol }	</span>
+{END Alkohol_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field37}
+				 
+					{BEGIN cellblock_grid_headcell_field38}
+	<th
+	
+	{$cell_grid_headcell_field38}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Obat_class}
+			"
+
+			data-field="Obat"
+	
+	data-cellId="grid_headcell_field38" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Obat_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field132" {$item_simple_grid_field132} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obat">
+	{$label andrologi Obat }	</span>
+{END Obat_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field38}
+				 
+					{BEGIN cellblock_grid_headcell_field39}
+	<th
+	
+	{$cell_grid_headcell_field39}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Celana_ketat_class}
+			"
+
+			data-field="Celana_ketat"
+	
+	data-cellId="grid_headcell_field39" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Celana_ketat_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field133" {$item_simple_grid_field133} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Celana_ketat">
+	{$label andrologi Celana_ketat }	</span>
+{END Celana_ketat_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field39}
+				 
+					{BEGIN cellblock_grid_headcell_field40}
+	<th
+	
+	{$cell_grid_headcell_field40}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Bahan_kimia_class}
+			"
+
+			data-field="Bahan_kimia"
+	
+	data-cellId="grid_headcell_field40" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Bahan_kimia_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field134" {$item_simple_grid_field134} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Bahan_kimia">
+	{$label andrologi Bahan_kimia }	</span>
+{END Bahan_kimia_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field40}
+				 
+					{BEGIN cellblock_grid_headcell_field41}
+	<th
+	
+	{$cell_grid_headcell_field41}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$KU_class}
+			"
+
+			data-field="KU"
+	
+	data-cellId="grid_headcell_field41" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN KU_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field135" {$item_simple_grid_field135} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="KU">
+	{$label andrologi KU }	</span>
+{END KU_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field41}
+				 
+					{BEGIN cellblock_grid_headcell_field42}
+	<th
+	
+	{$cell_grid_headcell_field42}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$TB_class}
+			"
+
+			data-field="TB"
+	
+	data-cellId="grid_headcell_field42" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN TB_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field136" {$item_simple_grid_field136} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TB">
+	{$label andrologi TB }	</span>
+{END TB_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field42}
+				 
+					{BEGIN cellblock_grid_headcell_field43}
+	<th
+	
+	{$cell_grid_headcell_field43}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$CM_class}
+			"
+
+			data-field="CM"
+	
+	data-cellId="grid_headcell_field43" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CM_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field137" {$item_simple_grid_field137} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CM">
+	{$label andrologi CM }	</span>
+{END CM_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field43}
+				 
+					{BEGIN cellblock_grid_headcell_field44}
+	<th
+	
+	{$cell_grid_headcell_field44}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$BB_class}
+			"
+
+			data-field="BB"
+	
+	data-cellId="grid_headcell_field44" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN BB_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field138" {$item_simple_grid_field138} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="BB">
+	{$label andrologi BB }	</span>
+{END BB_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field44}
+				 
+					{BEGIN cellblock_grid_headcell_field45}
+	<th
+	
+	{$cell_grid_headcell_field45}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$KG_class}
+			"
+
+			data-field="KG"
+	
+	data-cellId="grid_headcell_field45" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN KG_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field139" {$item_simple_grid_field139} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="KG">
+	{$label andrologi KG }	</span>
+{END KG_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field45}
+				 
+					{BEGIN cellblock_grid_headcell_field46}
+	<th
+	
+	{$cell_grid_headcell_field46}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Tensi_class}
+			"
+
+			data-field="Tensi"
+	
+	data-cellId="grid_headcell_field46" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Tensi_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field140" {$item_simple_grid_field140} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tensi">
+	{$label andrologi Tensi }	</span>
+{END Tensi_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field46}
+				 
+					{BEGIN cellblock_grid_headcell_field47}
+	<th
+	
+	{$cell_grid_headcell_field47}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Pertumbuhan_distribusi_rambut_class}
+			"
+
+			data-field="Pertumbuhan_distribusi_rambut"
+	
+	data-cellId="grid_headcell_field47" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pertumbuhan_distribusi_rambut_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field141" {$item_simple_grid_field141} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pertumbuhan_distribusi_rambut">
+	{$label andrologi Pertumbuhan_distribusi_rambut }	</span>
+{END Pertumbuhan_distribusi_rambut_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field47}
+				 
+					{BEGIN cellblock_grid_headcell_field48}
+	<th
+	
+	{$cell_grid_headcell_field48}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Kumis_class}
+			"
+
+			data-field="Kumis"
+	
+	data-cellId="grid_headcell_field48" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Kumis_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field142" {$item_simple_grid_field142} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Kumis">
+	{$label andrologi Kumis }	</span>
+{END Kumis_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field48}
+				 
+					{BEGIN cellblock_grid_headcell_field49}
+	<th
+	
+	{$cell_grid_headcell_field49}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Jenggot_class}
+			"
+
+			data-field="Jenggot"
+	
+	data-cellId="grid_headcell_field49" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Jenggot_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field143" {$item_simple_grid_field143} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Jenggot">
+	{$label andrologi Jenggot }	</span>
+{END Jenggot_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field49}
+				 
+					{BEGIN cellblock_grid_headcell_field50}
+	<th
+	
+	{$cell_grid_headcell_field50}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Mata_class}
+			"
+
+			data-field="Mata"
+	
+	data-cellId="grid_headcell_field50" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Mata_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field144" {$item_simple_grid_field144} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Mata">
+	{$label andrologi Mata }	</span>
+{END Mata_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field50}
+				 
+					{BEGIN cellblock_grid_headcell_field51}
+	<th
+	
+	{$cell_grid_headcell_field51}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Hidung_class}
+			"
+
+			data-field="Hidung"
+	
+	data-cellId="grid_headcell_field51" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hidung_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field145" {$item_simple_grid_field145} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hidung">
+	{$label andrologi Hidung }	</span>
+{END Hidung_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field51}
+				 
+					{BEGIN cellblock_grid_headcell_field52}
+	<th
+	
+	{$cell_grid_headcell_field52}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Leher_class}
+			"
+
+			data-field="Leher"
+	
+	data-cellId="grid_headcell_field52" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Leher_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field146" {$item_simple_grid_field146} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Leher">
+	{$label andrologi Leher }	</span>
+{END Leher_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field52}
+				 
+					{BEGIN cellblock_grid_headcell_field53}
+	<th
+	
+	{$cell_grid_headcell_field53}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Dada_class}
+			"
+
+			data-field="Dada"
+	
+	data-cellId="grid_headcell_field53" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Dada_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field147" {$item_simple_grid_field147} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dada">
+	{$label andrologi Dada }	</span>
+{END Dada_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field53}
+				 
+					{BEGIN cellblock_grid_headcell_field54}
+	<th
+	
+	{$cell_grid_headcell_field54}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ginecomastia_class}
+			"
+
+			data-field="ginecomastia"
+	
+	data-cellId="grid_headcell_field54" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ginecomastia_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field148" {$item_simple_grid_field148} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ginecomastia">
+	{$label andrologi ginecomastia }	</span>
+{END ginecomastia_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field54}
+				 
+					{BEGIN cellblock_grid_headcell_field55}
+	<th
+	
+	{$cell_grid_headcell_field55}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$PERUT_class}
+			"
+
+			data-field="PERUT"
+	
+	data-cellId="grid_headcell_field55" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PERUT_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field149" {$item_simple_grid_field149} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PERUT">
+	{$label andrologi PERUT }	</span>
+{END PERUT_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field55}
+				 
+					{BEGIN cellblock_grid_headcell_field56}
+	<th
+	
+	{$cell_grid_headcell_field56}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$INGUINAL_class}
+			"
+
+			data-field="INGUINAL"
+	
+	data-cellId="grid_headcell_field56" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INGUINAL_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field150" {$item_simple_grid_field150} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INGUINAL">
+	{$label andrologi INGUINAL }	</span>
+{END INGUINAL_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field56}
+				 
+					{BEGIN cellblock_grid_headcell_field57}
+	<th
+	
+	{$cell_grid_headcell_field57}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$kubitus__valganus___varus__class}
+			"
+
+			data-field="kubitus__valganus___varus_"
+	
+	data-cellId="grid_headcell_field57" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN kubitus__valganus___varus__fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field151" {$item_simple_grid_field151} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="kubitus__valganus___varus_">
+	{$label andrologi kubitus__valganus___varus_ }	</span>
+{END kubitus__valganus___varus__fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field57}
+				 
+					{BEGIN cellblock_grid_headcell_field58}
+	<th
+	
+	{$cell_grid_headcell_field58}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Rentangan_tangan_class}
+			"
+
+			data-field="Rentangan_tangan"
+	
+	data-cellId="grid_headcell_field58" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Rentangan_tangan_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field152" {$item_simple_grid_field152} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rentangan_tangan">
+	{$label andrologi Rentangan_tangan }	</span>
+{END Rentangan_tangan_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field58}
+				 
+					{BEGIN cellblock_grid_headcell_field59}
+	<th
+	
+	{$cell_grid_headcell_field59}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$_Rambut_axilla_class}
+			"
+
+			data-field="_Rambut_axilla"
+	
+	data-cellId="grid_headcell_field59" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN _Rambut_axilla_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field153" {$item_simple_grid_field153} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="_Rambut_axilla">
+	{$label andrologi _Rambut_axilla }	</span>
+{END _Rambut_axilla_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field59}
+				 
+					{BEGIN cellblock_grid_headcell_field60}
+	<th
+	
+	{$cell_grid_headcell_field60}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Cor_class}
+			"
+
+			data-field="Cor"
+	
+	data-cellId="grid_headcell_field60" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Cor_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field154" {$item_simple_grid_field154} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cor">
+	{$label andrologi Cor }	</span>
+{END Cor_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field60}
+				 
+					{BEGIN cellblock_grid_headcell_field61}
+	<th
+	
+	{$cell_grid_headcell_field61}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Hepar_class}
+			"
+
+			data-field="Hepar"
+	
+	data-cellId="grid_headcell_field61" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hepar_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field155" {$item_simple_grid_field155} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hepar">
+	{$label andrologi Hepar }	</span>
+{END Hepar_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field61}
+				 
+					{BEGIN cellblock_grid_headcell_field62}
+	<th
+	
+	{$cell_grid_headcell_field62}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Pulmo_class}
+			"
+
+			data-field="Pulmo"
+	
+	data-cellId="grid_headcell_field62" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pulmo_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field156" {$item_simple_grid_field156} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pulmo">
+	{$label andrologi Pulmo }	</span>
+{END Pulmo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field62}
+				 
+					{BEGIN cellblock_grid_headcell_field63}
+	<th
+	
+	{$cell_grid_headcell_field63}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Lien_class}
+			"
+
+			data-field="Lien"
+	
+	data-cellId="grid_headcell_field63" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Lien_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field157" {$item_simple_grid_field157} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Lien">
+	{$label andrologi Lien }	</span>
+{END Lien_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field63}
+				 
+					{BEGIN cellblock_grid_headcell_field64}
+	<th
+	
+	{$cell_grid_headcell_field64}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Penis_class}
+			"
+
+			data-field="Penis"
+	
+	data-cellId="grid_headcell_field64" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Penis_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field158" {$item_simple_grid_field158} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Penis">
+	{$label andrologi Penis }	</span>
+{END Penis_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field64}
+				 
+					{BEGIN cellblock_grid_headcell_field65}
+	<th
+	
+	{$cell_grid_headcell_field65}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Muara_Urethra_class}
+			"
+
+			data-field="Muara_Urethra"
+	
+	data-cellId="grid_headcell_field65" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Muara_Urethra_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field159" {$item_simple_grid_field159} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Muara_Urethra">
+	{$label andrologi Muara_Urethra }	</span>
+{END Muara_Urethra_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field65}
+				 
+					{BEGIN cellblock_grid_headcell_field66}
+	<th
+	
+	{$cell_grid_headcell_field66}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Skrotum_class}
+			"
+
+			data-field="Skrotum"
+	
+	data-cellId="grid_headcell_field66" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Skrotum_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field160" {$item_simple_grid_field160} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Skrotum">
+	{$label andrologi Skrotum }	</span>
+{END Skrotum_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field66}
+				 
+					{BEGIN cellblock_grid_headcell_field67}
+	<th
+	
+	{$cell_grid_headcell_field67}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Pubis_class}
+			"
+
+			data-field="Pubis"
+	
+	data-cellId="grid_headcell_field67" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pubis_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field161" {$item_simple_grid_field161} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pubis">
+	{$label andrologi Pubis }	</span>
+{END Pubis_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field67}
+				 
+					{BEGIN cellblock_grid_headcell_field68}
+	<th
+	
+	{$cell_grid_headcell_field68}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Pola_Pubis_class}
+			"
+
+			data-field="Pola_Pubis"
+	
+	data-cellId="grid_headcell_field68" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pola_Pubis_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field162" {$item_simple_grid_field162} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pola_Pubis">
+	{$label andrologi Pola_Pubis }	</span>
+{END Pola_Pubis_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field68}
+				 
+					{BEGIN cellblock_grid_headcell_field69}
+	<th
+	
+	{$cell_grid_headcell_field69}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Interna_Kanan_class}
+			"
+
+			data-field="Interna_Kanan"
+	
+	data-cellId="grid_headcell_field69" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Interna_Kanan_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field163" {$item_simple_grid_field163} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Interna_Kanan">
+	{$label andrologi Interna_Kanan }	</span>
+{END Interna_Kanan_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field69}
+				 
+					{BEGIN cellblock_grid_headcell_field70}
+	<th
+	
+	{$cell_grid_headcell_field70}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Interna_Kiri_class}
+			"
+
+			data-field="Interna_Kiri"
+	
+	data-cellId="grid_headcell_field70" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Interna_Kiri_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field164" {$item_simple_grid_field164} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Interna_Kiri">
+	{$label andrologi Interna_Kiri }	</span>
+{END Interna_Kiri_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field70}
+				 
+					{BEGIN cellblock_grid_headcell_field71}
+	<th
+	
+	{$cell_grid_headcell_field71}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Posisi_Testis_class}
+			"
+
+			data-field="Posisi_Testis"
+	
+	data-cellId="grid_headcell_field71" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Posisi_Testis_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field165" {$item_simple_grid_field165} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Posisi_Testis">
+	{$label andrologi Posisi_Testis }	</span>
+{END Posisi_Testis_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field71}
+				 
+					{BEGIN cellblock_grid_headcell_field72}
+	<th
+	
+	{$cell_grid_headcell_field72}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Volume_class}
+			"
+
+			data-field="Volume"
+	
+	data-cellId="grid_headcell_field72" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Volume_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field166" {$item_simple_grid_field166} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Volume">
+	{$label andrologi Volume }	</span>
+{END Volume_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field72}
+				 
+					{BEGIN cellblock_grid_headcell_field73}
+	<th
+	
+	{$cell_grid_headcell_field73}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Konsistensi_class}
+			"
+
+			data-field="Konsistensi"
+	
+	data-cellId="grid_headcell_field73" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Konsistensi_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field167" {$item_simple_grid_field167} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Konsistensi">
+	{$label andrologi Konsistensi }	</span>
+{END Konsistensi_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field73}
+				 
+					{BEGIN cellblock_grid_headcell_field74}
+	<th
+	
+	{$cell_grid_headcell_field74}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Nyeri_class}
+			"
+
+			data-field="Nyeri"
+	
+	data-cellId="grid_headcell_field74" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Nyeri_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field168" {$item_simple_grid_field168} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nyeri">
+	{$label andrologi Nyeri }	</span>
+{END Nyeri_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field74}
+				 
+					{BEGIN cellblock_grid_headcell_field75}
+	<th
+	
+	{$cell_grid_headcell_field75}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$VAS_DEFERENS_class}
+			"
+
+			data-field="VAS_DEFERENS"
+	
+	data-cellId="grid_headcell_field75" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN VAS_DEFERENS_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field169" {$item_simple_grid_field169} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="VAS_DEFERENS">
+	{$label andrologi VAS_DEFERENS }	</span>
+{END VAS_DEFERENS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field75}
+				 
+					{BEGIN cellblock_grid_headcell_field76}
+	<th
+	
+	{$cell_grid_headcell_field76}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$FUNICULUS_class}
+			"
+
+			data-field="FUNICULUS"
+	
+	data-cellId="grid_headcell_field76" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN FUNICULUS_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field170" {$item_simple_grid_field170} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FUNICULUS">
+	{$label andrologi FUNICULUS }	</span>
+{END FUNICULUS_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field76}
+				 
+					{BEGIN cellblock_grid_headcell_field77}
+	<th
+	
+	{$cell_grid_headcell_field77}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$EPIDIDYMIS_Ukuran_class}
+			"
+
+			data-field="EPIDIDYMIS_Ukuran"
+	
+	data-cellId="grid_headcell_field77" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EPIDIDYMIS_Ukuran_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field171" {$item_simple_grid_field171} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EPIDIDYMIS_Ukuran">
+	{$label andrologi EPIDIDYMIS_Ukuran }	</span>
+{END EPIDIDYMIS_Ukuran_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field77}
+				 
+					{BEGIN cellblock_grid_headcell_field78}
+	<th
+	
+	{$cell_grid_headcell_field78}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$EPIDIDYMIS_Konsistensi_class}
+			"
+
+			data-field="EPIDIDYMIS_Konsistensi"
+	
+	data-cellId="grid_headcell_field78" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EPIDIDYMIS_Konsistensi_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field172" {$item_simple_grid_field172} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EPIDIDYMIS_Konsistensi">
+	{$label andrologi EPIDIDYMIS_Konsistensi }	</span>
+{END EPIDIDYMIS_Konsistensi_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field78}
+				 
+					{BEGIN cellblock_grid_headcell_field79}
+	<th
+	
+	{$cell_grid_headcell_field79}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$EPIDIDYMIS_Kistik_class}
+			"
+
+			data-field="EPIDIDYMIS_Kistik"
+	
+	data-cellId="grid_headcell_field79" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EPIDIDYMIS_Kistik_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field173" {$item_simple_grid_field173} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EPIDIDYMIS_Kistik">
+	{$label andrologi EPIDIDYMIS_Kistik }	</span>
+{END EPIDIDYMIS_Kistik_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field79}
+				 
+					{BEGIN cellblock_grid_headcell_field80}
+	<th
+	
+	{$cell_grid_headcell_field80}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$EPIDIDYMIS_Nyeri_class}
+			"
+
+			data-field="EPIDIDYMIS_Nyeri"
+	
+	data-cellId="grid_headcell_field80" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EPIDIDYMIS_Nyeri_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field174" {$item_simple_grid_field174} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EPIDIDYMIS_Nyeri">
+	{$label andrologi EPIDIDYMIS_Nyeri }	</span>
+{END EPIDIDYMIS_Nyeri_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field80}
+				 
+					{BEGIN cellblock_grid_headcell_field81}
+	<th
+	
+	{$cell_grid_headcell_field81}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$EPIDIDYMIS_Permukaan_class}
+			"
+
+			data-field="EPIDIDYMIS_Permukaan"
+	
+	data-cellId="grid_headcell_field81" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EPIDIDYMIS_Permukaan_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field175" {$item_simple_grid_field175} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EPIDIDYMIS_Permukaan">
+	{$label andrologi EPIDIDYMIS_Permukaan }	</span>
+{END EPIDIDYMIS_Permukaan_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field81}
+				 
+					{BEGIN cellblock_grid_headcell_field82}
+	<th
+	
+	{$cell_grid_headcell_field82}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$VARIKOKEL_class}
+			"
+
+			data-field="VARIKOKEL"
+	
+	data-cellId="grid_headcell_field82" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN VARIKOKEL_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field176" {$item_simple_grid_field176} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="VARIKOKEL">
+	{$label andrologi VARIKOKEL }	</span>
+{END VARIKOKEL_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field82}
+				 
+					{BEGIN cellblock_grid_headcell_field83}
+	<th
+	
+	{$cell_grid_headcell_field83}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Prostat_class}
+			"
+
+			data-field="Prostat"
+	
+	data-cellId="grid_headcell_field83" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Prostat_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field177" {$item_simple_grid_field177} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prostat">
+	{$label andrologi Prostat }	</span>
+{END Prostat_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field83}
+				 
+					{BEGIN cellblock_grid_headcell_field84}
+	<th
+	
+	{$cell_grid_headcell_field84}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$V_Seminalis_class}
+			"
+
+			data-field="V_Seminalis"
+	
+	data-cellId="grid_headcell_field84" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN V_Seminalis_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field178" {$item_simple_grid_field178} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="V_Seminalis">
+	{$label andrologi V_Seminalis }	</span>
+{END V_Seminalis_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field84}
+				 
+					{BEGIN cellblock_grid_headcell_field85}
+	<th
+	
+	{$cell_grid_headcell_field85}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lab_ke_class}
+			"
+
+			data-field="lab_ke"
+	
+	data-cellId="grid_headcell_field85" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lab_ke_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field179" {$item_simple_grid_field179} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lab_ke">
+	{$label andrologi lab_ke }	</span>
+{END lab_ke_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field85}
+				 
+					{BEGIN cellblock_grid_headcell_field86}
+	<th
+	
+	{$cell_grid_headcell_field86}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lab_tgl_class}
+			"
+
+			data-field="lab_tgl"
+	
+	data-cellId="grid_headcell_field86" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lab_tgl_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field180" {$item_simple_grid_field180} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lab_tgl">
+	{$label andrologi lab_tgl }	</span>
+{END lab_tgl_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field86}
+				 
+					{BEGIN cellblock_grid_headcell_field87}
+	<th
+	
+	{$cell_grid_headcell_field87}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$no_reg_lab_class}
+			"
+
+			data-field="no_reg_lab"
+	
+	data-cellId="grid_headcell_field87" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN no_reg_lab_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field181" {$item_simple_grid_field181} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="no_reg_lab">
+	{$label andrologi no_reg_lab }	</span>
+{END no_reg_lab_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field87}
+				 
+					{BEGIN cellblock_grid_headcell_field88}
+	<th
+	
+	{$cell_grid_headcell_field88}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$kesan_lab_class}
+			"
+
+			data-field="kesan_lab"
+	
+	data-cellId="grid_headcell_field88" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN kesan_lab_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field182" {$item_simple_grid_field182} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="kesan_lab">
+	{$label andrologi kesan_lab }	</span>
+{END kesan_lab_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field88}
+				 
+					{BEGIN cellblock_grid_headcell_field89}
+	<th
+	
+	{$cell_grid_headcell_field89}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Diagnosis_Banding_class}
+			"
+
+			data-field="Diagnosis_Banding"
+	
+	data-cellId="grid_headcell_field89" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Diagnosis_Banding_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field183" {$item_simple_grid_field183} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Diagnosis_Banding">
+	{$label andrologi Diagnosis_Banding }	</span>
+{END Diagnosis_Banding_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field89}
+				 
+					{BEGIN cellblock_grid_headcell_field90}
+	<th
+	
+	{$cell_grid_headcell_field90}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Rencana_class}
+			"
+
+			data-field="Rencana"
+	
+	data-cellId="grid_headcell_field90" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Rencana_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field184" {$item_simple_grid_field184} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rencana">
+	{$label andrologi Rencana }	</span>
+{END Rencana_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field90}
+				 
+					{BEGIN cellblock_grid_headcell_field91}
+	<th
+	
+	{$cell_grid_headcell_field91}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$id_pasien_class}
+			"
+
+			data-field="id_pasien"
+	
+	data-cellId="grid_headcell_field91" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN id_pasien_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field185" {$item_simple_grid_field185} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_pasien">
+	{$label andrologi id_pasien }	</span>
+{END id_pasien_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field91}
+				 
+					{BEGIN cellblock_grid_headcell_field92}
+	<th
+	
+	{$cell_grid_headcell_field92}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$id_user_class}
+			"
+
+			data-field="id_user"
+	
+	data-cellId="grid_headcell_field92" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN id_user_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field186" {$item_simple_grid_field186} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_user">
+	{$label andrologi id_user }	</span>
+{END id_user_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field92}
+				 
+					{BEGIN cellblock_grid_headcell_field93}
+	<th
+	
+	{$cell_grid_headcell_field93}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Nomor_Rm_class}
+			"
+
+			data-field="Nomor_Rm"
+	
+	data-cellId="grid_headcell_field93" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Nomor_Rm_fieldheadercolumn}
+ 
+	<span data-itemtype="grid_field_label" data-itemid="simple_grid_field187" {$item_simple_grid_field187} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nomor_Rm">
+	{$label andrologi Nomor_Rm }	</span>
+{END Nomor_Rm_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field93}
+							</tr>
+					 
+					 
+					
+					{END grid_header}
+			</thead>
+															{BEGIN grid_row}
+					<tbody>
+									
+		 
+					 
+						<tr {$rowattrs} {$row_grid_1} class="{$rowclass} 
+								
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lama_perkawinan_1_class}
+			"
+
+			data-field="lama_perkawinan_1"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lama_perkawinan_1_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lama_perkawinan_1" data-default-width >
+{$lama_perkawinan_1_value}
+</span>
+{END lama_perkawinan_1_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+				 
+					{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lama_perkawinan_2_class}
+			"
+
+			data-field="lama_perkawinan_2"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lama_perkawinan_2_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lama_perkawinan_2" data-default-width >
+{$lama_perkawinan_2_value}
+</span>
+{END lama_perkawinan_2_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+				 
+					{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lama_perkawinan_3_class}
+			"
+
+			data-field="lama_perkawinan_3"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lama_perkawinan_3_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lama_perkawinan_3" data-default-width >
+{$lama_perkawinan_3_value}
+</span>
+{END lama_perkawinan_3_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+				 
+					{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$anak_perkawinan_1_class}
+			"
+
+			data-field="anak_perkawinan_1"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN anak_perkawinan_1_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="anak_perkawinan_1" data-default-width >
+{$anak_perkawinan_1_value}
+</span>
+{END anak_perkawinan_1_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+				 
+					{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$anak_perkawinan_2_class}
+			"
+
+			data-field="anak_perkawinan_2"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN anak_perkawinan_2_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="anak_perkawinan_2" data-default-width >
+{$anak_perkawinan_2_value}
+</span>
+{END anak_perkawinan_2_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+				 
+					{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$anak_perkawinan_3_class}
+			"
+
+			data-field="anak_perkawinan_3"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN anak_perkawinan_3_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="anak_perkawinan_3" data-default-width >
+{$anak_perkawinan_3_value}
+</span>
+{END anak_perkawinan_3_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+				 
+					{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Libido_class}
+			"
+
+			data-field="Libido"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Libido_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Libido" data-default-width >
+{$Libido_value}
+</span>
+{END Libido_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+				 
+					{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Frekwensi_koitus_class}
+			"
+
+			data-field="Frekwensi_koitus"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Frekwensi_koitus_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Frekwensi_koitus" data-default-width >
+{$Frekwensi_koitus_value}
+</span>
+{END Frekwensi_koitus_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+				 
+					{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Dispareuni_class}
+			"
+
+			data-field="Dispareuni"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Dispareuni_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dispareuni" data-default-width >
+{$Dispareuni_value}
+</span>
+{END Dispareuni_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+				 
+					{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Orgasmus_class}
+			"
+
+			data-field="Orgasmus"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Orgasmus_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Orgasmus" data-default-width >
+{$Orgasmus_value}
+</span>
+{END Orgasmus_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+				 
+					{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Reflux_Post_Coital_class}
+			"
+
+			data-field="Reflux_Post_Coital"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Reflux_Post_Coital_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Reflux_Post_Coital" data-default-width >
+{$Reflux_Post_Coital_value}
+</span>
+{END Reflux_Post_Coital_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+				 
+					{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Ejakulasi_Dini_class}
+			"
+
+			data-field="Ejakulasi_Dini"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejakulasi_Dini_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejakulasi_Dini" data-default-width >
+{$Ejakulasi_Dini_value}
+</span>
+{END Ejakulasi_Dini_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+				 
+					{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Ejakulasi_Nocturnal_class}
+			"
+
+			data-field="Ejakulasi_Nocturnal"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejakulasi_Nocturnal_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejakulasi_Nocturnal" data-default-width >
+{$Ejakulasi_Nocturnal_value}
+</span>
+{END Ejakulasi_Nocturnal_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+				 
+					{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Ejakulasi_Nyeri_class}
+			"
+
+			data-field="Ejakulasi_Nyeri"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Ejakulasi_Nyeri_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Ejakulasi_Nyeri" data-default-width >
+{$Ejakulasi_Nyeri_value}
+</span>
+{END Ejakulasi_Nyeri_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+				 
+					{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Puber_class}
+			"
+
+			data-field="Puber"
+	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Puber_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Puber" data-default-width >
+{$Puber_value}
+</span>
+{END Puber_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field14}
+				 
+					{BEGIN cellblock_grid_cell_field15}
+	<td
+	
+	{$cell_grid_cell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Masturbasi_class}
+			"
+
+			data-field="Masturbasi"
+	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Masturbasi_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Masturbasi" data-default-width >
+{$Masturbasi_value}
+</span>
+{END Masturbasi_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field15}
+				 
+					{BEGIN cellblock_grid_cell_field16}
+	<td
+	
+	{$cell_grid_cell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Koitus_pranikah_class}
+			"
+
+			data-field="Koitus_pranikah"
+	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Koitus_pranikah_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Koitus_pranikah" data-default-width >
+{$Koitus_pranikah_value}
+</span>
+{END Koitus_pranikah_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field16}
+				 
+					{BEGIN cellblock_grid_cell_field17}
+	<td
+	
+	{$cell_grid_cell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Lain_lain_class}
+			"
+
+			data-field="Lain_lain"
+	
+	data-cellId="grid_cell_field17" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Lain_lain_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Lain_lain" data-default-width >
+{$Lain_lain_value}
+</span>
+{END Lain_lain_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field17}
+				 
+					{BEGIN cellblock_grid_cell_field18}
+	<td
+	
+	{$cell_grid_cell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Peny_Hub_Seksual_class}
+			"
+
+			data-field="Peny_Hub_Seksual"
+	
+	data-cellId="grid_cell_field18" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Peny_Hub_Seksual_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Peny_Hub_Seksual" data-default-width >
+{$Peny_Hub_Seksual_value}
+</span>
+{END Peny_Hub_Seksual_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field18}
+				 
+					{BEGIN cellblock_grid_cell_field19}
+	<td
+	
+	{$cell_grid_cell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Hernia_class}
+			"
+
+			data-field="Hernia"
+	
+	data-cellId="grid_cell_field19" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hernia_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hernia" data-default-width >
+{$Hernia_value}
+</span>
+{END Hernia_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field19}
+				 
+					{BEGIN cellblock_grid_cell_field20}
+	<td
+	
+	{$cell_grid_cell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Hidrokel_class}
+			"
+
+			data-field="Hidrokel"
+	
+	data-cellId="grid_cell_field20" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hidrokel_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hidrokel" data-default-width >
+{$Hidrokel_value}
+</span>
+{END Hidrokel_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field20}
+				 
+					{BEGIN cellblock_grid_cell_field21}
+	<td
+	
+	{$cell_grid_cell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Trauma_class}
+			"
+
+			data-field="Trauma"
+	
+	data-cellId="grid_cell_field21" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Trauma_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Trauma" data-default-width >
+{$Trauma_value}
+</span>
+{END Trauma_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field21}
+				 
+					{BEGIN cellblock_grid_cell_field22}
+	<td
+	
+	{$cell_grid_cell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Kelainan_bawaan_class}
+			"
+
+			data-field="Kelainan_bawaan"
+	
+	data-cellId="grid_cell_field22" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Kelainan_bawaan_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Kelainan_bawaan" data-default-width >
+{$Kelainan_bawaan_value}
+</span>
+{END Kelainan_bawaan_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field22}
+				 
+					{BEGIN cellblock_grid_cell_field23}
+	<td
+	
+	{$cell_grid_cell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Penyakit_Paru_kronis_class}
+			"
+
+			data-field="Penyakit_Paru_kronis"
+	
+	data-cellId="grid_cell_field23" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Penyakit_Paru_kronis_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Penyakit_Paru_kronis" data-default-width >
+{$Penyakit_Paru_kronis_value}
+</span>
+{END Penyakit_Paru_kronis_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field23}
+				 
+					{BEGIN cellblock_grid_cell_field24}
+	<td
+	
+	{$cell_grid_cell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Penyakit_hidung_kronis_class}
+			"
+
+			data-field="Penyakit_hidung_kronis"
+	
+	data-cellId="grid_cell_field24" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Penyakit_hidung_kronis_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Penyakit_hidung_kronis" data-default-width >
+{$Penyakit_hidung_kronis_value}
+</span>
+{END Penyakit_hidung_kronis_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field24}
+				 
+					{BEGIN cellblock_grid_cell_field25}
+	<td
+	
+	{$cell_grid_cell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Tuberkulosa_class}
+			"
+
+			data-field="Tuberkulosa"
+	
+	data-cellId="grid_cell_field25" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Tuberkulosa_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tuberkulosa" data-default-width >
+{$Tuberkulosa_value}
+</span>
+{END Tuberkulosa_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field25}
+				 
+					{BEGIN cellblock_grid_cell_field26}
+	<td
+	
+	{$cell_grid_cell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Diabetes_mellitus_class}
+			"
+
+			data-field="Diabetes_mellitus"
+	
+	data-cellId="grid_cell_field26" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Diabetes_mellitus_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Diabetes_mellitus" data-default-width >
+{$Diabetes_mellitus_value}
+</span>
+{END Diabetes_mellitus_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field26}
+				 
+					{BEGIN cellblock_grid_cell_field27}
+	<td
+	
+	{$cell_grid_cell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Gondongan_parotitis_class}
+			"
+
+			data-field="Gondongan_parotitis"
+	
+	data-cellId="grid_cell_field27" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Gondongan_parotitis_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Gondongan_parotitis" data-default-width >
+{$Gondongan_parotitis_value}
+</span>
+{END Gondongan_parotitis_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field27}
+				 
+					{BEGIN cellblock_grid_cell_field28}
+	<td
+	
+	{$cell_grid_cell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Penyakit_Saraf_class}
+			"
+
+			data-field="Penyakit_Saraf"
+	
+	data-cellId="grid_cell_field28" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Penyakit_Saraf_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Penyakit_Saraf" data-default-width >
+{$Penyakit_Saraf_value}
+</span>
+{END Penyakit_Saraf_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field28}
+				 
+					{BEGIN cellblock_grid_cell_field29}
+	<td
+	
+	{$cell_grid_cell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Panas_dlm_6_bln_class}
+			"
+
+			data-field="Panas_dlm_6_bln"
+	
+	data-cellId="grid_cell_field29" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Panas_dlm_6_bln_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Panas_dlm_6_bln" data-default-width >
+{$Panas_dlm_6_bln_value}
+</span>
+{END Panas_dlm_6_bln_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field29}
+				 
+					{BEGIN cellblock_grid_cell_field30}
+	<td
+	
+	{$cell_grid_cell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Status_keluarga_class}
+			"
+
+			data-field="Status_keluarga"
+	
+	data-cellId="grid_cell_field30" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Status_keluarga_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Status_keluarga" data-default-width >
+{$Status_keluarga_value}
+</span>
+{END Status_keluarga_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field30}
+				 
+					{BEGIN cellblock_grid_cell_field31}
+	<td
+	
+	{$cell_grid_cell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Saudara_kandung_suami_class}
+			"
+
+			data-field="Saudara_kandung_suami"
+	
+	data-cellId="grid_cell_field31" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saudara_kandung_suami_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saudara_kandung_suami" data-default-width >
+{$Saudara_kandung_suami_value}
+</span>
+{END Saudara_kandung_suami_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field31}
+				 
+					{BEGIN cellblock_grid_cell_field32}
+	<td
+	
+	{$cell_grid_cell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Saudara_kandung_istri_class}
+			"
+
+			data-field="Saudara_kandung_istri"
+	
+	data-cellId="grid_cell_field32" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Saudara_kandung_istri_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Saudara_kandung_istri" data-default-width >
+{$Saudara_kandung_istri_value}
+</span>
+{END Saudara_kandung_istri_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field32}
+				 
+					{BEGIN cellblock_grid_cell_field33}
+	<td
+	
+	{$cell_grid_cell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Lingkungan_sosial_class}
+			"
+
+			data-field="Lingkungan_sosial"
+	
+	data-cellId="grid_cell_field33" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Lingkungan_sosial_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field34" {$item_simple_grid_field34} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Lingkungan_sosial" data-default-width >
+{$Lingkungan_sosial_value}
+</span>
+{END Lingkungan_sosial_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field33}
+				 
+					{BEGIN cellblock_grid_cell_field34}
+	<td
+	
+	{$cell_grid_cell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Pekerjaan_class}
+			"
+
+			data-field="Pekerjaan"
+	
+	data-cellId="grid_cell_field34" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pekerjaan_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field35" {$item_simple_grid_field35} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pekerjaan" data-default-width >
+{$Pekerjaan_value}
+</span>
+{END Pekerjaan_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field34}
+				 
+					{BEGIN cellblock_grid_cell_field35}
+	<td
+	
+	{$cell_grid_cell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Keluarga_class}
+			"
+
+			data-field="Keluarga"
+	
+	data-cellId="grid_cell_field35" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Keluarga_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field36" {$item_simple_grid_field36} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Keluarga" data-default-width >
+{$Keluarga_value}
+</span>
+{END Keluarga_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field35}
+				 
+					{BEGIN cellblock_grid_cell_field36}
+	<td
+	
+	{$cell_grid_cell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Rokok_class}
+			"
+
+			data-field="Rokok"
+	
+	data-cellId="grid_cell_field36" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Rokok_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field37" {$item_simple_grid_field37} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rokok" data-default-width >
+{$Rokok_value}
+</span>
+{END Rokok_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field36}
+				 
+					{BEGIN cellblock_grid_cell_field37}
+	<td
+	
+	{$cell_grid_cell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Alkohol_class}
+			"
+
+			data-field="Alkohol"
+	
+	data-cellId="grid_cell_field37" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Alkohol_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field38" {$item_simple_grid_field38} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Alkohol" data-default-width >
+{$Alkohol_value}
+</span>
+{END Alkohol_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field37}
+				 
+					{BEGIN cellblock_grid_cell_field38}
+	<td
+	
+	{$cell_grid_cell_field38}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Obat_class}
+			"
+
+			data-field="Obat"
+	
+	data-cellId="grid_cell_field38" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Obat_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field39" {$item_simple_grid_field39} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Obat" data-default-width >
+{$Obat_value}
+</span>
+{END Obat_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field38}
+				 
+					{BEGIN cellblock_grid_cell_field39}
+	<td
+	
+	{$cell_grid_cell_field39}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Celana_ketat_class}
+			"
+
+			data-field="Celana_ketat"
+	
+	data-cellId="grid_cell_field39" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Celana_ketat_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field40" {$item_simple_grid_field40} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Celana_ketat" data-default-width >
+{$Celana_ketat_value}
+</span>
+{END Celana_ketat_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field39}
+				 
+					{BEGIN cellblock_grid_cell_field40}
+	<td
+	
+	{$cell_grid_cell_field40}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Bahan_kimia_class}
+			"
+
+			data-field="Bahan_kimia"
+	
+	data-cellId="grid_cell_field40" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Bahan_kimia_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field41" {$item_simple_grid_field41} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Bahan_kimia" data-default-width >
+{$Bahan_kimia_value}
+</span>
+{END Bahan_kimia_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field40}
+				 
+					{BEGIN cellblock_grid_cell_field41}
+	<td
+	
+	{$cell_grid_cell_field41}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$KU_class}
+			"
+
+			data-field="KU"
+	
+	data-cellId="grid_cell_field41" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN KU_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field42" {$item_simple_grid_field42} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="KU" data-default-width >
+{$KU_value}
+</span>
+{END KU_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field41}
+				 
+					{BEGIN cellblock_grid_cell_field42}
+	<td
+	
+	{$cell_grid_cell_field42}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$TB_class}
+			"
+
+			data-field="TB"
+	
+	data-cellId="grid_cell_field42" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN TB_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field43" {$item_simple_grid_field43} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="TB" data-default-width >
+{$TB_value}
+</span>
+{END TB_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field42}
+				 
+					{BEGIN cellblock_grid_cell_field43}
+	<td
+	
+	{$cell_grid_cell_field43}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$CM_class}
+			"
+
+			data-field="CM"
+	
+	data-cellId="grid_cell_field43" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN CM_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field44" {$item_simple_grid_field44} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="CM" data-default-width >
+{$CM_value}
+</span>
+{END CM_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field43}
+				 
+					{BEGIN cellblock_grid_cell_field44}
+	<td
+	
+	{$cell_grid_cell_field44}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$BB_class}
+			"
+
+			data-field="BB"
+	
+	data-cellId="grid_cell_field44" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN BB_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field45" {$item_simple_grid_field45} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="BB" data-default-width >
+{$BB_value}
+</span>
+{END BB_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field44}
+				 
+					{BEGIN cellblock_grid_cell_field45}
+	<td
+	
+	{$cell_grid_cell_field45}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$KG_class}
+			"
+
+			data-field="KG"
+	
+	data-cellId="grid_cell_field45" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN KG_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field46" {$item_simple_grid_field46} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="KG" data-default-width >
+{$KG_value}
+</span>
+{END KG_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field45}
+				 
+					{BEGIN cellblock_grid_cell_field46}
+	<td
+	
+	{$cell_grid_cell_field46}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Tensi_class}
+			"
+
+			data-field="Tensi"
+	
+	data-cellId="grid_cell_field46" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Tensi_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field47" {$item_simple_grid_field47} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Tensi" data-default-width >
+{$Tensi_value}
+</span>
+{END Tensi_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field46}
+				 
+					{BEGIN cellblock_grid_cell_field47}
+	<td
+	
+	{$cell_grid_cell_field47}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Pertumbuhan_distribusi_rambut_class}
+			"
+
+			data-field="Pertumbuhan_distribusi_rambut"
+	
+	data-cellId="grid_cell_field47" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pertumbuhan_distribusi_rambut_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field48" {$item_simple_grid_field48} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pertumbuhan_distribusi_rambut" data-default-width >
+{$Pertumbuhan_distribusi_rambut_value}
+</span>
+{END Pertumbuhan_distribusi_rambut_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field47}
+				 
+					{BEGIN cellblock_grid_cell_field48}
+	<td
+	
+	{$cell_grid_cell_field48}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Kumis_class}
+			"
+
+			data-field="Kumis"
+	
+	data-cellId="grid_cell_field48" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Kumis_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field49" {$item_simple_grid_field49} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Kumis" data-default-width >
+{$Kumis_value}
+</span>
+{END Kumis_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field48}
+				 
+					{BEGIN cellblock_grid_cell_field49}
+	<td
+	
+	{$cell_grid_cell_field49}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Jenggot_class}
+			"
+
+			data-field="Jenggot"
+	
+	data-cellId="grid_cell_field49" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Jenggot_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field50" {$item_simple_grid_field50} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Jenggot" data-default-width >
+{$Jenggot_value}
+</span>
+{END Jenggot_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field49}
+				 
+					{BEGIN cellblock_grid_cell_field50}
+	<td
+	
+	{$cell_grid_cell_field50}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Mata_class}
+			"
+
+			data-field="Mata"
+	
+	data-cellId="grid_cell_field50" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Mata_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field51" {$item_simple_grid_field51} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Mata" data-default-width >
+{$Mata_value}
+</span>
+{END Mata_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field50}
+				 
+					{BEGIN cellblock_grid_cell_field51}
+	<td
+	
+	{$cell_grid_cell_field51}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Hidung_class}
+			"
+
+			data-field="Hidung"
+	
+	data-cellId="grid_cell_field51" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hidung_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field52" {$item_simple_grid_field52} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hidung" data-default-width >
+{$Hidung_value}
+</span>
+{END Hidung_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field51}
+				 
+					{BEGIN cellblock_grid_cell_field52}
+	<td
+	
+	{$cell_grid_cell_field52}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Leher_class}
+			"
+
+			data-field="Leher"
+	
+	data-cellId="grid_cell_field52" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Leher_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field53" {$item_simple_grid_field53} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Leher" data-default-width >
+{$Leher_value}
+</span>
+{END Leher_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field52}
+				 
+					{BEGIN cellblock_grid_cell_field53}
+	<td
+	
+	{$cell_grid_cell_field53}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Dada_class}
+			"
+
+			data-field="Dada"
+	
+	data-cellId="grid_cell_field53" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Dada_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field54" {$item_simple_grid_field54} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Dada" data-default-width >
+{$Dada_value}
+</span>
+{END Dada_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field53}
+				 
+					{BEGIN cellblock_grid_cell_field54}
+	<td
+	
+	{$cell_grid_cell_field54}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$ginecomastia_class}
+			"
+
+			data-field="ginecomastia"
+	
+	data-cellId="grid_cell_field54" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN ginecomastia_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field55" {$item_simple_grid_field55} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="ginecomastia" data-default-width >
+{$ginecomastia_value}
+</span>
+{END ginecomastia_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field54}
+				 
+					{BEGIN cellblock_grid_cell_field55}
+	<td
+	
+	{$cell_grid_cell_field55}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$PERUT_class}
+			"
+
+			data-field="PERUT"
+	
+	data-cellId="grid_cell_field55" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN PERUT_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field56" {$item_simple_grid_field56} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="PERUT" data-default-width >
+{$PERUT_value}
+</span>
+{END PERUT_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field55}
+				 
+					{BEGIN cellblock_grid_cell_field56}
+	<td
+	
+	{$cell_grid_cell_field56}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$INGUINAL_class}
+			"
+
+			data-field="INGUINAL"
+	
+	data-cellId="grid_cell_field56" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN INGUINAL_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field57" {$item_simple_grid_field57} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="INGUINAL" data-default-width >
+{$INGUINAL_value}
+</span>
+{END INGUINAL_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field56}
+				 
+					{BEGIN cellblock_grid_cell_field57}
+	<td
+	
+	{$cell_grid_cell_field57}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$kubitus__valganus___varus__class}
+			"
+
+			data-field="kubitus__valganus___varus_"
+	
+	data-cellId="grid_cell_field57" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN kubitus__valganus___varus__fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field58" {$item_simple_grid_field58} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="kubitus__valganus___varus_" data-default-width >
+{$kubitus__valganus___varus__value}
+</span>
+{END kubitus__valganus___varus__fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field57}
+				 
+					{BEGIN cellblock_grid_cell_field58}
+	<td
+	
+	{$cell_grid_cell_field58}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Rentangan_tangan_class}
+			"
+
+			data-field="Rentangan_tangan"
+	
+	data-cellId="grid_cell_field58" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Rentangan_tangan_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field59" {$item_simple_grid_field59} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rentangan_tangan" data-default-width >
+{$Rentangan_tangan_value}
+</span>
+{END Rentangan_tangan_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field58}
+				 
+					{BEGIN cellblock_grid_cell_field59}
+	<td
+	
+	{$cell_grid_cell_field59}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$_Rambut_axilla_class}
+			"
+
+			data-field="_Rambut_axilla"
+	
+	data-cellId="grid_cell_field59" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN _Rambut_axilla_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field60" {$item_simple_grid_field60} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="_Rambut_axilla" data-default-width >
+{$_Rambut_axilla_value}
+</span>
+{END _Rambut_axilla_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field59}
+				 
+					{BEGIN cellblock_grid_cell_field60}
+	<td
+	
+	{$cell_grid_cell_field60}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Cor_class}
+			"
+
+			data-field="Cor"
+	
+	data-cellId="grid_cell_field60" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Cor_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field61" {$item_simple_grid_field61} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Cor" data-default-width >
+{$Cor_value}
+</span>
+{END Cor_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field60}
+				 
+					{BEGIN cellblock_grid_cell_field61}
+	<td
+	
+	{$cell_grid_cell_field61}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Hepar_class}
+			"
+
+			data-field="Hepar"
+	
+	data-cellId="grid_cell_field61" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Hepar_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field62" {$item_simple_grid_field62} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Hepar" data-default-width >
+{$Hepar_value}
+</span>
+{END Hepar_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field61}
+				 
+					{BEGIN cellblock_grid_cell_field62}
+	<td
+	
+	{$cell_grid_cell_field62}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Pulmo_class}
+			"
+
+			data-field="Pulmo"
+	
+	data-cellId="grid_cell_field62" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pulmo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field63" {$item_simple_grid_field63} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pulmo" data-default-width >
+{$Pulmo_value}
+</span>
+{END Pulmo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field62}
+				 
+					{BEGIN cellblock_grid_cell_field63}
+	<td
+	
+	{$cell_grid_cell_field63}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Lien_class}
+			"
+
+			data-field="Lien"
+	
+	data-cellId="grid_cell_field63" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Lien_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field64" {$item_simple_grid_field64} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Lien" data-default-width >
+{$Lien_value}
+</span>
+{END Lien_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field63}
+				 
+					{BEGIN cellblock_grid_cell_field64}
+	<td
+	
+	{$cell_grid_cell_field64}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Penis_class}
+			"
+
+			data-field="Penis"
+	
+	data-cellId="grid_cell_field64" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Penis_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field65" {$item_simple_grid_field65} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Penis" data-default-width >
+{$Penis_value}
+</span>
+{END Penis_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field64}
+				 
+					{BEGIN cellblock_grid_cell_field65}
+	<td
+	
+	{$cell_grid_cell_field65}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Muara_Urethra_class}
+			"
+
+			data-field="Muara_Urethra"
+	
+	data-cellId="grid_cell_field65" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Muara_Urethra_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field66" {$item_simple_grid_field66} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Muara_Urethra" data-default-width >
+{$Muara_Urethra_value}
+</span>
+{END Muara_Urethra_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field65}
+				 
+					{BEGIN cellblock_grid_cell_field66}
+	<td
+	
+	{$cell_grid_cell_field66}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Skrotum_class}
+			"
+
+			data-field="Skrotum"
+	
+	data-cellId="grid_cell_field66" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Skrotum_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field67" {$item_simple_grid_field67} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Skrotum" data-default-width >
+{$Skrotum_value}
+</span>
+{END Skrotum_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field66}
+				 
+					{BEGIN cellblock_grid_cell_field67}
+	<td
+	
+	{$cell_grid_cell_field67}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Pubis_class}
+			"
+
+			data-field="Pubis"
+	
+	data-cellId="grid_cell_field67" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pubis_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field68" {$item_simple_grid_field68} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pubis" data-default-width >
+{$Pubis_value}
+</span>
+{END Pubis_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field67}
+				 
+					{BEGIN cellblock_grid_cell_field68}
+	<td
+	
+	{$cell_grid_cell_field68}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Pola_Pubis_class}
+			"
+
+			data-field="Pola_Pubis"
+	
+	data-cellId="grid_cell_field68" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Pola_Pubis_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field69" {$item_simple_grid_field69} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Pola_Pubis" data-default-width >
+{$Pola_Pubis_value}
+</span>
+{END Pola_Pubis_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field68}
+				 
+					{BEGIN cellblock_grid_cell_field69}
+	<td
+	
+	{$cell_grid_cell_field69}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Interna_Kanan_class}
+			"
+
+			data-field="Interna_Kanan"
+	
+	data-cellId="grid_cell_field69" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Interna_Kanan_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field70" {$item_simple_grid_field70} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Interna_Kanan" data-default-width >
+{$Interna_Kanan_value}
+</span>
+{END Interna_Kanan_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field69}
+				 
+					{BEGIN cellblock_grid_cell_field70}
+	<td
+	
+	{$cell_grid_cell_field70}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Interna_Kiri_class}
+			"
+
+			data-field="Interna_Kiri"
+	
+	data-cellId="grid_cell_field70" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Interna_Kiri_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field71" {$item_simple_grid_field71} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Interna_Kiri" data-default-width >
+{$Interna_Kiri_value}
+</span>
+{END Interna_Kiri_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field70}
+				 
+					{BEGIN cellblock_grid_cell_field71}
+	<td
+	
+	{$cell_grid_cell_field71}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Posisi_Testis_class}
+			"
+
+			data-field="Posisi_Testis"
+	
+	data-cellId="grid_cell_field71" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Posisi_Testis_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field72" {$item_simple_grid_field72} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Posisi_Testis" data-default-width >
+{$Posisi_Testis_value}
+</span>
+{END Posisi_Testis_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field71}
+				 
+					{BEGIN cellblock_grid_cell_field72}
+	<td
+	
+	{$cell_grid_cell_field72}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Volume_class}
+			"
+
+			data-field="Volume"
+	
+	data-cellId="grid_cell_field72" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Volume_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field73" {$item_simple_grid_field73} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Volume" data-default-width >
+{$Volume_value}
+</span>
+{END Volume_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field72}
+				 
+					{BEGIN cellblock_grid_cell_field73}
+	<td
+	
+	{$cell_grid_cell_field73}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Konsistensi_class}
+			"
+
+			data-field="Konsistensi"
+	
+	data-cellId="grid_cell_field73" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Konsistensi_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field74" {$item_simple_grid_field74} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Konsistensi" data-default-width >
+{$Konsistensi_value}
+</span>
+{END Konsistensi_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field73}
+				 
+					{BEGIN cellblock_grid_cell_field74}
+	<td
+	
+	{$cell_grid_cell_field74}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Nyeri_class}
+			"
+
+			data-field="Nyeri"
+	
+	data-cellId="grid_cell_field74" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Nyeri_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field75" {$item_simple_grid_field75} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nyeri" data-default-width >
+{$Nyeri_value}
+</span>
+{END Nyeri_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field74}
+				 
+					{BEGIN cellblock_grid_cell_field75}
+	<td
+	
+	{$cell_grid_cell_field75}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$VAS_DEFERENS_class}
+			"
+
+			data-field="VAS_DEFERENS"
+	
+	data-cellId="grid_cell_field75" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN VAS_DEFERENS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field76" {$item_simple_grid_field76} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="VAS_DEFERENS" data-default-width >
+{$VAS_DEFERENS_value}
+</span>
+{END VAS_DEFERENS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field75}
+				 
+					{BEGIN cellblock_grid_cell_field76}
+	<td
+	
+	{$cell_grid_cell_field76}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$FUNICULUS_class}
+			"
+
+			data-field="FUNICULUS"
+	
+	data-cellId="grid_cell_field76" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN FUNICULUS_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field77" {$item_simple_grid_field77} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="FUNICULUS" data-default-width >
+{$FUNICULUS_value}
+</span>
+{END FUNICULUS_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field76}
+				 
+					{BEGIN cellblock_grid_cell_field77}
+	<td
+	
+	{$cell_grid_cell_field77}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$EPIDIDYMIS_Ukuran_class}
+			"
+
+			data-field="EPIDIDYMIS_Ukuran"
+	
+	data-cellId="grid_cell_field77" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EPIDIDYMIS_Ukuran_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field78" {$item_simple_grid_field78} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EPIDIDYMIS_Ukuran" data-default-width >
+{$EPIDIDYMIS_Ukuran_value}
+</span>
+{END EPIDIDYMIS_Ukuran_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field77}
+				 
+					{BEGIN cellblock_grid_cell_field78}
+	<td
+	
+	{$cell_grid_cell_field78}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$EPIDIDYMIS_Konsistensi_class}
+			"
+
+			data-field="EPIDIDYMIS_Konsistensi"
+	
+	data-cellId="grid_cell_field78" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EPIDIDYMIS_Konsistensi_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field79" {$item_simple_grid_field79} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EPIDIDYMIS_Konsistensi" data-default-width >
+{$EPIDIDYMIS_Konsistensi_value}
+</span>
+{END EPIDIDYMIS_Konsistensi_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field78}
+				 
+					{BEGIN cellblock_grid_cell_field79}
+	<td
+	
+	{$cell_grid_cell_field79}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$EPIDIDYMIS_Kistik_class}
+			"
+
+			data-field="EPIDIDYMIS_Kistik"
+	
+	data-cellId="grid_cell_field79" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EPIDIDYMIS_Kistik_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field80" {$item_simple_grid_field80} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EPIDIDYMIS_Kistik" data-default-width >
+{$EPIDIDYMIS_Kistik_value}
+</span>
+{END EPIDIDYMIS_Kistik_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field79}
+				 
+					{BEGIN cellblock_grid_cell_field80}
+	<td
+	
+	{$cell_grid_cell_field80}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$EPIDIDYMIS_Nyeri_class}
+			"
+
+			data-field="EPIDIDYMIS_Nyeri"
+	
+	data-cellId="grid_cell_field80" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EPIDIDYMIS_Nyeri_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field81" {$item_simple_grid_field81} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EPIDIDYMIS_Nyeri" data-default-width >
+{$EPIDIDYMIS_Nyeri_value}
+</span>
+{END EPIDIDYMIS_Nyeri_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field80}
+				 
+					{BEGIN cellblock_grid_cell_field81}
+	<td
+	
+	{$cell_grid_cell_field81}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$EPIDIDYMIS_Permukaan_class}
+			"
+
+			data-field="EPIDIDYMIS_Permukaan"
+	
+	data-cellId="grid_cell_field81" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN EPIDIDYMIS_Permukaan_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field82" {$item_simple_grid_field82} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="EPIDIDYMIS_Permukaan" data-default-width >
+{$EPIDIDYMIS_Permukaan_value}
+</span>
+{END EPIDIDYMIS_Permukaan_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field81}
+				 
+					{BEGIN cellblock_grid_cell_field82}
+	<td
+	
+	{$cell_grid_cell_field82}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$VARIKOKEL_class}
+			"
+
+			data-field="VARIKOKEL"
+	
+	data-cellId="grid_cell_field82" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN VARIKOKEL_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field83" {$item_simple_grid_field83} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="VARIKOKEL" data-default-width >
+{$VARIKOKEL_value}
+</span>
+{END VARIKOKEL_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field82}
+				 
+					{BEGIN cellblock_grid_cell_field83}
+	<td
+	
+	{$cell_grid_cell_field83}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Prostat_class}
+			"
+
+			data-field="Prostat"
+	
+	data-cellId="grid_cell_field83" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Prostat_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field84" {$item_simple_grid_field84} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Prostat" data-default-width >
+{$Prostat_value}
+</span>
+{END Prostat_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field83}
+				 
+					{BEGIN cellblock_grid_cell_field84}
+	<td
+	
+	{$cell_grid_cell_field84}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$V_Seminalis_class}
+			"
+
+			data-field="V_Seminalis"
+	
+	data-cellId="grid_cell_field84" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN V_Seminalis_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field85" {$item_simple_grid_field85} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="V_Seminalis" data-default-width >
+{$V_Seminalis_value}
+</span>
+{END V_Seminalis_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field84}
+				 
+					{BEGIN cellblock_grid_cell_field85}
+	<td
+	
+	{$cell_grid_cell_field85}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lab_ke_class}
+			"
+
+			data-field="lab_ke"
+	
+	data-cellId="grid_cell_field85" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lab_ke_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field86" {$item_simple_grid_field86} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lab_ke" data-default-width >
+{$lab_ke_value}
+</span>
+{END lab_ke_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field85}
+				 
+					{BEGIN cellblock_grid_cell_field86}
+	<td
+	
+	{$cell_grid_cell_field86}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$lab_tgl_class}
+			"
+
+			data-field="lab_tgl"
+	
+	data-cellId="grid_cell_field86" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN lab_tgl_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field87" {$item_simple_grid_field87} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="lab_tgl" data-default-width >
+{$lab_tgl_value}
+</span>
+{END lab_tgl_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field86}
+				 
+					{BEGIN cellblock_grid_cell_field87}
+	<td
+	
+	{$cell_grid_cell_field87}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$no_reg_lab_class}
+			"
+
+			data-field="no_reg_lab"
+	
+	data-cellId="grid_cell_field87" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN no_reg_lab_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field88" {$item_simple_grid_field88} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="no_reg_lab" data-default-width >
+{$no_reg_lab_value}
+</span>
+{END no_reg_lab_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field87}
+				 
+					{BEGIN cellblock_grid_cell_field88}
+	<td
+	
+	{$cell_grid_cell_field88}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$kesan_lab_class}
+			"
+
+			data-field="kesan_lab"
+	
+	data-cellId="grid_cell_field88" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN kesan_lab_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field89" {$item_simple_grid_field89} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="kesan_lab" data-default-width >
+{$kesan_lab_value}
+</span>
+{END kesan_lab_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field88}
+				 
+					{BEGIN cellblock_grid_cell_field89}
+	<td
+	
+	{$cell_grid_cell_field89}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Diagnosis_Banding_class}
+			"
+
+			data-field="Diagnosis_Banding"
+	
+	data-cellId="grid_cell_field89" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Diagnosis_Banding_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field90" {$item_simple_grid_field90} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Diagnosis_Banding" data-default-width >
+{$Diagnosis_Banding_value}
+</span>
+{END Diagnosis_Banding_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field89}
+				 
+					{BEGIN cellblock_grid_cell_field90}
+	<td
+	
+	{$cell_grid_cell_field90}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Rencana_class}
+			"
+
+			data-field="Rencana"
+	
+	data-cellId="grid_cell_field90" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Rencana_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field91" {$item_simple_grid_field91} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Rencana" data-default-width >
+{$Rencana_value}
+</span>
+{END Rencana_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field90}
+				 
+					{BEGIN cellblock_grid_cell_field91}
+	<td
+	
+	{$cell_grid_cell_field91}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$id_pasien_class}
+			"
+
+			data-field="id_pasien"
+	
+	data-cellId="grid_cell_field91" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN id_pasien_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_pasien" data-default-width >
+{$id_pasien_value}
+</span>
+{END id_pasien_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field91}
+				 
+					{BEGIN cellblock_grid_cell_field92}
+	<td
+	
+	{$cell_grid_cell_field92}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$id_user_class}
+			"
+
+			data-field="id_user"
+	
+	data-cellId="grid_cell_field92" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN id_user_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field92" {$item_simple_grid_field92} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="id_user" data-default-width >
+{$id_user_value}
+</span>
+{END id_user_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field92}
+				 
+					{BEGIN cellblock_grid_cell_field93}
+	<td
+	
+	{$cell_grid_cell_field93}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$Nomor_Rm_class}
+			"
+
+			data-field="Nomor_Rm"
+	
+	data-cellId="grid_cell_field93" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN Nomor_Rm_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field93" {$item_simple_grid_field93} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="Nomor_Rm" data-default-width >
+{$Nomor_Rm_value}
+</span>
+{END Nomor_Rm_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field93}
+							</tr>
+					 
+					
+											</tbody>
+					{END grid_row}
+													<tfoot>
+					
+		 
+					 
+					 
+						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
+									{$gridFooter_class}
+									
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+				 
+					{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+				 
+					{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+				 
+					{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+				 
+					{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+				 
+					{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+				 
+					{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+				 
+					{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+				 
+					{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+				 
+					{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+				 
+					{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+				 
+					{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+				 
+					{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+				 
+					{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+				 
+					{BEGIN cellblock_grid_footcell_field14}
+	<td
+	
+	{$cell_grid_footcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field14}
+				 
+					{BEGIN cellblock_grid_footcell_field15}
+	<td
+	
+	{$cell_grid_footcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field15}
+				 
+					{BEGIN cellblock_grid_footcell_field16}
+	<td
+	
+	{$cell_grid_footcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field16}
+				 
+					{BEGIN cellblock_grid_footcell_field17}
+	<td
+	
+	{$cell_grid_footcell_field17}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field17" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field17}
+				 
+					{BEGIN cellblock_grid_footcell_field18}
+	<td
+	
+	{$cell_grid_footcell_field18}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field18" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field18}
+				 
+					{BEGIN cellblock_grid_footcell_field19}
+	<td
+	
+	{$cell_grid_footcell_field19}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field19" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field19}
+				 
+					{BEGIN cellblock_grid_footcell_field20}
+	<td
+	
+	{$cell_grid_footcell_field20}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field20" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field20}
+				 
+					{BEGIN cellblock_grid_footcell_field21}
+	<td
+	
+	{$cell_grid_footcell_field21}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field21" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field21}
+				 
+					{BEGIN cellblock_grid_footcell_field22}
+	<td
+	
+	{$cell_grid_footcell_field22}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field22" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field22}
+				 
+					{BEGIN cellblock_grid_footcell_field23}
+	<td
+	
+	{$cell_grid_footcell_field23}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field23" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field23}
+				 
+					{BEGIN cellblock_grid_footcell_field24}
+	<td
+	
+	{$cell_grid_footcell_field24}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field24" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field24}
+				 
+					{BEGIN cellblock_grid_footcell_field25}
+	<td
+	
+	{$cell_grid_footcell_field25}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field25" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field25}
+				 
+					{BEGIN cellblock_grid_footcell_field26}
+	<td
+	
+	{$cell_grid_footcell_field26}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field26" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field26}
+				 
+					{BEGIN cellblock_grid_footcell_field27}
+	<td
+	
+	{$cell_grid_footcell_field27}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field27" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field27}
+				 
+					{BEGIN cellblock_grid_footcell_field28}
+	<td
+	
+	{$cell_grid_footcell_field28}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field28" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field28}
+				 
+					{BEGIN cellblock_grid_footcell_field29}
+	<td
+	
+	{$cell_grid_footcell_field29}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field29" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field29}
+				 
+					{BEGIN cellblock_grid_footcell_field30}
+	<td
+	
+	{$cell_grid_footcell_field30}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field30" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field30}
+				 
+					{BEGIN cellblock_grid_footcell_field31}
+	<td
+	
+	{$cell_grid_footcell_field31}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field31" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field31}
+				 
+					{BEGIN cellblock_grid_footcell_field32}
+	<td
+	
+	{$cell_grid_footcell_field32}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field32" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field32}
+				 
+					{BEGIN cellblock_grid_footcell_field33}
+	<td
+	
+	{$cell_grid_footcell_field33}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field33" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field33}
+				 
+					{BEGIN cellblock_grid_footcell_field34}
+	<td
+	
+	{$cell_grid_footcell_field34}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field34" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field34}
+				 
+					{BEGIN cellblock_grid_footcell_field35}
+	<td
+	
+	{$cell_grid_footcell_field35}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field35" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field35}
+				 
+					{BEGIN cellblock_grid_footcell_field36}
+	<td
+	
+	{$cell_grid_footcell_field36}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field36" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field36}
+				 
+					{BEGIN cellblock_grid_footcell_field37}
+	<td
+	
+	{$cell_grid_footcell_field37}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field37" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field37}
+				 
+					{BEGIN cellblock_grid_footcell_field38}
+	<td
+	
+	{$cell_grid_footcell_field38}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field38" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field38}
+				 
+					{BEGIN cellblock_grid_footcell_field39}
+	<td
+	
+	{$cell_grid_footcell_field39}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field39" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field39}
+				 
+					{BEGIN cellblock_grid_footcell_field40}
+	<td
+	
+	{$cell_grid_footcell_field40}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field40" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field40}
+				 
+					{BEGIN cellblock_grid_footcell_field41}
+	<td
+	
+	{$cell_grid_footcell_field41}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field41" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field41}
+				 
+					{BEGIN cellblock_grid_footcell_field42}
+	<td
+	
+	{$cell_grid_footcell_field42}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field42" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field42}
+				 
+					{BEGIN cellblock_grid_footcell_field43}
+	<td
+	
+	{$cell_grid_footcell_field43}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field43" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field43}
+				 
+					{BEGIN cellblock_grid_footcell_field44}
+	<td
+	
+	{$cell_grid_footcell_field44}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field44" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field44}
+				 
+					{BEGIN cellblock_grid_footcell_field45}
+	<td
+	
+	{$cell_grid_footcell_field45}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field45" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field45}
+				 
+					{BEGIN cellblock_grid_footcell_field46}
+	<td
+	
+	{$cell_grid_footcell_field46}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field46" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field46}
+				 
+					{BEGIN cellblock_grid_footcell_field47}
+	<td
+	
+	{$cell_grid_footcell_field47}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field47" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field47}
+				 
+					{BEGIN cellblock_grid_footcell_field48}
+	<td
+	
+	{$cell_grid_footcell_field48}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field48" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field48}
+				 
+					{BEGIN cellblock_grid_footcell_field49}
+	<td
+	
+	{$cell_grid_footcell_field49}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field49" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field49}
+				 
+					{BEGIN cellblock_grid_footcell_field50}
+	<td
+	
+	{$cell_grid_footcell_field50}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field50" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field50}
+				 
+					{BEGIN cellblock_grid_footcell_field51}
+	<td
+	
+	{$cell_grid_footcell_field51}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field51" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field51}
+				 
+					{BEGIN cellblock_grid_footcell_field52}
+	<td
+	
+	{$cell_grid_footcell_field52}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field52" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field52}
+				 
+					{BEGIN cellblock_grid_footcell_field53}
+	<td
+	
+	{$cell_grid_footcell_field53}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field53" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field53}
+				 
+					{BEGIN cellblock_grid_footcell_field54}
+	<td
+	
+	{$cell_grid_footcell_field54}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field54" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field54}
+				 
+					{BEGIN cellblock_grid_footcell_field55}
+	<td
+	
+	{$cell_grid_footcell_field55}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field55" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field55}
+				 
+					{BEGIN cellblock_grid_footcell_field56}
+	<td
+	
+	{$cell_grid_footcell_field56}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field56" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field56}
+				 
+					{BEGIN cellblock_grid_footcell_field57}
+	<td
+	
+	{$cell_grid_footcell_field57}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field57" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field57}
+				 
+					{BEGIN cellblock_grid_footcell_field58}
+	<td
+	
+	{$cell_grid_footcell_field58}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field58" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field58}
+				 
+					{BEGIN cellblock_grid_footcell_field59}
+	<td
+	
+	{$cell_grid_footcell_field59}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field59" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field59}
+				 
+					{BEGIN cellblock_grid_footcell_field60}
+	<td
+	
+	{$cell_grid_footcell_field60}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field60" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field60}
+				 
+					{BEGIN cellblock_grid_footcell_field61}
+	<td
+	
+	{$cell_grid_footcell_field61}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field61" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field61}
+				 
+					{BEGIN cellblock_grid_footcell_field62}
+	<td
+	
+	{$cell_grid_footcell_field62}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field62" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field62}
+				 
+					{BEGIN cellblock_grid_footcell_field63}
+	<td
+	
+	{$cell_grid_footcell_field63}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field63" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field63}
+				 
+					{BEGIN cellblock_grid_footcell_field64}
+	<td
+	
+	{$cell_grid_footcell_field64}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field64" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field64}
+				 
+					{BEGIN cellblock_grid_footcell_field65}
+	<td
+	
+	{$cell_grid_footcell_field65}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field65" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field65}
+				 
+					{BEGIN cellblock_grid_footcell_field66}
+	<td
+	
+	{$cell_grid_footcell_field66}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field66" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field66}
+				 
+					{BEGIN cellblock_grid_footcell_field67}
+	<td
+	
+	{$cell_grid_footcell_field67}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field67" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field67}
+				 
+					{BEGIN cellblock_grid_footcell_field68}
+	<td
+	
+	{$cell_grid_footcell_field68}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field68" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field68}
+				 
+					{BEGIN cellblock_grid_footcell_field69}
+	<td
+	
+	{$cell_grid_footcell_field69}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field69" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field69}
+				 
+					{BEGIN cellblock_grid_footcell_field70}
+	<td
+	
+	{$cell_grid_footcell_field70}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field70" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field70}
+				 
+					{BEGIN cellblock_grid_footcell_field71}
+	<td
+	
+	{$cell_grid_footcell_field71}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field71" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field71}
+				 
+					{BEGIN cellblock_grid_footcell_field72}
+	<td
+	
+	{$cell_grid_footcell_field72}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field72" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field72}
+				 
+					{BEGIN cellblock_grid_footcell_field73}
+	<td
+	
+	{$cell_grid_footcell_field73}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field73" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field73}
+				 
+					{BEGIN cellblock_grid_footcell_field74}
+	<td
+	
+	{$cell_grid_footcell_field74}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field74" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field74}
+				 
+					{BEGIN cellblock_grid_footcell_field75}
+	<td
+	
+	{$cell_grid_footcell_field75}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field75" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field75}
+				 
+					{BEGIN cellblock_grid_footcell_field76}
+	<td
+	
+	{$cell_grid_footcell_field76}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field76" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field76}
+				 
+					{BEGIN cellblock_grid_footcell_field77}
+	<td
+	
+	{$cell_grid_footcell_field77}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field77" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field77}
+				 
+					{BEGIN cellblock_grid_footcell_field78}
+	<td
+	
+	{$cell_grid_footcell_field78}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field78" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field78}
+				 
+					{BEGIN cellblock_grid_footcell_field79}
+	<td
+	
+	{$cell_grid_footcell_field79}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field79" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field79}
+				 
+					{BEGIN cellblock_grid_footcell_field80}
+	<td
+	
+	{$cell_grid_footcell_field80}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field80" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field80}
+				 
+					{BEGIN cellblock_grid_footcell_field81}
+	<td
+	
+	{$cell_grid_footcell_field81}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field81" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field81}
+				 
+					{BEGIN cellblock_grid_footcell_field82}
+	<td
+	
+	{$cell_grid_footcell_field82}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field82" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field82}
+				 
+					{BEGIN cellblock_grid_footcell_field83}
+	<td
+	
+	{$cell_grid_footcell_field83}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field83" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field83}
+				 
+					{BEGIN cellblock_grid_footcell_field84}
+	<td
+	
+	{$cell_grid_footcell_field84}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field84" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field84}
+				 
+					{BEGIN cellblock_grid_footcell_field85}
+	<td
+	
+	{$cell_grid_footcell_field85}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field85" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field85}
+				 
+					{BEGIN cellblock_grid_footcell_field86}
+	<td
+	
+	{$cell_grid_footcell_field86}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field86" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field86}
+				 
+					{BEGIN cellblock_grid_footcell_field87}
+	<td
+	
+	{$cell_grid_footcell_field87}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field87" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field87}
+				 
+					{BEGIN cellblock_grid_footcell_field88}
+	<td
+	
+	{$cell_grid_footcell_field88}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field88" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field88}
+				 
+					{BEGIN cellblock_grid_footcell_field89}
+	<td
+	
+	{$cell_grid_footcell_field89}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field89" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field89}
+				 
+					{BEGIN cellblock_grid_footcell_field90}
+	<td
+	
+	{$cell_grid_footcell_field90}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field90" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field90}
+				 
+					{BEGIN cellblock_grid_footcell_field91}
+	<td
+	
+	{$cell_grid_footcell_field91}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field91" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field91}
+				 
+					{BEGIN cellblock_grid_footcell_field92}
+	<td
+	
+	{$cell_grid_footcell_field92}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field92" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field92}
+				 
+					{BEGIN cellblock_grid_footcell_field93}
+	<td
+	
+	{$cell_grid_footcell_field93}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field93" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="andrologi_print"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field93}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}" >		
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

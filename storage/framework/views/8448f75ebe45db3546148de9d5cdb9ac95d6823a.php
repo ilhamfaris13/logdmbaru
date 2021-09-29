@@ -35,7 +35,7 @@
 
 					</div>
 					<?php endif; ?>
-           <form id="edit-form" method="POST" action="<?php echo e(route('sync.create')); ?>">
+           <form id="edit-form" method="POST" action="<?php echo e(route('sync.folder')); ?>">
                         <?php echo csrf_field(); ?>
             
               <div class="form-group">
@@ -46,32 +46,7 @@
         <form method="post" action="<?php echo e(route('sync.multi')); ?>" >
             <?php echo csrf_field(); ?>
            
-        <table id="example2" class="table table-responsive table-bordered table-hover">
-                  <thead>
-                  
-                    <tr>
-                        <th>KODE</th>
-                        <th> ALIAS</th>
-                        <th> CEK</th>
-                        
-                    </tr>
-                  </thead>
-                  <tbody>
-                  <?php $__currentLoopData = $icd; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <tr class="data-row">
-                    <td><?php echo e($log->KODE); ?></td>
-                    <td><?php echo e($log->ALIAS); ?></td>
-                
-                    <td><!-- This input -->
-                        <input type="checkbox" name="selected_values[]" value="<?php echo e($log->ID); ?>">
-                    </td>
-                    </tr>
-                    
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                  </tbody>
-                  <tfoot>
-                  </tfoot>
-                </table>
+        
         <button type="submit" name="button">Get me some selected people</button>
         </form>
     </div>

@@ -1,0 +1,3508 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel jiwa view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<div class="panel with-tabs panel-default form-tabs" data-itemtype="tabs" data-itemid="tabs" {$item_tabs} data-pageid="{$pageid}">
+	<div class="panel-heading">
+		<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section{$pageid}">
+					Riwayat 				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section1{$pageid}">
+					Riwayat Kehidupan Pribadi				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section2{$pageid}">
+					Diskripsi Umum				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section3{$pageid}">
+					Pembicaraan & Mood				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section4{$pageid}">
+					Gangguang Persepsi & Pikiran				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section6{$pageid}">
+					Isi Pikir				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section7{$pageid}">
+					Kesadaran & Kognitif				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section8{$pageid}">
+					Diagnostik Lanjutan				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section10{$pageid}">
+					Prognosis				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section11{$pageid}">
+					Daftar Masalah & Rencana Terapi				</a>
+			</li>
+									</ul>
+	</div>
+	<div class="panel-body">
+		<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="tab_section{$pageid}"> 
+			{BEGIN section_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section" id="form_section_{$pageid}" data-makeup="small" {$form_section} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section_c3}
+<td
+	{$cell_section_c3}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Keluhan_Utama_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Keluhan_Utama}  r-vertical-field" data-fieldname="Keluhan_Utama" data-signal-error-for="Keluhan_Utama{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Keluhan_Utama" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Keluhan_Utama}">
+		
+		{BEGIN Keluhan_Utama_label}{$label jiwa Keluhan_Utama }{END Keluhan_Utama_label}
+	</label>
+	<div class="" >
+		{$Keluhan_Utama_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Keluhan_Utama_fieldblock}
+											
+{BEGIN Alloanamnesis_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Alloanamnesis}  r-vertical-field" data-fieldname="Alloanamnesis" data-signal-error-for="Alloanamnesis{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Alloanamnesis" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Alloanamnesis}">
+		
+		{BEGIN Alloanamnesis_label}{$label jiwa Alloanamnesis }{END Alloanamnesis_label}
+	</label>
+	<div class="" >
+		{$Alloanamnesis_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Alloanamnesis_fieldblock}
+											
+{BEGIN Riwayat_gangguan_dahulu_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_gangguan_dahulu}  r-vertical-field" data-fieldname="Riwayat_gangguan_dahulu" data-signal-error-for="Riwayat_gangguan_dahulu{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Riwayat_gangguan_dahulu" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_gangguan_dahulu}">
+		
+		{BEGIN Riwayat_gangguan_dahulu_label}{$label jiwa Riwayat_gangguan_dahulu }{END Riwayat_gangguan_dahulu_label}
+	</label>
+	<div class="" >
+		{$Riwayat_gangguan_dahulu_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_gangguan_dahulu_fieldblock}
+											
+{BEGIN Riwayat_gangguan_medis_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_gangguan_medis}  r-vertical-field" data-fieldname="Riwayat_gangguan_medis" data-signal-error-for="Riwayat_gangguan_medis{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Riwayat_gangguan_medis" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_gangguan_medis}">
+		
+		{BEGIN Riwayat_gangguan_medis_label}{$label jiwa Riwayat_gangguan_medis }{END Riwayat_gangguan_medis_label}
+	</label>
+	<div class="" >
+		{$Riwayat_gangguan_medis_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_gangguan_medis_fieldblock}
+	
+								</td>
+			{END cellblock_section_c3}
+			 
+																
+
+{BEGIN cellblock_section_c}
+<td
+	{$cell_section_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Autoanamnesis_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Autoanamnesis}  r-vertical-field" data-fieldname="Autoanamnesis" data-signal-error-for="Autoanamnesis{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Autoanamnesis" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Autoanamnesis}">
+		
+		{BEGIN Autoanamnesis_label}{$label jiwa Autoanamnesis }{END Autoanamnesis_label}
+	</label>
+	<div class="" >
+		{$Autoanamnesis_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Autoanamnesis_fieldblock}
+											
+{BEGIN Riwayat_gangguan_sekarang_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_gangguan_sekarang}  r-vertical-field" data-fieldname="Riwayat_gangguan_sekarang" data-signal-error-for="Riwayat_gangguan_sekarang{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Riwayat_gangguan_sekarang" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_gangguan_sekarang}">
+		
+		{BEGIN Riwayat_gangguan_sekarang_label}{$label jiwa Riwayat_gangguan_sekarang }{END Riwayat_gangguan_sekarang_label}
+	</label>
+	<div class="" >
+		{$Riwayat_gangguan_sekarang_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_gangguan_sekarang_fieldblock}
+											
+{BEGIN Riwayat_gangguan_psikiatri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_gangguan_psikiatri}  r-vertical-field" data-fieldname="Riwayat_gangguan_psikiatri" data-signal-error-for="Riwayat_gangguan_psikiatri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Riwayat_gangguan_psikiatri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_gangguan_psikiatri}">
+		
+		{BEGIN Riwayat_gangguan_psikiatri_label}{$label jiwa Riwayat_gangguan_psikiatri }{END Riwayat_gangguan_psikiatri_label}
+	</label>
+	<div class="" >
+		{$Riwayat_gangguan_psikiatri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_gangguan_psikiatri_fieldblock}
+											
+{BEGIN Riwayat_penggunaan_zat_psikoaktif_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_penggunaan_zat_psikoaktif}  r-vertical-field" data-fieldname="Riwayat_penggunaan_zat_psikoaktif" data-signal-error-for="Riwayat_penggunaan_zat_psikoaktif{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Riwayat_penggunaan_zat_psikoaktif" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_penggunaan_zat_psikoaktif}">
+		
+		{BEGIN Riwayat_penggunaan_zat_psikoaktif_label}{$label jiwa Riwayat_penggunaan_zat_psikoaktif }{END Riwayat_penggunaan_zat_psikoaktif_label}
+	</label>
+	<div class="" >
+		{$Riwayat_penggunaan_zat_psikoaktif_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_penggunaan_zat_psikoaktif_fieldblock}
+	
+								</td>
+			{END cellblock_section_c}
+								</tr>
+			</tbody></table>
+{END section_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section1{$pageid}"> 
+			{BEGIN section1_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section1" id="form_section1_{$pageid}" data-makeup="small" {$form_section1} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="3"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section1_c3}
+<td
+	{$cell_section1_c3}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Riwayat_prenatal_dan_perinatal_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_prenatal_dan_perinatal}  r-vertical-field" data-fieldname="Riwayat_prenatal_dan_perinatal" data-signal-error-for="Riwayat_prenatal_dan_perinatal{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="Riwayat_prenatal_dan_perinatal" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_prenatal_dan_perinatal}">
+		
+		{BEGIN Riwayat_prenatal_dan_perinatal_label}{$label jiwa Riwayat_prenatal_dan_perinatal }{END Riwayat_prenatal_dan_perinatal_label}
+	</label>
+	<div class="" >
+		{$Riwayat_prenatal_dan_perinatal_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_prenatal_dan_perinatal_fieldblock}
+											
+{BEGIN Riwayat_masa_kanak_akhir_dan_remaja_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_masa_kanak_akhir_dan_remaja}  r-vertical-field" data-fieldname="Riwayat_masa_kanak_akhir_dan_remaja" data-signal-error-for="Riwayat_masa_kanak_akhir_dan_remaja{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="Riwayat_masa_kanak_akhir_dan_remaja" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_masa_kanak_akhir_dan_remaja}">
+		
+		{BEGIN Riwayat_masa_kanak_akhir_dan_remaja_label}{$label jiwa Riwayat_masa_kanak_akhir_dan_remaja }{END Riwayat_masa_kanak_akhir_dan_remaja_label}
+	</label>
+	<div class="" >
+		{$Riwayat_masa_kanak_akhir_dan_remaja_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_masa_kanak_akhir_dan_remaja_fieldblock}
+											
+{BEGIN Riwayat_pekerjaan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_pekerjaan}  r-vertical-field" data-fieldname="Riwayat_pekerjaan" data-signal-error-for="Riwayat_pekerjaan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="Riwayat_pekerjaan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_pekerjaan}">
+		
+		{BEGIN Riwayat_pekerjaan_label}{$label jiwa Riwayat_pekerjaan }{END Riwayat_pekerjaan_label}
+	</label>
+	<div class="" >
+		{$Riwayat_pekerjaan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_pekerjaan_fieldblock}
+											
+{BEGIN Riwayat_Psikoseksual_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Psikoseksual}  r-vertical-field" data-fieldname="Riwayat_Psikoseksual" data-signal-error-for="Riwayat_Psikoseksual{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="Riwayat_Psikoseksual" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_Psikoseksual}">
+		
+		{BEGIN Riwayat_Psikoseksual_label}{$label jiwa Riwayat_Psikoseksual }{END Riwayat_Psikoseksual_label}
+	</label>
+	<div class="" >
+		{$Riwayat_Psikoseksual_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_Psikoseksual_fieldblock}
+											
+{BEGIN Riwayat_keluarga_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_keluarga}  r-vertical-field" data-fieldname="Riwayat_keluarga" data-signal-error-for="Riwayat_keluarga{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="Riwayat_keluarga" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_keluarga}">
+		
+		{BEGIN Riwayat_keluarga_label}{$label jiwa Riwayat_keluarga }{END Riwayat_keluarga_label}
+	</label>
+	<div class="" >
+		{$Riwayat_keluarga_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_keluarga_fieldblock}
+											
+{BEGIN Persepsi_tentang_diri_dan_kehidupannya_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Persepsi_tentang_diri_dan_kehidupannya}  r-vertical-field" data-fieldname="Persepsi_tentang_diri_dan_kehidupannya" data-signal-error-for="Persepsi_tentang_diri_dan_kehidupannya{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="Persepsi_tentang_diri_dan_kehidupannya" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Persepsi_tentang_diri_dan_kehidupannya}">
+		
+		{BEGIN Persepsi_tentang_diri_dan_kehidupannya_label}{$label jiwa Persepsi_tentang_diri_dan_kehidupannya }{END Persepsi_tentang_diri_dan_kehidupannya_label}
+	</label>
+	<div class="" >
+		{$Persepsi_tentang_diri_dan_kehidupannya_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Persepsi_tentang_diri_dan_kehidupannya_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c3}
+			 
+																
+
+{BEGIN cellblock_section1_c}
+<td
+	{$cell_section1_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Riwayat_masa_kanak_awal_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_masa_kanak_awal}  r-vertical-field" data-fieldname="Riwayat_masa_kanak_awal" data-signal-error-for="Riwayat_masa_kanak_awal{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="Riwayat_masa_kanak_awal" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_masa_kanak_awal}">
+		
+		{BEGIN Riwayat_masa_kanak_awal_label}{$label jiwa Riwayat_masa_kanak_awal }{END Riwayat_masa_kanak_awal_label}
+	</label>
+	<div class="" >
+		{$Riwayat_masa_kanak_awal_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_masa_kanak_awal_fieldblock}
+											
+{BEGIN Masa_Dewasa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Masa_Dewasa}  r-vertical-field" data-fieldname="Masa_Dewasa" data-signal-error-for="Masa_Dewasa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="Masa_Dewasa" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Masa_Dewasa}">
+		
+		{BEGIN Masa_Dewasa_label}{$label jiwa Masa_Dewasa }{END Masa_Dewasa_label}
+	</label>
+	<div class="" >
+		{$Masa_Dewasa_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Masa_Dewasa_fieldblock}
+											
+{BEGIN Riwayat_pernikahan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_pernikahan}  r-vertical-field" data-fieldname="Riwayat_pernikahan" data-signal-error-for="Riwayat_pernikahan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="Riwayat_pernikahan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_pernikahan}">
+		
+		{BEGIN Riwayat_pernikahan_label}{$label jiwa Riwayat_pernikahan }{END Riwayat_pernikahan_label}
+	</label>
+	<div class="" >
+		{$Riwayat_pernikahan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_pernikahan_fieldblock}
+											
+{BEGIN Riwayat_aktivitas_sosial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_aktivitas_sosial}  r-vertical-field" data-fieldname="Riwayat_aktivitas_sosial" data-signal-error-for="Riwayat_aktivitas_sosial{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="Riwayat_aktivitas_sosial" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_aktivitas_sosial}">
+		
+		{BEGIN Riwayat_aktivitas_sosial_label}{$label jiwa Riwayat_aktivitas_sosial }{END Riwayat_aktivitas_sosial_label}
+	</label>
+	<div class="" >
+		{$Riwayat_aktivitas_sosial_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_aktivitas_sosial_fieldblock}
+											
+{BEGIN Genogram_keluarga_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Genogram_keluarga}  r-vertical-field" data-fieldname="Genogram_keluarga" data-signal-error-for="Genogram_keluarga{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="Genogram_keluarga" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Genogram_keluarga}">
+		
+		{BEGIN Genogram_keluarga_label}{$label jiwa Genogram_keluarga }{END Genogram_keluarga_label}
+	</label>
+	<div class="" >
+		{$Genogram_keluarga_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Genogram_keluarga_fieldblock}
+											
+{BEGIN Persepsi_keluarga_tentang_diri_pasien_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Persepsi_keluarga_tentang_diri_pasien}  r-vertical-field" data-fieldname="Persepsi_keluarga_tentang_diri_pasien" data-signal-error-for="Persepsi_keluarga_tentang_diri_pasien{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="Persepsi_keluarga_tentang_diri_pasien" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Persepsi_keluarga_tentang_diri_pasien}">
+		
+		{BEGIN Persepsi_keluarga_tentang_diri_pasien_label}{$label jiwa Persepsi_keluarga_tentang_diri_pasien }{END Persepsi_keluarga_tentang_diri_pasien_label}
+	</label>
+	<div class="" >
+		{$Persepsi_keluarga_tentang_diri_pasien_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Persepsi_keluarga_tentang_diri_pasien_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c}
+			 
+																
+
+{BEGIN cellblock_section1_c4}
+<td
+	{$cell_section1_c4}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c4" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Riwayat_masa_kanak_pertengahan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_masa_kanak_pertengahan}  r-vertical-field" data-fieldname="Riwayat_masa_kanak_pertengahan" data-signal-error-for="Riwayat_masa_kanak_pertengahan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="Riwayat_masa_kanak_pertengahan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_masa_kanak_pertengahan}">
+		
+		{BEGIN Riwayat_masa_kanak_pertengahan_label}{$label jiwa Riwayat_masa_kanak_pertengahan }{END Riwayat_masa_kanak_pertengahan_label}
+	</label>
+	<div class="" >
+		{$Riwayat_masa_kanak_pertengahan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_masa_kanak_pertengahan_fieldblock}
+											
+{BEGIN Riwayat_pendidikan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_pendidikan}  r-vertical-field" data-fieldname="Riwayat_pendidikan" data-signal-error-for="Riwayat_pendidikan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="Riwayat_pendidikan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_pendidikan}">
+		
+		{BEGIN Riwayat_pendidikan_label}{$label jiwa Riwayat_pendidikan }{END Riwayat_pendidikan_label}
+	</label>
+	<div class="" >
+		{$Riwayat_pendidikan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_pendidikan_fieldblock}
+											
+{BEGIN Riwayat_Agama_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Agama}  r-vertical-field" data-fieldname="Riwayat_Agama" data-signal-error-for="Riwayat_Agama{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="Riwayat_Agama" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_Agama}">
+		
+		{BEGIN Riwayat_Agama_label}{$label jiwa Riwayat_Agama }{END Riwayat_Agama_label}
+	</label>
+	<div class="" >
+		{$Riwayat_Agama_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_Agama_fieldblock}
+											
+{BEGIN Riwayat_hukum_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_hukum}  r-vertical-field" data-fieldname="Riwayat_hukum" data-signal-error-for="Riwayat_hukum{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="Riwayat_hukum" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_hukum}">
+		
+		{BEGIN Riwayat_hukum_label}{$label jiwa Riwayat_hukum }{END Riwayat_hukum_label}
+	</label>
+	<div class="" >
+		{$Riwayat_hukum_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_hukum_fieldblock}
+											
+{BEGIN Situasi_kehidupan_sekarang_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Situasi_kehidupan_sekarang}  r-vertical-field" data-fieldname="Situasi_kehidupan_sekarang" data-signal-error-for="Situasi_kehidupan_sekarang{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="Situasi_kehidupan_sekarang" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Situasi_kehidupan_sekarang}">
+		
+		{BEGIN Situasi_kehidupan_sekarang_label}{$label jiwa Situasi_kehidupan_sekarang }{END Situasi_kehidupan_sekarang_label}
+	</label>
+	<div class="" >
+		{$Situasi_kehidupan_sekarang_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Situasi_kehidupan_sekarang_fieldblock}
+											
+{BEGIN Fantasi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fantasi}  r-vertical-field" data-fieldname="Fantasi" data-signal-error-for="Fantasi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="Fantasi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Fantasi}">
+		
+		{BEGIN Fantasi_label}{$label jiwa Fantasi }{END Fantasi_label}
+	</label>
+	<div class="" >
+		{$Fantasi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Fantasi_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c4}
+								</tr>
+			</tbody></table>
+{END section1_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section2{$pageid}"> 
+			{BEGIN section2_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section2" id="form_section2_{$pageid}" data-makeup="small" {$form_section2} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section2_c1}
+<td
+	{$cell_section2_c1}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="section2_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Penampilan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Penampilan}  r-vertical-field" data-fieldname="Penampilan" data-signal-error-for="Penampilan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field28" {$item_integrated_edit_field28} data-pageid="{$pageid}" data-field="Penampilan" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Penampilan}">
+		
+		{BEGIN Penampilan_label}{$label jiwa Penampilan }{END Penampilan_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Penampilan_value}	</div>
+
+		
+</div>
+
+
+{END Penampilan_fieldblock}
+											
+{BEGIN Perilaku_dan_aktivitas_psikomotor_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Perilaku_dan_aktivitas_psikomotor}  r-vertical-field" data-fieldname="Perilaku_dan_aktivitas_psikomotor" data-signal-error-for="Perilaku_dan_aktivitas_psikomotor{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field29" {$item_integrated_edit_field29} data-pageid="{$pageid}" data-field="Perilaku_dan_aktivitas_psikomotor" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Perilaku_dan_aktivitas_psikomotor}">
+		
+		{BEGIN Perilaku_dan_aktivitas_psikomotor_label}{$label jiwa Perilaku_dan_aktivitas_psikomotor }{END Perilaku_dan_aktivitas_psikomotor_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Perilaku_dan_aktivitas_psikomotor_value}	</div>
+
+		
+</div>
+
+
+{END Perilaku_dan_aktivitas_psikomotor_fieldblock}
+											
+{BEGIN Sikap_terhadap_pemeriksa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sikap_terhadap_pemeriksa}  r-vertical-field" data-fieldname="Sikap_terhadap_pemeriksa" data-signal-error-for="Sikap_terhadap_pemeriksa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field30" {$item_integrated_edit_field30} data-pageid="{$pageid}" data-field="Sikap_terhadap_pemeriksa" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Sikap_terhadap_pemeriksa}">
+		
+		{BEGIN Sikap_terhadap_pemeriksa_label}{$label jiwa Sikap_terhadap_pemeriksa }{END Sikap_terhadap_pemeriksa_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Sikap_terhadap_pemeriksa_value}	</div>
+
+		
+</div>
+
+
+{END Sikap_terhadap_pemeriksa_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c1}
+								</tr>
+			</tbody></table>
+{END section2_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section3{$pageid}"> 
+			{BEGIN section3_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section3" id="form_section3_{$pageid}" data-makeup="small" {$form_section3} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section3_c1}
+<td
+	{$cell_section3_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section3_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Irama_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Irama}  r-vertical-field" data-fieldname="Irama" data-signal-error-for="Irama{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field31" {$item_integrated_edit_field31} data-pageid="{$pageid}" data-field="Irama" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Irama}">
+		
+		{BEGIN Irama_label}{$label jiwa Irama }{END Irama_label}
+	</label>
+	<div class="" >
+		{$Irama_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Irama_fieldblock}
+											
+{BEGIN Kecepatan_bicara_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Kecepatan_bicara}  r-vertical-field" data-fieldname="Kecepatan_bicara" data-signal-error-for="Kecepatan_bicara{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field32" {$item_integrated_edit_field32} data-pageid="{$pageid}" data-field="Kecepatan_bicara" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Kecepatan_bicara}">
+		
+		{BEGIN Kecepatan_bicara_label}{$label jiwa Kecepatan_bicara }{END Kecepatan_bicara_label}
+	</label>
+	<div class="" >
+		{$Kecepatan_bicara_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Kecepatan_bicara_fieldblock}
+											
+{BEGIN Volume_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Volume}  r-vertical-field" data-fieldname="Volume" data-signal-error-for="Volume{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field33" {$item_integrated_edit_field33} data-pageid="{$pageid}" data-field="Volume" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Volume}">
+		
+		{BEGIN Volume_label}{$label jiwa Volume }{END Volume_label}
+	</label>
+	<div class="" >
+		{$Volume_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Volume_fieldblock}
+											
+{BEGIN Kelancaran_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Kelancaran}  r-vertical-field" data-fieldname="Kelancaran" data-signal-error-for="Kelancaran{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field34" {$item_integrated_edit_field34} data-pageid="{$pageid}" data-field="Kelancaran" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Kelancaran}">
+		
+		{BEGIN Kelancaran_label}{$label jiwa Kelancaran }{END Kelancaran_label}
+	</label>
+	<div class="" >
+		{$Kelancaran_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Kelancaran_fieldblock}
+	
+								</td>
+			{END cellblock_section3_c1}
+			 
+																
+
+{BEGIN cellblock_section3_c}
+<td
+	{$cell_section3_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section3_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Mood_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Mood}  r-vertical-field" data-fieldname="Mood" data-signal-error-for="Mood{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field35" {$item_integrated_edit_field35} data-pageid="{$pageid}" data-field="Mood" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Mood}">
+		
+		{BEGIN Mood_label}{$label jiwa Mood }{END Mood_label}
+	</label>
+	<div class="" >
+		{$Mood_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Mood_fieldblock}
+											
+{BEGIN Afek_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Afek}  r-vertical-field" data-fieldname="Afek" data-signal-error-for="Afek{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field36" {$item_integrated_edit_field36} data-pageid="{$pageid}" data-field="Afek" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Afek}">
+		
+		{BEGIN Afek_label}{$label jiwa Afek }{END Afek_label}
+	</label>
+	<div class="" >
+		{$Afek_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Afek_fieldblock}
+											
+{BEGIN Keserasian_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Keserasian}  r-vertical-field" data-fieldname="Keserasian" data-signal-error-for="Keserasian{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field37" {$item_integrated_edit_field37} data-pageid="{$pageid}" data-field="Keserasian" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Keserasian}">
+		
+		{BEGIN Keserasian_label}{$label jiwa Keserasian }{END Keserasian_label}
+	</label>
+	<div class="" >
+		{$Keserasian_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Keserasian_fieldblock}
+	
+								</td>
+			{END cellblock_section3_c}
+								</tr>
+			</tbody></table>
+{END section3_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section4{$pageid}"> 
+			{BEGIN section4_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section4" id="form_section4_{$pageid}" data-makeup="small" {$form_section4} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section4_c1}
+<td
+	{$cell_section4_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section4_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section" {$item_section} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section1_headattrs} data-toggle="collapse"   
+
+				href="#section1{$pageid}" aria-expanded="true" aria-controls="section1"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Halusinasi			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section1_xtrclass}" role="tabpanel"  {$section_section1_attrs}
+
+				id="section1{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section5_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section5" id="form_section5_{$pageid}" data-makeup="small" {$form_section5} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section5_c1}
+<td
+	{$cell_section5_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section5_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Auditorik_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Auditorik}  r-vertical-field" data-fieldname="Auditorik" data-signal-error-for="Auditorik{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field38" {$item_integrated_edit_field38} data-pageid="{$pageid}" data-field="Auditorik" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Auditorik}">
+		
+		{BEGIN Auditorik_label}{$label jiwa Auditorik }{END Auditorik_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Auditorik_value}	</div>
+
+		
+</div>
+
+
+{END Auditorik_fieldblock}
+											
+{BEGIN Visual_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Visual}  r-vertical-field" data-fieldname="Visual" data-signal-error-for="Visual{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field39" {$item_integrated_edit_field39} data-pageid="{$pageid}" data-field="Visual" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Visual}">
+		
+		{BEGIN Visual_label}{$label jiwa Visual }{END Visual_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Visual_value}	</div>
+
+		
+</div>
+
+
+{END Visual_fieldblock}
+											
+{BEGIN Taktil_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Taktil}  r-vertical-field" data-fieldname="Taktil" data-signal-error-for="Taktil{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field40" {$item_integrated_edit_field40} data-pageid="{$pageid}" data-field="Taktil" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Taktil}">
+		
+		{BEGIN Taktil_label}{$label jiwa Taktil }{END Taktil_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Taktil_value}	</div>
+
+		
+</div>
+
+
+{END Taktil_fieldblock}
+											
+{BEGIN Olfaktorik_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Olfaktorik}  r-vertical-field" data-fieldname="Olfaktorik" data-signal-error-for="Olfaktorik{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field41" {$item_integrated_edit_field41} data-pageid="{$pageid}" data-field="Olfaktorik" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Olfaktorik}">
+		
+		{BEGIN Olfaktorik_label}{$label jiwa Olfaktorik }{END Olfaktorik_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Olfaktorik_value}	</div>
+
+		
+</div>
+
+
+{END Olfaktorik_fieldblock}
+											
+{BEGIN Gustatorik_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Gustatorik}  r-vertical-field" data-fieldname="Gustatorik" data-signal-error-for="Gustatorik{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field42" {$item_integrated_edit_field42} data-pageid="{$pageid}" data-field="Gustatorik" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Gustatorik}">
+		
+		{BEGIN Gustatorik_label}{$label jiwa Gustatorik }{END Gustatorik_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Gustatorik_value}	</div>
+
+		
+</div>
+
+
+{END Gustatorik_fieldblock}
+	
+								</td>
+			{END cellblock_section5_c1}
+								</tr>
+			</tbody></table>
+{END section5_block}
+		  </div>
+		</div>
+	</div>
+											
+{BEGIN Ilusi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ilusi}  r-vertical-field" data-fieldname="Ilusi" data-signal-error-for="Ilusi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field43" {$item_integrated_edit_field43} data-pageid="{$pageid}" data-field="Ilusi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Ilusi}">
+		
+		{BEGIN Ilusi_label}{$label jiwa Ilusi }{END Ilusi_label}
+	</label>
+	<div class="" >
+		{$Ilusi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Ilusi_fieldblock}
+											
+{BEGIN Depersonalisasi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Depersonalisasi}  r-vertical-field" data-fieldname="Depersonalisasi" data-signal-error-for="Depersonalisasi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field44" {$item_integrated_edit_field44} data-pageid="{$pageid}" data-field="Depersonalisasi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Depersonalisasi}">
+		
+		{BEGIN Depersonalisasi_label}{$label jiwa Depersonalisasi }{END Depersonalisasi_label}
+	</label>
+	<div class="" >
+		{$Depersonalisasi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Depersonalisasi_fieldblock}
+											
+{BEGIN Derealisasi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Derealisasi}  r-vertical-field" data-fieldname="Derealisasi" data-signal-error-for="Derealisasi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field45" {$item_integrated_edit_field45} data-pageid="{$pageid}" data-field="Derealisasi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Derealisasi}">
+		
+		{BEGIN Derealisasi_label}{$label jiwa Derealisasi }{END Derealisasi_label}
+	</label>
+	<div class="" >
+		{$Derealisasi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Derealisasi_fieldblock}
+	
+								</td>
+			{END cellblock_section4_c1}
+			 
+																
+
+{BEGIN cellblock_section4_c}
+<td
+	{$cell_section4_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section4_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Blocking_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Blocking}  r-vertical-field" data-fieldname="Blocking" data-signal-error-for="Blocking{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field46" {$item_integrated_edit_field46} data-pageid="{$pageid}" data-field="Blocking" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Blocking}">
+		
+		{BEGIN Blocking_label}{$label jiwa Blocking }{END Blocking_label}
+	</label>
+	<div class="" >
+		{$Blocking_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Blocking_fieldblock}
+											
+{BEGIN Assosiasi_Longgar_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Assosiasi_Longgar}  r-vertical-field" data-fieldname="Assosiasi_Longgar" data-signal-error-for="Assosiasi_Longgar{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field47" {$item_integrated_edit_field47} data-pageid="{$pageid}" data-field="Assosiasi_Longgar" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Assosiasi_Longgar}">
+		
+		{BEGIN Assosiasi_Longgar_label}{$label jiwa Assosiasi_Longgar }{END Assosiasi_Longgar_label}
+	</label>
+	<div class="" >
+		{$Assosiasi_Longgar_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Assosiasi_Longgar_fieldblock}
+											
+{BEGIN Inkoheren_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Inkoheren}  r-vertical-field" data-fieldname="Inkoheren" data-signal-error-for="Inkoheren{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field48" {$item_integrated_edit_field48} data-pageid="{$pageid}" data-field="Inkoheren" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Inkoheren}">
+		
+		{BEGIN Inkoheren_label}{$label jiwa Inkoheren }{END Inkoheren_label}
+	</label>
+	<div class="" >
+		{$Inkoheren_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Inkoheren_fieldblock}
+											
+{BEGIN Flight_of_Idea_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Flight_of_Idea}  r-vertical-field" data-fieldname="Flight_of_Idea" data-signal-error-for="Flight_of_Idea{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field49" {$item_integrated_edit_field49} data-pageid="{$pageid}" data-field="Flight_of_Idea" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Flight_of_Idea}">
+		
+		{BEGIN Flight_of_Idea_label}{$label jiwa Flight_of_Idea }{END Flight_of_Idea_label}
+	</label>
+	<div class="" >
+		{$Flight_of_Idea_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Flight_of_Idea_fieldblock}
+											
+{BEGIN Sirkumstansia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sirkumstansia}  r-vertical-field" data-fieldname="Sirkumstansia" data-signal-error-for="Sirkumstansia{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field50" {$item_integrated_edit_field50} data-pageid="{$pageid}" data-field="Sirkumstansia" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Sirkumstansia}">
+		
+		{BEGIN Sirkumstansia_label}{$label jiwa Sirkumstansia }{END Sirkumstansia_label}
+	</label>
+	<div class="" >
+		{$Sirkumstansia_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Sirkumstansia_fieldblock}
+											
+{BEGIN Tangensial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tangensial}  r-vertical-field" data-fieldname="Tangensial" data-signal-error-for="Tangensial{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field51" {$item_integrated_edit_field51} data-pageid="{$pageid}" data-field="Tangensial" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Tangensial}">
+		
+		{BEGIN Tangensial_label}{$label jiwa Tangensial }{END Tangensial_label}
+	</label>
+	<div class="" >
+		{$Tangensial_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Tangensial_fieldblock}
+											
+{BEGIN Neologisme_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Neologisme}  r-vertical-field" data-fieldname="Neologisme" data-signal-error-for="Neologisme{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field52" {$item_integrated_edit_field52} data-pageid="{$pageid}" data-field="Neologisme" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Neologisme}">
+		
+		{BEGIN Neologisme_label}{$label jiwa Neologisme }{END Neologisme_label}
+	</label>
+	<div class="" >
+		{$Neologisme_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Neologisme_fieldblock}
+											
+{BEGIN Word_Salad_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Word_Salad}  r-vertical-field" data-fieldname="Word_Salad" data-signal-error-for="Word_Salad{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field53" {$item_integrated_edit_field53} data-pageid="{$pageid}" data-field="Word_Salad" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Word_Salad}">
+		
+		{BEGIN Word_Salad_label}{$label jiwa Word_Salad }{END Word_Salad_label}
+	</label>
+	<div class="" >
+		{$Word_Salad_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Word_Salad_fieldblock}
+											
+{BEGIN Hendaya_Berbahasa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Hendaya_Berbahasa}  r-vertical-field" data-fieldname="Hendaya_Berbahasa" data-signal-error-for="Hendaya_Berbahasa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field54" {$item_integrated_edit_field54} data-pageid="{$pageid}" data-field="Hendaya_Berbahasa" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Hendaya_Berbahasa}">
+		
+		{BEGIN Hendaya_Berbahasa_label}{$label jiwa Hendaya_Berbahasa }{END Hendaya_Berbahasa_label}
+	</label>
+	<div class="" >
+		{$Hendaya_Berbahasa_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Hendaya_Berbahasa_fieldblock}
+	
+								</td>
+			{END cellblock_section4_c}
+								</tr>
+			</tbody></table>
+{END section4_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section6{$pageid}"> 
+			{BEGIN section6_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section6" id="form_section6_{$pageid}" data-makeup="small" {$form_section6} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="3"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section6_c3}
+<td
+	{$cell_section6_c3}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section6_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Produktivitas_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Produktivitas}  r-vertical-field" data-fieldname="Produktivitas" data-signal-error-for="Produktivitas{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field55" {$item_integrated_edit_field55} data-pageid="{$pageid}" data-field="Produktivitas" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Produktivitas}">
+		
+		{BEGIN Produktivitas_label}{$label jiwa Produktivitas }{END Produktivitas_label}
+	</label>
+	<div class="" >
+		{$Produktivitas_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Produktivitas_fieldblock}
+											
+{BEGIN Waham_sistemik_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Waham_sistemik}  r-vertical-field" data-fieldname="Waham_sistemik" data-signal-error-for="Waham_sistemik{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field58" {$item_integrated_edit_field58} data-pageid="{$pageid}" data-field="Waham_sistemik" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Waham_sistemik}">
+		
+		{BEGIN Waham_sistemik_label}{$label jiwa Waham_sistemik }{END Waham_sistemik_label}
+	</label>
+	<div class="" >
+		{$Waham_sistemik_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Waham_sistemik_fieldblock}
+											
+{BEGIN Waham_kebesaran_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Waham_kebesaran}  r-vertical-field" data-fieldname="Waham_kebesaran" data-signal-error-for="Waham_kebesaran{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field61" {$item_integrated_edit_field61} data-pageid="{$pageid}" data-field="Waham_kebesaran" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Waham_kebesaran}">
+		
+		{BEGIN Waham_kebesaran_label}{$label jiwa Waham_kebesaran }{END Waham_kebesaran_label}
+	</label>
+	<div class="" >
+		{$Waham_kebesaran_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Waham_kebesaran_fieldblock}
+											
+{BEGIN Waham_dikendalikan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Waham_dikendalikan}  r-vertical-field" data-fieldname="Waham_dikendalikan" data-signal-error-for="Waham_dikendalikan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field64" {$item_integrated_edit_field64} data-pageid="{$pageid}" data-field="Waham_dikendalikan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Waham_dikendalikan}">
+		
+		{BEGIN Waham_dikendalikan_label}{$label jiwa Waham_dikendalikan }{END Waham_dikendalikan_label}
+	</label>
+	<div class="" >
+		{$Waham_dikendalikan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Waham_dikendalikan_fieldblock}
+											
+{BEGIN Thought_of_broadcasting_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Thought_of_broadcasting}  r-vertical-field" data-fieldname="Thought_of_broadcasting" data-signal-error-for="Thought_of_broadcasting{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field67" {$item_integrated_edit_field67} data-pageid="{$pageid}" data-field="Thought_of_broadcasting" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Thought_of_broadcasting}">
+		
+		{BEGIN Thought_of_broadcasting_label}{$label jiwa Thought_of_broadcasting }{END Thought_of_broadcasting_label}
+	</label>
+	<div class="" >
+		{$Thought_of_broadcasting_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Thought_of_broadcasting_fieldblock}
+											
+{BEGIN Fobia_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fobia}  r-vertical-field" data-fieldname="Fobia" data-signal-error-for="Fobia{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field70" {$item_integrated_edit_field70} data-pageid="{$pageid}" data-field="Fobia" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Fobia}">
+		
+		{BEGIN Fobia_label}{$label jiwa Fobia }{END Fobia_label}
+	</label>
+	<div class="" >
+		{$Fobia_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Fobia_fieldblock}
+	
+								</td>
+			{END cellblock_section6_c3}
+			 
+																
+
+{BEGIN cellblock_section6_c}
+<td
+	{$cell_section6_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section6_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Preokupasi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Preokupasi}  r-vertical-field" data-fieldname="Preokupasi" data-signal-error-for="Preokupasi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field56" {$item_integrated_edit_field56} data-pageid="{$pageid}" data-field="Preokupasi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Preokupasi}">
+		
+		{BEGIN Preokupasi_label}{$label jiwa Preokupasi }{END Preokupasi_label}
+	</label>
+	<div class="" >
+		{$Preokupasi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Preokupasi_fieldblock}
+											
+{BEGIN Waham_nihilistik_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Waham_nihilistik}  r-vertical-field" data-fieldname="Waham_nihilistik" data-signal-error-for="Waham_nihilistik{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field59" {$item_integrated_edit_field59} data-pageid="{$pageid}" data-field="Waham_nihilistik" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Waham_nihilistik}">
+		
+		{BEGIN Waham_nihilistik_label}{$label jiwa Waham_nihilistik }{END Waham_nihilistik_label}
+	</label>
+	<div class="" >
+		{$Waham_nihilistik_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Waham_nihilistik_fieldblock}
+											
+{BEGIN Waham_kejaran_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Waham_kejaran}  r-vertical-field" data-fieldname="Waham_kejaran" data-signal-error-for="Waham_kejaran{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field62" {$item_integrated_edit_field62} data-pageid="{$pageid}" data-field="Waham_kejaran" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Waham_kejaran}">
+		
+		{BEGIN Waham_kejaran_label}{$label jiwa Waham_kejaran }{END Waham_kejaran_label}
+	</label>
+	<div class="" >
+		{$Waham_kejaran_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Waham_kejaran_fieldblock}
+											
+{BEGIN Thought_of_withdrawl_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Thought_of_withdrawl}  r-vertical-field" data-fieldname="Thought_of_withdrawl" data-signal-error-for="Thought_of_withdrawl{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field65" {$item_integrated_edit_field65} data-pageid="{$pageid}" data-field="Thought_of_withdrawl" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Thought_of_withdrawl}">
+		
+		{BEGIN Thought_of_withdrawl_label}{$label jiwa Thought_of_withdrawl }{END Thought_of_withdrawl_label}
+	</label>
+	<div class="" >
+		{$Thought_of_withdrawl_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Thought_of_withdrawl_fieldblock}
+											
+{BEGIN Obsesi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Obsesi}  r-vertical-field" data-fieldname="Obsesi" data-signal-error-for="Obsesi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field68" {$item_integrated_edit_field68} data-pageid="{$pageid}" data-field="Obsesi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Obsesi}">
+		
+		{BEGIN Obsesi_label}{$label jiwa Obsesi }{END Obsesi_label}
+	</label>
+	<div class="" >
+		{$Obsesi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Obsesi_fieldblock}
+											
+{BEGIN Gagasan_untuk_bunuh_diri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Gagasan_untuk_bunuh_diri}  r-vertical-field" data-fieldname="Gagasan_untuk_bunuh_diri" data-signal-error-for="Gagasan_untuk_bunuh_diri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field71" {$item_integrated_edit_field71} data-pageid="{$pageid}" data-field="Gagasan_untuk_bunuh_diri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Gagasan_untuk_bunuh_diri}">
+		
+		{BEGIN Gagasan_untuk_bunuh_diri_label}{$label jiwa Gagasan_untuk_bunuh_diri }{END Gagasan_untuk_bunuh_diri_label}
+	</label>
+	<div class="" >
+		{$Gagasan_untuk_bunuh_diri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Gagasan_untuk_bunuh_diri_fieldblock}
+	
+								</td>
+			{END cellblock_section6_c}
+			 
+																
+
+{BEGIN cellblock_section6_c4}
+<td
+	{$cell_section6_c4}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section6_c4" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Waham_bizarre_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Waham_bizarre}  r-vertical-field" data-fieldname="Waham_bizarre" data-signal-error-for="Waham_bizarre{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field57" {$item_integrated_edit_field57} data-pageid="{$pageid}" data-field="Waham_bizarre" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Waham_bizarre}">
+		
+		{BEGIN Waham_bizarre_label}{$label jiwa Waham_bizarre }{END Waham_bizarre_label}
+	</label>
+	<div class="" >
+		{$Waham_bizarre_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Waham_bizarre_fieldblock}
+											
+{BEGIN Waham_paranoid_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Waham_paranoid}  r-vertical-field" data-fieldname="Waham_paranoid" data-signal-error-for="Waham_paranoid{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field60" {$item_integrated_edit_field60} data-pageid="{$pageid}" data-field="Waham_paranoid" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Waham_paranoid}">
+		
+		{BEGIN Waham_paranoid_label}{$label jiwa Waham_paranoid }{END Waham_paranoid_label}
+	</label>
+	<div class="" >
+		{$Waham_paranoid_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Waham_paranoid_fieldblock}
+											
+{BEGIN Waham_rujukan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Waham_rujukan}  r-vertical-field" data-fieldname="Waham_rujukan" data-signal-error-for="Waham_rujukan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field63" {$item_integrated_edit_field63} data-pageid="{$pageid}" data-field="Waham_rujukan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Waham_rujukan}">
+		
+		{BEGIN Waham_rujukan_label}{$label jiwa Waham_rujukan }{END Waham_rujukan_label}
+	</label>
+	<div class="" >
+		{$Waham_rujukan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Waham_rujukan_fieldblock}
+											
+{BEGIN Thought_of_insertion_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Thought_of_insertion}  r-vertical-field" data-fieldname="Thought_of_insertion" data-signal-error-for="Thought_of_insertion{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field66" {$item_integrated_edit_field66} data-pageid="{$pageid}" data-field="Thought_of_insertion" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Thought_of_insertion}">
+		
+		{BEGIN Thought_of_insertion_label}{$label jiwa Thought_of_insertion }{END Thought_of_insertion_label}
+	</label>
+	<div class="" >
+		{$Thought_of_insertion_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Thought_of_insertion_fieldblock}
+											
+{BEGIN Kompulsif_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Kompulsif}  r-vertical-field" data-fieldname="Kompulsif" data-signal-error-for="Kompulsif{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field69" {$item_integrated_edit_field69} data-pageid="{$pageid}" data-field="Kompulsif" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Kompulsif}">
+		
+		{BEGIN Kompulsif_label}{$label jiwa Kompulsif }{END Kompulsif_label}
+	</label>
+	<div class="" >
+		{$Kompulsif_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Kompulsif_fieldblock}
+	
+								</td>
+			{END cellblock_section6_c4}
+								</tr>
+			</tbody></table>
+{END section6_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section7{$pageid}"> 
+			{BEGIN section7_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section7" id="form_section7_{$pageid}" data-makeup="small" {$form_section7} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="3"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section7_c3}
+<td
+	{$cell_section7_c3}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section7_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Taraf_kesadaran_dan_kesiagaan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Taraf_kesadaran_dan_kesiagaan}  r-vertical-field" data-fieldname="Taraf_kesadaran_dan_kesiagaan" data-signal-error-for="Taraf_kesadaran_dan_kesiagaan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field72" {$item_integrated_edit_field72} data-pageid="{$pageid}" data-field="Taraf_kesadaran_dan_kesiagaan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Taraf_kesadaran_dan_kesiagaan}">
+		
+		{BEGIN Taraf_kesadaran_dan_kesiagaan_label}{$label jiwa Taraf_kesadaran_dan_kesiagaan }{END Taraf_kesadaran_dan_kesiagaan_label}
+	</label>
+	<div class="" >
+		{$Taraf_kesadaran_dan_kesiagaan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Taraf_kesadaran_dan_kesiagaan_fieldblock}
+											
+{BEGIN Orieantasi_Orang_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Orieantasi_Orang}  r-vertical-field" data-fieldname="Orieantasi_Orang" data-signal-error-for="Orieantasi_Orang{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field75" {$item_integrated_edit_field75} data-pageid="{$pageid}" data-field="Orieantasi_Orang" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Orieantasi_Orang}">
+		
+		{BEGIN Orieantasi_Orang_label}{$label jiwa Orieantasi_Orang }{END Orieantasi_Orang_label}
+	</label>
+	<div class="" >
+		{$Orieantasi_Orang_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Orieantasi_Orang_fieldblock}
+											
+{BEGIN Daya_ingat_Jangka_pendek_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Daya_ingat_Jangka_pendek}  r-vertical-field" data-fieldname="Daya_ingat_Jangka_pendek" data-signal-error-for="Daya_ingat_Jangka_pendek{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field78" {$item_integrated_edit_field78} data-pageid="{$pageid}" data-field="Daya_ingat_Jangka_pendek" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Daya_ingat_Jangka_pendek}">
+		
+		{BEGIN Daya_ingat_Jangka_pendek_label}{$label jiwa Daya_ingat_Jangka_pendek }{END Daya_ingat_Jangka_pendek_label}
+	</label>
+	<div class="" >
+		{$Daya_ingat_Jangka_pendek_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Daya_ingat_Jangka_pendek_fieldblock}
+											
+{BEGIN Kemampuan_Membaca_Menulis_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Kemampuan_Membaca_Menulis}  r-vertical-field" data-fieldname="Kemampuan_Membaca_Menulis" data-signal-error-for="Kemampuan_Membaca_Menulis{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field81" {$item_integrated_edit_field81} data-pageid="{$pageid}" data-field="Kemampuan_Membaca_Menulis" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Kemampuan_Membaca_Menulis}">
+		
+		{BEGIN Kemampuan_Membaca_Menulis_label}{$label jiwa Kemampuan_Membaca_Menulis }{END Kemampuan_Membaca_Menulis_label}
+	</label>
+	<div class="" >
+		{$Kemampuan_Membaca_Menulis_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Kemampuan_Membaca_Menulis_fieldblock}
+											
+{BEGIN Inteligensia_dan_kemampuan_informasi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Inteligensia_dan_kemampuan_informasi}  r-vertical-field" data-fieldname="Inteligensia_dan_kemampuan_informasi" data-signal-error-for="Inteligensia_dan_kemampuan_informasi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field84" {$item_integrated_edit_field84} data-pageid="{$pageid}" data-field="Inteligensia_dan_kemampuan_informasi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Inteligensia_dan_kemampuan_informasi}">
+		
+		{BEGIN Inteligensia_dan_kemampuan_informasi_label}{$label jiwa Inteligensia_dan_kemampuan_informasi }{END Inteligensia_dan_kemampuan_informasi_label}
+	</label>
+	<div class="" >
+		{$Inteligensia_dan_kemampuan_informasi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Inteligensia_dan_kemampuan_informasi_fieldblock}
+											
+{BEGIN Daya_nilai_sosial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Daya_nilai_sosial}  r-vertical-field" data-fieldname="Daya_nilai_sosial" data-signal-error-for="Daya_nilai_sosial{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field87" {$item_integrated_edit_field87} data-pageid="{$pageid}" data-field="Daya_nilai_sosial" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Daya_nilai_sosial}">
+		
+		{BEGIN Daya_nilai_sosial_label}{$label jiwa Daya_nilai_sosial }{END Daya_nilai_sosial_label}
+	</label>
+	<div class="" >
+		{$Daya_nilai_sosial_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Daya_nilai_sosial_fieldblock}
+											
+{BEGIN Tilikan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tilikan}  r-vertical-field" data-fieldname="Tilikan" data-signal-error-for="Tilikan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field90" {$item_integrated_edit_field90} data-pageid="{$pageid}" data-field="Tilikan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Tilikan}">
+		
+		{BEGIN Tilikan_label}{$label jiwa Tilikan }{END Tilikan_label}
+	</label>
+	<div class="" >
+		{$Tilikan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Tilikan_fieldblock}
+	
+								</td>
+			{END cellblock_section7_c3}
+			 
+																
+
+{BEGIN cellblock_section7_c}
+<td
+	{$cell_section7_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section7_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Orieantasi_Waktu_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Orieantasi_Waktu}  r-vertical-field" data-fieldname="Orieantasi_Waktu" data-signal-error-for="Orieantasi_Waktu{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field73" {$item_integrated_edit_field73} data-pageid="{$pageid}" data-field="Orieantasi_Waktu" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Orieantasi_Waktu}">
+		
+		{BEGIN Orieantasi_Waktu_label}{$label jiwa Orieantasi_Waktu }{END Orieantasi_Waktu_label}
+	</label>
+	<div class="" >
+		{$Orieantasi_Waktu_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Orieantasi_Waktu_fieldblock}
+											
+{BEGIN Daya_ingat_Jangka_panjang_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Daya_ingat_Jangka_panjang}  r-vertical-field" data-fieldname="Daya_ingat_Jangka_panjang" data-signal-error-for="Daya_ingat_Jangka_panjang{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field76" {$item_integrated_edit_field76} data-pageid="{$pageid}" data-field="Daya_ingat_Jangka_panjang" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Daya_ingat_Jangka_panjang}">
+		
+		{BEGIN Daya_ingat_Jangka_panjang_label}{$label jiwa Daya_ingat_Jangka_panjang }{END Daya_ingat_Jangka_panjang_label}
+	</label>
+	<div class="" >
+		{$Daya_ingat_Jangka_panjang_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Daya_ingat_Jangka_panjang_fieldblock}
+											
+{BEGIN Daya_ingat_Jangka_segera_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Daya_ingat_Jangka_segera}  r-vertical-field" data-fieldname="Daya_ingat_Jangka_segera" data-signal-error-for="Daya_ingat_Jangka_segera{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field79" {$item_integrated_edit_field79} data-pageid="{$pageid}" data-field="Daya_ingat_Jangka_segera" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Daya_ingat_Jangka_segera}">
+		
+		{BEGIN Daya_ingat_Jangka_segera_label}{$label jiwa Daya_ingat_Jangka_segera }{END Daya_ingat_Jangka_segera_label}
+	</label>
+	<div class="" >
+		{$Daya_ingat_Jangka_segera_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Daya_ingat_Jangka_segera_fieldblock}
+											
+{BEGIN Kemampuan_visuospasial_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Kemampuan_visuospasial}  r-vertical-field" data-fieldname="Kemampuan_visuospasial" data-signal-error-for="Kemampuan_visuospasial{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field82" {$item_integrated_edit_field82} data-pageid="{$pageid}" data-field="Kemampuan_visuospasial" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Kemampuan_visuospasial}">
+		
+		{BEGIN Kemampuan_visuospasial_label}{$label jiwa Kemampuan_visuospasial }{END Kemampuan_visuospasial_label}
+	</label>
+	<div class="" >
+		{$Kemampuan_visuospasial_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Kemampuan_visuospasial_fieldblock}
+											
+{BEGIN Kemampuan_mengendalikan_impuls_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Kemampuan_mengendalikan_impuls}  r-vertical-field" data-fieldname="Kemampuan_mengendalikan_impuls" data-signal-error-for="Kemampuan_mengendalikan_impuls{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field85" {$item_integrated_edit_field85} data-pageid="{$pageid}" data-field="Kemampuan_mengendalikan_impuls" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Kemampuan_mengendalikan_impuls}">
+		
+		{BEGIN Kemampuan_mengendalikan_impuls_label}{$label jiwa Kemampuan_mengendalikan_impuls }{END Kemampuan_mengendalikan_impuls_label}
+	</label>
+	<div class="" >
+		{$Kemampuan_mengendalikan_impuls_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Kemampuan_mengendalikan_impuls_fieldblock}
+											
+{BEGIN Uji_daya_nilai_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Uji_daya_nilai}  r-vertical-field" data-fieldname="Uji_daya_nilai" data-signal-error-for="Uji_daya_nilai{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field88" {$item_integrated_edit_field88} data-pageid="{$pageid}" data-field="Uji_daya_nilai" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Uji_daya_nilai}">
+		
+		{BEGIN Uji_daya_nilai_label}{$label jiwa Uji_daya_nilai }{END Uji_daya_nilai_label}
+	</label>
+	<div class="" >
+		{$Uji_daya_nilai_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Uji_daya_nilai_fieldblock}
+											
+{BEGIN Taraf_dipercaya_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Taraf_dipercaya}  r-vertical-field" data-fieldname="Taraf_dipercaya" data-signal-error-for="Taraf_dipercaya{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field91" {$item_integrated_edit_field91} data-pageid="{$pageid}" data-field="Taraf_dipercaya" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Taraf_dipercaya}">
+		
+		{BEGIN Taraf_dipercaya_label}{$label jiwa Taraf_dipercaya }{END Taraf_dipercaya_label}
+	</label>
+	<div class="" >
+		{$Taraf_dipercaya_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Taraf_dipercaya_fieldblock}
+	
+								</td>
+			{END cellblock_section7_c}
+			 
+																
+
+{BEGIN cellblock_section7_c4}
+<td
+	{$cell_section7_c4}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section7_c4" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Orieantasi_Tempat_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Orieantasi_Tempat}  r-vertical-field" data-fieldname="Orieantasi_Tempat" data-signal-error-for="Orieantasi_Tempat{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field74" {$item_integrated_edit_field74} data-pageid="{$pageid}" data-field="Orieantasi_Tempat" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Orieantasi_Tempat}">
+		
+		{BEGIN Orieantasi_Tempat_label}{$label jiwa Orieantasi_Tempat }{END Orieantasi_Tempat_label}
+	</label>
+	<div class="" >
+		{$Orieantasi_Tempat_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Orieantasi_Tempat_fieldblock}
+											
+{BEGIN Daya_ingat_Jangka_sedang_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Daya_ingat_Jangka_sedang}  r-vertical-field" data-fieldname="Daya_ingat_Jangka_sedang" data-signal-error-for="Daya_ingat_Jangka_sedang{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field77" {$item_integrated_edit_field77} data-pageid="{$pageid}" data-field="Daya_ingat_Jangka_sedang" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Daya_ingat_Jangka_sedang}">
+		
+		{BEGIN Daya_ingat_Jangka_sedang_label}{$label jiwa Daya_ingat_Jangka_sedang }{END Daya_ingat_Jangka_sedang_label}
+	</label>
+	<div class="" >
+		{$Daya_ingat_Jangka_sedang_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Daya_ingat_Jangka_sedang_fieldblock}
+											
+{BEGIN Konsentrasi_perhatian_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Konsentrasi_perhatian}  r-vertical-field" data-fieldname="Konsentrasi_perhatian" data-signal-error-for="Konsentrasi_perhatian{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field80" {$item_integrated_edit_field80} data-pageid="{$pageid}" data-field="Konsentrasi_perhatian" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Konsentrasi_perhatian}">
+		
+		{BEGIN Konsentrasi_perhatian_label}{$label jiwa Konsentrasi_perhatian }{END Konsentrasi_perhatian_label}
+	</label>
+	<div class="" >
+		{$Konsentrasi_perhatian_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Konsentrasi_perhatian_fieldblock}
+											
+{BEGIN Pikiran_abstrak_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Pikiran_abstrak}  r-vertical-field" data-fieldname="Pikiran_abstrak" data-signal-error-for="Pikiran_abstrak{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field83" {$item_integrated_edit_field83} data-pageid="{$pageid}" data-field="Pikiran_abstrak" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Pikiran_abstrak}">
+		
+		{BEGIN Pikiran_abstrak_label}{$label jiwa Pikiran_abstrak }{END Pikiran_abstrak_label}
+	</label>
+	<div class="" >
+		{$Pikiran_abstrak_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Pikiran_abstrak_fieldblock}
+											
+{BEGIN Daya_nilai_dan_tilikan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Daya_nilai_dan_tilikan}  r-vertical-field" data-fieldname="Daya_nilai_dan_tilikan" data-signal-error-for="Daya_nilai_dan_tilikan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field86" {$item_integrated_edit_field86} data-pageid="{$pageid}" data-field="Daya_nilai_dan_tilikan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Daya_nilai_dan_tilikan}">
+		
+		{BEGIN Daya_nilai_dan_tilikan_label}{$label jiwa Daya_nilai_dan_tilikan }{END Daya_nilai_dan_tilikan_label}
+	</label>
+	<div class="" >
+		{$Daya_nilai_dan_tilikan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Daya_nilai_dan_tilikan_fieldblock}
+											
+{BEGIN Penilaian_Daya_Realita_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Penilaian_Daya_Realita}  r-vertical-field" data-fieldname="Penilaian_Daya_Realita" data-signal-error-for="Penilaian_Daya_Realita{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field89" {$item_integrated_edit_field89} data-pageid="{$pageid}" data-field="Penilaian_Daya_Realita" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Penilaian_Daya_Realita}">
+		
+		{BEGIN Penilaian_Daya_Realita_label}{$label jiwa Penilaian_Daya_Realita }{END Penilaian_Daya_Realita_label}
+	</label>
+	<div class="" >
+		{$Penilaian_Daya_Realita_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Penilaian_Daya_Realita_fieldblock}
+	
+								</td>
+			{END cellblock_section7_c4}
+								</tr>
+			</tbody></table>
+{END section7_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section8{$pageid}"> 
+			{BEGIN section8_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section8" id="form_section8_{$pageid}" data-makeup="small" {$form_section8} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section8_c6}
+<td
+	{$cell_section8_c6}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section8_c6" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Keadaan_Umum_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Keadaan_Umum}  r-vertical-field" data-fieldname="Keadaan_Umum" data-signal-error-for="Keadaan_Umum{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field92" {$item_integrated_edit_field92} data-pageid="{$pageid}" data-field="Keadaan_Umum" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Keadaan_Umum}">
+		
+		{BEGIN Keadaan_Umum_label}{$label jiwa Keadaan_Umum }{END Keadaan_Umum_label}
+	</label>
+	<div class="" >
+		{$Keadaan_Umum_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Keadaan_Umum_fieldblock}
+											
+{BEGIN Status_gizi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Status_gizi}  r-vertical-field" data-fieldname="Status_gizi" data-signal-error-for="Status_gizi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field94" {$item_integrated_edit_field94} data-pageid="{$pageid}" data-field="Status_gizi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Status_gizi}">
+		
+		{BEGIN Status_gizi_label}{$label jiwa Status_gizi }{END Status_gizi_label}
+	</label>
+	<div class="" >
+		{$Status_gizi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Status_gizi_fieldblock}
+											
+{BEGIN Frekuensi_Nadi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Frekuensi_Nadi}  r-vertical-field" data-fieldname="Frekuensi_Nadi" data-signal-error-for="Frekuensi_Nadi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field96" {$item_integrated_edit_field96} data-pageid="{$pageid}" data-field="Frekuensi_Nadi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Frekuensi_Nadi}">
+		
+		{BEGIN Frekuensi_Nadi_label}{$label jiwa Frekuensi_Nadi }{END Frekuensi_Nadi_label}
+	</label>
+	<div class="" >
+		{$Frekuensi_Nadi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Frekuensi_Nadi_fieldblock}
+											
+{BEGIN Suhu_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Suhu}  r-vertical-field" data-fieldname="Suhu" data-signal-error-for="Suhu{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field98" {$item_integrated_edit_field98} data-pageid="{$pageid}" data-field="Suhu" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Suhu}">
+		
+		{BEGIN Suhu_label}{$label jiwa Suhu }{END Suhu_label}
+	</label>
+	<div class="" >
+		{$Suhu_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Suhu_fieldblock}
+											
+{BEGIN Mulut_dan_Gigi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Mulut_dan_Gigi}  r-vertical-field" data-fieldname="Mulut_dan_Gigi" data-signal-error-for="Mulut_dan_Gigi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field100" {$item_integrated_edit_field100} data-pageid="{$pageid}" data-field="Mulut_dan_Gigi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Mulut_dan_Gigi}">
+		
+		{BEGIN Mulut_dan_Gigi_label}{$label jiwa Mulut_dan_Gigi }{END Mulut_dan_Gigi_label}
+	</label>
+	<div class="" >
+		{$Mulut_dan_Gigi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Mulut_dan_Gigi_fieldblock}
+											
+{BEGIN Abdomen_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Abdomen}  r-vertical-field" data-fieldname="Abdomen" data-signal-error-for="Abdomen{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field102" {$item_integrated_edit_field102} data-pageid="{$pageid}" data-field="Abdomen" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Abdomen}">
+		
+		{BEGIN Abdomen_label}{$label jiwa Abdomen }{END Abdomen_label}
+	</label>
+	<div class="" >
+		{$Abdomen_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Abdomen_fieldblock}
+											
+{BEGIN Tanda_rangsang_Meningeal_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tanda_rangsang_Meningeal}  r-vertical-field" data-fieldname="Tanda_rangsang_Meningeal" data-signal-error-for="Tanda_rangsang_Meningeal{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field104" {$item_integrated_edit_field104} data-pageid="{$pageid}" data-field="Tanda_rangsang_Meningeal" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Tanda_rangsang_Meningeal}">
+		
+		{BEGIN Tanda_rangsang_Meningeal_label}{$label jiwa Tanda_rangsang_Meningeal }{END Tanda_rangsang_Meningeal_label}
+	</label>
+	<div class="" >
+		{$Tanda_rangsang_Meningeal_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Tanda_rangsang_Meningeal_fieldblock}
+											
+{BEGIN Sensorik_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sensorik}  r-vertical-field" data-fieldname="Sensorik" data-signal-error-for="Sensorik{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field106" {$item_integrated_edit_field106} data-pageid="{$pageid}" data-field="Sensorik" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Sensorik}">
+		
+		{BEGIN Sensorik_label}{$label jiwa Sensorik }{END Sensorik_label}
+	</label>
+	<div class="" >
+		{$Sensorik_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Sensorik_fieldblock}
+	
+								</td>
+			{END cellblock_section8_c6}
+			 
+																
+
+{BEGIN cellblock_section8_c}
+<td
+	{$cell_section8_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section8_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Kesadaran_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Kesadaran}  r-vertical-field" data-fieldname="Kesadaran" data-signal-error-for="Kesadaran{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field93" {$item_integrated_edit_field93} data-pageid="{$pageid}" data-field="Kesadaran" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Kesadaran}">
+		
+		{BEGIN Kesadaran_label}{$label jiwa Kesadaran }{END Kesadaran_label}
+	</label>
+	<div class="" >
+		{$Kesadaran_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Kesadaran_fieldblock}
+											
+{BEGIN Tekanan_Darah_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tekanan_Darah}  r-vertical-field" data-fieldname="Tekanan_Darah" data-signal-error-for="Tekanan_Darah{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field95" {$item_integrated_edit_field95} data-pageid="{$pageid}" data-field="Tekanan_Darah" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Tekanan_Darah}">
+		
+		{BEGIN Tekanan_Darah_label}{$label jiwa Tekanan_Darah }{END Tekanan_Darah_label}
+	</label>
+	<div class="" >
+		{$Tekanan_Darah_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Tekanan_Darah_fieldblock}
+											
+{BEGIN Frekuensi_Nafas_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Frekuensi_Nafas}  r-vertical-field" data-fieldname="Frekuensi_Nafas" data-signal-error-for="Frekuensi_Nafas{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field97" {$item_integrated_edit_field97} data-pageid="{$pageid}" data-field="Frekuensi_Nafas" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Frekuensi_Nafas}">
+		
+		{BEGIN Frekuensi_Nafas_label}{$label jiwa Frekuensi_Nafas }{END Frekuensi_Nafas_label}
+	</label>
+	<div class="" >
+		{$Frekuensi_Nafas_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Frekuensi_Nafas_fieldblock}
+											
+{BEGIN Mata_dan_THT_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Mata_dan_THT}  r-vertical-field" data-fieldname="Mata_dan_THT" data-signal-error-for="Mata_dan_THT{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field99" {$item_integrated_edit_field99} data-pageid="{$pageid}" data-field="Mata_dan_THT" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Mata_dan_THT}">
+		
+		{BEGIN Mata_dan_THT_label}{$label jiwa Mata_dan_THT }{END Mata_dan_THT_label}
+	</label>
+	<div class="" >
+		{$Mata_dan_THT_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Mata_dan_THT_fieldblock}
+											
+{BEGIN Thorax_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Thorax}  r-vertical-field" data-fieldname="Thorax" data-signal-error-for="Thorax{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field101" {$item_integrated_edit_field101} data-pageid="{$pageid}" data-field="Thorax" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Thorax}">
+		
+		{BEGIN Thorax_label}{$label jiwa Thorax }{END Thorax_label}
+	</label>
+	<div class="" >
+		{$Thorax_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Thorax_fieldblock}
+											
+{BEGIN Extremitas_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Extremitas}  r-vertical-field" data-fieldname="Extremitas" data-signal-error-for="Extremitas{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field103" {$item_integrated_edit_field103} data-pageid="{$pageid}" data-field="Extremitas" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Extremitas}">
+		
+		{BEGIN Extremitas_label}{$label jiwa Extremitas }{END Extremitas_label}
+	</label>
+	<div class="" >
+		{$Extremitas_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Extremitas_fieldblock}
+											
+{BEGIN Motorik_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Motorik}  r-vertical-field" data-fieldname="Motorik" data-signal-error-for="Motorik{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field105" {$item_integrated_edit_field105} data-pageid="{$pageid}" data-field="Motorik" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Motorik}">
+		
+		{BEGIN Motorik_label}{$label jiwa Motorik }{END Motorik_label}
+	</label>
+	<div class="" >
+		{$Motorik_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Motorik_fieldblock}
+	
+								</td>
+			{END cellblock_section8_c}
+								</tr>
+	 
+	 
+																</tbody></table>
+				 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section1" {$item_section1} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section2_headattrs} data-toggle="collapse"   
+
+				href="#section2{$pageid}" aria-expanded="true" aria-controls="section2"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Formulasi Diagnostik			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section2_xtrclass}" role="tabpanel"  {$section_section2_attrs}
+
+				id="section2{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section9_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section9" id="form_section9_{$pageid}" data-makeup="small" {$form_section9} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section9_c1}
+<td
+	{$cell_section9_c1}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section9_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Diagnosis_Axis_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Diagnosis_Axis}  r-vertical-field" data-fieldname="Diagnosis_Axis" data-signal-error-for="Diagnosis_Axis{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field107" {$item_integrated_edit_field107} data-pageid="{$pageid}" data-field="Diagnosis_Axis" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Diagnosis_Axis}">
+		
+		{BEGIN Diagnosis_Axis_label}{$label jiwa Diagnosis_Axis }{END Diagnosis_Axis_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Diagnosis_Axis_value}	</div>
+
+		
+</div>
+
+
+{END Diagnosis_Axis_fieldblock}
+	
+								</td>
+			{END cellblock_section9_c1}
+								</tr>
+			</tbody></table>
+{END section9_block}
+		  </div>
+		</div>
+	</div>
+	
+				{END section8_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section10{$pageid}"> 
+			{BEGIN section10_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section10" id="form_section10_{$pageid}" data-makeup="small" {$form_section10} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section10_c1}
+<td
+	{$cell_section10_c1}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="section10_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Quo_ad_Vitam_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Quo_ad_Vitam}  r-vertical-field" data-fieldname="Quo_ad_Vitam" data-signal-error-for="Quo_ad_Vitam{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field111" {$item_integrated_edit_field111} data-pageid="{$pageid}" data-field="Quo_ad_Vitam" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Quo_ad_Vitam}">
+		
+		{BEGIN Quo_ad_Vitam_label}{$label jiwa Quo_ad_Vitam }{END Quo_ad_Vitam_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Quo_ad_Vitam_value}	</div>
+
+		
+</div>
+
+
+{END Quo_ad_Vitam_fieldblock}
+											
+{BEGIN Quo_ad_Fungsionam_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Quo_ad_Fungsionam}  r-vertical-field" data-fieldname="Quo_ad_Fungsionam" data-signal-error-for="Quo_ad_Fungsionam{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field112" {$item_integrated_edit_field112} data-pageid="{$pageid}" data-field="Quo_ad_Fungsionam" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Quo_ad_Fungsionam}">
+		
+		{BEGIN Quo_ad_Fungsionam_label}{$label jiwa Quo_ad_Fungsionam }{END Quo_ad_Fungsionam_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Quo_ad_Fungsionam_value}	</div>
+
+		
+</div>
+
+
+{END Quo_ad_Fungsionam_fieldblock}
+											
+{BEGIN Quo_ad_Sanationam_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Quo_ad_Sanationam}  r-vertical-field" data-fieldname="Quo_ad_Sanationam" data-signal-error-for="Quo_ad_Sanationam{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field113" {$item_integrated_edit_field113} data-pageid="{$pageid}" data-field="Quo_ad_Sanationam" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Quo_ad_Sanationam}">
+		
+		{BEGIN Quo_ad_Sanationam_label}{$label jiwa Quo_ad_Sanationam }{END Quo_ad_Sanationam_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Quo_ad_Sanationam_value}	</div>
+
+		
+</div>
+
+
+{END Quo_ad_Sanationam_fieldblock}
+											
+{BEGIN Hal_hal_yang_mendukung_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Hal_hal_yang_mendukung}  r-vertical-field" data-fieldname="Hal-hal_yang_mendukung" data-signal-error-for="Hal_hal_yang_mendukung{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field114" {$item_integrated_edit_field114} data-pageid="{$pageid}" data-field="Hal_hal_yang_mendukung" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Hal_hal_yang_mendukung}">
+		
+		{BEGIN Hal_hal_yang_mendukung_label}{$label jiwa Hal_hal_yang_mendukung }{END Hal_hal_yang_mendukung_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Hal_hal_yang_mendukung_value}	</div>
+
+		
+</div>
+
+
+{END Hal_hal_yang_mendukung_fieldblock}
+											
+{BEGIN Hal_hal_yang_memberatkan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Hal_hal_yang_memberatkan}  r-vertical-field" data-fieldname="Hal-hal_yang_memberatkan" data-signal-error-for="Hal_hal_yang_memberatkan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field115" {$item_integrated_edit_field115} data-pageid="{$pageid}" data-field="Hal_hal_yang_memberatkan" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Hal_hal_yang_memberatkan}">
+		
+		{BEGIN Hal_hal_yang_memberatkan_label}{$label jiwa Hal_hal_yang_memberatkan }{END Hal_hal_yang_memberatkan_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Hal_hal_yang_memberatkan_value}	</div>
+
+		
+</div>
+
+
+{END Hal_hal_yang_memberatkan_fieldblock}
+	
+								</td>
+			{END cellblock_section10_c1}
+								</tr>
+			</tbody></table>
+{END section10_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section11{$pageid}"> 
+			{BEGIN section11_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section11" id="form_section11_{$pageid}" data-makeup="small" {$form_section11} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section11_c1}
+<td
+	{$cell_section11_c1}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section11_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section2" {$item_section2} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section3_headattrs} data-toggle="collapse"   
+
+				href="#section3{$pageid}" aria-expanded="true" aria-controls="section3"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Daftar Masalah			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section3_xtrclass}" role="tabpanel"  {$section_section3_attrs}
+
+				id="section3{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section12_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section12" id="form_section12_{$pageid}" data-makeup="small" {$form_section12} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section12_c1}
+<td
+	{$cell_section12_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section12_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Organobiologi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Organobiologi}  r-vertical-field" data-fieldname="Organobiologi" data-signal-error-for="Organobiologi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field108" {$item_integrated_edit_field108} data-pageid="{$pageid}" data-field="Organobiologi" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Organobiologi}">
+		
+		{BEGIN Organobiologi_label}{$label jiwa Organobiologi }{END Organobiologi_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Organobiologi_value}	</div>
+
+		
+</div>
+
+
+{END Organobiologi_fieldblock}
+											
+{BEGIN Psikologi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Psikologi}  r-vertical-field" data-fieldname="Psikologi" data-signal-error-for="Psikologi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field109" {$item_integrated_edit_field109} data-pageid="{$pageid}" data-field="Psikologi" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Psikologi}">
+		
+		{BEGIN Psikologi_label}{$label jiwa Psikologi }{END Psikologi_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Psikologi_value}	</div>
+
+		
+</div>
+
+
+{END Psikologi_fieldblock}
+											
+{BEGIN Lingkungan_dan_sosial_ekonomi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Lingkungan_dan_sosial_ekonomi}  r-vertical-field" data-fieldname="Lingkungan_dan_sosial_ekonomi" data-signal-error-for="Lingkungan_dan_sosial_ekonomi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field110" {$item_integrated_edit_field110} data-pageid="{$pageid}" data-field="Lingkungan_dan_sosial_ekonomi" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Lingkungan_dan_sosial_ekonomi}">
+		
+		{BEGIN Lingkungan_dan_sosial_ekonomi_label}{$label jiwa Lingkungan_dan_sosial_ekonomi }{END Lingkungan_dan_sosial_ekonomi_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Lingkungan_dan_sosial_ekonomi_value}	</div>
+
+		
+</div>
+
+
+{END Lingkungan_dan_sosial_ekonomi_fieldblock}
+	
+								</td>
+			{END cellblock_section12_c1}
+								</tr>
+			</tbody></table>
+{END section12_block}
+		  </div>
+		</div>
+	</div>
+	
+								</td>
+			{END cellblock_section11_c1}
+			 
+																
+
+{BEGIN cellblock_section11_c}
+<td
+	{$cell_section11_c}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section11_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section3" {$item_section3} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section4_headattrs} data-toggle="collapse"   
+
+				href="#section4{$pageid}" aria-expanded="true" aria-controls="section4"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Rencana Terapi			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section4_xtrclass}" role="tabpanel"  {$section_section4_attrs}
+
+				id="section4{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section13_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section13" id="form_section13_{$pageid}" data-makeup="small" {$form_section13} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section13_c1}
+<td
+	{$cell_section13_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section13_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Farmakologi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Farmakologi}  r-vertical-field" data-fieldname="Farmakologi" data-signal-error-for="Farmakologi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field116" {$item_integrated_edit_field116} data-pageid="{$pageid}" data-field="Farmakologi" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Farmakologi}">
+		
+		{BEGIN Farmakologi_label}{$label jiwa Farmakologi }{END Farmakologi_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Farmakologi_value}	</div>
+
+		
+</div>
+
+
+{END Farmakologi_fieldblock}
+											
+{BEGIN Non_Farmakologi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Non_Farmakologi}  r-vertical-field" data-fieldname="Non_Farmakologi" data-signal-error-for="Non_Farmakologi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field117" {$item_integrated_edit_field117} data-pageid="{$pageid}" data-field="Non_Farmakologi" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Non_Farmakologi}">
+		
+		{BEGIN Non_Farmakologi_label}{$label jiwa Non_Farmakologi }{END Non_Farmakologi_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Non_Farmakologi_value}	</div>
+
+		
+</div>
+
+
+{END Non_Farmakologi_fieldblock}
+	
+								</td>
+			{END cellblock_section13_c1}
+								</tr>
+			</tbody></table>
+{END section13_block}
+		  </div>
+		</div>
+	</div>
+	
+								</td>
+			{END cellblock_section11_c}
+								</tr>
+			</tbody></table>
+{END section11_block}
+						</div>
+				</div>
+	</div>
+</div>  											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_pasien_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_pasien}  r-vertical-field" data-fieldname="id_pasien" data-signal-error-for="id_pasien{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="id_pasien" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id_pasien}">
+		
+		{BEGIN id_pasien_label}{$label jiwa id_pasien }{END id_pasien_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$id_pasien_value}	</div>
+
+		
+</div>
+
+
+{END id_pasien_fieldblock}
+											
+{BEGIN id_user_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_user}  r-vertical-field" data-fieldname="id_user" data-signal-error-for="id_user{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="id_user" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id_user}">
+		
+		{BEGIN id_user_label}{$label jiwa id_user }{END id_user_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$id_user_value}	</div>
+
+		
+</div>
+
+
+{END id_user_fieldblock}
+											
+{BEGIN id_resep_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_resep}  r-vertical-field" data-fieldname="id_resep" data-signal-error-for="id_resep{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field118" {$item_integrated_edit_field118} data-pageid="{$pageid}" data-field="id_resep" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_id_resep}">
+		
+		{BEGIN id_resep_label}{$label jiwa id_resep }{END id_resep_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$id_resep_value}	</div>
+
+		
+</div>
+
+
+{END id_resep_fieldblock}
+											
+{BEGIN Nomor_Rm_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Nomor_Rm}  r-vertical-field" data-fieldname="Nomor_Rm" data-signal-error-for="Nomor_Rm{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field119" {$item_integrated_edit_field119} data-pageid="{$pageid}" data-field="Nomor_Rm" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Nomor_Rm}">
+		
+		{BEGIN Nomor_Rm_label}{$label jiwa Nomor_Rm }{END Nomor_Rm_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Nomor_Rm_value}	</div>
+
+		
+</div>
+
+
+{END Nomor_Rm_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Close window			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="jiwa_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		Edit		
+		</a>
+	</li>
+{END edit_page_button}
+								<li data-itemtype="view_pdf" data-itemid="view_pdf" {$item_view_pdf} data-pageid="{$pageid}" data-small >
+				<a class="pdflink" data-pdfpage="view" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Jiwa.pdf" 
+data-pagetype="view" 
+{$pdflink_attrs}  title="" >
+				
+		PDF View		
+		</a>
+	</li>
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,452 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel laporan_mata edit}","hidden":"{$item_hide_edit_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_edit_message}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+				],
+	
+		body: [
+				
+					{BEGIN row_grid_0}
+				[
+												{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel laporan_mata Keluhan_Utama }","bold":true},{"text":{$Keluhan_Utama_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel laporan_mata Keluhan_Tambahan }","bold":true},{"text":{$Keluhan_Tambahan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel laporan_mata Riwayat_Penyakit_Sekarang }","bold":true},{"text":{$Riwayat_Penyakit_Sekarang_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel laporan_mata Riwayat_Penyakit_Dahulu }","bold":true},{"text":{$Riwayat_Penyakit_Dahulu_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel laporan_mata Riwayat_Penyakit_Keluarga }","bold":true},{"text":{$Riwayat_Penyakit_Keluarga_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel laporan_mata Riwayat_Alergi }","bold":true},{"text":{$Riwayat_Alergi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel laporan_mata Riwayat_Pengobatan }","bold":true},{"text":{$Riwayat_Pengobatan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel laporan_mata Riwayat_Kebiasaan }","bold":true},{"text":{$Riwayat_Kebiasaan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel laporan_mata Riwayat_Sosio_Ekonomi }","bold":true},{"text":{$Riwayat_Sosio_Ekonomi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel laporan_mata Visus_OD_Kiri }","bold":true},{"text":{$Visus_OD_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel laporan_mata Visus_OS_Kanan }","bold":true},{"text":{$Visus_OS_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field11}","stack":[{"text":"{$jslabel laporan_mata Refraksi_OD_Kiri }","bold":true},{"text":{$Refraksi_OD_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field12}","stack":[{"text":"{$jslabel laporan_mata Refraksi_OS_Kanan }","bold":true},{"text":{$Refraksi_OS_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field13}","stack":[{"text":"{$jslabel laporan_mata Addisi_OD_Kiri }","bold":true},{"text":{$Addisi_OD_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field14}","stack":[{"text":"{$jslabel laporan_mata Addisi_OS_Kanan }","bold":true},{"text":{$Addisi_OS_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field15}","stack":[{"text":"{$jslabel laporan_mata Posisi_Bola_Mata_Kiri }","bold":true},{"text":{$Posisi_Bola_Mata_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field16}","stack":[{"text":"{$jslabel laporan_mata Posisi_Bola_Mata_Kanan }","bold":true},{"text":{$Posisi_Bola_Mata_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field17}","stack":[{"text":"{$jslabel laporan_mata Gerakan_Bola_Mata_Kiri }","bold":true},{"text":{$Gerakan_Bola_Mata_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field18}","stack":[{"text":"{$jslabel laporan_mata Gerakan_Bola_Mata_Kanan }","bold":true},{"text":{$Gerakan_Bola_Mata_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field19}","stack":[{"text":"{$jslabel laporan_mata Palpebra_Kiri }","bold":true},{"text":{$Palpebra_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field20}","stack":[{"text":"{$jslabel laporan_mata Palpebra_Kanan }","bold":true},{"text":{$Palpebra_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field21}","stack":[{"text":"{$jslabel laporan_mata Conjunctiva_Kiri }","bold":true},{"text":{$Conjunctiva_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field22}","stack":[{"text":"{$jslabel laporan_mata Conjunctiva_Kanan }","bold":true},{"text":{$Conjunctiva_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field23}","stack":[{"text":"{$jslabel laporan_mata Cornea_Kiri }","bold":true},{"text":{$Cornea_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field24}","stack":[{"text":"{$jslabel laporan_mata Cornea_Kanan }","bold":true},{"text":{$Cornea_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field25}","stack":[{"text":"{$jslabel laporan_mata COA_Kiri }","bold":true},{"text":{$COA_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field26}","stack":[{"text":"{$jslabel laporan_mata COA_Kanan }","bold":true},{"text":{$COA_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field27}","stack":[{"text":"{$jslabel laporan_mata Pupil_Kiri }","bold":true},{"text":{$Pupil_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field28}","stack":[{"text":"{$jslabel laporan_mata Pupil_Kanan }","bold":true},{"text":{$Pupil_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field29}","stack":[{"text":"{$jslabel laporan_mata Iris_Kiri }","bold":true},{"text":{$Iris_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field30}","stack":[{"text":"{$jslabel laporan_mata Iris_Kanan }","bold":true},{"text":{$Iris_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field31}","stack":[{"text":"{$jslabel laporan_mata Lensa_Kiri }","bold":true},{"text":{$Lensa_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field32}","stack":[{"text":"{$jslabel laporan_mata Lensa_Kanan }","bold":true},{"text":{$Lensa_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field33}","stack":[{"text":"{$jslabel laporan_mata Tekanan_Intra_Okuler_Kiri }","bold":true},{"text":{$Tekanan_Intra_Okuler_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field34}","stack":[{"text":"{$jslabel laporan_mata Tekanan_Intra_Okuler_Kanan }","bold":true},{"text":{$Tekanan_Intra_Okuler_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field35}","stack":[{"text":"{$jslabel laporan_mata Segment_Posterior_Kiri }","bold":true},{"text":{$Segment_Posterior_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field36}","stack":[{"text":"{$jslabel laporan_mata Segment_Posterior_Kanan }","bold":true},{"text":{$Segment_Posterior_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field37}","stack":[{"text":"{$jslabel laporan_mata Lapang_Pandang_Kiri }","bold":true},{"text":{$Lapang_Pandang_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field38}","stack":[{"text":"{$jslabel laporan_mata Lapang_Pandang_Kanan }","bold":true},{"text":{$Lapang_Pandang_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field39}","stack":[{"text":"{$jslabel laporan_mata Ishihara_Test_Kiri }","bold":true},{"text":{$Ishihara_Test_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field40}","stack":[{"text":"{$jslabel laporan_mata Ishihara_Test_Kanan }","bold":true},{"text":{$Ishihara_Test_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field41}","stack":[{"text":"{$jslabel laporan_mata Fluorescein_Tes_Kiri }","bold":true},{"text":{$Fluorescein_Tes_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field42}","stack":[{"text":"{$jslabel laporan_mata Fluorescein_Test_Kanan }","bold":true},{"text":{$Fluorescein_Test_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field43}","stack":[{"text":"{$jslabel laporan_mata Sensibilitas_Kornea_Kiri }","bold":true},{"text":{$Sensibilitas_Kornea_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field44}","stack":[{"text":"{$jslabel laporan_mata Sensibilitas_Kornea_Kanan }","bold":true},{"text":{$Sensibilitas_Kornea_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field45}","stack":[{"text":"{$jslabel laporan_mata Schirmer_Test_Kiri }","bold":true},{"text":{$Schirmer_Test_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field46}","stack":[{"text":"{$jslabel laporan_mata Schirmer_Test_Kanan }","bold":true},{"text":{$Schirmer_Test_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field47}","stack":[{"text":"{$jslabel laporan_mata Hirschberg_Test_Kiri }","bold":true},{"text":{$Hirschberg_Test_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field48}","stack":[{"text":"{$jslabel laporan_mata Hirschberg_Test_Kanan }","bold":true},{"text":{$Hirschberg_Test_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field49}","stack":[{"text":"{$jslabel laporan_mata Cover_Test_Kiri }","bold":true},{"text":{$Cover_Test_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field50}","stack":[{"text":"{$jslabel laporan_mata Cover_Test_Kanan }","bold":true},{"text":{$Cover_Test_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field51}","stack":[{"text":"{$jslabel laporan_mata Cover_Uncover_Test_Kiri }","bold":true},{"text":{$Cover_Uncover_Test_Kiri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field52}","stack":[{"text":"{$jslabel laporan_mata Cover_Uncover_Test_Kanan }","bold":true},{"text":{$Cover_Uncover_Test_Kanan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field53}","stack":[{"text":"{$jslabel laporan_mata Penunjang_Lain }","bold":true},{"text":{$Penunjang_Lain_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field54}","stack":[{"text":"{$jslabel laporan_mata Daftar_Masalah }","bold":true},{"text":{$Daftar_Masalah_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field55}","stack":[{"text":"{$jslabel laporan_mata Rencana_Permulaan }","bold":true},{"text":{$Rencana_Permulaan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field56}","stack":[{"text":"{$jslabel laporan_mata Catatan_Kemajuan }","bold":true},{"text":{$Catatan_Kemajuan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field57}","stack":[{"text":"{$jslabel laporan_mata Diagnosa_Diagnosa_Banding }","bold":true},{"text":{$Diagnosa_Diagnosa_Banding_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field58}","stack":[{"text":"{$jslabel laporan_mata Terapi }","bold":true},{"text":{$Terapi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field59}","stack":[{"text":"{$jslabel laporan_mata Prognosis }","bold":true},{"text":{$Prognosis_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field60}","stack":[{"text":"{$jslabel laporan_mata Komplikasi }","bold":true},{"text":{$Komplikasi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field61}","stack":[{"text":"{$jslabel laporan_mata Nomor_Rm }","bold":true},{"text":{$Nomor_Rm_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			 {BEGIN details_daftar_masalah}
+			{$displayDetailTable_daftar_masalah }
+		{END details_daftar_masalah},
+				
+				
+			 {BEGIN details_catatan_kemajuan}
+			{$displayDetailTable_catatan_kemajuan }
+		{END details_catatan_kemajuan},
+				
+				
+			 {BEGIN details_rencana_permulaan}
+			{$displayDetailTable_rencana_permulaan }
+		{END details_rencana_permulaan},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_0}
+					]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_edit_save}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_edit_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_edit_close}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+																			{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'right',
+  },
+
+											],
+					]
+	}
+}
+,
+			]
+}
+  

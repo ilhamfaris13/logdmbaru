@@ -1,0 +1,1813 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel kulit1 view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c}
+<td
+	{$cell_grid_c}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="grid_c" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				{BEGIN id_mhs_fieldblock}
+	<div class="r-view-field" data-itemtype="edit_field" data-itemid="integrated_edit_field44" {$item_integrated_edit_field44} data-pageid="{$pageid}" data-field="id_mhs" >
+		{$id_mhs_value}	</div>
+{END id_mhs_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c}
+								</tr>
+	 
+	 
+																</tbody></table>
+				{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section4" {$item_section4} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section1_headattrs} data-toggle="collapse"   
+
+				href="#section1{$pageid}" aria-expanded="true" aria-controls="section1"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Informasi DM			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section1_xtrclass}" role="tabpanel"  {$section_section1_attrs}
+
+				id="section1{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section10_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section10" id="form_section10_{$pageid}" data-makeup="small" {$form_section10} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section10_c1}
+<td
+	{$cell_section10_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section10_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN username_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_username}  r-vertical-field" data-fieldname="username" data-signal-error-for="username{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field37" {$item_integrated_edit_field37} data-pageid="{$pageid}" data-field="username" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_username}">
+		
+		{BEGIN username_label}{$label kulit1 username }{END username_label}
+	</label>
+	<div class="" >
+		{$username_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END username_fieldblock}
+											
+{BEGIN name_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_name}  r-vertical-field" data-fieldname="name" data-signal-error-for="name{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field36" {$item_integrated_edit_field36} data-pageid="{$pageid}" data-field="name" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_name}">
+		
+		{BEGIN name_label}{$label kulit1 name }{END name_label}
+	</label>
+	<div class="" >
+		{$name_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END name_fieldblock}
+	
+								</td>
+			{END cellblock_section10_c1}
+			 
+																
+
+{BEGIN cellblock_section10_c}
+<td
+	{$cell_section10_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section10_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Nomor_Rm_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Nomor_Rm}  r-vertical-field" data-fieldname="Nomor_Rm" data-signal-error-for="Nomor_Rm{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field33" {$item_integrated_edit_field33} data-pageid="{$pageid}" data-field="Nomor_Rm" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Nomor_Rm}">
+		
+		{BEGIN Nomor_Rm_label}{$label kulit1 Nomor_Rm }{END Nomor_Rm_label}
+	</label>
+	<div class="" >
+		{$Nomor_Rm_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Nomor_Rm_fieldblock}
+											
+{BEGIN email_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_email}  r-vertical-field" data-fieldname="email" data-signal-error-for="email{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field38" {$item_integrated_edit_field38} data-pageid="{$pageid}" data-field="email" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_email}">
+		
+		{BEGIN email_label}{$label kulit1 email }{END email_label}
+	</label>
+	<div class="" >
+		{$email_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END email_fieldblock}
+	
+								</td>
+			{END cellblock_section10_c}
+								</tr>
+			</tbody></table>
+{END section10_block}
+		  </div>
+		</div>
+	</div>
+											 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section5" {$item_section5} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section2_headattrs} data-toggle="collapse"   
+
+				href="#section2{$pageid}" aria-expanded="true" aria-controls="section2"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Identitas Pasien			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section2_xtrclass}" role="tabpanel"  {$section_section2_attrs}
+
+				id="section2{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section11_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section11" id="form_section11_{$pageid}" data-makeup="small" {$form_section11} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section11_c1}
+<td
+	{$cell_section11_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section11_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Nama_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Nama}  r-vertical-field" data-fieldname="Nama" data-signal-error-for="Nama{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field40" {$item_integrated_edit_field40} data-pageid="{$pageid}" data-field="Nama" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Nama}">
+		
+		{BEGIN Nama_label}{$label kulit1 Nama }{END Nama_label}
+	</label>
+	<div class="" >
+		{$Nama_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Nama_fieldblock}
+											
+{BEGIN Alamat_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Alamat}  r-vertical-field" data-fieldname="Alamat" data-signal-error-for="Alamat{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field41" {$item_integrated_edit_field41} data-pageid="{$pageid}" data-field="Alamat" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Alamat}">
+		
+		{BEGIN Alamat_label}{$label kulit1 Alamat }{END Alamat_label}
+	</label>
+	<div class="" >
+		{$Alamat_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Alamat_fieldblock}
+											
+{BEGIN Status_Perkawinan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Status_Perkawinan}  r-vertical-field" data-fieldname="Status_Perkawinan" data-signal-error-for="Status_Perkawinan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field43" {$item_integrated_edit_field43} data-pageid="{$pageid}" data-field="Status_Perkawinan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Status_Perkawinan}">
+		
+		{BEGIN Status_Perkawinan_label}{$label kulit1 Status_Perkawinan }{END Status_Perkawinan_label}
+	</label>
+	<div class="" >
+		{$Status_Perkawinan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Status_Perkawinan_fieldblock}
+											
+{BEGIN Suku_Ras_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Suku_Ras}  r-vertical-field" data-fieldname="Suku_Ras" data-signal-error-for="Suku_Ras{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field47" {$item_integrated_edit_field47} data-pageid="{$pageid}" data-field="Suku_Ras" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Suku_Ras}">
+		
+		{BEGIN Suku_Ras_label}{$label kulit1 Suku_Ras }{END Suku_Ras_label}
+	</label>
+	<div class="" >
+		{$Suku_Ras_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Suku_Ras_fieldblock}
+											
+{BEGIN Kerja_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Kerja}  r-vertical-field" data-fieldname="Kerja" data-signal-error-for="Kerja{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field49" {$item_integrated_edit_field49} data-pageid="{$pageid}" data-field="Kerja" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Kerja}">
+		
+		{BEGIN Kerja_label}{$label kulit1 Kerja }{END Kerja_label}
+	</label>
+	<div class="" >
+		{$Kerja_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Kerja_fieldblock}
+	
+								</td>
+			{END cellblock_section11_c1}
+			 
+																
+
+{BEGIN cellblock_section11_c}
+<td
+	{$cell_section11_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section11_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Umur_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Umur}  r-vertical-field" data-fieldname="Umur" data-signal-error-for="Umur{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field42" {$item_integrated_edit_field42} data-pageid="{$pageid}" data-field="Umur" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Umur}">
+		
+		{BEGIN Umur_label}{$label kulit1 Umur }{END Umur_label}
+	</label>
+	<div class="" >
+		{$Umur_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Umur_fieldblock}
+											
+{BEGIN Jenis_Kelamin_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Jenis_Kelamin}  r-vertical-field" data-fieldname="Jenis Kelamin" data-signal-error-for="Jenis_Kelamin{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field46" {$item_integrated_edit_field46} data-pageid="{$pageid}" data-field="Jenis_Kelamin" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Jenis_Kelamin}">
+		
+		{BEGIN Jenis_Kelamin_label}{$label kulit1 Jenis_Kelamin }{END Jenis_Kelamin_label}
+	</label>
+	<div class="" >
+		{$Jenis_Kelamin_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Jenis_Kelamin_fieldblock}
+											
+{BEGIN Agama_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Agama}  r-vertical-field" data-fieldname="Agama" data-signal-error-for="Agama{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field48" {$item_integrated_edit_field48} data-pageid="{$pageid}" data-field="Agama" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Agama}">
+		
+		{BEGIN Agama_label}{$label kulit1 Agama }{END Agama_label}
+	</label>
+	<div class="" >
+		{$Agama_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Agama_fieldblock}
+											
+{BEGIN Tanggal_MRS_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tanggal_MRS}  r-vertical-field" data-fieldname="Tanggal_MRS" data-signal-error-for="Tanggal_MRS{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field50" {$item_integrated_edit_field50} data-pageid="{$pageid}" data-field="Tanggal_MRS" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Tanggal_MRS}">
+		
+		{BEGIN Tanggal_MRS_label}{$label kulit1 Tanggal_MRS }{END Tanggal_MRS_label}
+	</label>
+	<div class="" >
+		{$Tanggal_MRS_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Tanggal_MRS_fieldblock}
+	
+								</td>
+			{END cellblock_section11_c}
+								</tr>
+			</tbody></table>
+{END section11_block}
+		  </div>
+		</div>
+	</div>
+											<div class="panel with-tabs panel-default form-tabs" data-itemtype="tabs" data-itemid="tabs" {$item_tabs} data-pageid="{$pageid}">
+	<div class="panel-heading">
+		<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section1{$pageid}">
+					SUBYEKTIF (ANAMNESA)				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section2{$pageid}">
+					OBYEKTIF (PEMERIKSAAN)				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section3{$pageid}">
+					RESUME				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section5{$pageid}">
+					ASSESSMENT				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section{$pageid}">
+					PLANNING				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section4{$pageid}">
+					PROGNOSIS				</a>
+			</li>
+									</ul>
+	</div>
+	<div class="panel-body">
+		<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="tab_section1{$pageid}"> 
+			{BEGIN section1_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section1" id="form_section1_{$pageid}" data-makeup="small" {$form_section1} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section1_c1}
+<td
+	{$cell_section1_c1}
+	class="r-align-left r-ori-vert"
+	
+			
+			data-cellId="section1_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN keluhan_pertama_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_keluhan_pertama}  r-vertical-field" data-fieldname="keluhan_pertama" data-signal-error-for="keluhan_pertama{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="keluhan_pertama" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_keluhan_pertama}">
+		
+		{BEGIN keluhan_pertama_label}{$label kulit1 keluhan_pertama }{END keluhan_pertama_label}
+	</label>
+	<div class="" >
+		{$keluhan_pertama_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END keluhan_pertama_fieldblock}
+											
+{BEGIN keluhan_tmbhan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_keluhan_tmbhan}  r-vertical-field" data-fieldname="keluhan_tmbhan" data-signal-error-for="keluhan_tmbhan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="keluhan_tmbhan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_keluhan_tmbhan}">
+		
+		{BEGIN keluhan_tmbhan_label}{$label kulit1 keluhan_tmbhan }{END keluhan_tmbhan_label}
+	</label>
+	<div class="" >
+		{$keluhan_tmbhan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END keluhan_tmbhan_fieldblock}
+											
+{BEGIN rwyt_skrg_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_skrg}  r-vertical-field" data-fieldname="rwyt_skrg" data-signal-error-for="rwyt_skrg{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="rwyt_skrg" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_rwyt_skrg}">
+		
+		{BEGIN rwyt_skrg_label}{$label kulit1 rwyt_skrg }{END rwyt_skrg_label}
+	</label>
+	<div class="" >
+		{$rwyt_skrg_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END rwyt_skrg_fieldblock}
+											
+{BEGIN rwyt_dulu_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_dulu}  r-vertical-field" data-fieldname="rwyt_dulu" data-signal-error-for="rwyt_dulu{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="rwyt_dulu" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_rwyt_dulu}">
+		
+		{BEGIN rwyt_dulu_label}{$label kulit1 rwyt_dulu }{END rwyt_dulu_label}
+	</label>
+	<div class="" >
+		{$rwyt_dulu_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END rwyt_dulu_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c1}
+			 
+																
+
+{BEGIN cellblock_section1_c}
+<td
+	{$cell_section1_c}
+	class="r-align-left r-ori-vert"
+	
+			
+			data-cellId="section1_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN rwyt_klg_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_klg}  r-vertical-field" data-fieldname="rwyt_klg" data-signal-error-for="rwyt_klg{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="rwyt_klg" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_rwyt_klg}">
+		
+		{BEGIN rwyt_klg_label}{$label kulit1 rwyt_klg }{END rwyt_klg_label}
+	</label>
+	<div class="" >
+		{$rwyt_klg_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END rwyt_klg_fieldblock}
+											
+{BEGIN rwyt_alergi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_alergi}  r-vertical-field" data-fieldname="rwyt_alergi" data-signal-error-for="rwyt_alergi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="rwyt_alergi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_rwyt_alergi}">
+		
+		{BEGIN rwyt_alergi_label}{$label kulit1 rwyt_alergi }{END rwyt_alergi_label}
+	</label>
+	<div class="" >
+		{$rwyt_alergi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END rwyt_alergi_fieldblock}
+											
+{BEGIN rwyt_pengobatan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_pengobatan}  r-vertical-field" data-fieldname="rwyt_pengobatan" data-signal-error-for="rwyt_pengobatan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="rwyt_pengobatan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_rwyt_pengobatan}">
+		
+		{BEGIN rwyt_pengobatan_label}{$label kulit1 rwyt_pengobatan }{END rwyt_pengobatan_label}
+	</label>
+	<div class="" >
+		{$rwyt_pengobatan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END rwyt_pengobatan_fieldblock}
+											
+{BEGIN rwyt_kebiasaan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_kebiasaan}  r-vertical-field" data-fieldname="rwyt_kebiasaan" data-signal-error-for="rwyt_kebiasaan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="rwyt_kebiasaan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_rwyt_kebiasaan}">
+		
+		{BEGIN rwyt_kebiasaan_label}{$label kulit1 rwyt_kebiasaan }{END rwyt_kebiasaan_label}
+	</label>
+	<div class="" >
+		{$rwyt_kebiasaan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END rwyt_kebiasaan_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c}
+								</tr>
+			</tbody></table>
+{END section1_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section2{$pageid}"> 
+			{BEGIN section2_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section2" id="form_section2_{$pageid}" data-makeup="small" {$form_section2} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section2_c1}
+<td
+	{$cell_section2_c1}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section2_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section" {$item_section} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section3_headattrs} data-toggle="collapse"   
+
+				href="#section3{$pageid}" aria-expanded="true" aria-controls="section3"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Pemeriksaan Umum			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section3_xtrclass}" role="tabpanel"  {$section_section3_attrs}
+
+				id="section3{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section6_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section6" id="form_section6_{$pageid}" data-makeup="small" {$form_section6} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section6_c1}
+<td
+	{$cell_section6_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section6_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN keadaan_umum_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_keadaan_umum}  r-vertical-field" data-fieldname="keadaan_umum" data-signal-error-for="keadaan_umum{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="keadaan_umum" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_keadaan_umum}">
+		
+		{BEGIN keadaan_umum_label}{$label kulit1 keadaan_umum }{END keadaan_umum_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$keadaan_umum_value}	</div>
+
+		
+</div>
+
+
+{END keadaan_umum_fieldblock}
+											
+{BEGIN kesadaran_gcs_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_kesadaran_gcs}  r-vertical-field" data-fieldname="kesadaran_gcs" data-signal-error-for="kesadaran_gcs{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="kesadaran_gcs" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_kesadaran_gcs}">
+		
+		{BEGIN kesadaran_gcs_label}{$label kulit1 kesadaran_gcs }{END kesadaran_gcs_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$kesadaran_gcs_value}	</div>
+
+		
+</div>
+
+
+{END kesadaran_gcs_fieldblock}
+											
+{BEGIN tb_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tb}  r-vertical-field" data-fieldname="tb" data-signal-error-for="tb{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="tb" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_tb}">
+		
+		{BEGIN tb_label}{$label kulit1 tb }{END tb_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$tb_value}	</div>
+
+		
+</div>
+
+
+{END tb_fieldblock}
+											
+{BEGIN bb_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_bb}  r-vertical-field" data-fieldname="bb" data-signal-error-for="bb{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="bb" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_bb}">
+		
+		{BEGIN bb_label}{$label kulit1 bb }{END bb_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$bb_value}	</div>
+
+		
+</div>
+
+
+{END bb_fieldblock}
+											
+{BEGIN tensi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tensi}  r-vertical-field" data-fieldname="tensi" data-signal-error-for="tensi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="tensi" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_tensi}">
+		
+		{BEGIN tensi_label}{$label kulit1 tensi }{END tensi_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$tensi_value}	</div>
+
+		
+</div>
+
+
+{END tensi_fieldblock}
+											
+{BEGIN status_gizi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_status_gizi}  r-vertical-field" data-fieldname="status_gizi" data-signal-error-for="status_gizi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="status_gizi" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_status_gizi}">
+		
+		{BEGIN status_gizi_label}{$label kulit1 status_gizi }{END status_gizi_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$status_gizi_value}	</div>
+
+		
+</div>
+
+
+{END status_gizi_fieldblock}
+											
+{BEGIN nadi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_nadi}  r-vertical-field" data-fieldname="nadi" data-signal-error-for="nadi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="nadi" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_nadi}">
+		
+		{BEGIN nadi_label}{$label kulit1 nadi }{END nadi_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$nadi_value}	</div>
+
+		
+</div>
+
+
+{END nadi_fieldblock}
+											
+{BEGIN rr_x_menit_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rr_x_menit}  r-vertical-field" data-fieldname="rr_x_menit" data-signal-error-for="rr_x_menit{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="rr_x_menit" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_rr_x_menit}">
+		
+		{BEGIN rr_x_menit_label}{$label kulit1 rr_x_menit }{END rr_x_menit_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$rr_x_menit_value}	</div>
+
+		
+</div>
+
+
+{END rr_x_menit_fieldblock}
+											
+{BEGIN temp_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_temp}  r-vertical-field" data-fieldname="temp" data-signal-error-for="temp{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="temp" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_temp}">
+		
+		{BEGIN temp_label}{$label kulit1 temp }{END temp_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$temp_value}	</div>
+
+		
+</div>
+
+
+{END temp_fieldblock}
+	
+								</td>
+			{END cellblock_section6_c1}
+								</tr>
+			</tbody></table>
+{END section6_block}
+		  </div>
+		</div>
+	</div>
+	
+								</td>
+			{END cellblock_section2_c1}
+			 
+																
+
+{BEGIN cellblock_section2_c}
+<td
+	{$cell_section2_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section2_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section1" {$item_section1} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section4_headattrs} data-toggle="collapse"   
+
+				href="#section4{$pageid}" aria-expanded="true" aria-controls="section4"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Pemeriksaan Fisik			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section4_xtrclass}" role="tabpanel"  {$section_section4_attrs}
+
+				id="section4{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section7_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section7" id="form_section7_{$pageid}" data-makeup="small" {$form_section7} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section7_c1}
+<td
+	{$cell_section7_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section7_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN kepala_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_kepala}  r-vertical-field" data-fieldname="kepala" data-signal-error-for="kepala{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field28" {$item_integrated_edit_field28} data-pageid="{$pageid}" data-field="kepala" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_kepala}">
+		
+		{BEGIN kepala_label}{$label kulit1 kepala }{END kepala_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$kepala_value}	</div>
+
+		
+</div>
+
+
+{END kepala_fieldblock}
+											
+{BEGIN leher_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_leher}  r-vertical-field" data-fieldname="leher" data-signal-error-for="leher{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field29" {$item_integrated_edit_field29} data-pageid="{$pageid}" data-field="leher" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_leher}">
+		
+		{BEGIN leher_label}{$label kulit1 leher }{END leher_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$leher_value}	</div>
+
+		
+</div>
+
+
+{END leher_fieldblock}
+											
+{BEGIN thorax_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_thorax}  r-vertical-field" data-fieldname="thorax" data-signal-error-for="thorax{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field30" {$item_integrated_edit_field30} data-pageid="{$pageid}" data-field="thorax" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_thorax}">
+		
+		{BEGIN thorax_label}{$label kulit1 thorax }{END thorax_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$thorax_value}	</div>
+
+		
+</div>
+
+
+{END thorax_fieldblock}
+											
+{BEGIN abdomen_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_abdomen}  r-vertical-field" data-fieldname="abdomen" data-signal-error-for="abdomen{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field31" {$item_integrated_edit_field31} data-pageid="{$pageid}" data-field="abdomen" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_abdomen}">
+		
+		{BEGIN abdomen_label}{$label kulit1 abdomen }{END abdomen_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$abdomen_value}	</div>
+
+		
+</div>
+
+
+{END abdomen_fieldblock}
+											
+{BEGIN ekstremitas_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ekstremitas}  r-vertical-field" data-fieldname="ekstremitas" data-signal-error-for="ekstremitas{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field32" {$item_integrated_edit_field32} data-pageid="{$pageid}" data-field="ekstremitas" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_ekstremitas}">
+		
+		{BEGIN ekstremitas_label}{$label kulit1 ekstremitas }{END ekstremitas_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$ekstremitas_value}	</div>
+
+		
+</div>
+
+
+{END ekstremitas_fieldblock}
+	
+								</td>
+			{END cellblock_section7_c1}
+								</tr>
+			</tbody></table>
+{END section7_block}
+		  </div>
+		</div>
+	</div>
+											 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section2" {$item_section2} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section5_headattrs} data-toggle="collapse"   
+
+				href="#section5{$pageid}" aria-expanded="true" aria-controls="section5"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Status Dermatologis			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section5_xtrclass}" role="tabpanel"  {$section_section5_attrs}
+
+				id="section5{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section8_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section8" id="form_section8_{$pageid}" data-makeup="small" {$form_section8} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section8_c1}
+<td
+	{$cell_section8_c1}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section8_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN status_dermatologis_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_status_dermatologis}  r-vertical-field" data-fieldname="status_dermatologis" data-signal-error-for="status_dermatologis{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="status_dermatologis" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_status_dermatologis}">
+		
+		{BEGIN status_dermatologis_label}{$label kulit1 status_dermatologis }{END status_dermatologis_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$status_dermatologis_value}	</div>
+
+		
+</div>
+
+
+{END status_dermatologis_fieldblock}
+	
+								</td>
+			{END cellblock_section8_c1}
+								</tr>
+			</tbody></table>
+{END section8_block}
+		  </div>
+		</div>
+	</div>
+											 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section3" {$item_section3} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section6_headattrs} data-toggle="collapse"   
+
+				href="#section6{$pageid}" aria-expanded="true" aria-controls="section6"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Pemeriksaan Laboratorium dan Penunjang Yang Lain			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section6_xtrclass}" role="tabpanel"  {$section_section6_attrs}
+
+				id="section6{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section9_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section9" id="form_section9_{$pageid}" data-makeup="small" {$form_section9} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section9_c1}
+<td
+	{$cell_section9_c1}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section9_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN pmrksaan_lab_pnunjang_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pmrksaan_lab_pnunjang}  r-vertical-field" data-fieldname="pmrksaan_lab_pnunjang" data-signal-error-for="pmrksaan_lab_pnunjang{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="pmrksaan_lab_pnunjang" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_pmrksaan_lab_pnunjang}">
+		
+		{BEGIN pmrksaan_lab_pnunjang_label}{$label kulit1 pmrksaan_lab_pnunjang }{END pmrksaan_lab_pnunjang_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$pmrksaan_lab_pnunjang_value}	</div>
+
+		
+</div>
+
+
+{END pmrksaan_lab_pnunjang_fieldblock}
+	
+								</td>
+			{END cellblock_section9_c1}
+								</tr>
+			</tbody></table>
+{END section9_block}
+		  </div>
+		</div>
+	</div>
+	
+								</td>
+			{END cellblock_section2_c}
+								</tr>
+			</tbody></table>
+{END section2_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section3{$pageid}"> 
+			{BEGIN section3_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section3" id="form_section3_{$pageid}" data-makeup="small" {$form_section3} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section3_c}
+<td
+	{$cell_section3_c}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section3_c" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN resume_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_resume}  r-vertical-field" data-fieldname="resume" data-signal-error-for="resume{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="resume" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_resume}">
+		
+		{BEGIN resume_label}{$label kulit1 resume }{END resume_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$resume_value}	</div>
+
+		
+</div>
+
+
+{END resume_fieldblock}
+	
+								</td>
+			{END cellblock_section3_c}
+								</tr>
+			</tbody></table>
+{END section3_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section5{$pageid}"> 
+			{BEGIN section5_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section5" id="form_section5_{$pageid}" data-makeup="small" {$form_section5} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section5_c1}
+<td
+	{$cell_section5_c1}
+	class="r-align-left r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section5_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN diagnosis_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_diagnosis}  r-vertical-field" data-fieldname="diagnosis" data-signal-error-for="diagnosis{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="diagnosis" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_diagnosis}">
+		
+		{BEGIN diagnosis_label}{$label kulit1 diagnosis }{END diagnosis_label}
+	</label>
+	<div class="" >
+		{$diagnosis_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END diagnosis_fieldblock}
+	
+								</td>
+			{END cellblock_section5_c1}
+			 
+																
+
+{BEGIN cellblock_section5_c}
+<td
+	{$cell_section5_c}
+	class="r-align-left r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section5_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN diagnosis_banding_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_diagnosis_banding}  r-vertical-field" data-fieldname="diagnosis_banding" data-signal-error-for="diagnosis_banding{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="diagnosis_banding" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_diagnosis_banding}">
+		
+		{BEGIN diagnosis_banding_label}{$label kulit1 diagnosis_banding }{END diagnosis_banding_label}
+	</label>
+	<div class="" >
+		{$diagnosis_banding_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END diagnosis_banding_fieldblock}
+	
+								</td>
+			{END cellblock_section5_c}
+								</tr>
+			</tbody></table>
+{END section5_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section{$pageid}"> 
+			{BEGIN section_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section" id="form_section_{$pageid}" data-makeup="small" {$form_section} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section_c1}
+<td
+	{$cell_section_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN diagnosis_planning_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_diagnosis_planning}  r-vertical-field" data-fieldname="diagnosis_planning" data-signal-error-for="diagnosis_planning{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="diagnosis_planning" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_diagnosis_planning}">
+		
+		{BEGIN diagnosis_planning_label}{$label kulit1 diagnosis_planning }{END diagnosis_planning_label}
+	</label>
+	<div class="" >
+		{$diagnosis_planning_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END diagnosis_planning_fieldblock}
+											
+{BEGIN terapi_medikamentosa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_terapi_medikamentosa}  r-vertical-field" data-fieldname="terapi_medikamentosa" data-signal-error-for="terapi_medikamentosa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="terapi_medikamentosa" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_terapi_medikamentosa}">
+		
+		{BEGIN terapi_medikamentosa_label}{$label kulit1 terapi_medikamentosa }{END terapi_medikamentosa_label}
+	</label>
+	<div class="" >
+		{$terapi_medikamentosa_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END terapi_medikamentosa_fieldblock}
+											
+{BEGIN terapi_nonmedikamentosa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_terapi_nonmedikamentosa}  r-vertical-field" data-fieldname="terapi_nonmedikamentosa" data-signal-error-for="terapi_nonmedikamentosa{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="terapi_nonmedikamentosa" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_terapi_nonmedikamentosa}">
+		
+		{BEGIN terapi_nonmedikamentosa_label}{$label kulit1 terapi_nonmedikamentosa }{END terapi_nonmedikamentosa_label}
+	</label>
+	<div class="" >
+		{$terapi_nonmedikamentosa_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END terapi_nonmedikamentosa_fieldblock}
+	
+								</td>
+			{END cellblock_section_c1}
+			 
+																
+
+{BEGIN cellblock_section_c}
+<td
+	{$cell_section_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN monitoring_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_monitoring}  r-vertical-field" data-fieldname="monitoring" data-signal-error-for="monitoring{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="monitoring" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_monitoring}">
+		
+		{BEGIN monitoring_label}{$label kulit1 monitoring }{END monitoring_label}
+	</label>
+	<div class="" >
+		{$monitoring_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END monitoring_fieldblock}
+											
+{BEGIN edukasi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_edukasi}  r-vertical-field" data-fieldname="edukasi" data-signal-error-for="edukasi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="edukasi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_edukasi}">
+		
+		{BEGIN edukasi_label}{$label kulit1 edukasi }{END edukasi_label}
+	</label>
+	<div class="" >
+		{$edukasi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END edukasi_fieldblock}
+	
+								</td>
+			{END cellblock_section_c}
+								</tr>
+			</tbody></table>
+{END section_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section4{$pageid}"> 
+			{BEGIN section4_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section4" id="form_section4_{$pageid}" data-makeup="small" {$form_section4} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section4_c1}
+<td
+	{$cell_section4_c1}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section4_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN prognosis_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_prognosis}  r-vertical-field" data-fieldname="prognosis" data-signal-error-for="prognosis{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="prognosis" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_prognosis}">
+		
+		{BEGIN prognosis_label}{$label kulit1 prognosis }{END prognosis_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$prognosis_value}	</div>
+
+		
+</div>
+
+
+{END prognosis_fieldblock}
+	
+								</td>
+			{END cellblock_section4_c1}
+								</tr>
+			</tbody></table>
+{END section4_block}
+						</div>
+				</div>
+	</div>
+</div>  	
+				{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Kembali ke menu			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-warning   
+	" href="#" {$closebutton_attrs} >
+							Tutup			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right			col-md-6
+	">
+	 
+		<span data-itemtype="prev" data-itemid="prev" {$item_prev} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	{$prevbutton_class}" {$prevbutton_attrs} >
+					<span class="glyphicon glyphicon-menu-left"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="next" data-itemid="next" {$item_next} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	{$nextbutton_class}" {$nextbutton_attrs} >
+					<span class="glyphicon glyphicon-menu-right"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

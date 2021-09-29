@@ -136,6 +136,15 @@
               </p>
             </a>
             </li>
+            <li class="nav-item">
+            <a href="<?php echo e(url('/rm')); ?>" class="nav-link" target="_blank">
+              <i class="nav-icon fas fa-ambulance"></i>
+              <p>
+                Rekam Medis
+                <i class="right fas fa-angle-right"></i>
+              </p>
+            </a>
+            </li>
           <?php else: ?>
           <li class="nav-item">
             <a href="#" class="nav-link">

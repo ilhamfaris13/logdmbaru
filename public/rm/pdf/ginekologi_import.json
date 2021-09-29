@@ -1,0 +1,264 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel ginekologi import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_import_field1}","text":{$keluhan_pertama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field2}","text":{$keluhan_tmbhan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field3}","text":{$rwyt_skrg_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field4}","text":{$rwyt_dulu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field5}","text":{$rwyt_klg_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field6}","text":{$rwyt_alergi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field7}","text":{$rwyt_pengobatan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field8}","text":{$rwyt_kebiasaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field9}","text":{$rwyt_haid_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field10}","text":{$rwyt_nikah_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field11}","text":{$rwyt_sos_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field12}","text":{$rwyt_prsalinan_satu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field13}","text":{$rwyt_prsalinan_dua_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field14}","text":{$rwyt_prsalinan_tiga_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field15}","text":{$rwyt_prsalinan_empat_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field16}","text":{$rwyt_mnyusui_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field17}","text":{$rwyt_imunisasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field18}","text":{$rwyt_kb_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field19}","text":{$ku_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field20}","text":{$gcs_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field21}","text":{$tb_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field22}","text":{$bb_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field23}","text":{$lila_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field24}","text":{$TD_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field25}","text":{$nadi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field26}","text":{$respi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field27}","text":{$temp_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field28}","text":{$kepala_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field29}","text":{$leher_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field30}","text":{$thorax_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field31}","text":{$abdomen_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field32}","text":{$ekstremitas_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field33}","text":{$genital_ekterna_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field35}","text":{$porsio_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field36}","text":{$korpus_uteri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field38}","text":{$kavum_doglasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field41}","text":{$pmrksaan_pnunjang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field42}","text":{$diagnosis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field43}","text":{$usul_pmrksaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field44}","text":{$konseling_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field}","text":{$dnding_vagina_genital_interna_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field34}","text":{$adneksa_parametrium_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field37}","text":{$dnding_vagina_spekulum_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field39}","text":{$cerviks_spekulum_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field45}","text":{$id_mhs_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field46}","text":{$id_pasien_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field47}","text":{$Nomor_Rm_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field40}","text":{$id_gine_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+					]
+}
+  

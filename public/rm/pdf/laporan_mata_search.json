@@ -1,0 +1,450 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel laporan_mata search}","hidden":"{$item_hide_search_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+								
+''
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+				],
+	
+		body: [
+				
+					{BEGIN row_grid_0}
+				[
+												{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_search_field1}","text":{$Keluhan_Utama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field2}","text":{$Keluhan_Tambahan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field3}","text":{$Riwayat_Penyakit_Sekarang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field4}","text":{$Riwayat_Penyakit_Dahulu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field5}","text":{$Riwayat_Penyakit_Keluarga_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field6}","text":{$Riwayat_Alergi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field7}","text":{$Riwayat_Pengobatan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field8}","text":{$Riwayat_Kebiasaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field9}","text":{$Riwayat_Sosio_Ekonomi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field10}","text":{$Visus_OD_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field11}","text":{$Visus_OS_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field12}","text":{$Refraksi_OD_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field13}","text":{$Refraksi_OS_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field14}","text":{$Addisi_OD_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field15}","text":{$Addisi_OS_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field16}","text":{$Posisi_Bola_Mata_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field17}","text":{$Posisi_Bola_Mata_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field18}","text":{$Gerakan_Bola_Mata_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field19}","text":{$Gerakan_Bola_Mata_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field20}","text":{$Palpebra_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field21}","text":{$Palpebra_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field22}","text":{$Conjunctiva_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field23}","text":{$Conjunctiva_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field24}","text":{$Cornea_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field25}","text":{$Cornea_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field26}","text":{$COA_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field27}","text":{$COA_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field28}","text":{$Pupil_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field29}","text":{$Pupil_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field30}","text":{$Iris_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field31}","text":{$Iris_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field32}","text":{$Lensa_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field33}","text":{$Lensa_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field34}","text":{$Tekanan_Intra_Okuler_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field35}","text":{$Tekanan_Intra_Okuler_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field36}","text":{$Segment_Posterior_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field37}","text":{$Segment_Posterior_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field38}","text":{$Lapang_Pandang_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field39}","text":{$Lapang_Pandang_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field40}","text":{$Ishihara_Test_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field41}","text":{$Ishihara_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field42}","text":{$Fluorescein_Tes_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field43}","text":{$Fluorescein_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field44}","text":{$Sensibilitas_Kornea_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field45}","text":{$Sensibilitas_Kornea_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field46}","text":{$Schirmer_Test_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field47}","text":{$Schirmer_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field48}","text":{$Hirschberg_Test_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field49}","text":{$Hirschberg_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field50}","text":{$Cover_Test_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field51}","text":{$Cover_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field52}","text":{$Cover_Uncover_Test_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field53}","text":{$Cover_Uncover_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field54}","text":{$Penunjang_Lain_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field55}","text":{$Daftar_Masalah_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field56}","text":{$Rencana_Permulaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field57}","text":{$Catatan_Kemajuan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field58}","text":{$Diagnosa_Diagnosa_Banding_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field59}","text":{$Terapi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field60}","text":{$Prognosis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field61}","text":{$Komplikasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field62}","text":{$Id_User_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field63}","text":{$Id_Pasien_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field64}","text":{$Nomor_Rm_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field}","text":{$Nama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field65}","text":{$Alamat_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field66}","text":{$Umur_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field67}","text":{$Status_Perkawinan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field68}","text":{$Jenis_Kelamin_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field69}","text":{$Suku_Ras_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field70}","text":{$Agama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field71}","text":{$Pekerjaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field72}","text":{$Tanggal_MRS_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field73}","text":{$name_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field74}","text":{$Id_Mata_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field75}","text":{$id_pasien1_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field76}","text":{$id_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field77}","text":{$username_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field78}","text":{$email_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field79}","text":{$email_verified_at_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field80}","text":{$password_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field81}","text":{$two_factor_secret_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field82}","text":{$two_factor_recovery_codes_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field83}","text":{$level_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field84}","text":{$remember_token_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field85}","text":{$profile_photo_path_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field86}","text":{$created_at_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field87}","text":{$updated_at_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_0}
+					]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+				
+			{"text":""},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_cancel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+			]
+}
+  

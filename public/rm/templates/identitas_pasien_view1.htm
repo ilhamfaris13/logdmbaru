@@ -1,0 +1,692 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="2"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel identitas_pasien view1}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="2"
+	data-v-margin="0"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section" {$item_section} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section1_headattrs} data-toggle="collapse"   
+
+				href="#section1{$pageid}" aria-expanded="true" aria-controls="section1"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Identitas Pasien			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section1_xtrclass}" role="tabpanel"  {$section_section1_attrs}
+
+				id="section1{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section" id="form_section_{$pageid}" data-makeup="small" {$form_section} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section_c1}
+<td
+	{$cell_section_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Id_Pasien_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Id_Pasien}  r-vertical-field" data-fieldname="Id_Pasien" data-signal-error-for="Id_Pasien{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Id_Pasien" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Id_Pasien}">
+		
+		{BEGIN Id_Pasien_label}{$label identitas_pasien Id_Pasien }{END Id_Pasien_label}
+	</label>
+	<div class="" >
+		{$Id_Pasien_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Id_Pasien_fieldblock}
+											
+{BEGIN Nama_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Nama}  r-vertical-field" data-fieldname="Nama" data-signal-error-for="Nama{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Nama" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Nama}">
+		
+		{BEGIN Nama_label}{$label identitas_pasien Nama }{END Nama_label}
+	</label>
+	<div class="" >
+		{$Nama_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Nama_fieldblock}
+											
+{BEGIN Alamat_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Alamat}  r-vertical-field" data-fieldname="Alamat" data-signal-error-for="Alamat{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Alamat" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Alamat}">
+		
+		{BEGIN Alamat_label}{$label identitas_pasien Alamat }{END Alamat_label}
+	</label>
+	<div class="" >
+		{$Alamat_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Alamat_fieldblock}
+											
+{BEGIN Umur_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Umur}  r-vertical-field" data-fieldname="Umur" data-signal-error-for="Umur{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Umur" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Umur}">
+		
+		{BEGIN Umur_label}{$label identitas_pasien Umur }{END Umur_label}
+	</label>
+	<div class="" >
+		{$Umur_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Umur_fieldblock}
+											
+{BEGIN Status_Perkawinan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Status_Perkawinan}  r-vertical-field" data-fieldname="Status_Perkawinan" data-signal-error-for="Status_Perkawinan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Status_Perkawinan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Status_Perkawinan}">
+		
+		{BEGIN Status_Perkawinan_label}{$label identitas_pasien Status_Perkawinan }{END Status_Perkawinan_label}
+	</label>
+	<div class="" >
+		{$Status_Perkawinan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Status_Perkawinan_fieldblock}
+	
+								</td>
+			{END cellblock_section_c1}
+			 
+																
+
+{BEGIN cellblock_section_c}
+<td
+	{$cell_section_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Jenis_Kelamin_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Jenis_Kelamin}  r-vertical-field" data-fieldname="Jenis Kelamin" data-signal-error-for="Jenis_Kelamin{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Jenis_Kelamin" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Jenis_Kelamin}">
+		
+		{BEGIN Jenis_Kelamin_label}{$label identitas_pasien Jenis_Kelamin }{END Jenis_Kelamin_label}
+	</label>
+	<div class="" >
+		{$Jenis_Kelamin_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Jenis_Kelamin_fieldblock}
+											
+{BEGIN Suku_Ras_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Suku_Ras}  r-vertical-field" data-fieldname="Suku_Ras" data-signal-error-for="Suku_Ras{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Suku_Ras" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Suku_Ras}">
+		
+		{BEGIN Suku_Ras_label}{$label identitas_pasien Suku_Ras }{END Suku_Ras_label}
+	</label>
+	<div class="" >
+		{$Suku_Ras_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Suku_Ras_fieldblock}
+											
+{BEGIN Agama_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Agama}  r-vertical-field" data-fieldname="Agama" data-signal-error-for="Agama{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Agama" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Agama}">
+		
+		{BEGIN Agama_label}{$label identitas_pasien Agama }{END Agama_label}
+	</label>
+	<div class="" >
+		{$Agama_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Agama_fieldblock}
+											
+{BEGIN Pekerjaan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Pekerjaan}  r-vertical-field" data-fieldname="Pekerjaan" data-signal-error-for="Pekerjaan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Pekerjaan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Pekerjaan}">
+		
+		{BEGIN Pekerjaan_label}{$label identitas_pasien Pekerjaan }{END Pekerjaan_label}
+	</label>
+	<div class="" >
+		{$Pekerjaan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Pekerjaan_fieldblock}
+											
+{BEGIN Tanggal_MRS_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tanggal_MRS}  r-vertical-field" data-fieldname="Tanggal_MRS" data-signal-error-for="Tanggal_MRS{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Tanggal_MRS" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Tanggal_MRS}">
+		
+		{BEGIN Tanggal_MRS_label}{$label identitas_pasien Tanggal_MRS }{END Tanggal_MRS_label}
+	</label>
+	<div class="" >
+		{$Tanggal_MRS_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Tanggal_MRS_fieldblock}
+	
+								</td>
+			{END cellblock_section_c}
+								</tr>
+			</tbody></table>
+{END section_block}
+		  </div>
+		</div>
+	</div>
+											
+{BEGIN details_mata}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption mata }				
+							<span>
+					{$detailslButtons_mata}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_mata}
+		</div>
+	</div>
+</div>
+{END details_mata}
+											
+{BEGIN details_tht}
+<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption tht }				
+							<span>
+					{$detailslButtons_tht}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_tht}
+		</div>
+	</div>
+</div>
+{END details_tht}
+											
+{BEGIN details_andrologi}
+<div data-itemtype="details_preview" data-itemid="details_preview2" {$item_details_preview2} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption andrologi }				
+							<span>
+					{$detailslButtons_andrologi}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_andrologi}
+		</div>
+	</div>
+</div>
+{END details_andrologi}
+											
+{BEGIN details_jiwa}
+<div data-itemtype="details_preview" data-itemid="details_preview3" {$item_details_preview3} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption jiwa }				
+							<span>
+					{$detailslButtons_jiwa}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_jiwa}
+		</div>
+	</div>
+</div>
+{END details_jiwa}
+											
+{BEGIN details_resep}
+<div data-itemtype="details_preview" data-itemid="details_preview4" {$item_details_preview4} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption resep }				
+							<span>
+					{$detailslButtons_resep}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_resep}
+		</div>
+	</div>
+</div>
+{END details_resep}
+											
+{BEGIN details_rujukan}
+<div data-itemtype="details_preview" data-itemid="details_preview5" {$item_details_preview5} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption rujukan }				
+							<span>
+					{$detailslButtons_rujukan}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_rujukan}
+		</div>
+	</div>
+</div>
+{END details_rujukan}
+											
+{BEGIN details_kulit}
+<div data-itemtype="details_preview" data-itemid="details_preview6" {$item_details_preview6} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption kulit }				
+							<span>
+					{$detailslButtons_kulit}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_kulit}
+		</div>
+	</div>
+</div>
+{END details_kulit}
+											
+{BEGIN details_pediatri}
+<div data-itemtype="details_preview" data-itemid="details_preview7" {$item_details_preview7} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption pediatri }				
+							<span>
+					{$detailslButtons_pediatri}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_pediatri}
+		</div>
+	</div>
+</div>
+{END details_pediatri}
+											
+{BEGIN details_interna}
+<div data-itemtype="details_preview" data-itemid="details_preview8" {$item_details_preview8} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption interna }				
+							<span>
+					{$detailslButtons_interna}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_interna}
+		</div>
+	</div>
+</div>
+{END details_interna}
+											
+{BEGIN details_ginekologi}
+<div data-itemtype="details_preview" data-itemid="details_preview9" {$item_details_preview9} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption ginekologi }				
+							<span>
+					{$detailslButtons_ginekologi}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_ginekologi}
+		</div>
+	</div>
+</div>
+{END details_ginekologi}
+											
+{BEGIN details_resep_kacamata}
+<div data-itemtype="details_preview" data-itemid="details_preview10" {$item_details_preview10} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption resep_kacamata }				
+							<span>
+					{$detailslButtons_resep_kacamata}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_resep_kacamata}
+		</div>
+	</div>
+</div>
+{END details_resep_kacamata}
+											
+{BEGIN details_obstetri}
+<div data-itemtype="details_preview" data-itemid="details_preview12" {$item_details_preview12} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption obstetri }				
+							<span>
+					{$detailslButtons_obstetri}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_obstetri}
+		</div>
+	</div>
+</div>
+{END details_obstetri}
+											
+{BEGIN details_paru}
+<div data-itemtype="details_preview" data-itemid="details_preview13" {$item_details_preview13} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption paru }				
+							<span>
+					{$detailslButtons_paru}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_paru}
+		</div>
+	</div>
+</div>
+{END details_paru}
+											
+{BEGIN details_bedah}
+<div data-itemtype="details_preview" data-itemid="details_preview14" {$item_details_preview14} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption bedah }				
+							<span>
+					{$detailslButtons_bedah}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_bedah}
+		</div>
+	</div>
+</div>
+{END details_bedah}
+											
+{BEGIN details_neurologi}
+<div data-itemtype="details_preview" data-itemid="details_preview15" {$item_details_preview15} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption neurologi }				
+							<span>
+					{$detailslButtons_neurologi}
+																																																																																																																																																																														</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_neurologi}
+		</div>
+	</div>
+</div>
+{END details_neurologi}
+	
+				{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="2"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Close window			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="identitas_pasien_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		Edit		
+		</a>
+	</li>
+{END edit_page_button}
+								<li data-itemtype="view_pdf" data-itemid="view_pdf" {$item_view_pdf} data-pageid="{$pageid}" data-small >
+				<a class="pdflink" data-pdfpage="view1" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Identitas Pasien.pdf" 
+data-pagetype="view" 
+{$pdflink_attrs}  title="" >
+				
+		PDF View		
+		</a>
+	</li>
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

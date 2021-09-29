@@ -87,6 +87,7 @@ Route::post('/kegiatan/store',[SignaturePadController2::class, 'store'])->name('
 | Sync Database Controller
 */
 Route::post('syncdb',[SyncDatabaseController::class, 'create'])->name('sync.create');
+Route::post('syncdb',[SyncDatabaseController::class, 'folder'])->name('sync.folder');
 Route::post('syncdb/multi',[SyncDatabaseController::class, 'multi'])->name('sync.multi');
 Route::post('syncdosen',[SyncDatabaseController::class, 'create_dosen'])->name('sync.create_dosen');
 Route::get('syncdb',[SyncDatabaseController::class, 'index']);

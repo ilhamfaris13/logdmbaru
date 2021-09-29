@@ -1,0 +1,378 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel laporan_mata export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_export_field1}","text":{$Keluhan_Utama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field2}","text":{$Keluhan_Tambahan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field3}","text":{$Riwayat_Penyakit_Sekarang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field4}","text":{$Riwayat_Penyakit_Dahulu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field5}","text":{$Riwayat_Penyakit_Keluarga_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field6}","text":{$Riwayat_Alergi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field7}","text":{$Riwayat_Pengobatan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field8}","text":{$Riwayat_Kebiasaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field9}","text":{$Riwayat_Sosio_Ekonomi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field10}","text":{$Visus_OD_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field11}","text":{$Visus_OS_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field12}","text":{$Refraksi_OD_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field13}","text":{$Refraksi_OS_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field14}","text":{$Addisi_OD_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field15}","text":{$Addisi_OS_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field16}","text":{$Posisi_Bola_Mata_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field17}","text":{$Posisi_Bola_Mata_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field18}","text":{$Gerakan_Bola_Mata_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field19}","text":{$Gerakan_Bola_Mata_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field20}","text":{$Palpebra_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field21}","text":{$Palpebra_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field22}","text":{$Conjunctiva_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field23}","text":{$Conjunctiva_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field24}","text":{$Cornea_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field25}","text":{$Cornea_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field26}","text":{$COA_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field27}","text":{$COA_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field28}","text":{$Pupil_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field29}","text":{$Pupil_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field30}","text":{$Iris_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field31}","text":{$Iris_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field32}","text":{$Lensa_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field33}","text":{$Lensa_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field34}","text":{$Tekanan_Intra_Okuler_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field35}","text":{$Tekanan_Intra_Okuler_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field36}","text":{$Segment_Posterior_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field37}","text":{$Segment_Posterior_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field38}","text":{$Lapang_Pandang_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field39}","text":{$Lapang_Pandang_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field40}","text":{$Ishihara_Test_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field41}","text":{$Ishihara_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field42}","text":{$Fluorescein_Tes_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field43}","text":{$Fluorescein_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field44}","text":{$Sensibilitas_Kornea_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field45}","text":{$Sensibilitas_Kornea_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field46}","text":{$Schirmer_Test_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field47}","text":{$Schirmer_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field48}","text":{$Hirschberg_Test_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field49}","text":{$Hirschberg_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field50}","text":{$Cover_Test_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field51}","text":{$Cover_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field52}","text":{$Cover_Uncover_Test_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field53}","text":{$Cover_Uncover_Test_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field54}","text":{$Penunjang_Lain_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field55}","text":{$Daftar_Masalah_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field56}","text":{$Rencana_Permulaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field57}","text":{$Catatan_Kemajuan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field58}","text":{$Diagnosa_Diagnosa_Banding_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field59}","text":{$Terapi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field60}","text":{$Prognosis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field61}","text":{$Komplikasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field}","text":{$Nomor_Rm_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field62}","text":{$Nama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field63}","text":{$Alamat_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field64}","text":{$Umur_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field65}","text":{$Status_Perkawinan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field66}","text":{$Jenis_Kelamin_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field67}","text":{$Suku_Ras_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field68}","text":{$Agama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field69}","text":{$Pekerjaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field70}","text":{$Tanggal_MRS_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field71}","text":{$name_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field72}","text":{$Id_Mata_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field73}","text":{$id_pasien1_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field74}","text":{$id_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field75}","text":{$username_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field76}","text":{$email_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field77}","text":{$email_verified_at_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field78}","text":{$password_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field79}","text":{$two_factor_secret_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field80}","text":{$two_factor_recovery_codes_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field81}","text":{$level_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field82}","text":{$remember_token_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field83}","text":{$profile_photo_path_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field84}","text":{$created_at_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field85}","text":{$updated_at_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+					]
+}
+  

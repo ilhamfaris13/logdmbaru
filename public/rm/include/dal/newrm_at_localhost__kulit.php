@@ -1,0 +1,43 @@
+<?php
+$dalTablekulit = array();
+$dalTablekulit["id_kulit"] = array("type"=>3,"varname"=>"id_kulit", "name" => "id_kulit");
+$dalTablekulit["id_mhs"] = array("type"=>20,"varname"=>"id_mhs", "name" => "id_mhs");
+$dalTablekulit["id_pasien"] = array("type"=>20,"varname"=>"id_pasien", "name" => "id_pasien");
+$dalTablekulit["keluhan_pertama"] = array("type"=>201,"varname"=>"keluhan_pertama", "name" => "keluhan_pertama");
+$dalTablekulit["keluhan_tmbhan"] = array("type"=>201,"varname"=>"keluhan_tmbhan", "name" => "keluhan_tmbhan");
+$dalTablekulit["rwyt_skrg"] = array("type"=>201,"varname"=>"rwyt_skrg", "name" => "rwyt_skrg");
+$dalTablekulit["rwyt_dulu"] = array("type"=>201,"varname"=>"rwyt_dulu", "name" => "rwyt_dulu");
+$dalTablekulit["rwyt_klg"] = array("type"=>201,"varname"=>"rwyt_klg", "name" => "rwyt_klg");
+$dalTablekulit["rwyt_alergi"] = array("type"=>201,"varname"=>"rwyt_alergi", "name" => "rwyt_alergi");
+$dalTablekulit["rwyt_pengobatan"] = array("type"=>201,"varname"=>"rwyt_pengobatan", "name" => "rwyt_pengobatan");
+$dalTablekulit["rwyt_kebiasaan"] = array("type"=>201,"varname"=>"rwyt_kebiasaan", "name" => "rwyt_kebiasaan");
+$dalTablekulit["keadaan_umum"] = array("type"=>200,"varname"=>"keadaan_umum", "name" => "keadaan_umum");
+$dalTablekulit["kesadaran_gcs"] = array("type"=>200,"varname"=>"kesadaran_gcs", "name" => "kesadaran_gcs");
+$dalTablekulit["tb"] = array("type"=>200,"varname"=>"tb", "name" => "tb");
+$dalTablekulit["bb"] = array("type"=>200,"varname"=>"bb", "name" => "bb");
+$dalTablekulit["status_gizi"] = array("type"=>200,"varname"=>"status_gizi", "name" => "status_gizi");
+$dalTablekulit["tensi"] = array("type"=>200,"varname"=>"tensi", "name" => "tensi");
+$dalTablekulit["nadi"] = array("type"=>200,"varname"=>"nadi", "name" => "nadi");
+$dalTablekulit["rr_x_menit"] = array("type"=>200,"varname"=>"rr_x_menit", "name" => "rr_x_menit");
+$dalTablekulit["temp"] = array("type"=>200,"varname"=>"temp", "name" => "temp");
+$dalTablekulit["kepala"] = array("type"=>201,"varname"=>"kepala", "name" => "kepala");
+$dalTablekulit["leher"] = array("type"=>201,"varname"=>"leher", "name" => "leher");
+$dalTablekulit["thorax"] = array("type"=>201,"varname"=>"thorax", "name" => "thorax");
+$dalTablekulit["abdomen"] = array("type"=>201,"varname"=>"abdomen", "name" => "abdomen");
+$dalTablekulit["ekstremitas"] = array("type"=>201,"varname"=>"ekstremitas", "name" => "ekstremitas");
+$dalTablekulit["status_dermatologis"] = array("type"=>201,"varname"=>"status_dermatologis", "name" => "status_dermatologis");
+$dalTablekulit["pmrksaan_lab_pnunjang"] = array("type"=>201,"varname"=>"pmrksaan_lab_pnunjang", "name" => "pmrksaan_lab_pnunjang");
+$dalTablekulit["resume"] = array("type"=>201,"varname"=>"resume", "name" => "resume");
+$dalTablekulit["diagnosis"] = array("type"=>201,"varname"=>"diagnosis", "name" => "diagnosis");
+$dalTablekulit["diagnosis_banding"] = array("type"=>201,"varname"=>"diagnosis_banding", "name" => "diagnosis_banding");
+$dalTablekulit["diagnosis_planning"] = array("type"=>201,"varname"=>"diagnosis_planning", "name" => "diagnosis_planning");
+$dalTablekulit["terapi_medikamentosa"] = array("type"=>201,"varname"=>"terapi_medikamentosa", "name" => "terapi_medikamentosa");
+$dalTablekulit["terapi_nonmedikamentosa"] = array("type"=>201,"varname"=>"terapi_nonmedikamentosa", "name" => "terapi_nonmedikamentosa");
+$dalTablekulit["monitoring"] = array("type"=>201,"varname"=>"monitoring", "name" => "monitoring");
+$dalTablekulit["edukasi"] = array("type"=>201,"varname"=>"edukasi", "name" => "edukasi");
+$dalTablekulit["prognosis"] = array("type"=>201,"varname"=>"prognosis", "name" => "prognosis");
+$dalTablekulit["Nomor_Rm"] = array("type"=>200,"varname"=>"Nomor_Rm", "name" => "Nomor_Rm");
+	$dalTablekulit["id_kulit"]["key"]=true;
+
+$dal_info["newrm_at_localhost__kulit"] = &$dalTablekulit;
+?>

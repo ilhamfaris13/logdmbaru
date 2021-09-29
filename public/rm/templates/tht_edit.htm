@@ -1,0 +1,904 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >{$pagetitlelabel tht edit}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<div data-itemtype="edit_message" data-itemid="edit_message" {$item_edit_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+</div>
+</div>
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Keluhan_Utama_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Keluhan_Utama}  r-vertical-field" 
+	data-fieldname="Keluhan_Utama" 
+	data-signal-error-for="Keluhan_Utama{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Keluhan_Utama" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Keluhan_Utama}">
+		{BEGIN Keluhan_Utama_label}{$label tht Keluhan_Utama }{END Keluhan_Utama_label}
+	</label>
+	<div class="r-edit-field">
+		{$Keluhan_Utama_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Keluhan_Utama">
+		<div class="text-muted" >
+		{$tooltip tht Keluhan_Utama }		</div>
+	</div>
+</div>
+
+
+{END Keluhan_Utama_fieldblock}
+											
+{BEGIN Keluhan_Tambahan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Keluhan_Tambahan}  r-vertical-field" 
+	data-fieldname="Keluhan_Tambahan" 
+	data-signal-error-for="Keluhan_Tambahan{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Keluhan_Tambahan" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Keluhan_Tambahan}">
+		{BEGIN Keluhan_Tambahan_label}{$label tht Keluhan_Tambahan }{END Keluhan_Tambahan_label}
+	</label>
+	<div class="r-edit-field">
+		{$Keluhan_Tambahan_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Keluhan_Tambahan">
+		<div class="text-muted" >
+		{$tooltip tht Keluhan_Tambahan }		</div>
+	</div>
+</div>
+
+
+{END Keluhan_Tambahan_fieldblock}
+											
+{BEGIN Riwayat_Penyakit_Sekarang_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Penyakit_Sekarang}  r-vertical-field" 
+	data-fieldname="Riwayat_Penyakit_Sekarang" 
+	data-signal-error-for="Riwayat_Penyakit_Sekarang{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Riwayat_Penyakit_Sekarang" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Penyakit_Sekarang}">
+		{BEGIN Riwayat_Penyakit_Sekarang_label}{$label tht Riwayat_Penyakit_Sekarang }{END Riwayat_Penyakit_Sekarang_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Penyakit_Sekarang_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Penyakit_Sekarang">
+		<div class="text-muted" >
+		{$tooltip tht Riwayat_Penyakit_Sekarang }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Penyakit_Sekarang_fieldblock}
+											
+{BEGIN Riwayat_Penyakit_Dahulu_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Penyakit_Dahulu}  r-vertical-field" 
+	data-fieldname="Riwayat_Penyakit_Dahulu" 
+	data-signal-error-for="Riwayat_Penyakit_Dahulu{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Riwayat_Penyakit_Dahulu" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Penyakit_Dahulu}">
+		{BEGIN Riwayat_Penyakit_Dahulu_label}{$label tht Riwayat_Penyakit_Dahulu }{END Riwayat_Penyakit_Dahulu_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Penyakit_Dahulu_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Penyakit_Dahulu">
+		<div class="text-muted" >
+		{$tooltip tht Riwayat_Penyakit_Dahulu }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Penyakit_Dahulu_fieldblock}
+											
+{BEGIN Riwayat_Alergi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Alergi}  r-vertical-field" 
+	data-fieldname="Riwayat_Alergi" 
+	data-signal-error-for="Riwayat_Alergi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Riwayat_Alergi" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Alergi}">
+		{BEGIN Riwayat_Alergi_label}{$label tht Riwayat_Alergi }{END Riwayat_Alergi_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Alergi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Alergi">
+		<div class="text-muted" >
+		{$tooltip tht Riwayat_Alergi }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Alergi_fieldblock}
+											
+{BEGIN Riwayat_Penyakit_Keluarga_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Penyakit_Keluarga}  r-vertical-field" 
+	data-fieldname="Riwayat_Penyakit_Keluarga" 
+	data-signal-error-for="Riwayat_Penyakit_Keluarga{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Riwayat_Penyakit_Keluarga" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Penyakit_Keluarga}">
+		{BEGIN Riwayat_Penyakit_Keluarga_label}{$label tht Riwayat_Penyakit_Keluarga }{END Riwayat_Penyakit_Keluarga_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Penyakit_Keluarga_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Penyakit_Keluarga">
+		<div class="text-muted" >
+		{$tooltip tht Riwayat_Penyakit_Keluarga }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Penyakit_Keluarga_fieldblock}
+											
+{BEGIN Riwayat_Pengobatan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Pengobatan}  r-vertical-field" 
+	data-fieldname="Riwayat_Pengobatan" 
+	data-signal-error-for="Riwayat_Pengobatan{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Riwayat_Pengobatan" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Pengobatan}">
+		{BEGIN Riwayat_Pengobatan_label}{$label tht Riwayat_Pengobatan }{END Riwayat_Pengobatan_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Pengobatan_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Pengobatan">
+		<div class="text-muted" >
+		{$tooltip tht Riwayat_Pengobatan }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Pengobatan_fieldblock}
+											
+{BEGIN Riwayat_Kebiasaan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Kebiasaan}  r-vertical-field" 
+	data-fieldname="Riwayat_Kebiasaan" 
+	data-signal-error-for="Riwayat_Kebiasaan{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Riwayat_Kebiasaan" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Kebiasaan}">
+		{BEGIN Riwayat_Kebiasaan_label}{$label tht Riwayat_Kebiasaan }{END Riwayat_Kebiasaan_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Kebiasaan_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Kebiasaan">
+		<div class="text-muted" >
+		{$tooltip tht Riwayat_Kebiasaan }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Kebiasaan_fieldblock}
+											
+{BEGIN Riwayat_Sosial_Ekonomi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Sosial_Ekonomi}  r-vertical-field" 
+	data-fieldname="Riwayat_Sosial_Ekonomi" 
+	data-signal-error-for="Riwayat_Sosial_Ekonomi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Riwayat_Sosial_Ekonomi" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Sosial_Ekonomi}">
+		{BEGIN Riwayat_Sosial_Ekonomi_label}{$label tht Riwayat_Sosial_Ekonomi }{END Riwayat_Sosial_Ekonomi_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Sosial_Ekonomi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Sosial_Ekonomi">
+		<div class="text-muted" >
+		{$tooltip tht Riwayat_Sosial_Ekonomi }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Sosial_Ekonomi_fieldblock}
+											
+{BEGIN Pem_Umum_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Pem_Umum}  r-vertical-field" 
+	data-fieldname="Pem_Umum" 
+	data-signal-error-for="Pem_Umum{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Pem_Umum" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Pem_Umum}">
+		{BEGIN Pem_Umum_label}{$label tht Pem_Umum }{END Pem_Umum_label}
+	</label>
+	<div class="r-edit-field">
+		{$Pem_Umum_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Pem_Umum">
+		<div class="text-muted" >
+		{$tooltip tht Pem_Umum }		</div>
+	</div>
+</div>
+
+
+{END Pem_Umum_fieldblock}
+											
+{BEGIN Tanda_Vital_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tanda_Vital}  r-vertical-field" 
+	data-fieldname="Tanda_Vital" 
+	data-signal-error-for="Tanda_Vital{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="Tanda_Vital" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Tanda_Vital}">
+		{BEGIN Tanda_Vital_label}{$label tht Tanda_Vital }{END Tanda_Vital_label}
+	</label>
+	<div class="r-edit-field">
+		{$Tanda_Vital_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Tanda_Vital">
+		<div class="text-muted" >
+		{$tooltip tht Tanda_Vital }		</div>
+	</div>
+</div>
+
+
+{END Tanda_Vital_fieldblock}
+											
+{BEGIN Kepala_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Kepala}  r-vertical-field" 
+	data-fieldname="Kepala" 
+	data-signal-error-for="Kepala{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="Kepala" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Kepala}">
+		{BEGIN Kepala_label}{$label tht Kepala }{END Kepala_label}
+	</label>
+	<div class="r-edit-field">
+		{$Kepala_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Kepala">
+		<div class="text-muted" >
+		{$tooltip tht Kepala }		</div>
+	</div>
+</div>
+
+
+{END Kepala_fieldblock}
+											
+{BEGIN Leher_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Leher}  r-vertical-field" 
+	data-fieldname="Leher" 
+	data-signal-error-for="Leher{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="Leher" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Leher}">
+		{BEGIN Leher_label}{$label tht Leher }{END Leher_label}
+	</label>
+	<div class="r-edit-field">
+		{$Leher_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Leher">
+		<div class="text-muted" >
+		{$tooltip tht Leher }		</div>
+	</div>
+</div>
+
+
+{END Leher_fieldblock}
+											
+{BEGIN Telinga_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Telinga}  r-vertical-field" 
+	data-fieldname="Telinga" 
+	data-signal-error-for="Telinga{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="Telinga" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Telinga}">
+		{BEGIN Telinga_label}{$label tht Telinga }{END Telinga_label}
+	</label>
+	<div class="r-edit-field">
+		{$Telinga_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Telinga">
+		<div class="text-muted" >
+		{$tooltip tht Telinga }		</div>
+	</div>
+</div>
+
+
+{END Telinga_fieldblock}
+											
+{BEGIN Hidung_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Hidung}  r-vertical-field" 
+	data-fieldname="Hidung" 
+	data-signal-error-for="Hidung{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="Hidung" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Hidung}">
+		{BEGIN Hidung_label}{$label tht Hidung }{END Hidung_label}
+	</label>
+	<div class="r-edit-field">
+		{$Hidung_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Hidung">
+		<div class="text-muted" >
+		{$tooltip tht Hidung }		</div>
+	</div>
+</div>
+
+
+{END Hidung_fieldblock}
+											
+{BEGIN Mulut_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Mulut}  r-vertical-field" 
+	data-fieldname="Mulut" 
+	data-signal-error-for="Mulut{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="Mulut" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Mulut}">
+		{BEGIN Mulut_label}{$label tht Mulut }{END Mulut_label}
+	</label>
+	<div class="r-edit-field">
+		{$Mulut_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Mulut">
+		<div class="text-muted" >
+		{$tooltip tht Mulut }		</div>
+	</div>
+</div>
+
+
+{END Mulut_fieldblock}
+											
+{BEGIN Epipharynx_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Epipharynx}  r-vertical-field" 
+	data-fieldname="Epipharynx" 
+	data-signal-error-for="Epipharynx{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="Epipharynx" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Epipharynx}">
+		{BEGIN Epipharynx_label}{$label tht Epipharynx }{END Epipharynx_label}
+	</label>
+	<div class="r-edit-field">
+		{$Epipharynx_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Epipharynx">
+		<div class="text-muted" >
+		{$tooltip tht Epipharynx }		</div>
+	</div>
+</div>
+
+
+{END Epipharynx_fieldblock}
+											
+{BEGIN Larynx_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Larynx}  r-vertical-field" 
+	data-fieldname="Larynx" 
+	data-signal-error-for="Larynx{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="Larynx" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Larynx}">
+		{BEGIN Larynx_label}{$label tht Larynx }{END Larynx_label}
+	</label>
+	<div class="r-edit-field">
+		{$Larynx_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Larynx">
+		<div class="text-muted" >
+		{$tooltip tht Larynx }		</div>
+	</div>
+</div>
+
+
+{END Larynx_fieldblock}
+											
+{BEGIN Diagnosa_Banding_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Diagnosa_Banding}  r-vertical-field" 
+	data-fieldname="Diagnosa_Banding" 
+	data-signal-error-for="Diagnosa_Banding{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="Diagnosa_Banding" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Diagnosa_Banding}">
+		{BEGIN Diagnosa_Banding_label}{$label tht Diagnosa_Banding }{END Diagnosa_Banding_label}
+	</label>
+	<div class="r-edit-field">
+		{$Diagnosa_Banding_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Diagnosa_Banding">
+		<div class="text-muted" >
+		{$tooltip tht Diagnosa_Banding }		</div>
+	</div>
+</div>
+
+
+{END Diagnosa_Banding_fieldblock}
+											
+{BEGIN Laboratorium_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Laboratorium}  r-vertical-field" 
+	data-fieldname="Laboratorium" 
+	data-signal-error-for="Laboratorium{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="Laboratorium" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Laboratorium}">
+		{BEGIN Laboratorium_label}{$label tht Laboratorium }{END Laboratorium_label}
+	</label>
+	<div class="r-edit-field">
+		{$Laboratorium_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Laboratorium">
+		<div class="text-muted" >
+		{$tooltip tht Laboratorium }		</div>
+	</div>
+</div>
+
+
+{END Laboratorium_fieldblock}
+											
+{BEGIN Radiologi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Radiologi}  r-vertical-field" 
+	data-fieldname="Radiologi" 
+	data-signal-error-for="Radiologi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="Radiologi" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Radiologi}">
+		{BEGIN Radiologi_label}{$label tht Radiologi }{END Radiologi_label}
+	</label>
+	<div class="r-edit-field">
+		{$Radiologi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Radiologi">
+		<div class="text-muted" >
+		{$tooltip tht Radiologi }		</div>
+	</div>
+</div>
+
+
+{END Radiologi_fieldblock}
+											
+{BEGIN Lain_lain_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Lain_lain}  r-vertical-field" 
+	data-fieldname="Lain_lain" 
+	data-signal-error-for="Lain_lain{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="Lain_lain" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Lain_lain}">
+		{BEGIN Lain_lain_label}{$label tht Lain_lain }{END Lain_lain_label}
+	</label>
+	<div class="r-edit-field">
+		{$Lain_lain_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Lain_lain">
+		<div class="text-muted" >
+		{$tooltip tht Lain_lain }		</div>
+	</div>
+</div>
+
+
+{END Lain_lain_fieldblock}
+											
+{BEGIN Diagnosa_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Diagnosa}  r-vertical-field" 
+	data-fieldname="Diagnosa" 
+	data-signal-error-for="Diagnosa{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="Diagnosa" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Diagnosa}">
+		{BEGIN Diagnosa_label}{$label tht Diagnosa }{END Diagnosa_label}
+	</label>
+	<div class="r-edit-field">
+		{$Diagnosa_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Diagnosa">
+		<div class="text-muted" >
+		{$tooltip tht Diagnosa }		</div>
+	</div>
+</div>
+
+
+{END Diagnosa_fieldblock}
+											
+{BEGIN Terapi_Farmakologi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Terapi_Farmakologi}  r-vertical-field" 
+	data-fieldname="Terapi_Farmakologi" 
+	data-signal-error-for="Terapi_Farmakologi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="Terapi_Farmakologi" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Terapi_Farmakologi}">
+		{BEGIN Terapi_Farmakologi_label}{$label tht Terapi_Farmakologi }{END Terapi_Farmakologi_label}
+	</label>
+	<div class="r-edit-field">
+		{$Terapi_Farmakologi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Terapi_Farmakologi">
+		<div class="text-muted" >
+		{$tooltip tht Terapi_Farmakologi }		</div>
+	</div>
+</div>
+
+
+{END Terapi_Farmakologi_fieldblock}
+											
+{BEGIN Terapi_Non_Farmakologi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Terapi_Non_Farmakologi}  r-vertical-field" 
+	data-fieldname="Terapi_Non_Farmakologi" 
+	data-signal-error-for="Terapi_Non_Farmakologi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="Terapi_Non_Farmakologi" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Terapi_Non_Farmakologi}">
+		{BEGIN Terapi_Non_Farmakologi_label}{$label tht Terapi_Non_Farmakologi }{END Terapi_Non_Farmakologi_label}
+	</label>
+	<div class="r-edit-field">
+		{$Terapi_Non_Farmakologi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Terapi_Non_Farmakologi">
+		<div class="text-muted" >
+		{$tooltip tht Terapi_Non_Farmakologi }		</div>
+	</div>
+</div>
+
+
+{END Terapi_Non_Farmakologi_fieldblock}
+											
+{BEGIN Edukasi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Edukasi}  r-vertical-field" 
+	data-fieldname="Edukasi" 
+	data-signal-error-for="Edukasi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="Edukasi" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Edukasi}">
+		{BEGIN Edukasi_label}{$label tht Edukasi }{END Edukasi_label}
+	</label>
+	<div class="r-edit-field">
+		{$Edukasi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Edukasi">
+		<div class="text-muted" >
+		{$tooltip tht Edukasi }		</div>
+	</div>
+</div>
+
+
+{END Edukasi_fieldblock}
+											
+{BEGIN Diagnosa_2_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Diagnosa_2}  r-vertical-field" 
+	data-fieldname="Diagnosa_2" 
+	data-signal-error-for="Diagnosa_2{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="Diagnosa_2" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Diagnosa_2}">
+		{BEGIN Diagnosa_2_label}{$label tht Diagnosa_2 }{END Diagnosa_2_label}
+	</label>
+	<div class="r-edit-field">
+		{$Diagnosa_2_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Diagnosa_2">
+		<div class="text-muted" >
+		{$tooltip tht Diagnosa_2 }		</div>
+	</div>
+</div>
+
+
+{END Diagnosa_2_fieldblock}
+											
+{BEGIN Diagnosa_3_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Diagnosa_3}  r-vertical-field" 
+	data-fieldname="Diagnosa_3" 
+	data-signal-error-for="Diagnosa_3{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="Diagnosa_3" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Diagnosa_3}">
+		{BEGIN Diagnosa_3_label}{$label tht Diagnosa_3 }{END Diagnosa_3_label}
+	</label>
+	<div class="r-edit-field">
+		{$Diagnosa_3_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Diagnosa_3">
+		<div class="text-muted" >
+		{$tooltip tht Diagnosa_3 }		</div>
+	</div>
+</div>
+
+
+{END Diagnosa_3_fieldblock}
+											
+{BEGIN Diagnosa_4_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Diagnosa_4}  r-vertical-field" 
+	data-fieldname="Diagnosa_4" 
+	data-signal-error-for="Diagnosa_4{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field28" {$item_integrated_edit_field28} data-pageid="{$pageid}" data-field="Diagnosa_4" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Diagnosa_4}">
+		{BEGIN Diagnosa_4_label}{$label tht Diagnosa_4 }{END Diagnosa_4_label}
+	</label>
+	<div class="r-edit-field">
+		{$Diagnosa_4_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Diagnosa_4">
+		<div class="text-muted" >
+		{$tooltip tht Diagnosa_4 }		</div>
+	</div>
+</div>
+
+
+{END Diagnosa_4_fieldblock}
+											
+{BEGIN Diagnosa_5_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Diagnosa_5}  r-vertical-field" 
+	data-fieldname="Diagnosa_5" 
+	data-signal-error-for="Diagnosa_5{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field29" {$item_integrated_edit_field29} data-pageid="{$pageid}" data-field="Diagnosa_5" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Diagnosa_5}">
+		{BEGIN Diagnosa_5_label}{$label tht Diagnosa_5 }{END Diagnosa_5_label}
+	</label>
+	<div class="r-edit-field">
+		{$Diagnosa_5_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Diagnosa_5">
+		<div class="text-muted" >
+		{$tooltip tht Diagnosa_5 }		</div>
+	</div>
+</div>
+
+
+{END Diagnosa_5_fieldblock}
+											
+{BEGIN Nomor_Rm_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Nomor_Rm}  r-vertical-field" 
+	data-fieldname="Nomor_Rm" 
+	data-signal-error-for="Nomor_Rm{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field30" {$item_integrated_edit_field30} data-pageid="{$pageid}" data-field="Nomor_Rm" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Nomor_Rm}">
+		{BEGIN Nomor_Rm_label}{$label tht Nomor_Rm }{END Nomor_Rm_label}
+	</label>
+	<div class="r-edit-field">
+		{$Nomor_Rm_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Nomor_Rm">
+		<div class="text-muted" >
+		{$tooltip tht Nomor_Rm }		</div>
+	</div>
+</div>
+
+
+{END Nomor_Rm_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN save_edit}
+<span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Save			</a>
+</span>
+{END save_edit}
+	 
+		{BEGIN back_button}
+<span data-itemtype="edit_back_list" data-itemid="edit_back_list" {$item_edit_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="edit_close" data-itemid="edit_close" {$item_edit_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$closebutton_attrs} >
+							Cancel			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >
+				<a  {$resetbutton_attrs}  title="" >
+				
+		Reset		
+		</a>
+	</li>
+							{BEGIN view_page_button}
+	<li data-itemtype="edit_view" data-itemid="edit_view" {$item_edit_view} data-pageid="{$pageid}" data-small >
+				<a  href="tht_view.php?{$editlink}" {$view_page_button_attrs}  title="" >
+				
+		View		
+		</a>
+	</li>
+{END view_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

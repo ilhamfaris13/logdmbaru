@@ -1,0 +1,204 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel bedah import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_import_field1}","text":{$Keluhan_Utama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field2}","text":{$Keluhan_Tambahan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field3}","text":{$Riwayat_Penyakit_Sekarang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field4}","text":{$Riwayat_Penyakit_Dahulu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field5}","text":{$Riwayat_Penyakit_Keluarga_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field6}","text":{$Riwayat_Alergi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field7}","text":{$Riwayat_Pengobatan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field8}","text":{$Riwayat_Kebiasaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field24}","text":{$status_lokalis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field26}","text":{$resume_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field27}","text":{$Diagnosis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field28}","text":{$Diagnosis_Banding_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field29}","text":{$Terapi_Medikamentosa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field30}","text":{$Terapi_Non_Medikamentosa___Operatif_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field9}","text":{$Pemeriksaan_Umum_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field10}","text":{$Pemeriksaan_Fisik_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field11}","text":{$Diagnosis_Plan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field12}","text":{$Monitoring_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field13}","text":{$Edukasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field14}","text":{$Prognosis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field15}","text":{$Foto_Klinis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field16}","text":{$CT_SCAN_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field17}","text":{$MRI_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field18}","text":{$Patologi_Anatomi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field19}","text":{$id_pasien_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field20}","text":{$id_user_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field21}","text":{$nomor_rm_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field}","text":{$Id_bedah_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+					]
+}
+  

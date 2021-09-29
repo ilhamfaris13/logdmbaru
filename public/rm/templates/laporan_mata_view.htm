@@ -1,0 +1,1823 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel laporan_mata view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Nomor_Rm_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Nomor_Rm}  r-vertical-field" data-fieldname="Nomor_Rm" data-signal-error-for="Nomor_Rm{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field54" {$item_integrated_edit_field54} data-pageid="{$pageid}" data-field="Nomor_Rm" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Nomor_Rm}">
+		
+		{BEGIN Nomor_Rm_label}{$label laporan_mata Nomor_Rm }{END Nomor_Rm_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Nomor_Rm_value}	</div>
+
+		
+</div>
+
+
+{END Nomor_Rm_fieldblock}
+										</td>
+			{END cellblock_grid_c3}
+										</tr>
+										</tbody></table>
+				<div class="panel with-tabs panel-default form-tabs" data-itemtype="tabs" data-itemid="tabs" {$item_tabs} data-pageid="{$pageid}">
+	<div class="panel-heading">
+		<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section{$pageid}">
+					Anamnesa				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section1{$pageid}">
+					Pemeriksaan Mata				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section2{$pageid}">
+					Pemeriksaan Lain				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section6{$pageid}">
+					Diagnosa Banding				</a>
+			</li>
+									</ul>
+	</div>
+	<div class="panel-body">
+		<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="tab_section{$pageid}"> 
+			{BEGIN section_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section" id="form_section_{$pageid}" data-makeup="small" {$form_section} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section_c3}
+<td
+	{$cell_section_c3}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Keluhan_Utama_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Keluhan_Utama}  r-vertical-field" data-fieldname="Keluhan_Utama" data-signal-error-for="Keluhan_Utama{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Keluhan_Utama" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Keluhan_Utama}">
+		
+		{BEGIN Keluhan_Utama_label}{$label laporan_mata Keluhan_Utama }{END Keluhan_Utama_label}
+	</label>
+	<div class="" >
+		{$Keluhan_Utama_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Keluhan_Utama_fieldblock}
+											
+{BEGIN Riwayat_Penyakit_Sekarang_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Penyakit_Sekarang}  r-vertical-field" data-fieldname="Riwayat_Penyakit_Sekarang" data-signal-error-for="Riwayat_Penyakit_Sekarang{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Riwayat_Penyakit_Sekarang" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_Penyakit_Sekarang}">
+		
+		{BEGIN Riwayat_Penyakit_Sekarang_label}{$label laporan_mata Riwayat_Penyakit_Sekarang }{END Riwayat_Penyakit_Sekarang_label}
+	</label>
+	<div class="" >
+		{$Riwayat_Penyakit_Sekarang_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_Penyakit_Sekarang_fieldblock}
+											
+{BEGIN Riwayat_Penyakit_Keluarga_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Penyakit_Keluarga}  r-vertical-field" data-fieldname="Riwayat_Penyakit_Keluarga" data-signal-error-for="Riwayat_Penyakit_Keluarga{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Riwayat_Penyakit_Keluarga" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_Penyakit_Keluarga}">
+		
+		{BEGIN Riwayat_Penyakit_Keluarga_label}{$label laporan_mata Riwayat_Penyakit_Keluarga }{END Riwayat_Penyakit_Keluarga_label}
+	</label>
+	<div class="" >
+		{$Riwayat_Penyakit_Keluarga_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_Penyakit_Keluarga_fieldblock}
+											
+{BEGIN Riwayat_Pengobatan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Pengobatan}  r-vertical-field" data-fieldname="Riwayat_Pengobatan" data-signal-error-for="Riwayat_Pengobatan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Riwayat_Pengobatan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_Pengobatan}">
+		
+		{BEGIN Riwayat_Pengobatan_label}{$label laporan_mata Riwayat_Pengobatan }{END Riwayat_Pengobatan_label}
+	</label>
+	<div class="" >
+		{$Riwayat_Pengobatan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_Pengobatan_fieldblock}
+											
+{BEGIN Riwayat_Sosio_Ekonomi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Sosio_Ekonomi}  r-vertical-field" data-fieldname="Riwayat_Sosio_Ekonomi" data-signal-error-for="Riwayat_Sosio_Ekonomi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Riwayat_Sosio_Ekonomi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_Sosio_Ekonomi}">
+		
+		{BEGIN Riwayat_Sosio_Ekonomi_label}{$label laporan_mata Riwayat_Sosio_Ekonomi }{END Riwayat_Sosio_Ekonomi_label}
+	</label>
+	<div class="" >
+		{$Riwayat_Sosio_Ekonomi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_Sosio_Ekonomi_fieldblock}
+	
+								</td>
+			{END cellblock_section_c3}
+			 
+																
+
+{BEGIN cellblock_section_c}
+<td
+	{$cell_section_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Keluhan_Tambahan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Keluhan_Tambahan}  r-vertical-field" data-fieldname="Keluhan_Tambahan" data-signal-error-for="Keluhan_Tambahan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Keluhan_Tambahan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Keluhan_Tambahan}">
+		
+		{BEGIN Keluhan_Tambahan_label}{$label laporan_mata Keluhan_Tambahan }{END Keluhan_Tambahan_label}
+	</label>
+	<div class="" >
+		{$Keluhan_Tambahan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Keluhan_Tambahan_fieldblock}
+											
+{BEGIN Riwayat_Penyakit_Dahulu_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Penyakit_Dahulu}  r-vertical-field" data-fieldname="Riwayat_Penyakit_Dahulu" data-signal-error-for="Riwayat_Penyakit_Dahulu{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Riwayat_Penyakit_Dahulu" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_Penyakit_Dahulu}">
+		
+		{BEGIN Riwayat_Penyakit_Dahulu_label}{$label laporan_mata Riwayat_Penyakit_Dahulu }{END Riwayat_Penyakit_Dahulu_label}
+	</label>
+	<div class="" >
+		{$Riwayat_Penyakit_Dahulu_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_Penyakit_Dahulu_fieldblock}
+											
+{BEGIN Riwayat_Alergi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Alergi}  r-vertical-field" data-fieldname="Riwayat_Alergi" data-signal-error-for="Riwayat_Alergi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Riwayat_Alergi" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_Alergi}">
+		
+		{BEGIN Riwayat_Alergi_label}{$label laporan_mata Riwayat_Alergi }{END Riwayat_Alergi_label}
+	</label>
+	<div class="" >
+		{$Riwayat_Alergi_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_Alergi_fieldblock}
+											
+{BEGIN Riwayat_Kebiasaan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Kebiasaan}  r-vertical-field" data-fieldname="Riwayat_Kebiasaan" data-signal-error-for="Riwayat_Kebiasaan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Riwayat_Kebiasaan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Riwayat_Kebiasaan}">
+		
+		{BEGIN Riwayat_Kebiasaan_label}{$label laporan_mata Riwayat_Kebiasaan }{END Riwayat_Kebiasaan_label}
+	</label>
+	<div class="" >
+		{$Riwayat_Kebiasaan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Riwayat_Kebiasaan_fieldblock}
+	
+								</td>
+			{END cellblock_section_c}
+								</tr>
+			</tbody></table>
+{END section_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section1{$pageid}"> 
+			{BEGIN section1_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section1" id="form_section1_{$pageid}" data-makeup="small" {$form_section1} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section1_c1}
+<td
+	{$cell_section1_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Visus_OD_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Visus_OD_Kiri}  r-vertical-field" data-fieldname="Visus_OD_Kiri" data-signal-error-for="Visus_OD_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Visus_OD_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Visus_OD_Kiri}">
+		
+		{BEGIN Visus_OD_Kiri_label}{$label laporan_mata Visus_OD_Kiri }{END Visus_OD_Kiri_label}
+	</label>
+	<div class="" >
+		{$Visus_OD_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Visus_OD_Kiri_fieldblock}
+											
+{BEGIN Refraksi_OD_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Refraksi_OD_Kiri}  r-vertical-field" data-fieldname="Refraksi_OD_Kiri" data-signal-error-for="Refraksi_OD_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="Refraksi_OD_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Refraksi_OD_Kiri}">
+		
+		{BEGIN Refraksi_OD_Kiri_label}{$label laporan_mata Refraksi_OD_Kiri }{END Refraksi_OD_Kiri_label}
+	</label>
+	<div class="" >
+		{$Refraksi_OD_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Refraksi_OD_Kiri_fieldblock}
+											
+{BEGIN Addisi_OD_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Addisi_OD_Kiri}  r-vertical-field" data-fieldname="Addisi_OD_Kiri" data-signal-error-for="Addisi_OD_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="Addisi_OD_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Addisi_OD_Kiri}">
+		
+		{BEGIN Addisi_OD_Kiri_label}{$label laporan_mata Addisi_OD_Kiri }{END Addisi_OD_Kiri_label}
+	</label>
+	<div class="" >
+		{$Addisi_OD_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Addisi_OD_Kiri_fieldblock}
+											
+{BEGIN Posisi_Bola_Mata_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Posisi_Bola_Mata_Kiri}  r-vertical-field" data-fieldname="Posisi_Bola_Mata_Kiri" data-signal-error-for="Posisi_Bola_Mata_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="Posisi_Bola_Mata_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Posisi_Bola_Mata_Kiri}">
+		
+		{BEGIN Posisi_Bola_Mata_Kiri_label}{$label laporan_mata Posisi_Bola_Mata_Kiri }{END Posisi_Bola_Mata_Kiri_label}
+	</label>
+	<div class="" >
+		{$Posisi_Bola_Mata_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Posisi_Bola_Mata_Kiri_fieldblock}
+											
+{BEGIN Gerakan_Bola_Mata_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Gerakan_Bola_Mata_Kiri}  r-vertical-field" data-fieldname="Gerakan_Bola_Mata_Kiri" data-signal-error-for="Gerakan_Bola_Mata_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="Gerakan_Bola_Mata_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Gerakan_Bola_Mata_Kiri}">
+		
+		{BEGIN Gerakan_Bola_Mata_Kiri_label}{$label laporan_mata Gerakan_Bola_Mata_Kiri }{END Gerakan_Bola_Mata_Kiri_label}
+	</label>
+	<div class="" >
+		{$Gerakan_Bola_Mata_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Gerakan_Bola_Mata_Kiri_fieldblock}
+											
+{BEGIN Palpebra_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Palpebra_Kiri}  r-vertical-field" data-fieldname="Palpebra_Kiri" data-signal-error-for="Palpebra_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="Palpebra_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Palpebra_Kiri}">
+		
+		{BEGIN Palpebra_Kiri_label}{$label laporan_mata Palpebra_Kiri }{END Palpebra_Kiri_label}
+	</label>
+	<div class="" >
+		{$Palpebra_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Palpebra_Kiri_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c1}
+			 
+																
+
+{BEGIN cellblock_section1_c}
+<td
+	{$cell_section1_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Visus_OS_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Visus_OS_Kanan}  r-vertical-field" data-fieldname="Visus_OS_Kanan" data-signal-error-for="Visus_OS_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="Visus_OS_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Visus_OS_Kanan}">
+		
+		{BEGIN Visus_OS_Kanan_label}{$label laporan_mata Visus_OS_Kanan }{END Visus_OS_Kanan_label}
+	</label>
+	<div class="" >
+		{$Visus_OS_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Visus_OS_Kanan_fieldblock}
+											
+{BEGIN Refraksi_OS_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Refraksi_OS_Kanan}  r-vertical-field" data-fieldname="Refraksi_OS_Kanan" data-signal-error-for="Refraksi_OS_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="Refraksi_OS_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Refraksi_OS_Kanan}">
+		
+		{BEGIN Refraksi_OS_Kanan_label}{$label laporan_mata Refraksi_OS_Kanan }{END Refraksi_OS_Kanan_label}
+	</label>
+	<div class="" >
+		{$Refraksi_OS_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Refraksi_OS_Kanan_fieldblock}
+											
+{BEGIN Addisi_OS_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Addisi_OS_Kanan}  r-vertical-field" data-fieldname="Addisi_OS_Kanan" data-signal-error-for="Addisi_OS_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="Addisi_OS_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Addisi_OS_Kanan}">
+		
+		{BEGIN Addisi_OS_Kanan_label}{$label laporan_mata Addisi_OS_Kanan }{END Addisi_OS_Kanan_label}
+	</label>
+	<div class="" >
+		{$Addisi_OS_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Addisi_OS_Kanan_fieldblock}
+											
+{BEGIN Posisi_Bola_Mata_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Posisi_Bola_Mata_Kanan}  r-vertical-field" data-fieldname="Posisi_Bola_Mata_Kanan" data-signal-error-for="Posisi_Bola_Mata_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="Posisi_Bola_Mata_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Posisi_Bola_Mata_Kanan}">
+		
+		{BEGIN Posisi_Bola_Mata_Kanan_label}{$label laporan_mata Posisi_Bola_Mata_Kanan }{END Posisi_Bola_Mata_Kanan_label}
+	</label>
+	<div class="" >
+		{$Posisi_Bola_Mata_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Posisi_Bola_Mata_Kanan_fieldblock}
+											
+{BEGIN Gerakan_Bola_Mata_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Gerakan_Bola_Mata_Kanan}  r-vertical-field" data-fieldname="Gerakan_Bola_Mata_Kanan" data-signal-error-for="Gerakan_Bola_Mata_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="Gerakan_Bola_Mata_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Gerakan_Bola_Mata_Kanan}">
+		
+		{BEGIN Gerakan_Bola_Mata_Kanan_label}{$label laporan_mata Gerakan_Bola_Mata_Kanan }{END Gerakan_Bola_Mata_Kanan_label}
+	</label>
+	<div class="" >
+		{$Gerakan_Bola_Mata_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Gerakan_Bola_Mata_Kanan_fieldblock}
+											
+{BEGIN Palpebra_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Palpebra_Kanan}  r-vertical-field" data-fieldname="Palpebra_Kanan" data-signal-error-for="Palpebra_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="Palpebra_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Palpebra_Kanan}">
+		
+		{BEGIN Palpebra_Kanan_label}{$label laporan_mata Palpebra_Kanan }{END Palpebra_Kanan_label}
+	</label>
+	<div class="" >
+		{$Palpebra_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Palpebra_Kanan_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c}
+								</tr>
+	 
+	 
+		
+						<tr>
+						
+
+{BEGIN cellblock_section1_c2}
+<td
+	{$cell_section1_c2}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+	ocolspan="2"		data-cellId="section1_c2" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_section1_c2}
+								</tr>
+	 
+	 
+														<tr>
+										
+
+{BEGIN cellblock_section1_c4}
+<td
+	{$cell_section1_c4}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c4" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Conjunctiva_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Conjunctiva_Kiri}  r-vertical-field" data-fieldname="Conjunctiva_Kiri" data-signal-error-for="Conjunctiva_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="Conjunctiva_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Conjunctiva_Kiri}">
+		
+		{BEGIN Conjunctiva_Kiri_label}{$label laporan_mata Conjunctiva_Kiri }{END Conjunctiva_Kiri_label}
+	</label>
+	<div class="" >
+		{$Conjunctiva_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Conjunctiva_Kiri_fieldblock}
+											
+{BEGIN Cornea_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cornea_Kiri}  r-vertical-field" data-fieldname="Cornea_Kiri" data-signal-error-for="Cornea_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field23" {$item_integrated_edit_field23} data-pageid="{$pageid}" data-field="Cornea_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Cornea_Kiri}">
+		
+		{BEGIN Cornea_Kiri_label}{$label laporan_mata Cornea_Kiri }{END Cornea_Kiri_label}
+	</label>
+	<div class="" >
+		{$Cornea_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Cornea_Kiri_fieldblock}
+											
+{BEGIN COA_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_COA_Kiri}  r-vertical-field" data-fieldname="COA_Kiri" data-signal-error-for="COA_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field25" {$item_integrated_edit_field25} data-pageid="{$pageid}" data-field="COA_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_COA_Kiri}">
+		
+		{BEGIN COA_Kiri_label}{$label laporan_mata COA_Kiri }{END COA_Kiri_label}
+	</label>
+	<div class="" >
+		{$COA_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END COA_Kiri_fieldblock}
+											
+{BEGIN Pupil_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Pupil_Kiri}  r-vertical-field" data-fieldname="Pupil_Kiri" data-signal-error-for="Pupil_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field27" {$item_integrated_edit_field27} data-pageid="{$pageid}" data-field="Pupil_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Pupil_Kiri}">
+		
+		{BEGIN Pupil_Kiri_label}{$label laporan_mata Pupil_Kiri }{END Pupil_Kiri_label}
+	</label>
+	<div class="" >
+		{$Pupil_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Pupil_Kiri_fieldblock}
+											
+{BEGIN Iris_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Iris_Kiri}  r-vertical-field" data-fieldname="Iris_Kiri" data-signal-error-for="Iris_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field29" {$item_integrated_edit_field29} data-pageid="{$pageid}" data-field="Iris_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Iris_Kiri}">
+		
+		{BEGIN Iris_Kiri_label}{$label laporan_mata Iris_Kiri }{END Iris_Kiri_label}
+	</label>
+	<div class="" >
+		{$Iris_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Iris_Kiri_fieldblock}
+											
+{BEGIN Lensa_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Lensa_Kiri}  r-vertical-field" data-fieldname="Lensa_Kiri" data-signal-error-for="Lensa_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field31" {$item_integrated_edit_field31} data-pageid="{$pageid}" data-field="Lensa_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Lensa_Kiri}">
+		
+		{BEGIN Lensa_Kiri_label}{$label laporan_mata Lensa_Kiri }{END Lensa_Kiri_label}
+	</label>
+	<div class="" >
+		{$Lensa_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Lensa_Kiri_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c4}
+			 
+																
+
+{BEGIN cellblock_section1_c5}
+<td
+	{$cell_section1_c5}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c5" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Conjunctiva_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Conjunctiva_Kanan}  r-vertical-field" data-fieldname="Conjunctiva_Kanan" data-signal-error-for="Conjunctiva_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="Conjunctiva_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Conjunctiva_Kanan}">
+		
+		{BEGIN Conjunctiva_Kanan_label}{$label laporan_mata Conjunctiva_Kanan }{END Conjunctiva_Kanan_label}
+	</label>
+	<div class="" >
+		{$Conjunctiva_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Conjunctiva_Kanan_fieldblock}
+											
+{BEGIN Cornea_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cornea_Kanan}  r-vertical-field" data-fieldname="Cornea_Kanan" data-signal-error-for="Cornea_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field24" {$item_integrated_edit_field24} data-pageid="{$pageid}" data-field="Cornea_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Cornea_Kanan}">
+		
+		{BEGIN Cornea_Kanan_label}{$label laporan_mata Cornea_Kanan }{END Cornea_Kanan_label}
+	</label>
+	<div class="" >
+		{$Cornea_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Cornea_Kanan_fieldblock}
+											
+{BEGIN COA_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_COA_Kanan}  r-vertical-field" data-fieldname="COA_Kanan" data-signal-error-for="COA_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field26" {$item_integrated_edit_field26} data-pageid="{$pageid}" data-field="COA_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_COA_Kanan}">
+		
+		{BEGIN COA_Kanan_label}{$label laporan_mata COA_Kanan }{END COA_Kanan_label}
+	</label>
+	<div class="" >
+		{$COA_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END COA_Kanan_fieldblock}
+											
+{BEGIN Pupil_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Pupil_Kanan}  r-vertical-field" data-fieldname="Pupil_Kanan" data-signal-error-for="Pupil_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field28" {$item_integrated_edit_field28} data-pageid="{$pageid}" data-field="Pupil_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Pupil_Kanan}">
+		
+		{BEGIN Pupil_Kanan_label}{$label laporan_mata Pupil_Kanan }{END Pupil_Kanan_label}
+	</label>
+	<div class="" >
+		{$Pupil_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Pupil_Kanan_fieldblock}
+											
+{BEGIN Iris_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Iris_Kanan}  r-vertical-field" data-fieldname="Iris_Kanan" data-signal-error-for="Iris_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field30" {$item_integrated_edit_field30} data-pageid="{$pageid}" data-field="Iris_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Iris_Kanan}">
+		
+		{BEGIN Iris_Kanan_label}{$label laporan_mata Iris_Kanan }{END Iris_Kanan_label}
+	</label>
+	<div class="" >
+		{$Iris_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Iris_Kanan_fieldblock}
+											
+{BEGIN Lensa_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Lensa_Kanan}  r-vertical-field" data-fieldname="Lensa_Kanan" data-signal-error-for="Lensa_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field32" {$item_integrated_edit_field32} data-pageid="{$pageid}" data-field="Lensa_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Lensa_Kanan}">
+		
+		{BEGIN Lensa_Kanan_label}{$label laporan_mata Lensa_Kanan }{END Lensa_Kanan_label}
+	</label>
+	<div class="" >
+		{$Lensa_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Lensa_Kanan_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c5}
+								</tr>
+	 
+	 
+														<tr>
+										
+
+{BEGIN cellblock_section1_c6}
+<td
+	{$cell_section1_c6}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c6" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Tekanan_Intra_Okuler_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tekanan_Intra_Okuler_Kiri}  r-vertical-field" data-fieldname="Tekanan_Intra_Okuler_Kiri" data-signal-error-for="Tekanan_Intra_Okuler_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field33" {$item_integrated_edit_field33} data-pageid="{$pageid}" data-field="Tekanan_Intra_Okuler_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Tekanan_Intra_Okuler_Kiri}">
+		
+		{BEGIN Tekanan_Intra_Okuler_Kiri_label}{$label laporan_mata Tekanan_Intra_Okuler_Kiri }{END Tekanan_Intra_Okuler_Kiri_label}
+	</label>
+	<div class="" >
+		{$Tekanan_Intra_Okuler_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Tekanan_Intra_Okuler_Kiri_fieldblock}
+											
+{BEGIN Segment_Posterior_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Segment_Posterior_Kiri}  r-vertical-field" data-fieldname="Segment_Posterior_Kiri" data-signal-error-for="Segment_Posterior_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field35" {$item_integrated_edit_field35} data-pageid="{$pageid}" data-field="Segment_Posterior_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Segment_Posterior_Kiri}">
+		
+		{BEGIN Segment_Posterior_Kiri_label}{$label laporan_mata Segment_Posterior_Kiri }{END Segment_Posterior_Kiri_label}
+	</label>
+	<div class="" >
+		{$Segment_Posterior_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Segment_Posterior_Kiri_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c6}
+			 
+																
+
+{BEGIN cellblock_section1_c7}
+<td
+	{$cell_section1_c7}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c7" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Tekanan_Intra_Okuler_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Tekanan_Intra_Okuler_Kanan}  r-vertical-field" data-fieldname="Tekanan_Intra_Okuler_Kanan" data-signal-error-for="Tekanan_Intra_Okuler_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field34" {$item_integrated_edit_field34} data-pageid="{$pageid}" data-field="Tekanan_Intra_Okuler_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Tekanan_Intra_Okuler_Kanan}">
+		
+		{BEGIN Tekanan_Intra_Okuler_Kanan_label}{$label laporan_mata Tekanan_Intra_Okuler_Kanan }{END Tekanan_Intra_Okuler_Kanan_label}
+	</label>
+	<div class="" >
+		{$Tekanan_Intra_Okuler_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Tekanan_Intra_Okuler_Kanan_fieldblock}
+											
+{BEGIN Segment_Posterior_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Segment_Posterior_Kanan}  r-vertical-field" data-fieldname="Segment_Posterior_Kanan" data-signal-error-for="Segment_Posterior_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field36" {$item_integrated_edit_field36} data-pageid="{$pageid}" data-field="Segment_Posterior_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Segment_Posterior_Kanan}">
+		
+		{BEGIN Segment_Posterior_Kanan_label}{$label laporan_mata Segment_Posterior_Kanan }{END Segment_Posterior_Kanan_label}
+	</label>
+	<div class="" >
+		{$Segment_Posterior_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Segment_Posterior_Kanan_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c7}
+								</tr>
+			</tbody></table>
+{END section1_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section2{$pageid}"> 
+			{BEGIN section2_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section2" id="form_section2_{$pageid}" data-makeup="small" {$form_section2} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="3"
+		
+		data-v-width="5"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section2_c1}
+<td
+	{$cell_section2_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section2_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Lapang_Pandang_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Lapang_Pandang_Kiri}  r-vertical-field" data-fieldname="Lapang_Pandang_Kiri" data-signal-error-for="Lapang_Pandang_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field37" {$item_integrated_edit_field37} data-pageid="{$pageid}" data-field="Lapang_Pandang_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Lapang_Pandang_Kiri}">
+		
+		{BEGIN Lapang_Pandang_Kiri_label}{$label laporan_mata Lapang_Pandang_Kiri }{END Lapang_Pandang_Kiri_label}
+	</label>
+	<div class="" >
+		{$Lapang_Pandang_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Lapang_Pandang_Kiri_fieldblock}
+											
+{BEGIN Ishihara_Test_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ishihara_Test_Kiri}  r-vertical-field" data-fieldname="Ishihara_Test_Kiri" data-signal-error-for="Ishihara_Test_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field39" {$item_integrated_edit_field39} data-pageid="{$pageid}" data-field="Ishihara_Test_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Ishihara_Test_Kiri}">
+		
+		{BEGIN Ishihara_Test_Kiri_label}{$label laporan_mata Ishihara_Test_Kiri }{END Ishihara_Test_Kiri_label}
+	</label>
+	<div class="" >
+		{$Ishihara_Test_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Ishihara_Test_Kiri_fieldblock}
+											
+{BEGIN Fluorescein_Tes_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fluorescein_Tes_Kiri}  r-vertical-field" data-fieldname="Fluorescein_Tes_Kiri" data-signal-error-for="Fluorescein_Tes_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field41" {$item_integrated_edit_field41} data-pageid="{$pageid}" data-field="Fluorescein_Tes_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Fluorescein_Tes_Kiri}">
+		
+		{BEGIN Fluorescein_Tes_Kiri_label}{$label laporan_mata Fluorescein_Tes_Kiri }{END Fluorescein_Tes_Kiri_label}
+	</label>
+	<div class="" >
+		{$Fluorescein_Tes_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Fluorescein_Tes_Kiri_fieldblock}
+											
+{BEGIN Sensibilitas_Kornea_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sensibilitas_Kornea_Kiri}  r-vertical-field" data-fieldname="Sensibilitas_Kornea_Kiri" data-signal-error-for="Sensibilitas_Kornea_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field43" {$item_integrated_edit_field43} data-pageid="{$pageid}" data-field="Sensibilitas_Kornea_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Sensibilitas_Kornea_Kiri}">
+		
+		{BEGIN Sensibilitas_Kornea_Kiri_label}{$label laporan_mata Sensibilitas_Kornea_Kiri }{END Sensibilitas_Kornea_Kiri_label}
+	</label>
+	<div class="" >
+		{$Sensibilitas_Kornea_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Sensibilitas_Kornea_Kiri_fieldblock}
+											
+{BEGIN Schirmer_Test_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Schirmer_Test_Kiri}  r-vertical-field" data-fieldname="Schirmer_Test_Kiri" data-signal-error-for="Schirmer_Test_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field45" {$item_integrated_edit_field45} data-pageid="{$pageid}" data-field="Schirmer_Test_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Schirmer_Test_Kiri}">
+		
+		{BEGIN Schirmer_Test_Kiri_label}{$label laporan_mata Schirmer_Test_Kiri }{END Schirmer_Test_Kiri_label}
+	</label>
+	<div class="" >
+		{$Schirmer_Test_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Schirmer_Test_Kiri_fieldblock}
+											
+{BEGIN Hirschberg_Test_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Hirschberg_Test_Kiri}  r-vertical-field" data-fieldname="Hirschberg_Test_Kiri" data-signal-error-for="Hirschberg_Test_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field47" {$item_integrated_edit_field47} data-pageid="{$pageid}" data-field="Hirschberg_Test_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Hirschberg_Test_Kiri}">
+		
+		{BEGIN Hirschberg_Test_Kiri_label}{$label laporan_mata Hirschberg_Test_Kiri }{END Hirschberg_Test_Kiri_label}
+	</label>
+	<div class="" >
+		{$Hirschberg_Test_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Hirschberg_Test_Kiri_fieldblock}
+											
+{BEGIN Cover_Test_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cover_Test_Kiri}  r-vertical-field" data-fieldname="Cover_Test_Kiri" data-signal-error-for="Cover_Test_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field49" {$item_integrated_edit_field49} data-pageid="{$pageid}" data-field="Cover_Test_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Cover_Test_Kiri}">
+		
+		{BEGIN Cover_Test_Kiri_label}{$label laporan_mata Cover_Test_Kiri }{END Cover_Test_Kiri_label}
+	</label>
+	<div class="" >
+		{$Cover_Test_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Cover_Test_Kiri_fieldblock}
+											
+{BEGIN Cover_Uncover_Test_Kiri_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cover_Uncover_Test_Kiri}  r-vertical-field" data-fieldname="Cover_Uncover_Test_Kiri" data-signal-error-for="Cover_Uncover_Test_Kiri{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field51" {$item_integrated_edit_field51} data-pageid="{$pageid}" data-field="Cover_Uncover_Test_Kiri" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Cover_Uncover_Test_Kiri}">
+		
+		{BEGIN Cover_Uncover_Test_Kiri_label}{$label laporan_mata Cover_Uncover_Test_Kiri }{END Cover_Uncover_Test_Kiri_label}
+	</label>
+	<div class="" >
+		{$Cover_Uncover_Test_Kiri_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Cover_Uncover_Test_Kiri_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c1}
+			 
+		
+							
+
+{BEGIN cellblock_section2_c4}
+<td
+	{$cell_section2_c4}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section2_c4" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_section2_c4}
+			 
+																
+
+{BEGIN cellblock_section2_c}
+<td
+	{$cell_section2_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section2_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Lapang_Pandang_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Lapang_Pandang_Kanan}  r-vertical-field" data-fieldname="Lapang_Pandang_Kanan" data-signal-error-for="Lapang_Pandang_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field38" {$item_integrated_edit_field38} data-pageid="{$pageid}" data-field="Lapang_Pandang_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Lapang_Pandang_Kanan}">
+		
+		{BEGIN Lapang_Pandang_Kanan_label}{$label laporan_mata Lapang_Pandang_Kanan }{END Lapang_Pandang_Kanan_label}
+	</label>
+	<div class="" >
+		{$Lapang_Pandang_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Lapang_Pandang_Kanan_fieldblock}
+											
+{BEGIN Ishihara_Test_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Ishihara_Test_Kanan}  r-vertical-field" data-fieldname="Ishihara_Test_Kanan" data-signal-error-for="Ishihara_Test_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field40" {$item_integrated_edit_field40} data-pageid="{$pageid}" data-field="Ishihara_Test_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Ishihara_Test_Kanan}">
+		
+		{BEGIN Ishihara_Test_Kanan_label}{$label laporan_mata Ishihara_Test_Kanan }{END Ishihara_Test_Kanan_label}
+	</label>
+	<div class="" >
+		{$Ishihara_Test_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Ishihara_Test_Kanan_fieldblock}
+											
+{BEGIN Fluorescein_Test_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Fluorescein_Test_Kanan}  r-vertical-field" data-fieldname="Fluorescein_Test_Kanan" data-signal-error-for="Fluorescein_Test_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field42" {$item_integrated_edit_field42} data-pageid="{$pageid}" data-field="Fluorescein_Test_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Fluorescein_Test_Kanan}">
+		
+		{BEGIN Fluorescein_Test_Kanan_label}{$label laporan_mata Fluorescein_Test_Kanan }{END Fluorescein_Test_Kanan_label}
+	</label>
+	<div class="" >
+		{$Fluorescein_Test_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Fluorescein_Test_Kanan_fieldblock}
+											
+{BEGIN Sensibilitas_Kornea_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Sensibilitas_Kornea_Kanan}  r-vertical-field" data-fieldname="Sensibilitas_Kornea_Kanan" data-signal-error-for="Sensibilitas_Kornea_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field44" {$item_integrated_edit_field44} data-pageid="{$pageid}" data-field="Sensibilitas_Kornea_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Sensibilitas_Kornea_Kanan}">
+		
+		{BEGIN Sensibilitas_Kornea_Kanan_label}{$label laporan_mata Sensibilitas_Kornea_Kanan }{END Sensibilitas_Kornea_Kanan_label}
+	</label>
+	<div class="" >
+		{$Sensibilitas_Kornea_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Sensibilitas_Kornea_Kanan_fieldblock}
+											
+{BEGIN Schirmer_Test_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Schirmer_Test_Kanan}  r-vertical-field" data-fieldname="Schirmer_Test_Kanan" data-signal-error-for="Schirmer_Test_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field46" {$item_integrated_edit_field46} data-pageid="{$pageid}" data-field="Schirmer_Test_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Schirmer_Test_Kanan}">
+		
+		{BEGIN Schirmer_Test_Kanan_label}{$label laporan_mata Schirmer_Test_Kanan }{END Schirmer_Test_Kanan_label}
+	</label>
+	<div class="" >
+		{$Schirmer_Test_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Schirmer_Test_Kanan_fieldblock}
+											
+{BEGIN Hirschberg_Test_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Hirschberg_Test_Kanan}  r-vertical-field" data-fieldname="Hirschberg_Test_Kanan" data-signal-error-for="Hirschberg_Test_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field48" {$item_integrated_edit_field48} data-pageid="{$pageid}" data-field="Hirschberg_Test_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Hirschberg_Test_Kanan}">
+		
+		{BEGIN Hirschberg_Test_Kanan_label}{$label laporan_mata Hirschberg_Test_Kanan }{END Hirschberg_Test_Kanan_label}
+	</label>
+	<div class="" >
+		{$Hirschberg_Test_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Hirschberg_Test_Kanan_fieldblock}
+											
+{BEGIN Cover_Test_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cover_Test_Kanan}  r-vertical-field" data-fieldname="Cover_Test_Kanan" data-signal-error-for="Cover_Test_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field50" {$item_integrated_edit_field50} data-pageid="{$pageid}" data-field="Cover_Test_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Cover_Test_Kanan}">
+		
+		{BEGIN Cover_Test_Kanan_label}{$label laporan_mata Cover_Test_Kanan }{END Cover_Test_Kanan_label}
+	</label>
+	<div class="" >
+		{$Cover_Test_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Cover_Test_Kanan_fieldblock}
+											
+{BEGIN Cover_Uncover_Test_Kanan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Cover_Uncover_Test_Kanan}  r-vertical-field" data-fieldname="Cover_Uncover_Test_Kanan" data-signal-error-for="Cover_Uncover_Test_Kanan{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field52" {$item_integrated_edit_field52} data-pageid="{$pageid}" data-field="Cover_Uncover_Test_Kanan" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Cover_Uncover_Test_Kanan}">
+		
+		{BEGIN Cover_Uncover_Test_Kanan_label}{$label laporan_mata Cover_Uncover_Test_Kanan }{END Cover_Uncover_Test_Kanan_label}
+	</label>
+	<div class="" >
+		{$Cover_Uncover_Test_Kanan_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Cover_Uncover_Test_Kanan_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c}
+								</tr>
+	 
+	 
+														<tr>
+										
+
+{BEGIN cellblock_section2_c2}
+<td
+	{$cell_section2_c2}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+	ocolspan="3"		data-cellId="section2_c2" data-pageid="{$pageid}"
+		data-v-cell="5"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Penunjang_Lain_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Penunjang_Lain}  r-vertical-field" data-fieldname="Penunjang_Lain" data-signal-error-for="Penunjang_Lain{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field53" {$item_integrated_edit_field53} data-pageid="{$pageid}" data-field="Penunjang_Lain" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_Penunjang_Lain}">
+		
+		{BEGIN Penunjang_Lain_label}{$label laporan_mata Penunjang_Lain }{END Penunjang_Lain_label}
+	</label>
+	<div class="" >
+		{$Penunjang_Lain_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END Penunjang_Lain_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c2}
+								</tr>
+			</tbody></table>
+{END section2_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section6{$pageid}"> 
+			{BEGIN section6_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section6" id="form_section6_{$pageid}" data-makeup="small" {$form_section6} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section6_c1}
+<td
+	{$cell_section6_c1}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="section6_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Diagnosa_Diagnosa_Banding_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Diagnosa_Diagnosa_Banding}  r-vertical-field" data-fieldname="Diagnosa_Diagnosa_Banding" data-signal-error-for="Diagnosa_Diagnosa_Banding{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field57" {$item_integrated_edit_field57} data-pageid="{$pageid}" data-field="Diagnosa_Diagnosa_Banding" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Diagnosa_Diagnosa_Banding}">
+		
+		{BEGIN Diagnosa_Diagnosa_Banding_label}{$label laporan_mata Diagnosa_Diagnosa_Banding }{END Diagnosa_Diagnosa_Banding_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Diagnosa_Diagnosa_Banding_value}	</div>
+
+		
+</div>
+
+
+{END Diagnosa_Diagnosa_Banding_fieldblock}
+											
+{BEGIN Terapi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Terapi}  r-vertical-field" data-fieldname="Terapi" data-signal-error-for="Terapi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field58" {$item_integrated_edit_field58} data-pageid="{$pageid}" data-field="Terapi" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Terapi}">
+		
+		{BEGIN Terapi_label}{$label laporan_mata Terapi }{END Terapi_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Terapi_value}	</div>
+
+		
+</div>
+
+
+{END Terapi_fieldblock}
+											
+{BEGIN Prognosis_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Prognosis}  r-vertical-field" data-fieldname="Prognosis" data-signal-error-for="Prognosis{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field59" {$item_integrated_edit_field59} data-pageid="{$pageid}" data-field="Prognosis" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Prognosis}">
+		
+		{BEGIN Prognosis_label}{$label laporan_mata Prognosis }{END Prognosis_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Prognosis_value}	</div>
+
+		
+</div>
+
+
+{END Prognosis_fieldblock}
+											
+{BEGIN Komplikasi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Komplikasi}  r-vertical-field" data-fieldname="Komplikasi" data-signal-error-for="Komplikasi{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field60" {$item_integrated_edit_field60} data-pageid="{$pageid}" data-field="Komplikasi" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_Komplikasi}">
+		
+		{BEGIN Komplikasi_label}{$label laporan_mata Komplikasi }{END Komplikasi_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$Komplikasi_value}	</div>
+
+		
+</div>
+
+
+{END Komplikasi_fieldblock}
+	
+								</td>
+			{END cellblock_section6_c1}
+								</tr>
+			</tbody></table>
+{END section6_block}
+						</div>
+				</div>
+	</div>
+</div>  											
+{BEGIN details_daftar_masalah}
+<div data-itemtype="details_preview" data-itemid="details_preview" {$item_details_preview} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption daftar_masalah }				
+							<span>
+					{$detailslButtons_daftar_masalah}
+																																										</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_daftar_masalah}
+		</div>
+	</div>
+</div>
+{END details_daftar_masalah}
+											
+{BEGIN details_catatan_kemajuan}
+<div data-itemtype="details_preview" data-itemid="details_preview1" {$item_details_preview1} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption catatan_kemajuan }				
+							<span>
+					{$detailslButtons_catatan_kemajuan}
+																																										</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_catatan_kemajuan}
+		</div>
+	</div>
+</div>
+{END details_catatan_kemajuan}
+											
+{BEGIN details_rencana_permulaan}
+<div data-itemtype="details_preview" data-itemid="details_preview2" {$item_details_preview2} data-pageid="{$pageid}" class="bs-details"> 
+	<div class="panel panel-info details-grid">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+							{$caption rencana_permulaan }				
+							<span>
+					{$detailslButtons_rencana_permulaan}
+																																										</span>
+			</h4>
+		</div>
+		<div class="panel-body">
+			{$displayDetailTable_rencana_permulaan}
+		</div>
+	</div>
+</div>
+{END details_rencana_permulaan}
+	
+				{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Close window			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="laporan_mata_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		Edit		
+		</a>
+	</li>
+{END edit_page_button}
+								<li data-itemtype="view_pdf" data-itemid="view_pdf" {$item_view_pdf} data-pageid="{$pageid}" data-small >
+				<a class="pdflink" data-pdfpage="view" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Laporan Mata.pdf" 
+data-pagetype="view" 
+{$pdflink_attrs}  title="" >
+				
+		PDF View		
+		</a>
+	</li>
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

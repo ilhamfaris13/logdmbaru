@@ -1,0 +1,329 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >{$pagetitlelabel rencana_permulaan edit}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<div data-itemtype="edit_message" data-itemid="edit_message" {$item_edit_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+</div>
+</div>
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Daftar_Permasalahan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Daftar_Permasalahan}  r-vertical-field" 
+	data-fieldname="Daftar_Permasalahan" 
+	data-signal-error-for="Daftar_Permasalahan{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="Daftar_Permasalahan" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Daftar_Permasalahan}">
+		{BEGIN Daftar_Permasalahan_label}{$label rencana_permulaan Daftar_Permasalahan }{END Daftar_Permasalahan_label}
+	</label>
+	<div class="r-edit-field">
+		{$Daftar_Permasalahan_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Daftar_Permasalahan">
+		<div class="text-muted" >
+		{$tooltip rencana_permulaan Daftar_Permasalahan }		</div>
+	</div>
+</div>
+
+
+{END Daftar_Permasalahan_fieldblock}
+											
+{BEGIN Pemeriksaan_Diagnostik_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Pemeriksaan_Diagnostik}  r-vertical-field" 
+	data-fieldname="Pemeriksaan_Diagnostik" 
+	data-signal-error-for="Pemeriksaan_Diagnostik{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="Pemeriksaan_Diagnostik" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Pemeriksaan_Diagnostik}">
+		{BEGIN Pemeriksaan_Diagnostik_label}{$label rencana_permulaan Pemeriksaan_Diagnostik }{END Pemeriksaan_Diagnostik_label}
+	</label>
+	<div class="r-edit-field">
+		{$Pemeriksaan_Diagnostik_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Pemeriksaan_Diagnostik">
+		<div class="text-muted" >
+		{$tooltip rencana_permulaan Pemeriksaan_Diagnostik }		</div>
+	</div>
+</div>
+
+
+{END Pemeriksaan_Diagnostik_fieldblock}
+											
+{BEGIN Monitoring_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Monitoring}  r-vertical-field" 
+	data-fieldname="Monitoring" 
+	data-signal-error-for="Monitoring{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Monitoring" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Monitoring}">
+		{BEGIN Monitoring_label}{$label rencana_permulaan Monitoring }{END Monitoring_label}
+	</label>
+	<div class="r-edit-field">
+		{$Monitoring_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Monitoring">
+		<div class="text-muted" >
+		{$tooltip rencana_permulaan Monitoring }		</div>
+	</div>
+</div>
+
+
+{END Monitoring_fieldblock}
+											
+{BEGIN Terapi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Terapi}  r-vertical-field" 
+	data-fieldname="Terapi" 
+	data-signal-error-for="Terapi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Terapi" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Terapi}">
+		{BEGIN Terapi_label}{$label rencana_permulaan Terapi }{END Terapi_label}
+	</label>
+	<div class="r-edit-field">
+		{$Terapi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Terapi">
+		<div class="text-muted" >
+		{$tooltip rencana_permulaan Terapi }		</div>
+	</div>
+</div>
+
+
+{END Terapi_fieldblock}
+											
+{BEGIN Edukasi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Edukasi}  r-vertical-field" 
+	data-fieldname="Edukasi" 
+	data-signal-error-for="Edukasi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Edukasi" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Edukasi}">
+		{BEGIN Edukasi_label}{$label rencana_permulaan Edukasi }{END Edukasi_label}
+	</label>
+	<div class="r-edit-field">
+		{$Edukasi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Edukasi">
+		<div class="text-muted" >
+		{$tooltip rencana_permulaan Edukasi }		</div>
+	</div>
+</div>
+
+
+{END Edukasi_fieldblock}
+											
+{BEGIN id_mata_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_mata}  r-vertical-field" 
+	data-fieldname="id_mata" 
+	data-signal-error-for="id_mata{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="id_mata" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_mata}">
+		{BEGIN id_mata_label}{$label rencana_permulaan id_mata }{END id_mata_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_mata_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_mata">
+		<div class="text-muted" >
+		{$tooltip rencana_permulaan id_mata }		</div>
+	</div>
+</div>
+
+
+{END id_mata_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN save_edit}
+<span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Save			</a>
+</span>
+{END save_edit}
+	 
+		{BEGIN back_button}
+<span data-itemtype="edit_back_list" data-itemid="edit_back_list" {$item_edit_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="edit_close" data-itemid="edit_close" {$item_edit_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$closebutton_attrs} >
+							Cancel			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >
+				<a  {$resetbutton_attrs}  title="" >
+				
+		Reset		
+		</a>
+	</li>
+							{BEGIN view_page_button}
+	<li data-itemtype="edit_view" data-itemid="edit_view" {$item_edit_view} data-pageid="{$pageid}" data-small >
+				<a  href="rencana_permulaan_view.php?{$editlink}" {$view_page_button_attrs}  title="" >
+				
+		View		
+		</a>
+	</li>
+{END view_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,207 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel pediatri import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_import_field1}","text":{$keluhan_pertama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field2}","text":{$keluhan_tmbhan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field3}","text":{$rwyt_skrg_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field4}","text":{$rwyt_dulu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field5}","text":{$rwyt_klg_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field6}","text":{$rwyt_alergi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field7}","text":{$rwyt_pengobatan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field8}","text":{$rwyt_kebiasaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field11}","text":{$rwyt_sos_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field17}","text":{$rwyt_imunisasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field21}","text":{$tb_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field22}","text":{$bb_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field28}","text":{$kepala_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field29}","text":{$leher_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field30}","text":{$thorax_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field31}","text":{$abdomen_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field32}","text":{$ekstremitas_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field}","text":{$id_pediatri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field45}","text":{$id_mhs_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field46}","text":{$id_pasien_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field9}","text":{$rwyt_kelahiran_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field10}","text":{$rwyt_tumbuh_kembang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field12}","text":{$kesan_umum_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field13}","text":{$imt_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field14}","text":{$tanda_vital_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field15}","text":{$pmrksaan_pnunjang_lab_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field16}","text":{$pmrksaan_pnunjang_radiologi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field18}","text":{$pmrksaan_pnunjang_lain_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field19}","text":{$Nomor_Rm_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+					]
+}
+  

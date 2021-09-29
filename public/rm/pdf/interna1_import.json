@@ -1,0 +1,240 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel interna1 import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_import_field1}","text":{$keluhan_pertama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field2}","text":{$keluhan_tmbhan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field3}","text":{$rwyt_skrg_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field4}","text":{$rwyt_dulu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field5}","text":{$rwyt_klg_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field6}","text":{$rwyt_alergi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field7}","text":{$rwyt_pengobatan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field8}","text":{$rwyt_kebiasaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field11}","text":{$rwyt_sos_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field28}","text":{$kepala_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field29}","text":{$leher_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field30}","text":{$thorax_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field31}","text":{$abdomen_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field32}","text":{$ekstremitas_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field9}","text":{$pem_umum_ku_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field10}","text":{$pem_umum_tb_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field12}","text":{$pem_umum_bb_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field13}","text":{$pem_umum_imt_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field14}","text":{$tanda_vital_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field15}","text":{$pmrksaan_pnunjang_lab_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field16}","text":{$pmrksaan_pnunjang_radiologi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field17}","text":{$pmrksaan_pnunjang_lain_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field}","text":{$id_interna_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field18}","text":{$id_mhs_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field19}","text":{$id_pasien_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field20}","text":{$Nomor_Rm_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field21}","text":{$id_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field22}","text":{$name_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field23}","text":{$username_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field24}","text":{$email_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field25}","text":{$Id_Pasien1_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field26}","text":{$Nama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field27}","text":{$Alamat_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field33}","text":{$Umur_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field34}","text":{$Status_Perkawinan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field35}","text":{$Jenis_Kelamin_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field36}","text":{$Suku_Ras_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field37}","text":{$Agama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field38}","text":{$Kerja_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_import_field39}","text":{$Tanggal_MRS_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+					]
+}
+  

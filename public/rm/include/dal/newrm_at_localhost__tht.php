@@ -1,0 +1,40 @@
+<?php
+$dalTabletht = array();
+$dalTabletht["id_tht"] = array("type"=>20,"varname"=>"id_tht", "name" => "id_tht");
+$dalTabletht["Keluhan_Utama"] = array("type"=>201,"varname"=>"Keluhan_Utama", "name" => "Keluhan_Utama");
+$dalTabletht["Keluhan_Tambahan"] = array("type"=>201,"varname"=>"Keluhan_Tambahan", "name" => "Keluhan_Tambahan");
+$dalTabletht["Riwayat_Penyakit_Sekarang"] = array("type"=>201,"varname"=>"Riwayat_Penyakit_Sekarang", "name" => "Riwayat_Penyakit_Sekarang");
+$dalTabletht["Riwayat_Penyakit_Dahulu"] = array("type"=>201,"varname"=>"Riwayat_Penyakit_Dahulu", "name" => "Riwayat_Penyakit_Dahulu");
+$dalTabletht["Riwayat_Alergi"] = array("type"=>201,"varname"=>"Riwayat_Alergi", "name" => "Riwayat_Alergi");
+$dalTabletht["Riwayat_Penyakit_Keluarga"] = array("type"=>201,"varname"=>"Riwayat_Penyakit_Keluarga", "name" => "Riwayat_Penyakit_Keluarga");
+$dalTabletht["Riwayat_Pengobatan"] = array("type"=>201,"varname"=>"Riwayat_Pengobatan", "name" => "Riwayat_Pengobatan");
+$dalTabletht["Riwayat_Kebiasaan"] = array("type"=>201,"varname"=>"Riwayat_Kebiasaan", "name" => "Riwayat_Kebiasaan");
+$dalTabletht["Riwayat_Sosial_Ekonomi"] = array("type"=>201,"varname"=>"Riwayat_Sosial_Ekonomi", "name" => "Riwayat_Sosial_Ekonomi");
+$dalTabletht["Pem_Umum"] = array("type"=>201,"varname"=>"Pem_Umum", "name" => "Pem_Umum");
+$dalTabletht["Tanda_Vital"] = array("type"=>201,"varname"=>"Tanda_Vital", "name" => "Tanda_Vital");
+$dalTabletht["Kepala"] = array("type"=>201,"varname"=>"Kepala", "name" => "Kepala");
+$dalTabletht["Leher"] = array("type"=>201,"varname"=>"Leher", "name" => "Leher");
+$dalTabletht["Telinga"] = array("type"=>201,"varname"=>"Telinga", "name" => "Telinga");
+$dalTabletht["Hidung"] = array("type"=>201,"varname"=>"Hidung", "name" => "Hidung");
+$dalTabletht["Mulut"] = array("type"=>201,"varname"=>"Mulut", "name" => "Mulut");
+$dalTabletht["Epipharynx"] = array("type"=>201,"varname"=>"Epipharynx", "name" => "Epipharynx");
+$dalTabletht["Larynx"] = array("type"=>201,"varname"=>"Larynx", "name" => "Larynx");
+$dalTabletht["Diagnosa_Banding"] = array("type"=>201,"varname"=>"Diagnosa_Banding", "name" => "Diagnosa_Banding");
+$dalTabletht["Laboratorium"] = array("type"=>201,"varname"=>"Laboratorium", "name" => "Laboratorium");
+$dalTabletht["Radiologi"] = array("type"=>201,"varname"=>"Radiologi", "name" => "Radiologi");
+$dalTabletht["Lain_lain"] = array("type"=>201,"varname"=>"Lain_lain", "name" => "Lain_lain");
+$dalTabletht["Diagnosa"] = array("type"=>201,"varname"=>"Diagnosa", "name" => "Diagnosa");
+$dalTabletht["Diagnosa_2"] = array("type"=>201,"varname"=>"Diagnosa_2", "name" => "Diagnosa_2");
+$dalTabletht["Diagnosa_3"] = array("type"=>201,"varname"=>"Diagnosa_3", "name" => "Diagnosa_3");
+$dalTabletht["Diagnosa_4"] = array("type"=>201,"varname"=>"Diagnosa_4", "name" => "Diagnosa_4");
+$dalTabletht["Diagnosa_5"] = array("type"=>201,"varname"=>"Diagnosa_5", "name" => "Diagnosa_5");
+$dalTabletht["Terapi_Farmakologi"] = array("type"=>201,"varname"=>"Terapi_Farmakologi", "name" => "Terapi_Farmakologi");
+$dalTabletht["Terapi_Non_Farmakologi"] = array("type"=>201,"varname"=>"Terapi_Non_Farmakologi", "name" => "Terapi_Non_Farmakologi");
+$dalTabletht["Edukasi"] = array("type"=>201,"varname"=>"Edukasi", "name" => "Edukasi");
+$dalTabletht["id_pasien"] = array("type"=>20,"varname"=>"id_pasien", "name" => "id_pasien");
+$dalTabletht["id_user"] = array("type"=>20,"varname"=>"id_user", "name" => "id_user");
+$dalTabletht["Nomor_Rm"] = array("type"=>200,"varname"=>"Nomor_Rm", "name" => "Nomor_Rm");
+	$dalTabletht["id_tht"]["key"]=true;
+
+$dal_info["newrm_at_localhost__tht"] = &$dalTabletht;
+?>

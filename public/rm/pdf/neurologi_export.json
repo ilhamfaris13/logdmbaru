@@ -1,0 +1,174 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel neurologi export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_export_field1}","text":{$Keluhan_Utama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field2}","text":{$Keluhan_Tambahan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field3}","text":{$Riwayat_Penyakit_Sekarang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field4}","text":{$Riwayat_Penyakit_Dahulu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field5}","text":{$Riwayat_Penyakit_Keluarga_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field6}","text":{$Riwayat_Alergi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field7}","text":{$Riwayat_Pengobatan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field8}","text":{$Riwayat_Kebiasaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field9}","text":{$Riwayat_Psiko_Sosial_Ekonomi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field10}","text":{$Pemeriksaan_Fisik_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field11}","text":{$Status_Psikiatri_Singkat_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field12}","text":{$Status_Neurologis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field13}","text":{$PEMERIKSAAN_KHUSUS_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field14}","text":{$Pemeriksaan_Penunjang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field15}","text":{$id_pasien_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field16}","text":{$id_user_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field17}","text":{$nomor_rm_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field}","text":{$id_neuro_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+					]
+}
+  

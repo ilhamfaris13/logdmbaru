@@ -1,0 +1,421 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >{$pagetitlelabel resep_kacamata edit}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<div data-itemtype="edit_message" data-itemid="edit_message" {$item_edit_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+</div>
+</div>
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN od_spheris_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_od_spheris}  r-vertical-field" 
+	data-fieldname="od_spheris" 
+	data-signal-error-for="od_spheris{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="od_spheris" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_od_spheris}">
+		{BEGIN od_spheris_label}{$label resep_kacamata od_spheris }{END od_spheris_label}
+	</label>
+	<div class="r-edit-field">
+		{$od_spheris_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="od_spheris">
+		<div class="text-muted" >
+		{$tooltip resep_kacamata od_spheris }		</div>
+	</div>
+</div>
+
+
+{END od_spheris_fieldblock}
+											
+{BEGIN od_cylindris_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_od_cylindris}  r-vertical-field" 
+	data-fieldname="od_cylindris" 
+	data-signal-error-for="od_cylindris{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="od_cylindris" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_od_cylindris}">
+		{BEGIN od_cylindris_label}{$label resep_kacamata od_cylindris }{END od_cylindris_label}
+	</label>
+	<div class="r-edit-field">
+		{$od_cylindris_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="od_cylindris">
+		<div class="text-muted" >
+		{$tooltip resep_kacamata od_cylindris }		</div>
+	</div>
+</div>
+
+
+{END od_cylindris_fieldblock}
+											
+{BEGIN od_axis_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_od_axis}  r-vertical-field" 
+	data-fieldname="od_axis" 
+	data-signal-error-for="od_axis{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="od_axis" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_od_axis}">
+		{BEGIN od_axis_label}{$label resep_kacamata od_axis }{END od_axis_label}
+	</label>
+	<div class="r-edit-field">
+		{$od_axis_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="od_axis">
+		<div class="text-muted" >
+		{$tooltip resep_kacamata od_axis }		</div>
+	</div>
+</div>
+
+
+{END od_axis_fieldblock}
+											
+{BEGIN addisi_od_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_addisi_od}  r-vertical-field" 
+	data-fieldname="addisi_od" 
+	data-signal-error-for="addisi_od{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="addisi_od" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_addisi_od}">
+		{BEGIN addisi_od_label}{$label resep_kacamata addisi_od }{END addisi_od_label}
+	</label>
+	<div class="r-edit-field">
+		{$addisi_od_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="addisi_od">
+		<div class="text-muted" >
+		{$tooltip resep_kacamata addisi_od }		</div>
+	</div>
+</div>
+
+
+{END addisi_od_fieldblock}
+											
+{BEGIN os_spheris_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_os_spheris}  r-vertical-field" 
+	data-fieldname="os_spheris" 
+	data-signal-error-for="os_spheris{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="os_spheris" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_os_spheris}">
+		{BEGIN os_spheris_label}{$label resep_kacamata os_spheris }{END os_spheris_label}
+	</label>
+	<div class="r-edit-field">
+		{$os_spheris_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="os_spheris">
+		<div class="text-muted" >
+		{$tooltip resep_kacamata os_spheris }		</div>
+	</div>
+</div>
+
+
+{END os_spheris_fieldblock}
+											
+{BEGIN os_cylindris_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_os_cylindris}  r-vertical-field" 
+	data-fieldname="os_cylindris" 
+	data-signal-error-for="os_cylindris{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="os_cylindris" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_os_cylindris}">
+		{BEGIN os_cylindris_label}{$label resep_kacamata os_cylindris }{END os_cylindris_label}
+	</label>
+	<div class="r-edit-field">
+		{$os_cylindris_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="os_cylindris">
+		<div class="text-muted" >
+		{$tooltip resep_kacamata os_cylindris }		</div>
+	</div>
+</div>
+
+
+{END os_cylindris_fieldblock}
+											
+{BEGIN os_axis_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_os_axis}  r-vertical-field" 
+	data-fieldname="os_axis" 
+	data-signal-error-for="os_axis{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="os_axis" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_os_axis}">
+		{BEGIN os_axis_label}{$label resep_kacamata os_axis }{END os_axis_label}
+	</label>
+	<div class="r-edit-field">
+		{$os_axis_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="os_axis">
+		<div class="text-muted" >
+		{$tooltip resep_kacamata os_axis }		</div>
+	</div>
+</div>
+
+
+{END os_axis_fieldblock}
+											
+{BEGIN addis_os_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_addis_os}  r-vertical-field" 
+	data-fieldname="addis_os" 
+	data-signal-error-for="addis_os{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="addis_os" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_addis_os}">
+		{BEGIN addis_os_label}{$label resep_kacamata addis_os }{END addis_os_label}
+	</label>
+	<div class="r-edit-field">
+		{$addis_os_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="addis_os">
+		<div class="text-muted" >
+		{$tooltip resep_kacamata addis_os }		</div>
+	</div>
+</div>
+
+
+{END addis_os_fieldblock}
+											
+{BEGIN jarak_pupil_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_jarak_pupil}  r-vertical-field" 
+	data-fieldname="jarak_pupil" 
+	data-signal-error-for="jarak_pupil{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="jarak_pupil" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_jarak_pupil}">
+		{BEGIN jarak_pupil_label}{$label resep_kacamata jarak_pupil }{END jarak_pupil_label}
+	</label>
+	<div class="r-edit-field">
+		{$jarak_pupil_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="jarak_pupil">
+		<div class="text-muted" >
+		{$tooltip resep_kacamata jarak_pupil }		</div>
+	</div>
+</div>
+
+
+{END jarak_pupil_fieldblock}
+											
+{BEGIN id_pasien_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_pasien}  r-vertical-field" 
+	data-fieldname="id_pasien" 
+	data-signal-error-for="id_pasien{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="id_pasien" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_pasien}">
+		{BEGIN id_pasien_label}{$label resep_kacamata id_pasien }{END id_pasien_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_pasien_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_pasien">
+		<div class="text-muted" >
+		{$tooltip resep_kacamata id_pasien }		</div>
+	</div>
+</div>
+
+
+{END id_pasien_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN save_edit}
+<span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Save			</a>
+</span>
+{END save_edit}
+	 
+		{BEGIN back_button}
+<span data-itemtype="edit_back_list" data-itemid="edit_back_list" {$item_edit_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="edit_close" data-itemid="edit_close" {$item_edit_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$closebutton_attrs} >
+							Cancel			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >
+				<a  {$resetbutton_attrs}  title="" >
+				
+		Reset		
+		</a>
+	</li>
+							{BEGIN view_page_button}
+	<li data-itemtype="edit_view" data-itemid="edit_view" {$item_edit_view} data-pageid="{$pageid}" data-small >
+				<a  href="resep_kacamata_view.php?{$editlink}" {$view_page_button_attrs}  title="" >
+				
+		View		
+		</a>
+	</li>
+{END view_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

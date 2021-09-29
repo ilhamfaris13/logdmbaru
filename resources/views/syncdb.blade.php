@@ -34,7 +34,7 @@
 					 {{ session('status') }}
 					</div>
 					@endif
-           <form id="edit-form" method="POST" action="{{ route('sync.create') }}">
+           <form id="edit-form" method="POST" action="{{ route('sync.folder') }}">
                         @csrf
             
               <div class="form-group">
@@ -45,32 +45,7 @@
         <form method="post" action="{{ route('sync.multi') }}" >
             @csrf
            
-        <table id="example2" class="table table-responsive table-bordered table-hover">
-                  <thead>
-                  
-                    <tr>
-                        <th>KODE</th>
-                        <th> ALIAS</th>
-                        <th> CEK</th>
-                        
-                    </tr>
-                  </thead>
-                  <tbody>
-                  @foreach($icd as $key => $log)
-                    <tr class="data-row">
-                    <td>{{$log->KODE}}</td>
-                    <td>{{$log->ALIAS}}</td>
-                
-                    <td><!-- This input -->
-                        <input type="checkbox" name="selected_values[]" value="{{$log->ID}}">
-                    </td>
-                    </tr>
-                    
-                    @endforeach
-                  </tbody>
-                  <tfoot>
-                  </tfoot>
-                </table>
+        
         <button type="submit" name="button">Get me some selected people</button>
         </form>
     </div>

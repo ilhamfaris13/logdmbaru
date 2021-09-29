@@ -1,0 +1,552 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel jiwa search}","hidden":"{$item_hide_search_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+								
+''
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+				],
+	
+		body: [
+				
+					{BEGIN row_grid_0}
+				[
+												{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{"hidden":"{$item_hide_integrated_search_field}","text":{$id_Jiwa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field1}","text":{$Keluhan_Utama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field2}","text":{$Anamnesis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field3}","text":{$Autoanamnesis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field4}","text":{$Alloanamnesis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field5}","text":{$Riwayat_gangguan_sekarang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field6}","text":{$Riwayat_gangguan_dahulu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field7}","text":{$Riwayat_gangguan_psikiatri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field8}","text":{$Riwayat_gangguan_medis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field9}","text":{$Riwayat_penggunaan_zat_psikoaktif_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field10}","text":{$Riwayat_prenatal_dan_perinatal_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field11}","text":{$Riwayat_masa_kanak_awal_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field12}","text":{$Riwayat_masa_kanak_pertengahan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field13}","text":{$Riwayat_masa_kanak_akhir_dan_remaja_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field14}","text":{$Masa_Dewasa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field15}","text":{$Riwayat_pendidikan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field16}","text":{$Riwayat_pekerjaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field17}","text":{$Riwayat_pernikahan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field18}","text":{$Riwayat_Agama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field19}","text":{$Riwayat_Psikoseksual_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field20}","text":{$Riwayat_aktivitas_sosial_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field21}","text":{$Riwayat_hukum_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field22}","text":{$Riwayat_keluarga_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field23}","text":{$Genogram_keluarga_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field24}","text":{$Situasi_kehidupan_sekarang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field25}","text":{$Persepsi_tentang_diri_dan_kehidupannya_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field26}","text":{$Persepsi_keluarga_tentang_diri_pasien_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field27}","text":{$Fantasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field28}","text":{$Penampilan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field29}","text":{$Perilaku_dan_aktivitas_psikomotor_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field30}","text":{$Sikap_terhadap_pemeriksa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field31}","text":{$Irama_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field32}","text":{$Kecepatan_bicara_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field33}","text":{$Volume_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field34}","text":{$Kelancaran_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field35}","text":{$Mood_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field36}","text":{$Afek_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field37}","text":{$Keserasian_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field38}","text":{$Auditorik_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field39}","text":{$Visual_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field40}","text":{$Taktil_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field41}","text":{$Olfaktorik_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field42}","text":{$Gustatorik_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field43}","text":{$Ilusi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field44}","text":{$Depersonalisasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field45}","text":{$Derealisasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field46}","text":{$Blocking_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field47}","text":{$Assosiasi_Longgar_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field48}","text":{$Inkoheren_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field49}","text":{$Flight_of_Idea_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field50}","text":{$Sirkumstansia_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field51}","text":{$Tangensial_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field52}","text":{$Neologisme_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field53}","text":{$Word_Salad_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field54}","text":{$Hendaya_Berbahasa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field55}","text":{$Produktivitas_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field56}","text":{$Preokupasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field57}","text":{$Waham_bizarre_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field58}","text":{$Waham_sistemik_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field59}","text":{$Waham_nihilistik_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field60}","text":{$Waham_paranoid_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field61}","text":{$Waham_kebesaran_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field62}","text":{$Waham_kejaran_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field63}","text":{$Waham_rujukan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field64}","text":{$Waham_dikendalikan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field65}","text":{$Thought_of_withdrawl_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field66}","text":{$Thought_of_insertion_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field67}","text":{$Thought_of_broadcasting_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field68}","text":{$Obsesi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field69}","text":{$Kompulsif_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field70}","text":{$Fobia_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field71}","text":{$Gagasan_untuk_bunuh_diri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field72}","text":{$Taraf_kesadaran_dan_kesiagaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field73}","text":{$Orieantasi_Waktu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field74}","text":{$Orieantasi_Tempat_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field75}","text":{$Orieantasi_Orang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field76}","text":{$Daya_ingat_Jangka_panjang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field77}","text":{$Daya_ingat_Jangka_sedang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field78}","text":{$Daya_ingat_Jangka_pendek_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field79}","text":{$Daya_ingat_Jangka_segera_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field80}","text":{$Konsentrasi_perhatian_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field81}","text":{$Kemampuan_Membaca_Menulis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field82}","text":{$Kemampuan_visuospasial_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field83}","text":{$Pikiran_abstrak_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field84}","text":{$Inteligensia_dan_kemampuan_informasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field85}","text":{$Kemampuan_mengendalikan_impuls_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field86}","text":{$Daya_nilai_dan_tilikan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field87}","text":{$Daya_nilai_sosial_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field88}","text":{$Uji_daya_nilai_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field89}","text":{$Penilaian_Daya_Realita_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field90}","text":{$Tilikan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field91}","text":{$Taraf_dipercaya_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field92}","text":{$Keadaan_Umum_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field93}","text":{$Kesadaran_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field94}","text":{$Status_gizi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field95}","text":{$Tekanan_Darah_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field96}","text":{$Frekuensi_Nadi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field97}","text":{$Frekuensi_Nafas_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field98}","text":{$Suhu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field99}","text":{$Mata_dan_THT_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field100}","text":{$Mulut_dan_Gigi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field101}","text":{$Thorax_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field102}","text":{$Abdomen_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field103}","text":{$Extremitas_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field104}","text":{$Tanda_rangsang_Meningeal_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field105}","text":{$Motorik_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field106}","text":{$Sensorik_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field107}","text":{$Diagnosis_Axis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field108}","text":{$Organobiologi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field109}","text":{$Psikologi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field110}","text":{$Lingkungan_dan_sosial_ekonomi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field111}","text":{$Quo_ad_Vitam_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field112}","text":{$Quo_ad_Fungsionam_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field113}","text":{$Quo_ad_Sanationam_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field114}","text":{$Hal_hal_yang_mendukung_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field115}","text":{$Hal_hal_yang_memberatkan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field116}","text":{$Farmakologi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field117}","text":{$Non_Farmakologi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field118}","text":{$id_pasien_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field119}","text":{$id_user_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field120}","text":{$id_resep_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_integrated_search_field121}","text":{$Nomor_Rm_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_0}
+					]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+				
+			{"text":""},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_search_cancel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+			]
+}
+  

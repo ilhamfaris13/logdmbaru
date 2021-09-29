@@ -1,0 +1,192 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel obstetri export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_export_field3}","text":{$Riwayat_Penyakit_Sekarang_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field4}","text":{$Riwayat_Penyakit_Dahulu_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field5}","text":{$Riwayat_Penyakit_Keluarga_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field6}","text":{$Riwayat_Alergi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field7}","text":{$Riwayat_Pengobatan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field8}","text":{$Riwayat_Kebiasaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field9}","text":{$Riwayat_haid_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field10}","text":{$Riwayat_pernikahan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field11}","text":{$Riwayat_Sosial_Ekonomi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field12}","text":{$Riwayat_persalinan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field13}","text":{$Riwayat_menyusui_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field14}","text":{$Riwayat_imunisasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field15}","text":{$Riwayat_Keluarga_Berencana_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field16}","text":{$PEMERIKSAA_FISIK__UMUM_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field17}","text":{$PEMERIKSAAN__OBSTETRI_GINEKOLOGI_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field18}","text":{$PEMERIKSAAN_PENUNJANG_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field19}","text":{$DIAGNOSIS_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field20}","text":{$RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field21}","text":{$KONSELING_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field22}","text":{$ANAMNESIS_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field1}","text":{$id_pasien_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field2}","text":{$id_user_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field23}","text":{$nomor_rm_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field}","text":{$Id_obstetri_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+					]
+}
+  

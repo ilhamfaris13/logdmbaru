@@ -1,0 +1,614 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel jiwa edit}","hidden":"{$item_hide_edit_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_edit_message}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				tableForm: true,
+				
+		location: 'grid',
+		
+		
+		widths: [
+									{BEGIN col_grid_0}
+						"*", 
+							{END col_grid_0}
+					 ],	
+		
+			heights: [
+								{BEGIN row_grid_0}
+						
+			"%",
+						{END row_grid_0}
+			 
+				],
+	
+		body: [
+				
+					{BEGIN row_grid_0}
+				[
+												{BEGIN cellblock_grid_c3}
+{
+	cellId: 'c3',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"stack": [
+		
+				
+			{BEGIN mastertable_block}
+			{$showmasterfile}
+		{END mastertable_block},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field}","stack":[{"text":"{$jslabel jiwa Keluhan_Utama }","bold":true},{"text":{$Keluhan_Utama_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field1}","stack":[{"text":"{$jslabel jiwa Anamnesis }","bold":true},{"text":{$Anamnesis_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field2}","stack":[{"text":"{$jslabel jiwa Autoanamnesis }","bold":true},{"text":{$Autoanamnesis_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field3}","stack":[{"text":"{$jslabel jiwa Alloanamnesis }","bold":true},{"text":{$Alloanamnesis_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field4}","stack":[{"text":"{$jslabel jiwa Riwayat_gangguan_sekarang }","bold":true},{"text":{$Riwayat_gangguan_sekarang_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field5}","stack":[{"text":"{$jslabel jiwa Riwayat_gangguan_dahulu }","bold":true},{"text":{$Riwayat_gangguan_dahulu_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field6}","stack":[{"text":"{$jslabel jiwa Riwayat_gangguan_psikiatri }","bold":true},{"text":{$Riwayat_gangguan_psikiatri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field7}","stack":[{"text":"{$jslabel jiwa Riwayat_gangguan_medis }","bold":true},{"text":{$Riwayat_gangguan_medis_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field8}","stack":[{"text":"{$jslabel jiwa Riwayat_penggunaan_zat_psikoaktif }","bold":true},{"text":{$Riwayat_penggunaan_zat_psikoaktif_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field9}","stack":[{"text":"{$jslabel jiwa Riwayat_prenatal_dan_perinatal }","bold":true},{"text":{$Riwayat_prenatal_dan_perinatal_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field10}","stack":[{"text":"{$jslabel jiwa Riwayat_masa_kanak_awal }","bold":true},{"text":{$Riwayat_masa_kanak_awal_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field11}","stack":[{"text":"{$jslabel jiwa Riwayat_masa_kanak_pertengahan }","bold":true},{"text":{$Riwayat_masa_kanak_pertengahan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field12}","stack":[{"text":"{$jslabel jiwa Riwayat_masa_kanak_akhir_dan_remaja }","bold":true},{"text":{$Riwayat_masa_kanak_akhir_dan_remaja_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field13}","stack":[{"text":"{$jslabel jiwa Masa_Dewasa }","bold":true},{"text":{$Masa_Dewasa_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field14}","stack":[{"text":"{$jslabel jiwa Riwayat_pendidikan }","bold":true},{"text":{$Riwayat_pendidikan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field15}","stack":[{"text":"{$jslabel jiwa Riwayat_pekerjaan }","bold":true},{"text":{$Riwayat_pekerjaan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field16}","stack":[{"text":"{$jslabel jiwa Riwayat_pernikahan }","bold":true},{"text":{$Riwayat_pernikahan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field17}","stack":[{"text":"{$jslabel jiwa Riwayat_Agama }","bold":true},{"text":{$Riwayat_Agama_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field18}","stack":[{"text":"{$jslabel jiwa Riwayat_Psikoseksual }","bold":true},{"text":{$Riwayat_Psikoseksual_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field19}","stack":[{"text":"{$jslabel jiwa Riwayat_aktivitas_sosial }","bold":true},{"text":{$Riwayat_aktivitas_sosial_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field20}","stack":[{"text":"{$jslabel jiwa Riwayat_hukum }","bold":true},{"text":{$Riwayat_hukum_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field21}","stack":[{"text":"{$jslabel jiwa Riwayat_keluarga }","bold":true},{"text":{$Riwayat_keluarga_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field22}","stack":[{"text":"{$jslabel jiwa Genogram_keluarga }","bold":true},{"text":{$Genogram_keluarga_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field23}","stack":[{"text":"{$jslabel jiwa Situasi_kehidupan_sekarang }","bold":true},{"text":{$Situasi_kehidupan_sekarang_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field24}","stack":[{"text":"{$jslabel jiwa Persepsi_tentang_diri_dan_kehidupannya }","bold":true},{"text":{$Persepsi_tentang_diri_dan_kehidupannya_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field25}","stack":[{"text":"{$jslabel jiwa Persepsi_keluarga_tentang_diri_pasien }","bold":true},{"text":{$Persepsi_keluarga_tentang_diri_pasien_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field26}","stack":[{"text":"{$jslabel jiwa Fantasi }","bold":true},{"text":{$Fantasi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field27}","stack":[{"text":"{$jslabel jiwa Penampilan }","bold":true},{"text":{$Penampilan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field28}","stack":[{"text":"{$jslabel jiwa Perilaku_dan_aktivitas_psikomotor }","bold":true},{"text":{$Perilaku_dan_aktivitas_psikomotor_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field29}","stack":[{"text":"{$jslabel jiwa Sikap_terhadap_pemeriksa }","bold":true},{"text":{$Sikap_terhadap_pemeriksa_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field30}","stack":[{"text":"{$jslabel jiwa Irama }","bold":true},{"text":{$Irama_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field31}","stack":[{"text":"{$jslabel jiwa Kecepatan_bicara }","bold":true},{"text":{$Kecepatan_bicara_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field32}","stack":[{"text":"{$jslabel jiwa Volume }","bold":true},{"text":{$Volume_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field33}","stack":[{"text":"{$jslabel jiwa Kelancaran }","bold":true},{"text":{$Kelancaran_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field34}","stack":[{"text":"{$jslabel jiwa Mood }","bold":true},{"text":{$Mood_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field35}","stack":[{"text":"{$jslabel jiwa Afek }","bold":true},{"text":{$Afek_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field36}","stack":[{"text":"{$jslabel jiwa Keserasian }","bold":true},{"text":{$Keserasian_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field37}","stack":[{"text":"{$jslabel jiwa Auditorik }","bold":true},{"text":{$Auditorik_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field38}","stack":[{"text":"{$jslabel jiwa Visual }","bold":true},{"text":{$Visual_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field39}","stack":[{"text":"{$jslabel jiwa Taktil }","bold":true},{"text":{$Taktil_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field40}","stack":[{"text":"{$jslabel jiwa Olfaktorik }","bold":true},{"text":{$Olfaktorik_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field41}","stack":[{"text":"{$jslabel jiwa Gustatorik }","bold":true},{"text":{$Gustatorik_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field42}","stack":[{"text":"{$jslabel jiwa Ilusi }","bold":true},{"text":{$Ilusi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field43}","stack":[{"text":"{$jslabel jiwa Depersonalisasi }","bold":true},{"text":{$Depersonalisasi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field44}","stack":[{"text":"{$jslabel jiwa Derealisasi }","bold":true},{"text":{$Derealisasi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field45}","stack":[{"text":"{$jslabel jiwa Blocking }","bold":true},{"text":{$Blocking_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field46}","stack":[{"text":"{$jslabel jiwa Assosiasi_Longgar }","bold":true},{"text":{$Assosiasi_Longgar_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field47}","stack":[{"text":"{$jslabel jiwa Inkoheren }","bold":true},{"text":{$Inkoheren_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field48}","stack":[{"text":"{$jslabel jiwa Flight_of_Idea }","bold":true},{"text":{$Flight_of_Idea_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field49}","stack":[{"text":"{$jslabel jiwa Sirkumstansia }","bold":true},{"text":{$Sirkumstansia_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field50}","stack":[{"text":"{$jslabel jiwa Tangensial }","bold":true},{"text":{$Tangensial_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field51}","stack":[{"text":"{$jslabel jiwa Neologisme }","bold":true},{"text":{$Neologisme_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field52}","stack":[{"text":"{$jslabel jiwa Word_Salad }","bold":true},{"text":{$Word_Salad_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field53}","stack":[{"text":"{$jslabel jiwa Hendaya_Berbahasa }","bold":true},{"text":{$Hendaya_Berbahasa_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field54}","stack":[{"text":"{$jslabel jiwa Produktivitas }","bold":true},{"text":{$Produktivitas_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field55}","stack":[{"text":"{$jslabel jiwa Preokupasi }","bold":true},{"text":{$Preokupasi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field56}","stack":[{"text":"{$jslabel jiwa Waham_bizarre }","bold":true},{"text":{$Waham_bizarre_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field57}","stack":[{"text":"{$jslabel jiwa Waham_sistemik }","bold":true},{"text":{$Waham_sistemik_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field58}","stack":[{"text":"{$jslabel jiwa Waham_nihilistik }","bold":true},{"text":{$Waham_nihilistik_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field59}","stack":[{"text":"{$jslabel jiwa Waham_paranoid }","bold":true},{"text":{$Waham_paranoid_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field60}","stack":[{"text":"{$jslabel jiwa Waham_kebesaran }","bold":true},{"text":{$Waham_kebesaran_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field61}","stack":[{"text":"{$jslabel jiwa Waham_kejaran }","bold":true},{"text":{$Waham_kejaran_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field62}","stack":[{"text":"{$jslabel jiwa Waham_rujukan }","bold":true},{"text":{$Waham_rujukan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field63}","stack":[{"text":"{$jslabel jiwa Waham_dikendalikan }","bold":true},{"text":{$Waham_dikendalikan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field64}","stack":[{"text":"{$jslabel jiwa Thought_of_withdrawl }","bold":true},{"text":{$Thought_of_withdrawl_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field65}","stack":[{"text":"{$jslabel jiwa Thought_of_insertion }","bold":true},{"text":{$Thought_of_insertion_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field66}","stack":[{"text":"{$jslabel jiwa Thought_of_broadcasting }","bold":true},{"text":{$Thought_of_broadcasting_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field67}","stack":[{"text":"{$jslabel jiwa Obsesi }","bold":true},{"text":{$Obsesi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field68}","stack":[{"text":"{$jslabel jiwa Kompulsif }","bold":true},{"text":{$Kompulsif_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field69}","stack":[{"text":"{$jslabel jiwa Fobia }","bold":true},{"text":{$Fobia_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field70}","stack":[{"text":"{$jslabel jiwa Gagasan_untuk_bunuh_diri }","bold":true},{"text":{$Gagasan_untuk_bunuh_diri_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field71}","stack":[{"text":"{$jslabel jiwa Taraf_kesadaran_dan_kesiagaan }","bold":true},{"text":{$Taraf_kesadaran_dan_kesiagaan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field72}","stack":[{"text":"{$jslabel jiwa Orieantasi_Waktu }","bold":true},{"text":{$Orieantasi_Waktu_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field73}","stack":[{"text":"{$jslabel jiwa Orieantasi_Tempat }","bold":true},{"text":{$Orieantasi_Tempat_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field74}","stack":[{"text":"{$jslabel jiwa Orieantasi_Orang }","bold":true},{"text":{$Orieantasi_Orang_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field75}","stack":[{"text":"{$jslabel jiwa Daya_ingat_Jangka_panjang }","bold":true},{"text":{$Daya_ingat_Jangka_panjang_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field76}","stack":[{"text":"{$jslabel jiwa Daya_ingat_Jangka_sedang }","bold":true},{"text":{$Daya_ingat_Jangka_sedang_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field77}","stack":[{"text":"{$jslabel jiwa Daya_ingat_Jangka_pendek }","bold":true},{"text":{$Daya_ingat_Jangka_pendek_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field78}","stack":[{"text":"{$jslabel jiwa Daya_ingat_Jangka_segera }","bold":true},{"text":{$Daya_ingat_Jangka_segera_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field79}","stack":[{"text":"{$jslabel jiwa Konsentrasi_perhatian }","bold":true},{"text":{$Konsentrasi_perhatian_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field80}","stack":[{"text":"{$jslabel jiwa Kemampuan_Membaca_Menulis }","bold":true},{"text":{$Kemampuan_Membaca_Menulis_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field81}","stack":[{"text":"{$jslabel jiwa Kemampuan_visuospasial }","bold":true},{"text":{$Kemampuan_visuospasial_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field82}","stack":[{"text":"{$jslabel jiwa Pikiran_abstrak }","bold":true},{"text":{$Pikiran_abstrak_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field83}","stack":[{"text":"{$jslabel jiwa Inteligensia_dan_kemampuan_informasi }","bold":true},{"text":{$Inteligensia_dan_kemampuan_informasi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field84}","stack":[{"text":"{$jslabel jiwa Kemampuan_mengendalikan_impuls }","bold":true},{"text":{$Kemampuan_mengendalikan_impuls_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field85}","stack":[{"text":"{$jslabel jiwa Daya_nilai_dan_tilikan }","bold":true},{"text":{$Daya_nilai_dan_tilikan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field86}","stack":[{"text":"{$jslabel jiwa Daya_nilai_sosial }","bold":true},{"text":{$Daya_nilai_sosial_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field87}","stack":[{"text":"{$jslabel jiwa Uji_daya_nilai }","bold":true},{"text":{$Uji_daya_nilai_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field88}","stack":[{"text":"{$jslabel jiwa Penilaian_Daya_Realita }","bold":true},{"text":{$Penilaian_Daya_Realita_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field89}","stack":[{"text":"{$jslabel jiwa Tilikan }","bold":true},{"text":{$Tilikan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field90}","stack":[{"text":"{$jslabel jiwa Taraf_dipercaya }","bold":true},{"text":{$Taraf_dipercaya_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field91}","stack":[{"text":"{$jslabel jiwa Keadaan_Umum }","bold":true},{"text":{$Keadaan_Umum_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field92}","stack":[{"text":"{$jslabel jiwa Kesadaran }","bold":true},{"text":{$Kesadaran_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field93}","stack":[{"text":"{$jslabel jiwa Status_gizi }","bold":true},{"text":{$Status_gizi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field94}","stack":[{"text":"{$jslabel jiwa Tekanan_Darah }","bold":true},{"text":{$Tekanan_Darah_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field95}","stack":[{"text":"{$jslabel jiwa Frekuensi_Nadi }","bold":true},{"text":{$Frekuensi_Nadi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field96}","stack":[{"text":"{$jslabel jiwa Frekuensi_Nafas }","bold":true},{"text":{$Frekuensi_Nafas_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field97}","stack":[{"text":"{$jslabel jiwa Suhu }","bold":true},{"text":{$Suhu_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field98}","stack":[{"text":"{$jslabel jiwa Mata_dan_THT }","bold":true},{"text":{$Mata_dan_THT_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field99}","stack":[{"text":"{$jslabel jiwa Mulut_dan_Gigi }","bold":true},{"text":{$Mulut_dan_Gigi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field100}","stack":[{"text":"{$jslabel jiwa Thorax }","bold":true},{"text":{$Thorax_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field101}","stack":[{"text":"{$jslabel jiwa Abdomen }","bold":true},{"text":{$Abdomen_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field102}","stack":[{"text":"{$jslabel jiwa Extremitas }","bold":true},{"text":{$Extremitas_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field103}","stack":[{"text":"{$jslabel jiwa Tanda_rangsang_Meningeal }","bold":true},{"text":{$Tanda_rangsang_Meningeal_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field104}","stack":[{"text":"{$jslabel jiwa Motorik }","bold":true},{"text":{$Motorik_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field105}","stack":[{"text":"{$jslabel jiwa Sensorik }","bold":true},{"text":{$Sensorik_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field106}","stack":[{"text":"{$jslabel jiwa Diagnosis_Axis }","bold":true},{"text":{$Diagnosis_Axis_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field107}","stack":[{"text":"{$jslabel jiwa Organobiologi }","bold":true},{"text":{$Organobiologi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field108}","stack":[{"text":"{$jslabel jiwa Psikologi }","bold":true},{"text":{$Psikologi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field109}","stack":[{"text":"{$jslabel jiwa Lingkungan_dan_sosial_ekonomi }","bold":true},{"text":{$Lingkungan_dan_sosial_ekonomi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field110}","stack":[{"text":"{$jslabel jiwa Quo_ad_Vitam }","bold":true},{"text":{$Quo_ad_Vitam_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field111}","stack":[{"text":"{$jslabel jiwa Quo_ad_Fungsionam }","bold":true},{"text":{$Quo_ad_Fungsionam_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field112}","stack":[{"text":"{$jslabel jiwa Quo_ad_Sanationam }","bold":true},{"text":{$Quo_ad_Sanationam_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field113}","stack":[{"text":"{$jslabel jiwa Hal_hal_yang_mendukung }","bold":true},{"text":{$Hal_hal_yang_mendukung_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field114}","stack":[{"text":"{$jslabel jiwa Hal_hal_yang_memberatkan }","bold":true},{"text":{$Hal_hal_yang_memberatkan_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field115}","stack":[{"text":"{$jslabel jiwa Farmakologi }","bold":true},{"text":{$Farmakologi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field116}","stack":[{"text":"{$jslabel jiwa Non_Farmakologi }","bold":true},{"text":{$Non_Farmakologi_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field117}","stack":[{"text":"{$jslabel jiwa id_pasien }","bold":true},{"text":{$id_pasien_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field118}","stack":[{"text":"{$jslabel jiwa id_user }","bold":true},{"text":{$id_user_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field119}","stack":[{"text":"{$jslabel jiwa id_resep }","bold":true},{"text":{$id_resep_pdfvalue}}],"margin":[0,0,0,15]},
+				
+				
+			{"hidden":"{$item_hide_integrated_edit_field120}","stack":[{"text":"{$jslabel jiwa Nomor_Rm }","bold":true},{"text":{$Nomor_Rm_pdfvalue}}],"margin":[0,0,0,15]},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+{END cellblock_grid_c3}
+											],
+				{END row_grid_0}
+					]
+	}
+}
+,
+		
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_edit_save}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_edit_back_list}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_edit_close}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+																			{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":""},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'right',
+  },
+
+											],
+					]
+	}
+}
+,
+			]
+}
+  

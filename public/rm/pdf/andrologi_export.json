@@ -1,0 +1,402 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel andrologi export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+					[
+												{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			style: 'cell',
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"hidden":"{$item_hide_export_field1}","text":{$lama_perkawinan_1_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field2}","text":{$lama_perkawinan_2_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field3}","text":{$lama_perkawinan_3_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field4}","text":{$anak_perkawinan_1_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field5}","text":{$anak_perkawinan_2_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field6}","text":{$anak_perkawinan_3_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field7}","text":{$Libido_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field8}","text":{$Frekwensi_koitus_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field9}","text":{$Dispareuni_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field10}","text":{$Orgasmus_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field11}","text":{$Reflux_Post_Coital_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field12}","text":{$Ejakulasi_Dini_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field13}","text":{$Ejakulasi_Nocturnal_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field14}","text":{$Ejakulasi_Nyeri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field15}","text":{$Puber_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field16}","text":{$Masturbasi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field17}","text":{$Koitus_pranikah_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field18}","text":{$Lain_lain_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field19}","text":{$Peny_Hub_Seksual_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field20}","text":{$Hernia_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field21}","text":{$Hidrokel_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field22}","text":{$Trauma_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field23}","text":{$Kelainan_bawaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field24}","text":{$Penyakit_Paru_kronis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field25}","text":{$Penyakit_hidung_kronis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field26}","text":{$Tuberkulosa_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field27}","text":{$Diabetes_mellitus_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field28}","text":{$Gondongan_parotitis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field29}","text":{$Penyakit_Saraf_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field30}","text":{$Panas_dlm_6_bln_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field31}","text":{$Status_keluarga_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field32}","text":{$Saudara_kandung_suami_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field33}","text":{$Saudara_kandung_istri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field34}","text":{$Lingkungan_sosial_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field35}","text":{$Pekerjaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field36}","text":{$Keluarga_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field37}","text":{$Rokok_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field38}","text":{$Alkohol_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field39}","text":{$Obat_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field40}","text":{$Celana_ketat_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field41}","text":{$Bahan_kimia_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field42}","text":{$KU_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field43}","text":{$TB_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field44}","text":{$CM_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field45}","text":{$BB_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field46}","text":{$KG_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field47}","text":{$Tensi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field48}","text":{$Pertumbuhan_distribusi_rambut_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field49}","text":{$Kumis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field50}","text":{$Jenggot_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field51}","text":{$Mata_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field52}","text":{$Hidung_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field53}","text":{$Leher_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field54}","text":{$Dada_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field55}","text":{$ginecomastia_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field56}","text":{$PERUT_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field57}","text":{$INGUINAL_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field58}","text":{$kubitus__valganus___varus__pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field59}","text":{$Rentangan_tangan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field60}","text":{$_Rambut_axilla_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field61}","text":{$Cor_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field62}","text":{$Hepar_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field63}","text":{$Pulmo_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field64}","text":{$Lien_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field65}","text":{$Penis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field66}","text":{$Muara_Urethra_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field67}","text":{$Skrotum_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field68}","text":{$Pubis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field69}","text":{$Pola_Pubis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field70}","text":{$Interna_Kanan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field71}","text":{$Interna_Kiri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field72}","text":{$Posisi_Testis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field73}","text":{$Volume_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field74}","text":{$Konsistensi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field75}","text":{$Nyeri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field76}","text":{$VAS_DEFERENS_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field77}","text":{$FUNICULUS_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field78}","text":{$EPIDIDYMIS_Ukuran_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field79}","text":{$EPIDIDYMIS_Konsistensi_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field80}","text":{$EPIDIDYMIS_Kistik_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field81}","text":{$EPIDIDYMIS_Nyeri_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field82}","text":{$EPIDIDYMIS_Permukaan_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field83}","text":{$VARIKOKEL_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field84}","text":{$Prostat_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field85}","text":{$V_Seminalis_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field86}","text":{$lab_ke_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field87}","text":{$lab_tgl_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field88}","text":{$no_reg_lab_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field89}","text":{$kesan_lab_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field90}","text":{$Diagnosis_Banding_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field91}","text":{$Rencana_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field}","text":{$id_pasien_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field92}","text":{$id_user_pdfvalue}},
+				
+				
+			{"hidden":"{$item_hide_export_field93}","text":{$Nomor_Rm_pdfvalue}},
+				
+		  ],
+  "border": [ false, false, false, false ],
+          "alignment": 'left',
+  },
+
+											],
+					]
+	}
+}
+,
+		
+					]
+}
+  

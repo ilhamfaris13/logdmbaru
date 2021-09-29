@@ -1,0 +1,1066 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel kulit search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN keluhan_pertama_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_keluhan_pertama}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="keluhan_pertama" 
+	
+	data-signal-error-for="keluhan_pertama{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="keluhan_pertama" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_keluhan_pertama}">
+		{$label kulit keluhan_pertama }	</label>
+	<div class="r-search-option">
+		{$searchtype_keluhan_pertama}
+	</div>
+	<div class="r-search-field">
+		{$keluhan_pertama_editcontrol}	</div>
+	<div class="r-search-field">
+		{$keluhan_pertama_editcontrol1}
+	</div>
+	
+</div>
+
+{END keluhan_pertama_fieldblock}
+											
+{BEGIN keluhan_tmbhan_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_keluhan_tmbhan}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="keluhan_tmbhan" 
+	
+	data-signal-error-for="keluhan_tmbhan{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="keluhan_tmbhan" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_keluhan_tmbhan}">
+		{$label kulit keluhan_tmbhan }	</label>
+	<div class="r-search-option">
+		{$searchtype_keluhan_tmbhan}
+	</div>
+	<div class="r-search-field">
+		{$keluhan_tmbhan_editcontrol}	</div>
+	<div class="r-search-field">
+		{$keluhan_tmbhan_editcontrol1}
+	</div>
+	
+</div>
+
+{END keluhan_tmbhan_fieldblock}
+											
+{BEGIN rwyt_skrg_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_skrg}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="rwyt_skrg" 
+	
+	data-signal-error-for="rwyt_skrg{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="rwyt_skrg" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_rwyt_skrg}">
+		{$label kulit rwyt_skrg }	</label>
+	<div class="r-search-option">
+		{$searchtype_rwyt_skrg}
+	</div>
+	<div class="r-search-field">
+		{$rwyt_skrg_editcontrol}	</div>
+	<div class="r-search-field">
+		{$rwyt_skrg_editcontrol1}
+	</div>
+	
+</div>
+
+{END rwyt_skrg_fieldblock}
+											
+{BEGIN rwyt_dulu_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_dulu}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="rwyt_dulu" 
+	
+	data-signal-error-for="rwyt_dulu{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="rwyt_dulu" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_rwyt_dulu}">
+		{$label kulit rwyt_dulu }	</label>
+	<div class="r-search-option">
+		{$searchtype_rwyt_dulu}
+	</div>
+	<div class="r-search-field">
+		{$rwyt_dulu_editcontrol}	</div>
+	<div class="r-search-field">
+		{$rwyt_dulu_editcontrol1}
+	</div>
+	
+</div>
+
+{END rwyt_dulu_fieldblock}
+											
+{BEGIN rwyt_klg_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_klg}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="rwyt_klg" 
+	
+	data-signal-error-for="rwyt_klg{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="rwyt_klg" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_rwyt_klg}">
+		{$label kulit rwyt_klg }	</label>
+	<div class="r-search-option">
+		{$searchtype_rwyt_klg}
+	</div>
+	<div class="r-search-field">
+		{$rwyt_klg_editcontrol}	</div>
+	<div class="r-search-field">
+		{$rwyt_klg_editcontrol1}
+	</div>
+	
+</div>
+
+{END rwyt_klg_fieldblock}
+											
+{BEGIN rwyt_alergi_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_alergi}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="rwyt_alergi" 
+	
+	data-signal-error-for="rwyt_alergi{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="rwyt_alergi" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_rwyt_alergi}">
+		{$label kulit rwyt_alergi }	</label>
+	<div class="r-search-option">
+		{$searchtype_rwyt_alergi}
+	</div>
+	<div class="r-search-field">
+		{$rwyt_alergi_editcontrol}	</div>
+	<div class="r-search-field">
+		{$rwyt_alergi_editcontrol1}
+	</div>
+	
+</div>
+
+{END rwyt_alergi_fieldblock}
+											
+{BEGIN rwyt_pengobatan_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_pengobatan}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="rwyt_pengobatan" 
+	
+	data-signal-error-for="rwyt_pengobatan{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="rwyt_pengobatan" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_rwyt_pengobatan}">
+		{$label kulit rwyt_pengobatan }	</label>
+	<div class="r-search-option">
+		{$searchtype_rwyt_pengobatan}
+	</div>
+	<div class="r-search-field">
+		{$rwyt_pengobatan_editcontrol}	</div>
+	<div class="r-search-field">
+		{$rwyt_pengobatan_editcontrol1}
+	</div>
+	
+</div>
+
+{END rwyt_pengobatan_fieldblock}
+											
+{BEGIN rwyt_kebiasaan_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rwyt_kebiasaan}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="rwyt_kebiasaan" 
+	
+	data-signal-error-for="rwyt_kebiasaan{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="rwyt_kebiasaan" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_rwyt_kebiasaan}">
+		{$label kulit rwyt_kebiasaan }	</label>
+	<div class="r-search-option">
+		{$searchtype_rwyt_kebiasaan}
+	</div>
+	<div class="r-search-field">
+		{$rwyt_kebiasaan_editcontrol}	</div>
+	<div class="r-search-field">
+		{$rwyt_kebiasaan_editcontrol1}
+	</div>
+	
+</div>
+
+{END rwyt_kebiasaan_fieldblock}
+											
+{BEGIN tb_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tb}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="tb" 
+	
+	data-signal-error-for="tb{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field21" {$item_integrated_search_field21} data-pageid="{$pageid}" data-field="tb" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_tb}">
+		{$label kulit tb }	</label>
+	<div class="r-search-option">
+		{$searchtype_tb}
+	</div>
+	<div class="r-search-field">
+		{$tb_editcontrol}	</div>
+	<div class="r-search-field">
+		{$tb_editcontrol1}
+	</div>
+	
+</div>
+
+{END tb_fieldblock}
+											
+{BEGIN bb_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_bb}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="bb" 
+	
+	data-signal-error-for="bb{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field22" {$item_integrated_search_field22} data-pageid="{$pageid}" data-field="bb" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_bb}">
+		{$label kulit bb }	</label>
+	<div class="r-search-option">
+		{$searchtype_bb}
+	</div>
+	<div class="r-search-field">
+		{$bb_editcontrol}	</div>
+	<div class="r-search-field">
+		{$bb_editcontrol1}
+	</div>
+	
+</div>
+
+{END bb_fieldblock}
+											
+{BEGIN nadi_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_nadi}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="nadi" 
+	
+	data-signal-error-for="nadi{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field25" {$item_integrated_search_field25} data-pageid="{$pageid}" data-field="nadi" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_nadi}">
+		{$label kulit nadi }	</label>
+	<div class="r-search-option">
+		{$searchtype_nadi}
+	</div>
+	<div class="r-search-field">
+		{$nadi_editcontrol}	</div>
+	<div class="r-search-field">
+		{$nadi_editcontrol1}
+	</div>
+	
+</div>
+
+{END nadi_fieldblock}
+											
+{BEGIN temp_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_temp}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="temp" 
+	
+	data-signal-error-for="temp{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field27" {$item_integrated_search_field27} data-pageid="{$pageid}" data-field="temp" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_temp}">
+		{$label kulit temp }	</label>
+	<div class="r-search-option">
+		{$searchtype_temp}
+	</div>
+	<div class="r-search-field">
+		{$temp_editcontrol}	</div>
+	<div class="r-search-field">
+		{$temp_editcontrol1}
+	</div>
+	
+</div>
+
+{END temp_fieldblock}
+											
+{BEGIN kepala_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_kepala}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="kepala" 
+	
+	data-signal-error-for="kepala{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field28" {$item_integrated_search_field28} data-pageid="{$pageid}" data-field="kepala" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_kepala}">
+		{$label kulit kepala }	</label>
+	<div class="r-search-option">
+		{$searchtype_kepala}
+	</div>
+	<div class="r-search-field">
+		{$kepala_editcontrol}	</div>
+	<div class="r-search-field">
+		{$kepala_editcontrol1}
+	</div>
+	
+</div>
+
+{END kepala_fieldblock}
+											
+{BEGIN leher_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_leher}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="leher" 
+	
+	data-signal-error-for="leher{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field29" {$item_integrated_search_field29} data-pageid="{$pageid}" data-field="leher" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_leher}">
+		{$label kulit leher }	</label>
+	<div class="r-search-option">
+		{$searchtype_leher}
+	</div>
+	<div class="r-search-field">
+		{$leher_editcontrol}	</div>
+	<div class="r-search-field">
+		{$leher_editcontrol1}
+	</div>
+	
+</div>
+
+{END leher_fieldblock}
+											
+{BEGIN thorax_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_thorax}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="thorax" 
+	
+	data-signal-error-for="thorax{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field30" {$item_integrated_search_field30} data-pageid="{$pageid}" data-field="thorax" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_thorax}">
+		{$label kulit thorax }	</label>
+	<div class="r-search-option">
+		{$searchtype_thorax}
+	</div>
+	<div class="r-search-field">
+		{$thorax_editcontrol}	</div>
+	<div class="r-search-field">
+		{$thorax_editcontrol1}
+	</div>
+	
+</div>
+
+{END thorax_fieldblock}
+											
+{BEGIN abdomen_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_abdomen}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="abdomen" 
+	
+	data-signal-error-for="abdomen{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field31" {$item_integrated_search_field31} data-pageid="{$pageid}" data-field="abdomen" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_abdomen}">
+		{$label kulit abdomen }	</label>
+	<div class="r-search-option">
+		{$searchtype_abdomen}
+	</div>
+	<div class="r-search-field">
+		{$abdomen_editcontrol}	</div>
+	<div class="r-search-field">
+		{$abdomen_editcontrol1}
+	</div>
+	
+</div>
+
+{END abdomen_fieldblock}
+											
+{BEGIN ekstremitas_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ekstremitas}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="ekstremitas" 
+	
+	data-signal-error-for="ekstremitas{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field32" {$item_integrated_search_field32} data-pageid="{$pageid}" data-field="ekstremitas" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ekstremitas}">
+		{$label kulit ekstremitas }	</label>
+	<div class="r-search-option">
+		{$searchtype_ekstremitas}
+	</div>
+	<div class="r-search-field">
+		{$ekstremitas_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ekstremitas_editcontrol1}
+	</div>
+	
+</div>
+
+{END ekstremitas_fieldblock}
+											
+{BEGIN diagnosis_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_diagnosis}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="diagnosis" 
+	
+	data-signal-error-for="diagnosis{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field42" {$item_integrated_search_field42} data-pageid="{$pageid}" data-field="diagnosis" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_diagnosis}">
+		{$label kulit diagnosis }	</label>
+	<div class="r-search-option">
+		{$searchtype_diagnosis}
+	</div>
+	<div class="r-search-field">
+		{$diagnosis_editcontrol}	</div>
+	<div class="r-search-field">
+		{$diagnosis_editcontrol1}
+	</div>
+	
+</div>
+
+{END diagnosis_fieldblock}
+											
+{BEGIN id_mhs_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_mhs}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="id_mhs" 
+	
+	data-signal-error-for="id_mhs{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field45" {$item_integrated_search_field45} data-pageid="{$pageid}" data-field="id_mhs" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_id_mhs}">
+		{$label kulit id_mhs }	</label>
+	<div class="r-search-option">
+		{$searchtype_id_mhs}
+	</div>
+	<div class="r-search-field">
+		{$id_mhs_editcontrol}	</div>
+	<div class="r-search-field">
+		{$id_mhs_editcontrol1}
+	</div>
+	
+</div>
+
+{END id_mhs_fieldblock}
+											
+{BEGIN id_pasien_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_pasien}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="id_pasien" 
+	
+	data-signal-error-for="id_pasien{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field46" {$item_integrated_search_field46} data-pageid="{$pageid}" data-field="id_pasien" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_id_pasien}">
+		{$label kulit id_pasien }	</label>
+	<div class="r-search-option">
+		{$searchtype_id_pasien}
+	</div>
+	<div class="r-search-field">
+		{$id_pasien_editcontrol}	</div>
+	<div class="r-search-field">
+		{$id_pasien_editcontrol1}
+	</div>
+	
+</div>
+
+{END id_pasien_fieldblock}
+											
+{BEGIN id_kulit_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_kulit}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="id_kulit" 
+	
+	data-signal-error-for="id_kulit{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="id_kulit" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_id_kulit}">
+		{$label kulit id_kulit }	</label>
+	<div class="r-search-option">
+		{$searchtype_id_kulit}
+	</div>
+	<div class="r-search-field">
+		{$id_kulit_editcontrol}	</div>
+	<div class="r-search-field">
+		{$id_kulit_editcontrol1}
+	</div>
+	
+</div>
+
+{END id_kulit_fieldblock}
+											
+{BEGIN keadaan_umum_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_keadaan_umum}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="keadaan_umum" 
+	
+	data-signal-error-for="keadaan_umum{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="keadaan_umum" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_keadaan_umum}">
+		{$label kulit keadaan_umum }	</label>
+	<div class="r-search-option">
+		{$searchtype_keadaan_umum}
+	</div>
+	<div class="r-search-field">
+		{$keadaan_umum_editcontrol}	</div>
+	<div class="r-search-field">
+		{$keadaan_umum_editcontrol1}
+	</div>
+	
+</div>
+
+{END keadaan_umum_fieldblock}
+											
+{BEGIN kesadaran_gcs_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_kesadaran_gcs}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="kesadaran_gcs" 
+	
+	data-signal-error-for="kesadaran_gcs{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="kesadaran_gcs" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_kesadaran_gcs}">
+		{$label kulit kesadaran_gcs }	</label>
+	<div class="r-search-option">
+		{$searchtype_kesadaran_gcs}
+	</div>
+	<div class="r-search-field">
+		{$kesadaran_gcs_editcontrol}	</div>
+	<div class="r-search-field">
+		{$kesadaran_gcs_editcontrol1}
+	</div>
+	
+</div>
+
+{END kesadaran_gcs_fieldblock}
+											
+{BEGIN status_gizi_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_status_gizi}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="status_gizi" 
+	
+	data-signal-error-for="status_gizi{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="status_gizi" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_status_gizi}">
+		{$label kulit status_gizi }	</label>
+	<div class="r-search-option">
+		{$searchtype_status_gizi}
+	</div>
+	<div class="r-search-field">
+		{$status_gizi_editcontrol}	</div>
+	<div class="r-search-field">
+		{$status_gizi_editcontrol1}
+	</div>
+	
+</div>
+
+{END status_gizi_fieldblock}
+											
+{BEGIN tensi_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_tensi}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="tensi" 
+	
+	data-signal-error-for="tensi{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="tensi" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_tensi}">
+		{$label kulit tensi }	</label>
+	<div class="r-search-option">
+		{$searchtype_tensi}
+	</div>
+	<div class="r-search-field">
+		{$tensi_editcontrol}	</div>
+	<div class="r-search-field">
+		{$tensi_editcontrol1}
+	</div>
+	
+</div>
+
+{END tensi_fieldblock}
+											
+{BEGIN rr_x_menit_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_rr_x_menit}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="rr_x_menit" 
+	
+	data-signal-error-for="rr_x_menit{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="rr_x_menit" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_rr_x_menit}">
+		{$label kulit rr_x_menit }	</label>
+	<div class="r-search-option">
+		{$searchtype_rr_x_menit}
+	</div>
+	<div class="r-search-field">
+		{$rr_x_menit_editcontrol}	</div>
+	<div class="r-search-field">
+		{$rr_x_menit_editcontrol1}
+	</div>
+	
+</div>
+
+{END rr_x_menit_fieldblock}
+											
+{BEGIN status_dermatologis_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_status_dermatologis}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="status_dermatologis" 
+	
+	data-signal-error-for="status_dermatologis{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field14" {$item_integrated_search_field14} data-pageid="{$pageid}" data-field="status_dermatologis" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_status_dermatologis}">
+		{$label kulit status_dermatologis }	</label>
+	<div class="r-search-option">
+		{$searchtype_status_dermatologis}
+	</div>
+	<div class="r-search-field">
+		{$status_dermatologis_editcontrol}	</div>
+	<div class="r-search-field">
+		{$status_dermatologis_editcontrol1}
+	</div>
+	
+</div>
+
+{END status_dermatologis_fieldblock}
+											
+{BEGIN pmrksaan_lab_pnunjang_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pmrksaan_lab_pnunjang}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="pmrksaan_lab_pnunjang" 
+	
+	data-signal-error-for="pmrksaan_lab_pnunjang{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field15" {$item_integrated_search_field15} data-pageid="{$pageid}" data-field="pmrksaan_lab_pnunjang" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_pmrksaan_lab_pnunjang}">
+		{$label kulit pmrksaan_lab_pnunjang }	</label>
+	<div class="r-search-option">
+		{$searchtype_pmrksaan_lab_pnunjang}
+	</div>
+	<div class="r-search-field">
+		{$pmrksaan_lab_pnunjang_editcontrol}	</div>
+	<div class="r-search-field">
+		{$pmrksaan_lab_pnunjang_editcontrol1}
+	</div>
+	
+</div>
+
+{END pmrksaan_lab_pnunjang_fieldblock}
+											
+{BEGIN resume_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_resume}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="resume" 
+	
+	data-signal-error-for="resume{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field16" {$item_integrated_search_field16} data-pageid="{$pageid}" data-field="resume" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_resume}">
+		{$label kulit resume }	</label>
+	<div class="r-search-option">
+		{$searchtype_resume}
+	</div>
+	<div class="r-search-field">
+		{$resume_editcontrol}	</div>
+	<div class="r-search-field">
+		{$resume_editcontrol1}
+	</div>
+	
+</div>
+
+{END resume_fieldblock}
+											
+{BEGIN diagnosis_banding_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_diagnosis_banding}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="diagnosis_banding" 
+	
+	data-signal-error-for="diagnosis_banding{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field17" {$item_integrated_search_field17} data-pageid="{$pageid}" data-field="diagnosis_banding" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_diagnosis_banding}">
+		{$label kulit diagnosis_banding }	</label>
+	<div class="r-search-option">
+		{$searchtype_diagnosis_banding}
+	</div>
+	<div class="r-search-field">
+		{$diagnosis_banding_editcontrol}	</div>
+	<div class="r-search-field">
+		{$diagnosis_banding_editcontrol1}
+	</div>
+	
+</div>
+
+{END diagnosis_banding_fieldblock}
+											
+{BEGIN diagnosis_planning_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_diagnosis_planning}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="diagnosis_planning" 
+	
+	data-signal-error-for="diagnosis_planning{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field18" {$item_integrated_search_field18} data-pageid="{$pageid}" data-field="diagnosis_planning" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_diagnosis_planning}">
+		{$label kulit diagnosis_planning }	</label>
+	<div class="r-search-option">
+		{$searchtype_diagnosis_planning}
+	</div>
+	<div class="r-search-field">
+		{$diagnosis_planning_editcontrol}	</div>
+	<div class="r-search-field">
+		{$diagnosis_planning_editcontrol1}
+	</div>
+	
+</div>
+
+{END diagnosis_planning_fieldblock}
+											
+{BEGIN terapi_medikamentosa_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_terapi_medikamentosa}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="terapi_medikamentosa" 
+	
+	data-signal-error-for="terapi_medikamentosa{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field19" {$item_integrated_search_field19} data-pageid="{$pageid}" data-field="terapi_medikamentosa" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_terapi_medikamentosa}">
+		{$label kulit terapi_medikamentosa }	</label>
+	<div class="r-search-option">
+		{$searchtype_terapi_medikamentosa}
+	</div>
+	<div class="r-search-field">
+		{$terapi_medikamentosa_editcontrol}	</div>
+	<div class="r-search-field">
+		{$terapi_medikamentosa_editcontrol1}
+	</div>
+	
+</div>
+
+{END terapi_medikamentosa_fieldblock}
+											
+{BEGIN terapi_nonmedikamentosa_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_terapi_nonmedikamentosa}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="terapi_nonmedikamentosa" 
+	
+	data-signal-error-for="terapi_nonmedikamentosa{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field20" {$item_integrated_search_field20} data-pageid="{$pageid}" data-field="terapi_nonmedikamentosa" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_terapi_nonmedikamentosa}">
+		{$label kulit terapi_nonmedikamentosa }	</label>
+	<div class="r-search-option">
+		{$searchtype_terapi_nonmedikamentosa}
+	</div>
+	<div class="r-search-field">
+		{$terapi_nonmedikamentosa_editcontrol}	</div>
+	<div class="r-search-field">
+		{$terapi_nonmedikamentosa_editcontrol1}
+	</div>
+	
+</div>
+
+{END terapi_nonmedikamentosa_fieldblock}
+											
+{BEGIN monitoring_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_monitoring}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="monitoring" 
+	
+	data-signal-error-for="monitoring{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field23" {$item_integrated_search_field23} data-pageid="{$pageid}" data-field="monitoring" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_monitoring}">
+		{$label kulit monitoring }	</label>
+	<div class="r-search-option">
+		{$searchtype_monitoring}
+	</div>
+	<div class="r-search-field">
+		{$monitoring_editcontrol}	</div>
+	<div class="r-search-field">
+		{$monitoring_editcontrol1}
+	</div>
+	
+</div>
+
+{END monitoring_fieldblock}
+											
+{BEGIN edukasi_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_edukasi}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="edukasi" 
+	
+	data-signal-error-for="edukasi{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field24" {$item_integrated_search_field24} data-pageid="{$pageid}" data-field="edukasi" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_edukasi}">
+		{$label kulit edukasi }	</label>
+	<div class="r-search-option">
+		{$searchtype_edukasi}
+	</div>
+	<div class="r-search-field">
+		{$edukasi_editcontrol}	</div>
+	<div class="r-search-field">
+		{$edukasi_editcontrol1}
+	</div>
+	
+</div>
+
+{END edukasi_fieldblock}
+											
+{BEGIN prognosis_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_prognosis}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="prognosis" 
+	
+	data-signal-error-for="prognosis{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field26" {$item_integrated_search_field26} data-pageid="{$pageid}" data-field="prognosis" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_prognosis}">
+		{$label kulit prognosis }	</label>
+	<div class="r-search-option">
+		{$searchtype_prognosis}
+	</div>
+	<div class="r-search-field">
+		{$prognosis_editcontrol}	</div>
+	<div class="r-search-field">
+		{$prognosis_editcontrol1}
+	</div>
+	
+</div>
+
+{END prognosis_fieldblock}
+											
+{BEGIN Nomor_Rm_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Nomor_Rm}  r-horizontal-field form-horizontal" 
+	
+		data-fieldname="Nomor_Rm" 
+	
+	data-signal-error-for="Nomor_Rm{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field33" {$item_integrated_search_field33} data-pageid="{$pageid}" data-field="Nomor_Rm" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_Nomor_Rm}">
+		{$label kulit Nomor_Rm }	</label>
+	<div class="r-search-option">
+		{$searchtype_Nomor_Rm}
+	</div>
+	<div class="r-search-field">
+		{$Nomor_Rm_editcontrol}	</div>
+	<div class="r-search-field">
+		{$Nomor_Rm_editcontrol1}
+	</div>
+	
+</div>
+
+{END Nomor_Rm_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Search			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Reset			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancel			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

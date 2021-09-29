@@ -1,0 +1,34 @@
+[data-page="mata1_add"][data-itemid="image"] {
+  width: 100px;
+  height: 100px;
+}
+[data-page="mata1_add"][data-itemid="image1"] {
+  width: 100px;
+  height: 100px;
+}
+[data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"] > * > input,
+[data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"] > * > select,
+[data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"] > * > * > select,
+[data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"] > .form-control-static,
+[data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"] > [id^=view],
+[data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"] label,
+[data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"][data-page="mata1_add"][data-itemid="integrated_edit_field56"] > * > .r-readonly-control {
+  font-weight: bold;
+  font-size: 20px;
+}
+[data-page="mata1_add"][data-itemid="edit_field_label"][data-page="mata1_add"][data-itemid="edit_field_label"][data-page="mata1_add"][data-itemid="edit_field_label"][data-page="mata1_add"][data-itemid="edit_field_label"] {
+  font-weight: bold;
+  font-size: 20px;
+}
+[data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"] {
+  background-color: transparent;
+}
+[data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"] > * > label,
+[data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"] > * > * > input,
+[data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"] > * > * > select,
+[data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"] > * > * > .r-readonly-control,
+[data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"][data-page="mata1_add"][data-itemid="id_pasien"] > * > * > * > select {
+  color: #ffffff;
+}
+
+

@@ -1,0 +1,1118 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="edit_header" data-itemid="edit_header" {$item_edit_header} data-pageid="{$pageid}" >{$pagetitlelabel obstetri edit}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<div data-itemtype="edit_message" data-itemid="edit_message" {$item_edit_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+			<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+	{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+</div>
+</div>
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<div class="panel with-tabs panel-default form-tabs" data-itemtype="tabs" data-itemid="tabs" {$item_tabs} data-pageid="{$pageid}">
+	<div class="panel-heading">
+		<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section{$pageid}">
+					Anamnesis				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section1{$pageid}">
+					Riwayat				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section2{$pageid}">
+					PEMERIKSAA FISIK				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section3{$pageid}">
+					PEMERIKSAAN  OBSTETRI				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section4{$pageid}">
+					PEMERIKSAAN PENUNJANG				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section6{$pageid}">
+					RENCANA TATALAKSANA				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section5{$pageid}">
+					Diagnosis				</a>
+			</li>
+										<li role="presentation" class="">
+				<a aria-controls="settings" role="tab" data-toggle="tab" href="#tab_section7{$pageid}">
+									</a>
+			</li>
+									</ul>
+	</div>
+	<div class="panel-body">
+		<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="tab_section{$pageid}"> 
+			{BEGIN section_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section" id="form_section_{$pageid}" data-makeup="small" {$form_section} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section_c1}
+<td
+	{$cell_section_c1}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN ANAMNESIS_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ANAMNESIS}  r-vertical-field" 
+	data-fieldname="ANAMNESIS" 
+	data-signal-error-for="ANAMNESIS{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field21" {$item_integrated_edit_field21} data-pageid="{$pageid}" data-field="ANAMNESIS" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_ANAMNESIS}">
+		{BEGIN ANAMNESIS_label}{$label obstetri ANAMNESIS }{END ANAMNESIS_label}
+	</label>
+	<div class="r-edit-field">
+		{$ANAMNESIS_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ANAMNESIS">
+		<div class="text-muted" >
+		{$tooltip obstetri ANAMNESIS }		</div>
+	</div>
+</div>
+
+
+{END ANAMNESIS_fieldblock}
+	
+								</td>
+			{END cellblock_section_c1}
+								</tr>
+			</tbody></table>
+{END section_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section1{$pageid}"> 
+			{BEGIN section1_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section1" id="form_section1_{$pageid}" data-makeup="small" {$form_section1} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section1_c1}
+<td
+	{$cell_section1_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Riwayat_Penyakit_Sekarang_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Penyakit_Sekarang}  r-vertical-field" 
+	data-fieldname="Riwayat Penyakit Sekarang" 
+	data-signal-error-for="Riwayat_Penyakit_Sekarang{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="Riwayat_Penyakit_Sekarang" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Penyakit_Sekarang}">
+		{BEGIN Riwayat_Penyakit_Sekarang_label}{$label obstetri Riwayat_Penyakit_Sekarang }{END Riwayat_Penyakit_Sekarang_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Penyakit_Sekarang_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Penyakit_Sekarang">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_Penyakit_Sekarang }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Penyakit_Sekarang_fieldblock}
+											
+{BEGIN Riwayat_Penyakit_Dahulu_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Penyakit_Dahulu}  r-vertical-field" 
+	data-fieldname="Riwayat Penyakit Dahulu" 
+	data-signal-error-for="Riwayat_Penyakit_Dahulu{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="Riwayat_Penyakit_Dahulu" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Penyakit_Dahulu}">
+		{BEGIN Riwayat_Penyakit_Dahulu_label}{$label obstetri Riwayat_Penyakit_Dahulu }{END Riwayat_Penyakit_Dahulu_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Penyakit_Dahulu_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Penyakit_Dahulu">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_Penyakit_Dahulu }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Penyakit_Dahulu_fieldblock}
+											
+{BEGIN Riwayat_Penyakit_Keluarga_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Penyakit_Keluarga}  r-vertical-field" 
+	data-fieldname="Riwayat Penyakit Keluarga" 
+	data-signal-error-for="Riwayat_Penyakit_Keluarga{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="Riwayat_Penyakit_Keluarga" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Penyakit_Keluarga}">
+		{BEGIN Riwayat_Penyakit_Keluarga_label}{$label obstetri Riwayat_Penyakit_Keluarga }{END Riwayat_Penyakit_Keluarga_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Penyakit_Keluarga_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Penyakit_Keluarga">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_Penyakit_Keluarga }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Penyakit_Keluarga_fieldblock}
+											
+{BEGIN Riwayat_Alergi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Alergi}  r-vertical-field" 
+	data-fieldname="Riwayat Alergi" 
+	data-signal-error-for="Riwayat_Alergi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="Riwayat_Alergi" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Alergi}">
+		{BEGIN Riwayat_Alergi_label}{$label obstetri Riwayat_Alergi }{END Riwayat_Alergi_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Alergi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Alergi">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_Alergi }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Alergi_fieldblock}
+											
+{BEGIN Riwayat_Pengobatan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Pengobatan}  r-vertical-field" 
+	data-fieldname="Riwayat Pengobatan" 
+	data-signal-error-for="Riwayat_Pengobatan{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="Riwayat_Pengobatan" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Pengobatan}">
+		{BEGIN Riwayat_Pengobatan_label}{$label obstetri Riwayat_Pengobatan }{END Riwayat_Pengobatan_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Pengobatan_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Pengobatan">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_Pengobatan }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Pengobatan_fieldblock}
+											
+{BEGIN Riwayat_Kebiasaan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Kebiasaan}  r-vertical-field" 
+	data-fieldname="Riwayat Kebiasaan" 
+	data-signal-error-for="Riwayat_Kebiasaan{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="Riwayat_Kebiasaan" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Kebiasaan}">
+		{BEGIN Riwayat_Kebiasaan_label}{$label obstetri Riwayat_Kebiasaan }{END Riwayat_Kebiasaan_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Kebiasaan_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Kebiasaan">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_Kebiasaan }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Kebiasaan_fieldblock}
+											
+{BEGIN Riwayat_haid_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_haid}  r-vertical-field" 
+	data-fieldname="Riwayat haid" 
+	data-signal-error-for="Riwayat_haid{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="Riwayat_haid" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_haid}">
+		{BEGIN Riwayat_haid_label}{$label obstetri Riwayat_haid }{END Riwayat_haid_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_haid_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_haid">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_haid }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_haid_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c1}
+			 
+																
+
+{BEGIN cellblock_section1_c}
+<td
+	{$cell_section1_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN Riwayat_pernikahan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_pernikahan}  r-vertical-field" 
+	data-fieldname="Riwayat pernikahan" 
+	data-signal-error-for="Riwayat_pernikahan{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="Riwayat_pernikahan" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_pernikahan}">
+		{BEGIN Riwayat_pernikahan_label}{$label obstetri Riwayat_pernikahan }{END Riwayat_pernikahan_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_pernikahan_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_pernikahan">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_pernikahan }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_pernikahan_fieldblock}
+											
+{BEGIN Riwayat_Sosial_Ekonomi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Sosial_Ekonomi}  r-vertical-field" 
+	data-fieldname="Riwayat Sosial Ekonomi" 
+	data-signal-error-for="Riwayat_Sosial_Ekonomi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="Riwayat_Sosial_Ekonomi" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Sosial_Ekonomi}">
+		{BEGIN Riwayat_Sosial_Ekonomi_label}{$label obstetri Riwayat_Sosial_Ekonomi }{END Riwayat_Sosial_Ekonomi_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Sosial_Ekonomi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Sosial_Ekonomi">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_Sosial_Ekonomi }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Sosial_Ekonomi_fieldblock}
+											
+{BEGIN Riwayat_persalinan_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_persalinan}  r-vertical-field" 
+	data-fieldname="Riwayat persalinan" 
+	data-signal-error-for="Riwayat_persalinan{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="Riwayat_persalinan" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_persalinan}">
+		{BEGIN Riwayat_persalinan_label}{$label obstetri Riwayat_persalinan }{END Riwayat_persalinan_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_persalinan_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_persalinan">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_persalinan }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_persalinan_fieldblock}
+											
+{BEGIN Riwayat_menyusui_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_menyusui}  r-vertical-field" 
+	data-fieldname="Riwayat menyusui" 
+	data-signal-error-for="Riwayat_menyusui{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="Riwayat_menyusui" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_menyusui}">
+		{BEGIN Riwayat_menyusui_label}{$label obstetri Riwayat_menyusui }{END Riwayat_menyusui_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_menyusui_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_menyusui">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_menyusui }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_menyusui_fieldblock}
+											
+{BEGIN Riwayat_imunisasi_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_imunisasi}  r-vertical-field" 
+	data-fieldname="Riwayat imunisasi" 
+	data-signal-error-for="Riwayat_imunisasi{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="Riwayat_imunisasi" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_imunisasi}">
+		{BEGIN Riwayat_imunisasi_label}{$label obstetri Riwayat_imunisasi }{END Riwayat_imunisasi_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_imunisasi_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_imunisasi">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_imunisasi }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_imunisasi_fieldblock}
+											
+{BEGIN Riwayat_Keluarga_Berencana_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_Riwayat_Keluarga_Berencana}  r-vertical-field" 
+	data-fieldname="Riwayat Keluarga Berencana" 
+	data-signal-error-for="Riwayat_Keluarga_Berencana{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="Riwayat_Keluarga_Berencana" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_Riwayat_Keluarga_Berencana}">
+		{BEGIN Riwayat_Keluarga_Berencana_label}{$label obstetri Riwayat_Keluarga_Berencana }{END Riwayat_Keluarga_Berencana_label}
+	</label>
+	<div class="r-edit-field">
+		{$Riwayat_Keluarga_Berencana_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="Riwayat_Keluarga_Berencana">
+		<div class="text-muted" >
+		{$tooltip obstetri Riwayat_Keluarga_Berencana }		</div>
+	</div>
+</div>
+
+
+{END Riwayat_Keluarga_Berencana_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c}
+								</tr>
+			</tbody></table>
+{END section1_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section2{$pageid}"> 
+			{BEGIN section2_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section2" id="form_section2_{$pageid}" data-makeup="small" {$form_section2} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section2_c1}
+<td
+	{$cell_section2_c1}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section2_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN PEMERIKSAA_FISIK__UMUM_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PEMERIKSAA_FISIK__UMUM}  r-vertical-field" 
+	data-fieldname="PEMERIKSAA FISIK  UMUM" 
+	data-signal-error-for="PEMERIKSAA_FISIK__UMUM{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="PEMERIKSAA_FISIK__UMUM" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_PEMERIKSAA_FISIK__UMUM}">
+		{BEGIN PEMERIKSAA_FISIK__UMUM_label}{$label obstetri PEMERIKSAA_FISIK__UMUM }{END PEMERIKSAA_FISIK__UMUM_label}
+	</label>
+	<div class="r-edit-field">
+		{$PEMERIKSAA_FISIK__UMUM_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="PEMERIKSAA_FISIK__UMUM">
+		<div class="text-muted" >
+		{$tooltip obstetri PEMERIKSAA_FISIK__UMUM }		</div>
+	</div>
+</div>
+
+
+{END PEMERIKSAA_FISIK__UMUM_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c1}
+								</tr>
+			</tbody></table>
+{END section2_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section3{$pageid}"> 
+			{BEGIN section3_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section3" id="form_section3_{$pageid}" data-makeup="small" {$form_section3} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section3_c1}
+<td
+	{$cell_section3_c1}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section3_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN PEMERIKSAAN__OBSTETRI_GINEKOLOGI_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PEMERIKSAAN__OBSTETRI_GINEKOLOGI}  r-vertical-field" 
+	data-fieldname="PEMERIKSAAN  OBSTETRI/GINEKOLOGI" 
+	data-signal-error-for="PEMERIKSAAN__OBSTETRI_GINEKOLOGI{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="PEMERIKSAAN__OBSTETRI_GINEKOLOGI" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_PEMERIKSAAN__OBSTETRI_GINEKOLOGI}">
+		{BEGIN PEMERIKSAAN__OBSTETRI_GINEKOLOGI_label}{$label obstetri PEMERIKSAAN__OBSTETRI_GINEKOLOGI }{END PEMERIKSAAN__OBSTETRI_GINEKOLOGI_label}
+	</label>
+	<div class="r-edit-field">
+		{$PEMERIKSAAN__OBSTETRI_GINEKOLOGI_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="PEMERIKSAAN__OBSTETRI_GINEKOLOGI">
+		<div class="text-muted" >
+		{$tooltip obstetri PEMERIKSAAN__OBSTETRI_GINEKOLOGI }		</div>
+	</div>
+</div>
+
+
+{END PEMERIKSAAN__OBSTETRI_GINEKOLOGI_fieldblock}
+	
+								</td>
+			{END cellblock_section3_c1}
+								</tr>
+			</tbody></table>
+{END section3_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section4{$pageid}"> 
+			{BEGIN section4_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section4" id="form_section4_{$pageid}" data-makeup="small" {$form_section4} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section4_c1}
+<td
+	{$cell_section4_c1}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section4_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN PEMERIKSAAN_PENUNJANG_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_PEMERIKSAAN_PENUNJANG}  r-vertical-field" 
+	data-fieldname="PEMERIKSAAN PENUNJANG" 
+	data-signal-error-for="PEMERIKSAAN_PENUNJANG{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="PEMERIKSAAN_PENUNJANG" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_PEMERIKSAAN_PENUNJANG}">
+		{BEGIN PEMERIKSAAN_PENUNJANG_label}{$label obstetri PEMERIKSAAN_PENUNJANG }{END PEMERIKSAAN_PENUNJANG_label}
+	</label>
+	<div class="r-edit-field">
+		{$PEMERIKSAAN_PENUNJANG_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="PEMERIKSAAN_PENUNJANG">
+		<div class="text-muted" >
+		{$tooltip obstetri PEMERIKSAAN_PENUNJANG }		</div>
+	</div>
+</div>
+
+
+{END PEMERIKSAAN_PENUNJANG_fieldblock}
+	
+								</td>
+			{END cellblock_section4_c1}
+								</tr>
+			</tbody></table>
+{END section4_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section6{$pageid}"> 
+			{BEGIN section6_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section6" id="form_section6_{$pageid}" data-makeup="small" {$form_section6} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section6_c1}
+<td
+	{$cell_section6_c1}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section6_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN}  r-vertical-field" 
+	data-fieldname="RENCANA TATALAKSANA/ USULAN PEMERIKSAAN" 
+	data-signal-error-for="RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field19" {$item_integrated_edit_field19} data-pageid="{$pageid}" data-field="RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN}">
+		{BEGIN RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN_label}{$label obstetri RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN }{END RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN_label}
+	</label>
+	<div class="r-edit-field">
+		{$RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN">
+		<div class="text-muted" >
+		{$tooltip obstetri RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN }		</div>
+	</div>
+</div>
+
+
+{END RENCANA_TATALAKSANA__USULAN_PEMERIKSAAN_fieldblock}
+	
+								</td>
+			{END cellblock_section6_c1}
+								</tr>
+			</tbody></table>
+{END section6_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section5{$pageid}"> 
+			{BEGIN section5_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section5" id="form_section5_{$pageid}" data-makeup="small" {$form_section5} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section5_c1}
+<td
+	{$cell_section5_c1}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section5_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN DIAGNOSIS_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_DIAGNOSIS}  r-vertical-field" 
+	data-fieldname="DIAGNOSIS" 
+	data-signal-error-for="DIAGNOSIS{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field18" {$item_integrated_edit_field18} data-pageid="{$pageid}" data-field="DIAGNOSIS" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_DIAGNOSIS}">
+		{BEGIN DIAGNOSIS_label}{$label obstetri DIAGNOSIS }{END DIAGNOSIS_label}
+	</label>
+	<div class="r-edit-field">
+		{$DIAGNOSIS_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="DIAGNOSIS">
+		<div class="text-muted" >
+		{$tooltip obstetri DIAGNOSIS }		</div>
+	</div>
+</div>
+
+
+{END DIAGNOSIS_fieldblock}
+	
+								</td>
+			{END cellblock_section5_c1}
+								</tr>
+			</tbody></table>
+{END section5_block}
+						</div>
+					<div role="tabpanel" class="tab-pane " id="tab_section7{$pageid}"> 
+			{BEGIN section7_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section7" id="form_section7_{$pageid}" data-makeup="small" {$form_section7} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_section7_c1}
+<td
+	{$cell_section7_c1}
+	class=" r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section7_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN KONSELING_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_KONSELING}  r-vertical-field" 
+	data-fieldname="KONSELING" 
+	data-signal-error-for="KONSELING{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field20" {$item_integrated_edit_field20} data-pageid="{$pageid}" data-field="KONSELING" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_KONSELING}">
+		{BEGIN KONSELING_label}{$label obstetri KONSELING }{END KONSELING_label}
+	</label>
+	<div class="r-edit-field">
+		{$KONSELING_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="KONSELING">
+		<div class="text-muted" >
+		{$tooltip obstetri KONSELING }		</div>
+	</div>
+</div>
+
+
+{END KONSELING_fieldblock}
+	
+								</td>
+			{END cellblock_section7_c1}
+								</tr>
+			</tbody></table>
+{END section7_block}
+						</div>
+				</div>
+	</div>
+</div>  											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr>
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_pasien_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_pasien}  r-vertical-field" 
+	data-fieldname="id_pasien" 
+	data-signal-error-for="id_pasien{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="id_pasien" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_pasien}">
+		{BEGIN id_pasien_label}{$label obstetri id_pasien }{END id_pasien_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_pasien_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_pasien">
+		<div class="text-muted" >
+		{$tooltip obstetri id_pasien }		</div>
+	</div>
+</div>
+
+
+{END id_pasien_fieldblock}
+											
+{BEGIN id_user_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id_user}  r-vertical-field" 
+	data-fieldname="id_user" 
+	data-signal-error-for="id_user{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="id_user" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_id_user}">
+		{BEGIN id_user_label}{$label obstetri id_user }{END id_user_label}
+	</label>
+	<div class="r-edit-field">
+		{$id_user_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="id_user">
+		<div class="text-muted" >
+		{$tooltip obstetri id_user }		</div>
+	</div>
+</div>
+
+
+{END id_user_fieldblock}
+											
+{BEGIN nomor_rm_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_nomor_rm}  r-vertical-field" 
+	data-fieldname="nomor_rm" 
+	data-signal-error-for="nomor_rm{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field22" {$item_integrated_edit_field22} data-pageid="{$pageid}" data-field="nomor_rm" >
+
+
+	<label class="r-edit-label control-label" for="{$labelfor_nomor_rm}">
+		{BEGIN nomor_rm_label}{$label obstetri nomor_rm }{END nomor_rm_label}
+	</label>
+	<div class="r-edit-field">
+		{$nomor_rm_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="nomor_rm">
+		<div class="text-muted" >
+		{$tooltip obstetri nomor_rm }		</div>
+	</div>
+</div>
+
+
+{END nomor_rm_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN save_edit}
+<span data-itemtype="edit_save" data-itemid="edit_save" {$item_edit_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Save			</a>
+</span>
+{END save_edit}
+	 
+		{BEGIN back_button}
+<span data-itemtype="edit_back_list" data-itemid="edit_back_list" {$item_edit_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Back to list			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="edit_close" data-itemid="edit_close" {$item_edit_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$closebutton_attrs} >
+							Cancel			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right			col-md-6
+	">
+	 
+		<span data-itemtype="prev" data-itemid="prev" {$item_prev} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	{$prevbutton_class}" {$prevbutton_attrs} >
+					<span class="glyphicon glyphicon-menu-left"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="next" data-itemid="next" {$item_next} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	{$nextbutton_class}" {$nextbutton_attrs} >
+					<span class="glyphicon glyphicon-menu-right"></span>
+										</a>
+</span>
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+									<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+								<li data-itemtype="edit_reset" data-itemid="edit_reset" {$item_edit_reset} data-pageid="{$pageid}" data-small >
+				<a  {$resetbutton_attrs}  title="" >
+				
+		Reset		
+		</a>
+	</li>
+							{BEGIN view_page_button}
+	<li data-itemtype="edit_view" data-itemid="edit_view" {$item_edit_view} data-pageid="{$pageid}" data-small >
+				<a  href="obstetri_view.php?{$editlink}" {$view_page_button_attrs}  title="" >
+				
+		View		
+		</a>
+	</li>
+{END view_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
