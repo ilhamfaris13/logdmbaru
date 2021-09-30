@@ -36,6 +36,7 @@ Route::get('/',[DashboardController::class, 'index'], function () {
     return view('dashboard');
 });
 Route::post('/upload/foto', [DashboardController::class, 'proses_upload']);
+Route::post('/ganti/pwd', [DashboardController::class, 'ganti_pwd']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[DashboardController::class, 'index'], function () {
     return view('dashboard');
 })->name('dashboard');
@@ -112,7 +113,7 @@ Route::get('pdfview', [SignaturePadController::class, 'pdfView']);
 | Panduan
 */
 Route::get('panduan', [PanduanController::class, 'index']);
-
+Route::get('/downloadfile',[PanduanController::class, 'downloadfile']);
 /*
 | 
 |--------------------------------------------------------------------------

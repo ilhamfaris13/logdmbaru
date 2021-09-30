@@ -15,18 +15,14 @@
     </p>
 
     <ul>
-        <li><a href="http://fk.hangtuah.ac.id/feedback-website/">Form Feedback</a>
-         
-        </li>
+        <li><a href="/downloadfile">Download Buku Panduan</a></li>
+        <li><a href="http://fk.hangtuah.ac.id/feedback-website/">Form Feedback</a></li>
         
     </ul>
     </div>
 <div>
 
-
-
-        
-        </div>
+</div>
           
            
              

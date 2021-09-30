@@ -188,6 +188,24 @@
             </div>
             
         </div>
+
+        <div class="card card-primary card-outline">
+            <div class="card-body box-profile">
+            <form action="/ganti/pwd" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+          
+                    <div class="form-group">
+                      <b>GANTI PASSWORD</b><br/>
+                      <div class="form-group">
+                    <label class="col-form-label" for="modal-input-password">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" required>
+                    </div>
+                    </div>
+                    <input type="submit" value="Ganti" class="btn btn-primary">
+                  </form>
+            </div>
+            
+        </div>
        
        <!--  <div class="card card-primary card-outline">
             <div class="card-body box-profile">
