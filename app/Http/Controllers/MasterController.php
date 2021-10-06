@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use DB;
 use Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Dm;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
 class MasterController extends Controller
 {
     /**
@@ -166,6 +170,206 @@ class MasterController extends Controller
         else{
             abort(403, 'Tidak Diizinkan');
         }
+    }
+    public function index_tarik()
+    {
+         //
+        //$user;
+        $userAuth = Auth::user();
+        /*$user=DB::table('users')
+        ->join('user','users.username','=','user.nim_profesi_dokter')
+        ->select('users.*','user.kelompok','user.nama')
+        ->where('user.nim_profesi_dokter', '=',$userAuth->username)
+        ->get();*/
+        if($userAuth->level == 'dm'){
+            abort(403, 'Tidak Diizinkan');
+        } 
+        elseif($userAuth->level =='dosen') {
+            abort(403, 'Tidak Diizinkan');
+        }
+        elseif($userAuth->level =='admin') {
+            $user2 = DB::table('rumah_sakit')
+            ->orderBy('id','desc')
+            ->get();
+            
+            return view('admin.master_sinkron',compact('user2'));
+        }
+        else{
+            abort(403, 'Tidak Diizinkan');
+        }
+    }
+    public function create_dm(Request $request)
+    {
+        //
+        
+        //dd($request->sinkron);
+        if($request->sinkron == 'sinkrondm')
+        {
+            $old_users = Dm::get();
+        $old_users2 = DB::table('dm')->get();
+        $old_users3 = DB::table('dosen')->get();
+      
+        foreach ($old_users2 as $u){
+            //echo $u->NAMA;
+            //dd($u->NIM_Profesi_Dokter);
+            $array = [
+                ['name' => $u->NAMA,
+                 'username' => $u->nim_profesi_dokter,
+                 'email' => $u->nim_profesi_dokter . '@hangtuah.ac.id',
+                 'password' => Hash::make($u->nim_profesi_dokter),
+                 'level' => 'dm',
+                 'profile_photo_path' => 'default.png',
+                 'pwd_rm' => $u->nim_profesi_dokter]
+                 
+              ];
+              $array2 = [
+                ['NAMA' => $u->NAMA,
+                 'User' => $u->nim_profesi_dokter,
+                 'NIM_Profesi_Dokter' => $u->nim_profesi_dokter ,
+                 'Password' => $u->nim_profesi_dokter,
+                 'Kelompok' => $u->Kelompok]
+                 
+              ];
+              DB::table('users')->insertOrIgnore($array);
+           
+        }
+       // dd($old_users2);
+        return back()->with('success', 'success sinkron');
+        }
+        elseif($request->sinkron == 'sinkrondosen')
+        {
+            //dd('Ini Sinkron DOSEN');
+            $old_users = Dm::get();
+            $old_users2 = DB::table('dm')->get();
+            $old_users3 = DB::table('dosen')->get();
+           
+            foreach ($old_users3 as $u){
+                //echo $u->NAMA;
+                //dd($u->NIM_Profesi_Dokter);
+                $array = [
+                    ['name' => $u->NAMA,
+                    'username' => $u->NIP,
+                    'email' => $u->NIP . '@hangtuah.ac.id',
+                    'password' => Hash::make($u->NIP),
+                    'level' => 'dosen',
+                    'profile_photo_path' => 'default.png'
+                    ]
+                    
+                ];
+                DB::table('users')->insertOrIgnore($array);
+                
+            }
+        // dd($old_users2);
+            return back()->with('success', 'success sinkron Dosen');
+        }
+        elseif($request->sinkron == 'resetpwd')
+        {
+            $old_users = Dm::get();
+        $old_users2 = DB::table('dm')->get();
+        $old_users3 = DB::table('dosen')->get();
+        $old_users4 = DB::table('users')->get();
+        foreach ($old_users2 as $u){
+            
+              DB::table('users')
+              ->where('level', 'dm')
+              ->where('username',$u->nim_profesi_dokter)
+                ->update(
+                    [
+                    'password' => Hash::make($u->nim_profesi_dokter),
+                    'pwd_rm' => $u->nim_profesi_dokter,
+                    ]
+                );
+        }
+       
+        return back()->with('success', 'success reset semua Password');
+        }
+        else
+        {
+            //dd('Ini ELSE');
+            return back()->with('failed', 'Pilih pengaturan terlebih dahulu');
+        }
+        
+    }
+    public function createResetPwd(Request $request)
+    {
+        //
+        $old_users = Dm::get();
+        $old_users2 = DB::table('dm')->get();
+        $old_users3 = DB::table('dosen')->get();
+        //dd($old_users3);
+        /*foreach ($old_users3 as $u){
+            //echo $u->NAMA;
+            //dd($u->NIM_Profesi_Dokter);
+            DB::insert('insert into users (name,username,email,password,level) values (?,?,?,?,?)',[
+                $u->NAMA,
+                $u->NIP,
+                $u->NIP . '@gmail.com',
+                Hash::make($u->NIP),
+                'dosen' 
+
+                
+            ]);
+        }*/
+        foreach ($old_users2 as $u){
+            
+              DB::table('users')
+              ->where('level', 'dm')
+                ->update(
+                    [
+                    'ttdp' => $filename,
+                    'status' => 1,
+                    'password' => Hash::make($u->nim_profesi_dokter),
+                    'pwd_rm' => $u->nim_profesi_dokter,
+                    ]
+                );
+        }
+       
+        return back()->with('success', 'success reset semua Password');
+    }
+    public function create_dosen(Request $request)
+    {
+        $old_users = Dm::get();
+        $old_users2 = DB::table('dm')->get();
+        $old_users3 = DB::table('dosen')->get();
+        //dd($old_users3);
+        /*foreach ($old_users3 as $u){
+            //echo $u->NAMA;
+            //dd($u->NIM_Profesi_Dokter);
+            DB::insert('insert into users (name,username,email,password,level) values (?,?,?,?,?)',[
+                $u->NAMA,
+                $u->NIP,
+                $u->NIP . '@gmail.com',
+                Hash::make($u->NIP),
+                'dosen' 
+
+                
+            ]);
+        }*/
+        foreach ($old_users3 as $u){
+            //echo $u->NAMA;
+            //dd($u->NIM_Profesi_Dokter);
+            $array = [
+                ['name' => $u->NAMA,
+                 'username' => $u->NIP,
+                 'email' => $u->NIP . '@hangtuah.ac.id',
+                 'password' => Hash::make($u->NIP),
+                 'level' => 'dosen',
+                 'profile_photo_path' => 'default.png'
+                 ]  
+            ];
+              DB::table('users')->insertOrIgnore($array);
+            /* DB::insertOrIgnore('insert into users (name,username,email,password,level) values (?,?,?,?,?)',[
+                $u->NAMA,
+                $u->nim_profesi_dokter,
+                $u->nim_profesi_dokter . '@hangtuah.ac.id',
+                Hash::make($u->nim_profesi_dokter),
+                'dm'  
+
+                
+            ]);*/
+        }
+       // dd($old_users2);
+        return back()->with('success', 'success sinkron Dosen');
     }
     public function index_user()
     {

@@ -12,22 +12,14 @@
             <h3 class="card-title">Sinkron Database</h3>
         </div>
             <div class="card-body">
-            <form id="edit-form" method="POST" action="<?php echo e(route('sync.create')); ?>">
-                        <?php echo csrf_field(); ?>
-            
+            <form method="POST" action="<?php echo e(route('syncdb.create')); ?>">
+            <?php echo e(csrf_field()); ?>
+
               <div class="form-group">
               <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Sinkron User DM" />
              </div>
-                      
         </form>
-        <form id="edit-form" method="POST" action="<?php echo e(route('sync.create_dosen')); ?>">
-                        <?php echo csrf_field(); ?>
-            
-              <div class="form-group">
-              <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Sinkron User Dosen/Dokter" />
-             </div>
-            </div>               
-        </form>
+       
             </div>
         </div>
         <!-- END COL 2- CARD 1 -->

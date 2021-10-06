@@ -12,22 +12,13 @@
             <h3 class="card-title">Sinkron Database</h3>
         </div>
             <div class="card-body">
-            <form id="edit-form" method="POST" action="{{ route('sync.create') }}">
-                        @csrf
-            
+            <form method="POST" action="{{ route('syncdb.create') }}">
+            {{ csrf_field() }}
               <div class="form-group">
               <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Sinkron User DM" />
              </div>
-                      
         </form>
-        <form id="edit-form" method="POST" action="{{ route('sync.create_dosen') }}">
-                        @csrf
-            
-              <div class="form-group">
-              <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Sinkron User Dosen/Dokter" />
-             </div>
-            </div>               
-        </form>
+       
             </div>
         </div>
         <!-- END COL 2- CARD 1 -->

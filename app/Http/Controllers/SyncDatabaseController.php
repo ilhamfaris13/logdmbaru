@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+
+use DB;
+use Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Dm;
 use Illuminate\Support\Facades\File;
@@ -17,9 +19,30 @@ class SyncDatabaseController extends Controller
      */
     public function index()
     {
-        $icd = DB::table('icd')
-        ->get();
-        return view('syncdb',compact('icd'));
+         //
+        //$user;
+        $userAuth = Auth::user();
+        /*$user=DB::table('users')
+        ->join('user','users.username','=','user.nim_profesi_dokter')
+        ->select('users.*','user.kelompok','user.nama')
+        ->where('user.nim_profesi_dokter', '=',$userAuth->username)
+        ->get();*/
+        if($userAuth->level == 'dm'){
+            abort(403, 'Tidak Diizinkan');
+        } 
+        elseif($userAuth->level =='dosen') {
+            abort(403, 'Tidak Diizinkan');
+        }
+        elseif($userAuth->level =='admin') {
+            $user2 = DB::table('rumah_sakit')
+            ->orderBy('id','desc')
+            ->get();
+            
+            return view('admin.master_db',compact('user2'));
+        }
+        else{
+            abort(403, 'Tidak Diizinkan');
+        }
     }
 
     /**
@@ -96,7 +119,16 @@ class SyncDatabaseController extends Controller
                  'profile_photo_path' => 'default.png']
                  
               ];
+              $array2 = [
+                ['NAMA' => $u->NAMA,
+                 'User' => $u->nim_profesi_dokter,
+                 'NIM_Profesi_Dokter' => $u->nim_profesi_dokter ,
+                 'Password' => $u->nim_profesi_dokter,
+                 'Kelompok' => $u->Kelompok]
+                 
+              ];
               DB::table('users')->insertOrIgnore($array);
+              DB::table('user')->insertOrIgnore($array2);
             /* DB::insertOrIgnore('insert into users (name,username,email,password,level) values (?,?,?,?,?)',[
                 $u->NAMA,
                 $u->nim_profesi_dokter,
@@ -155,6 +187,42 @@ class SyncDatabaseController extends Controller
         }
        // dd($old_users2);
         return back()->with('success', 'success sinkron Dosen');
+    }
+    public function createResetPwd(Request $request)
+    {
+        //
+        $old_users = Dm::get();
+        $old_users2 = DB::table('dm')->get();
+        $old_users3 = DB::table('dosen')->get();
+        //dd($old_users3);
+        /*foreach ($old_users3 as $u){
+            //echo $u->NAMA;
+            //dd($u->NIM_Profesi_Dokter);
+            DB::insert('insert into users (name,username,email,password,level) values (?,?,?,?,?)',[
+                $u->NAMA,
+                $u->NIP,
+                $u->NIP . '@gmail.com',
+                Hash::make($u->NIP),
+                'dosen' 
+
+                
+            ]);
+        }*/
+        foreach ($old_users2 as $u){
+            
+              DB::table('users')
+              ->where('level', 'dm')
+                ->update(
+                    [
+                    'ttdp' => $filename,
+                    'status' => 1,
+                    'password' => Hash::make($u->nim_profesi_dokter),
+                    'pwd_rm' => $u->nim_profesi_dokter,
+                    ]
+                );
+        }
+       
+        return back()->with('success', 'success reset semua Password');
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
+use Illuminate\Support\Facades\Hash;
 class DashboardController extends Controller
 {
     //
@@ -34,42 +35,55 @@ class DashboardController extends Controller
         ->orderBy('id_mata','desc')
         ->get();
         $ipd=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',1)
         ->count();
         $ika=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',2)
         ->count();
         $bedah=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',3)
         ->count();
         $kulit=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',4)
         ->count();
         $tht=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',5)
         ->count();
         $mata1=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',6)
         ->count();
         $saraf=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',7)
         ->count();
         $jiwa=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',8)
         ->count();
         $forensik=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',9)
         ->count();
         $anestesi=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',10)
         ->count();
         $radiologi=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',11)
         ->count();
         $rehab=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',12)
         ->count();
         $farmasi=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',28)
         ->count();
        
@@ -121,5 +135,18 @@ class DashboardController extends Controller
             ]           
         );
         return back()->with('success', 'Sukses Merubah Foto');
+	}
+    public function ganti_pwd(Request $request){
+      //  dd('GANTI PWD '.$request->password);
+      $userAuth = Auth::user();
+      $foto = DB::table('users')
+      ->where('id', $userAuth->id)
+      ->update(
+          [
+            'password' => Hash::make($request->password),
+            'pwd_rm' => $request->password
+          ]           
+      );
+        return back()->with('success', 'Sukses Merubah Password');
 	}
 }

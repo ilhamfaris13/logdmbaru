@@ -190,7 +190,7 @@
 
         <div class="card card-primary card-outline">
             <div class="card-body box-profile">
-            <form action="/upload/foto" method="POST" enctype="multipart/form-data">
+            <form action="/ganti/pwd" method="POST" enctype="multipart/form-data">
                     <?php echo e(csrf_field()); ?>
 
           

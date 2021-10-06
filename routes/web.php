@@ -87,10 +87,9 @@ Route::post('/kegiatan/store',[SignaturePadController2::class, 'store'])->name('
 |--------------------------------------------------------------------------
 | Sync Database Controller
 */
-Route::post('syncdb',[SyncDatabaseController::class, 'create'])->name('sync.create');
-Route::post('syncdb',[SyncDatabaseController::class, 'folder'])->name('sync.folder');
+Route::post('syncdb',[SyncDatabaseController::class, 'create'])->name('syncdb.create');
 Route::post('syncdb/multi',[SyncDatabaseController::class, 'multi'])->name('sync.multi');
-Route::post('syncdosen',[SyncDatabaseController::class, 'create_dosen'])->name('sync.create_dosen');
+Route::post('syncdosen',[SyncDatabaseController::class, 'create_dosen'])->name('sinkron.create_dosen');
 Route::get('syncdb',[SyncDatabaseController::class, 'index']);
 Route::get('ajax-autocomplete-search', [SyncDatabaseController::class,'selectSearch']);
 /*
@@ -190,9 +189,15 @@ Route::get('masterdosen', [MasterController::class, 'index_dosen']);
 Route::get('masterstase', [MasterController::class, 'index_stase']);
 Route::get('masterrs', [MasterController::class, 'index_rs']);
 Route::get('mastersinkron', [MasterController::class, 'index_db']);
+Route::post('mastersinkron', [MasterController::class, 'create_dm'])->name('sync.create_dm');
+Route::post('mastersinkron', [MasterController::class, 'createResetPwd'])->name('sync.resetpwd');
 Route::get('masteruser', [MasterController::class, 'index_user']);
 Route::get('masterkegiatan', [MasterController::class, 'index_kegiatan']);
 Route::get('detail_kegiatan/{id}', [MasterController::class, 'index_detail_kegiatan']);
+
+Route::get('tarikdb', [MasterController::class, 'index_tarik']);
+Route::post('tarikdb', [MasterController::class, 'create_dm'])->name('tarikdb.create');
+//Route::post('tarikdb', [MasterController::class, 'createResetPwd'])->name('reset.create');
 /*
 | 
 |--------------------------------------------------------------------------

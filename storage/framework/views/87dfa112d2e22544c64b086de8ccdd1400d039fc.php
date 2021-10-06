@@ -159,7 +159,7 @@
             </a>
                 <ul class="nav nav-treeview" style="display: none;">
                   <li class="nav-item">
-                    <a href="<?php echo e(url('/mastersinkron')); ?>" class="nav-link">
+                    <a href="<?php echo e(url('/tarikdb')); ?>" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Sinkron Database</p>
                     </a>
