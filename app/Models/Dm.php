@@ -16,8 +16,13 @@ class Dm extends Model
         'sex',
         'masa_kerja',
         'keterangan',
+        'alamat_rumah',
+        'alamat_orang_tua',
+        'ttd',
+        'foto'
     ];
-
+    protected $table = 'dm';
+    public $timestamps = false;
     /**
      * The attributes that should be hidden for arrays.
      *

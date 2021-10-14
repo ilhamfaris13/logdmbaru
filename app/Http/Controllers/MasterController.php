@@ -6,10 +6,14 @@ use Illuminate\Http\Request;
 
 use DB;
 use Auth;
+//use App\DM;
+use Session;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Dm;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Response;
+use App\Imports\DmImport;
+use Maatwebsite\Excel\Facades\Excel;
 class MasterController extends Controller
 {
     /**
@@ -439,6 +443,7 @@ class MasterController extends Controller
             abort(403, 'Tidak Diizinkan');
         }
     }
+    
     public function index_detail_kegiatan($id)
     {
          //
@@ -625,6 +630,36 @@ class MasterController extends Controller
         else{
             abort(403, 'Tidak Diizinkan');
         }
+    }
+    public function index_import()
+    {
+        return view('admin.master_import');
+    }
+    public function import_excel(Request $request)
+    {
+        // validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:csv,xls,xlsx'
+		]);
+ 
+		// menangkap file excel
+		$file = $request->file('file');
+ 
+		// membuat nama file unik
+		$nama_file = rand().$file->getClientOriginalName();
+ 
+		// upload ke folder file_siswa di dalam folder public
+		$file->move('upload',$nama_file);
+ 
+		// import data
+		Excel::import(new DmImport, public_path('/upload/'.$nama_file));
+ 
+		// notifikasi dengan session
+		//Session::flash('sukses','Data Siswa Berhasil Diimport!');
+ 
+		// alihkan halaman kembali
+		//return redirect('/masterimport');
+        return back()->with('success', 'Data Siswa Berhasil Diimport!');
     }
     /**
      * Show the form for creating a new resource.

@@ -169,6 +169,12 @@
                       <p>User</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="{{url('/masterimport')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Import User</p>
+                    </a>
+                  </li>
                   
                   
                 </ul>

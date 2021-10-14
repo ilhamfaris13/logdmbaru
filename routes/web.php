@@ -194,7 +194,8 @@ Route::post('mastersinkron', [MasterController::class, 'createResetPwd'])->name(
 Route::get('masteruser', [MasterController::class, 'index_user']);
 Route::get('masterkegiatan', [MasterController::class, 'index_kegiatan']);
 Route::get('detail_kegiatan/{id}', [MasterController::class, 'index_detail_kegiatan']);
-
+Route::get('masterimport', [MasterController::class, 'index_import']);
+Route::post('/dm/import_excel',[MasterController::class, 'import_excel']);
 Route::get('tarikdb', [MasterController::class, 'index_tarik']);
 Route::post('tarikdb', [MasterController::class, 'create_dm'])->name('tarikdb.create');
 //Route::post('tarikdb', [MasterController::class, 'createResetPwd'])->name('reset.create');
