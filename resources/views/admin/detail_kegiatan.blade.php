@@ -8,7 +8,6 @@
             <div class="card card-primary card-outline">
               <div class="card-body box-profile">
                 <div class="text-center">
-               
                    @foreach($user2 as $key => $us)
                    <img class="profile-user-img img-responsive img-circle"
                   src="/upload/profile/{{ $us->profile_photo_path}}" alt="{{ Auth::user()->name }}"
@@ -35,6 +34,74 @@
                   <li class="list-group-item">
                     <b>NIM</b> <a class="float-right">{{$users->username}}</a>
                   </li>
+                  
+                  @foreach($paru as $key => $parus)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$parus->nomor_rm}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/paru1_view.php?editid1={{$parus->Id_paru}}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  @endforeach
+                  @foreach($andrologi as $key => $rms)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$rms->nomor_rm}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/andrologi1_view.php?editid1={{$rms->id_andrologi}}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  @endforeach
+                  @foreach($ginekologi as $key => $rms)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$rms->nomor_rm}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/ginekologi1_view.php?editid1={{$rms->id_gine}}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  @endforeach
+                  @foreach($interna as $key => $rms)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$rms->nomor_rm}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/interna1_view.php?editid1={{$rms->id_interna}}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  @endforeach
+                  @foreach($jiwa1 as $key => $rms)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$rms->nomor_rm}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/jiwa1_view.php?editid1={{$rms->id_Jiwa}}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  @endforeach
+                  @foreach($kulit1 as $key => $rms)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$rms->nomor_rm}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/kulit1_view.php?editid1={{$rms->id_kulit}}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  @endforeach
+                  @foreach($mata1 as $key => $rms)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$rms->nomor_rm}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/mata1_view.php?editid1={{$rms->id_mata}}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  @endforeach
+                  @foreach($neurologi as $key => $rms)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$rms->nomor_rm}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/neurologi1_view.php?editid1={{$rms->id_neuro }}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  @endforeach
+                  @foreach($obstetri as $key => $rms)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$rms->nomor_rm}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/obstetri1_view.php?editid1={{$rms->Id_obstetri}}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  @endforeach
+                  @foreach($pediatri1 as $key => $rms)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$rms->nomor_rm}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/pediatri1_view.php?editid1={{$rms->id_pediatri}}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  @endforeach
+                  @foreach($tht1 as $key => $rms)
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right">{{$rms->nomor_rm}}</a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/tht1_view.php?editid1={{$rms->id_tht}}&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  @endforeach
+                  
                 </ul>
               </div>
               <!-- /.card-body -->

@@ -56,6 +56,33 @@ class PenilaianController extends Controller
  
         return view('/penilaian/responsi',compact('logs','verif'));
     }
+    public function evaluasi()
+    {
+         //
+        //$user;
+        $userAuth = Auth::user();
+        /*$user=DB::table('users')
+        ->join('user','users.username','=','user.nim_profesi_dokter')
+        ->select('users.*','user.kelompok','user.nama')
+        ->where('user.nim_profesi_dokter', '=',$userAuth->username)
+        ->get();*/
+        if($userAuth->level == 'dm'){
+            abort(403, 'Tidak Diizinkan');
+        } 
+        elseif($userAuth->level =='admin') {
+            abort(403, 'Tidak Diizinkan');
+        }
+        elseif($userAuth->level =='dosen') {
+            $user2 = DB::table('users')
+        ->orderBy('id','desc')
+        ->get();
+            
+            return view('penilaian.evaluasi',compact('user2'));
+        }
+        else{
+            abort(403, 'Tidak Diizinkan');
+        }
+    }
 
     /**
      * Show the form for creating a new resource.

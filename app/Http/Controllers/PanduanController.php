@@ -19,4 +19,9 @@ class PanduanController extends Controller
         $filepath = public_path('upload/panduan/PANDUAN ELOGBOOK.pdf');
         return Response::download($filepath); 
     }
+    public function downloadtemplate()
+    {
+        $filepath = public_path('upload/panduan/import dm.xlsx');
+        return Response::download($filepath); 
+    }
 }

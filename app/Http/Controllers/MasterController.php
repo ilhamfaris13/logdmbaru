@@ -416,7 +416,25 @@ class MasterController extends Controller
             abort(403, 'Tidak Diizinkan');
         } 
         elseif($userAuth->level =='dosen') {
-            abort(403, 'Tidak Diizinkan');
+        $user2 = DB::table('users')
+        ->orderBy('id','desc')
+        ->get();
+        $user2 = DB::table('users')
+        ->orderBy('id','desc')
+        ->get();
+        $logs = DB::table('kegiatan_log')
+         ->join('users','users.id','=','kegiatan_log.id_user')
+         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+         ->join('stase','stase.id','=','kegiatan_log.stase')
+         ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+         ->select('users.username','users.name','users.id')
+         //->where('kegiatan_log.status', '=',0)
+         //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         ->orderBy('kegiatan_log.status','asc')
+         ->distinct()
+         ->get();
+            return view('admin.master_kegiatan',compact('user2','logs'));
         }
         elseif($userAuth->level =='admin') {
         $user2 = DB::table('users')
@@ -458,14 +476,57 @@ class MasterController extends Controller
             abort(403, 'Tidak Diizinkan');
         } 
         elseif($userAuth->level =='dosen') {
-            abort(403, 'Tidak Diizinkan');
-        }
-        elseif($userAuth->level =='admin') {
-            
             $user2 = DB::table('users')
             ->orderBy('id','desc')
             ->where('id','=',$id)
             ->get();
+            /*REKAM MEDIS*/
+            $paru=DB::table('paru')
+            ->where('Id_User', '=',$id)
+            ->orderBy('Id_paru','desc')
+            ->get();
+            $andrologi=DB::table('andrologi')
+            ->where('id_user', '=',$id)
+            ->orderBy('id_andrologi','desc')
+            ->get();
+            $ginekologi=DB::table('ginekologi')
+            ->where('id_mhs', '=',$id)
+            //->orderBy('id_gine ','desc')
+            ->get();
+            $interna=DB::table('interna')
+            ->where('id_mhs', '=',$id)
+            //->orderBy('id_interna ','desc')
+            ->get();
+            $jiwa1=DB::table('jiwa')
+            ->where('id_user', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $kulit1=DB::table('kulit')
+            ->where('id_mhs', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $mata1=DB::table('mata')
+            ->where('Id_User', '=',$id)
+            //->where('username', '=',$userAuth->username)
+            ->orderBy('id_mata','desc')
+            ->get();
+            $neurologi=DB::table('neurologi')
+            ->where('id_user', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $obstetri=DB::table('obstetri')
+            ->where('Id_obstetri', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $pediatri1=DB::table('pediatri')
+            ->where('id_pediatri', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $tht1=DB::table('tht')
+            ->where('id_tht', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            
             /* STASE IPD */
             $logs = DB::table('kegiatan_log')
             ->join('users','users.id','=','kegiatan_log.id_user')
@@ -479,6 +540,7 @@ class MasterController extends Controller
             ->where('kegiatan_log.stase', '=',"1")
             ->orderBy('kegiatan_log.status','asc')
             ->get();
+            
             /* STASE IKA */
             $ika = DB::table('kegiatan_log')
             ->join('users','users.id','=','kegiatan_log.id_user')
@@ -625,7 +687,222 @@ class MasterController extends Controller
             ->where('kegiatan_log.stase', '=',"28")
             ->orderBy('kegiatan_log.status','asc')
             ->get();
-                return view('admin.detail_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi'));
+                return view('admin.detail_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi','paru','andrologi','ginekologi','interna','jiwa1','kulit1','mata1','neurologi','obstetri','pediatri1','tht1'));
+        }
+        elseif($userAuth->level =='admin') {
+            
+            $user2 = DB::table('users')
+            ->orderBy('id','desc')
+            ->where('id','=',$id)
+            ->get();
+            /*REKAM MEDIS*/
+            $paru=DB::table('paru')
+            ->where('Id_User', '=',$id)
+            ->orderBy('Id_paru','desc')
+            ->get();
+            $andrologi=DB::table('andrologi')
+            ->where('id_user', '=',$id)
+            ->orderBy('id_andrologi','desc')
+            ->get();
+            $ginekologi=DB::table('ginekologi')
+            ->where('id_mhs', '=',$id)
+            //->orderBy('id_gine ','desc')
+            ->get();
+            $interna=DB::table('interna')
+            ->where('id_mhs', '=',$id)
+            //->orderBy('id_interna ','desc')
+            ->get();
+            $jiwa1=DB::table('jiwa')
+            ->where('id_user', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $kulit1=DB::table('kulit')
+            ->where('id_mhs', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $mata1=DB::table('mata')
+            ->where('Id_User', '=',$id)
+            //->where('username', '=',$userAuth->username)
+            ->orderBy('id_mata','desc')
+            ->get();
+            $neurologi=DB::table('neurologi')
+            ->where('id_user', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $obstetri=DB::table('obstetri')
+            ->where('Id_obstetri', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $pediatri1=DB::table('pediatri')
+            ->where('id_pediatri', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $tht1=DB::table('tht')
+            ->where('id_tht', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            
+            /* STASE IPD */
+            $logs = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"1")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            
+            /* STASE IKA */
+            $ika = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"2")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            /* STASE BEDAH */
+            $bedah = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"3")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $kulit = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"4")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $tht = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"5")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $mata = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"6")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $saraf = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"7")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $jiwa = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"8")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $forensik = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"9")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $anestesi = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"10")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $radiologi = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"11")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $rehab = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"12")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $farmasi = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"28")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+                return view('admin.detail_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi','paru','andrologi','ginekologi','interna','jiwa1','kulit1','mata1','neurologi','obstetri','pediatri1','tht1'));
         }
         else{
             abort(403, 'Tidak Diizinkan');
@@ -725,5 +1002,281 @@ class MasterController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function index_dm_kegiatan()
+    {
+         //
+        //$user;
+        $userAuth = Auth::user();
+        /*$user=DB::table('users')
+        ->join('user','users.username','=','user.nim_profesi_dokter')
+        ->select('users.*','user.kelompok','user.nama')
+        ->where('user.nim_profesi_dokter', '=',$userAuth->username)
+        ->get();*/
+        if($userAuth->level == 'dm'){
+            abort(403, 'Tidak Diizinkan');
+        } 
+        elseif($userAuth->level =='dosen') {
+        $user2 = DB::table('users')
+        ->orderBy('id','desc')
+        ->get();
+        $user2 = DB::table('users')
+        ->orderBy('id','desc')
+        ->get();
+        $logs = DB::table('kegiatan_log')
+         ->join('users','users.id','=','kegiatan_log.id_user')
+         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+         ->join('stase','stase.id','=','kegiatan_log.stase')
+         ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+         ->select('users.username','users.name','users.id')
+         //->where('kegiatan_log.status', '=',0)
+         //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         ->orderBy('kegiatan_log.status','asc')
+         ->distinct()
+         ->get();
+            return view('penilaian.dm_kegiatan',compact('user2','logs'));
+        }
+        elseif($userAuth->level =='admin') {
+            abort(403, 'Tidak Diizinkan');
+        }
+        else{
+            abort(403, 'Tidak Diizinkan');
+        }
+    }
+    
+    public function index_detail_dm_kegiatan($id)
+    {
+         //
+        //$user;
+        $userAuth = Auth::user();
+        /*$user=DB::table('users')
+        ->join('user','users.username','=','user.nim_profesi_dokter')
+        ->select('users.*','user.kelompok','user.nama')
+        ->where('user.nim_profesi_dokter', '=',$userAuth->username)
+        ->get();*/
+        if($userAuth->level == 'dm'){
+            abort(403, 'Tidak Diizinkan');
+        } 
+        elseif($userAuth->level =='dosen') {
+            $user2 = DB::table('users')
+            ->orderBy('id','desc')
+            ->where('id','=',$id)
+            ->get();
+            /*REKAM MEDIS*/
+            $paru=DB::table('paru')
+            ->where('Id_User', '=',$id)
+            ->orderBy('Id_paru','desc')
+            ->get();
+            $andrologi=DB::table('andrologi')
+            ->where('id_user', '=',$id)
+            ->orderBy('id_andrologi','desc')
+            ->get();
+            $ginekologi=DB::table('ginekologi')
+            ->where('id_mhs', '=',$id)
+            //->orderBy('id_gine ','desc')
+            ->get();
+            $interna=DB::table('interna')
+            ->where('id_mhs', '=',$id)
+            //->orderBy('id_interna ','desc')
+            ->get();
+            $jiwa1=DB::table('jiwa')
+            ->where('id_user', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $kulit1=DB::table('kulit')
+            ->where('id_mhs', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $mata1=DB::table('mata')
+            ->where('Id_User', '=',$id)
+            //->where('username', '=',$userAuth->username)
+            ->orderBy('id_mata','desc')
+            ->get();
+            $neurologi=DB::table('neurologi')
+            ->where('id_user', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $obstetri=DB::table('obstetri')
+            ->where('Id_obstetri', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $pediatri1=DB::table('pediatri')
+            ->where('id_pediatri', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            $tht1=DB::table('tht')
+            ->where('id_tht', '=',$id)
+            //->orderBy('id_Jiwa ','desc')
+            ->get();
+            
+            /* STASE IPD */
+            $logs = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"1")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            
+            /* STASE IKA */
+            $ika = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"2")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            /* STASE BEDAH */
+            $bedah = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"3")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $kulit = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"4")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $tht = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"5")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $mata = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"6")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $saraf = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"7")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $jiwa = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"8")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $forensik = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"9")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $anestesi = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"10")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $radiologi = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"11")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $rehab = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"12")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+            $farmasi = DB::table('kegiatan_log')
+            ->join('users','users.id','=','kegiatan_log.id_user')
+            ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+            ->join('stase','stase.id','=','kegiatan_log.stase')
+            ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+            ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+            //->where('kegiatan_log.status', '=',0)
+            //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+            ->where('kegiatan_log.id_user', '=',$id)
+            ->where('kegiatan_log.stase', '=',"28")
+            ->orderBy('kegiatan_log.status','asc')
+            ->get();
+                return view('penilaian.detail_dm_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi','paru','andrologi','ginekologi','interna','jiwa1','kulit1','mata1','neurologi','obstetri','pediatri1','tht1'));
+        }
+        elseif($userAuth->level =='admin') {
+            abort(403, 'Tidak Diizinkan');
+        }
+        else{
+            abort(403, 'Tidak Diizinkan');
+        }
     }
 }

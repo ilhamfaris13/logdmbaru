@@ -113,6 +113,7 @@ Route::get('pdfview', [SignaturePadController::class, 'pdfView']);
 */
 Route::get('panduan', [PanduanController::class, 'index']);
 Route::get('/downloadfile',[PanduanController::class, 'downloadfile']);
+Route::get('/downloadtemplate',[PanduanController::class, 'downloadtemplate']);
 /*
 | 
 |--------------------------------------------------------------------------
@@ -122,6 +123,7 @@ Route::get('/downloadfile',[PanduanController::class, 'downloadfile']);
 | Penialaian
 */
 Route::get('penilaian',[PenilaianController::class, 'index']);
+Route::get('evaluasi',[PenilaianController::class, 'evaluasi']);
 Route::get('responsi',[PenilaianController::class, 'index']);
 Route::get('/responsi/post',[SignaturePadController2::class, 'create']);
 Route::post('/responsi/post',[PenilaianController::class, 'store'])->name('responsi.store');
@@ -203,6 +205,8 @@ Route::post('tarikdb', [MasterController::class, 'create_dm'])->name('tarikdb.cr
 | 
 |--------------------------------------------------------------------------
 */
+Route::get('dm_kegiatan', [MasterController::class, 'index_dm_kegiatan']);
+Route::get('detail_dm_kegiatan/{id}', [MasterController::class, 'index_detail_dm_kegiatan']);
 /*
 
 /*

@@ -35,6 +35,74 @@
                   <li class="list-group-item">
                     <b>NIM</b> <a class="float-right"><?php echo e($users->username); ?></a>
                   </li>
+                  
+                  <?php $__currentLoopData = $paru; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $parus): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($parus->nomor_rm); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/paru1_view.php?editid1=<?php echo e($parus->Id_paru); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <?php $__currentLoopData = $andrologi; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rms): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($rms->nomor_rm); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/andrologi1_view.php?editid1=<?php echo e($rms->id_andrologi); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <?php $__currentLoopData = $ginekologi; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rms): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($rms->nomor_rm); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/ginekologi1_view.php?editid1=<?php echo e($rms->id_gine); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <?php $__currentLoopData = $interna; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rms): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($rms->nomor_rm); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/interna1_view.php?editid1=<?php echo e($rms->id_interna); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <?php $__currentLoopData = $jiwa1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rms): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($rms->nomor_rm); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/jiwa1_view.php?editid1=<?php echo e($rms->id_Jiwa); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <?php $__currentLoopData = $kulit1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rms): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($rms->nomor_rm); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/kulit1_view.php?editid1=<?php echo e($rms->id_kulit); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <?php $__currentLoopData = $mata1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rms): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($rms->nomor_rm); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/mata1_view.php?editid1=<?php echo e($rms->id_mata); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <?php $__currentLoopData = $neurologi; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rms): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($rms->nomor_rm); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/neurologi1_view.php?editid1=<?php echo e($rms->id_neuro); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <?php $__currentLoopData = $obstetri; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rms): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($rms->nomor_rm); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/obstetri1_view.php?editid1=<?php echo e($rms->Id_obstetri); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <?php $__currentLoopData = $pediatri1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rms): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($rms->nomor_rm); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/pediatri1_view.php?editid1=<?php echo e($rms->id_pediatri); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <?php $__currentLoopData = $tht1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rms): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <li class="list-group-item">
+                    <b>RM</b> <a class="float-right"><?php echo e($rms->nomor_rm); ?></a>
+                    <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/tht1_view.php?editid1=<?php echo e($rms->id_tht); ?>&" target="_blank"><i class="far fa-eye"></i></a>
+                  </li>  
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  
                 </ul>
               </div>
               <!-- /.card-body -->

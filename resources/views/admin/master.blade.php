@@ -168,12 +168,22 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('/evaluasi')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Prolonged Exam</p>
+                  <p>EVALUASI DM </p>
                 </a>
               </li>
+            
             </ul>
+          </li>
+          <li class="nav-item ">
+            <a href="{{url('/dm_kegiatan')}}" class="nav-link">
+              <i class="nav-icon fa fa-book-open"></i>
+              <p>
+                Detail Kegiatan DM
+                <i class="right fas fa-angle-right"></i>
+              </p>
+            </a>
           </li>
           @endif
           <!-- /PENILIAIAN -->
