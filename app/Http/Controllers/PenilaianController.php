@@ -1,12 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Nilai;
 use App\Http\Controllers\Controller;
+use App\Exports\NilaiExport;
+use Maatwebsite\Excel\Facades\Excel;
 use DB;
 use Auth;
 use PDF;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class PenilaianController extends Controller
 {
@@ -27,35 +31,18 @@ class PenilaianController extends Controller
          ->select('dosen.NAMA') */
          ->select('name as NAMA')
          ->get();
-       $logs = DB::table('kegiatan_log')
-        ->join('users','users.id','=','kegiatan_log.id_user')
-        ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
-        ->join('stase','stase.id','=','kegiatan_log.stase')
-        ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
-        ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
-        ->where('kegiatan_log.status', '=',0)
-        ->where('kegiatan_log.jenis', '=','Presentasi Kasus / Responsi')
-        ->orwhere('kegiatan_log.jenis', '=','Karya Tulis / Referat')
-        ->where('kegiatan_log.id_user', '=',$userAuth->id)
-        ->orWhere('kegiatan_log.id_dosen', '=',$userAuth->username)
-        ->where('kegiatan_log.jenis', '=','Presentasi Kasus / Responsi')
-        ->orwhere('kegiatan_log.jenis', '=','Karya Tulis / Referat')
-        ->orderBy('kegiatan_log.status','asc')
-        ->get();
-
-        $verif = DB::table('kegiatan_log')
-        ->join('users','users.id','=','kegiatan_log.id_user')
-        ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
-        ->join('stase','stase.id','=','kegiatan_log.stase')
-        ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
-        ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
-        ->where('kegiatan_log.id_user', '=',$userAuth->id)
-        ->where('kegiatan_log.status', '=',1)
-        ->get();
-        // ActivityLog::all();
+       /*$logs = DB::table('nilai')
+         ->get();*/
+		  $logs = Nilai::All();
+		   
  
-        return view('/penilaian/responsi',compact('logs','verif'));
+        return view('Penilaian.index',compact('logs'));
+		//return view('Penilaian',['nilai'=>$logs]);
     }
+	public function export_excel()
+	{
+		return Excel::download(new NilaiExport, 'nilai.xlsx');
+	}
     public function evaluasi()
     {
          //
@@ -82,6 +69,100 @@ class PenilaianController extends Controller
         else{
             abort(403, 'Tidak Diizinkan');
         }
+    }
+
+    public function atitude()
+    {
+         //
+        //$user;
+        $userAuth = Auth::user();
+        /*$user=DB::table('users')
+        ->join('user','users.username','=','user.nim_profesi_dokter')
+        ->select('users.*','user.kelompok','user.nama')
+        ->where('user.nim_profesi_dokter', '=',$userAuth->username)
+        ->get();*/
+        if($userAuth->level == 'dm'){
+            abort(403, 'Tidak Diizinkan');
+        } 
+        elseif($userAuth->level =='admin') {
+            abort(403, 'Tidak Diizinkan');
+        }
+        elseif($userAuth->level =='dosen') {
+            $user2 = DB::table('users')
+        ->orderBy('id','desc')
+        ->get();
+            
+            return view('penilaian.atitude',compact('user2'));
+        }
+        else{
+            abort(403, 'Tidak Diizinkan');
+        }
+    }
+	public function nilai($id)
+    {
+         //
+        //$user;
+        $userAuth = Auth::user();
+        /*$user=DB::table('users')
+        ->join('user','users.username','=','user.nim_profesi_dokter')
+        ->select('users.*','user.kelompok','user.nama')
+        ->where('user.nim_profesi_dokter', '=',$userAuth->username)
+        ->get();*/
+        if($userAuth->level == 'dm'){
+            abort(403, 'Tidak Diizinkan');
+        } 
+        elseif($userAuth->level =='admin') {
+            abort(403, 'Tidak Diizinkan');
+        }
+        elseif($userAuth->level =='dosen') {
+            $user2 = DB::table('nilai')
+            //->orderBy('id','desc')
+            ->where('id_dm','=',$id)
+            ->get();
+            
+            return view('penilaian.nilai',compact('user2'));
+        }
+        else{
+            abort(403, 'Tidak Diizinkan');
+        }
+    }
+    public function create_atitude(Request $request)
+    {
+         dd($request);
+    }
+	public function create_nilai(Request $request)
+    {
+         //dd($request);
+		 #create or update your data here
+		$result = DB::table('nilai')
+			->select(DB::raw(' ((atitude * 25/100)+(longcase * 25/100)+(jurnal * 25/100)+(minicex * 25/100)+(derajat * 25/100)+(pengabdian * 25/100)+(prettest * 25/100)+(posttest * 25/100)+(osce * 25/100)) / 9 AS NilaiAkhir'))
+			//->selectRaw('select ((atitude * 25/100)+(longcase * 25/100)+(jurnal * 25/100)+(minicex * 25/100)+(derajat * 25/100)+(pengabdian * 25/100)+(prettest * 25/100)+(posttest * 25/100)+(osce * 25/100)) / 9')
+            ->where('id','=',$request->get('id'))
+            ->first();
+			
+		//dd($result->NilaiAkhir);
+        DB::table('nilai')
+        ->where('id', $request->get('id'))
+        ->update(
+            [
+			
+			'atitude' => $request->get('atitude'),
+            'longcase' => $request->get('longcase'),
+            'jurnal' => $request->get('jurnal'),
+            'minicex' => $request->get('minicex'),
+            'derajat' => $request->get('derajat'),
+			'pengabdian' => $request->get('pengabdian'),
+			'prettest' => $request->get('prettest'),
+			'posttest' => $request->get('posttest'),
+			'osce' =>$request->get('osce'),
+			"nilai_akhir" =>$result->NilaiAkhir
+            ] 
+		
+		
+        );
+		
+		//return back()->with('success', 'success set nilai');
+		return redirect('/pnilai')->with('success', 'success set nilai');
     }
 
     /**

@@ -22,6 +22,7 @@
                       <option value="sinkrondm" >Sinkron DM</option>
                       <option value="sinkrondosen" >Sinkron Dosen/Dokter</option>
                       <option value="resetpwd" >Reset Semua Password DM</option>
+					  <option value="nilai" >Set Nilai DM</option>
                     </select>
                     
                 </div>

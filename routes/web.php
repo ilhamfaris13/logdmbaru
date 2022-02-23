@@ -122,11 +122,17 @@ Route::get('/downloadtemplate',[PanduanController::class, 'downloadtemplate']);
 |--------------------------------------------------------------------------
 | Penialaian
 */
-Route::get('penilaian',[PenilaianController::class, 'index']);
+//Route::get('/nilai',[PenilaianController::class, 'index']);
 Route::get('evaluasi',[PenilaianController::class, 'evaluasi']);
 Route::get('responsi',[PenilaianController::class, 'index']);
 Route::get('/responsi/post',[SignaturePadController2::class, 'create']);
 Route::post('/responsi/post',[PenilaianController::class, 'store'])->name('responsi.store');
+Route::get('atitude',[PenilaianController::class, 'atitude']);
+Route::post('/atitude/create',[PenilaianController::class, 'create_atitude'])->name('atitude.create');
+Route::get('nilai/{id}',[PenilaianController::class, 'nilai']);
+Route::post('/nilai/create',[PenilaianController::class, 'create_nilai'])->name('nilai.create');
+Route::get('/pnilai',[PenilaianController::class, 'index']);
+Route::get('/pnilai/export_excel',[PenilaianController::class, 'export_excel']);
 /*
 | 
 |--------------------------------------------------------------------------

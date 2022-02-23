@@ -240,6 +240,41 @@ class MasterController extends Controller
        // dd($old_users2);
         return back()->with('success', 'success sinkron');
         }
+		 elseif($request->sinkron == 'nilai')
+        {
+            $old_users = Dm::get();
+			$old_users2 = DB::table('users')->where('level', 'dm')->get();
+		//dd($old_users2);
+      
+        foreach ($old_users2 as $u){
+            //echo $u->NAMA;
+            //dd($u->NIM_Profesi_Dokter);
+            $array = [
+                [
+				'nama' => $u->name,
+                 'nim' => $u->username,
+                 'atitude' => 0,
+                 'longcase' => 0,
+                 'jurnal' => 0,
+                 'minicex' => 0,
+                 'derajat' => 0,
+				 'pengabdian' => 0,
+				 'prettest' => 0,
+				 'posttest' => 0,
+				 'osce' =>0,
+				 'id_dm' => $u->id,
+				 'nilai_akhir' =>0
+				]
+                 
+              ];
+           // dd($array[1]);
+              DB::table('nilai')->insertOrIgnore($array);
+			  //DB::table('nilai')->insertGetId($array);
+           
+        }
+       // dd($old_users2);
+        return back()->with('success', 'success set nilai');
+        }
         elseif($request->sinkron == 'sinkrondosen')
         {
             //dd('Ini Sinkron DOSEN');
@@ -256,7 +291,8 @@ class MasterController extends Controller
                     'email' => $u->NIP . '@hangtuah.ac.id',
                     'password' => Hash::make($u->NIP),
                     'level' => 'dosen',
-                    'profile_photo_path' => 'default.png'
+                    'profile_photo_path' => 'default.png',
+                    'pwd_rm' => $u->NIP
                     ]
                     
                 ];
@@ -1035,7 +1071,7 @@ class MasterController extends Controller
          ->orderBy('kegiatan_log.status','asc')
          ->distinct()
          ->get();
-            return view('penilaian.dm_kegiatan',compact('user2','logs'));
+            return view('Penilaian.dm_kegiatan',compact('user2','logs'));
         }
         elseif($userAuth->level =='admin') {
             abort(403, 'Tidak Diizinkan');
@@ -1270,7 +1306,7 @@ class MasterController extends Controller
             ->where('kegiatan_log.stase', '=',"28")
             ->orderBy('kegiatan_log.status','asc')
             ->get();
-                return view('penilaian.detail_dm_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi','paru','andrologi','ginekologi','interna','jiwa1','kulit1','mata1','neurologi','obstetri','pediatri1','tht1'));
+                return view('Penilaian.detail_dm_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi','paru','andrologi','ginekologi','interna','jiwa1','kulit1','mata1','neurologi','obstetri','pediatri1','tht1'));
         }
         elseif($userAuth->level =='admin') {
             abort(403, 'Tidak Diizinkan');

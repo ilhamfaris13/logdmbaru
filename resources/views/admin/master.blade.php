@@ -136,7 +136,7 @@
             </a>
             </li>
             <li class="nav-item">
-            <a href="{{url('/rm')}}" class="nav-link" target="_blank">
+            <a href="http://103.112.123.217/rm/login.php" class="nav-link" target="_blank">
               <i class="nav-icon fas fa-ambulance"></i>
               <p>
                 Rekam Medis
@@ -146,13 +146,14 @@
             </li>
           @else
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="https://forms.gle/MmW8V24bKiSp4JwL6" class="nav-link" target="_blank">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                Penilaian
+                Daftar Nilai
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+			<!--
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{url('/responsi')}}" class="nav-link">
@@ -175,6 +176,7 @@
               </li>
             
             </ul>
+			PENILAIAN -->
           </li>
           <li class="nav-item ">
             <a href="{{url('/dm_kegiatan')}}" class="nav-link">
