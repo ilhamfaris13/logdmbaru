@@ -12,6 +12,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
+use App\Imports\NilaiImport;
+
 class PenilaianController extends Controller
 {
     /**
@@ -277,5 +279,32 @@ class PenilaianController extends Controller
     public function destroy($id)
     {
         //
+    }
+	
+    public function import_nilai(Request $request)
+    {
+        // validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:csv,xls,xlsx'
+		]);
+ 
+		// menangkap file excel
+		$file = $request->file('file');
+ 
+		// membuat nama file unik
+		$nama_file = rand().$file->getClientOriginalName();
+ 
+		// upload ke folder file_siswa di dalam folder public
+		$file->move('upload',$nama_file);
+ 
+		// import data
+		Excel::import(new NilaiImport, public_path('/upload/'.$nama_file));
+ 
+		// notifikasi dengan session
+		//Session::flash('sukses','Data Siswa Berhasil Diimport!');
+ 
+		// alihkan halaman kembali
+		//return redirect('/masterimport');
+        return back()->with('success', 'Data Nilai Berhasil Diimport!');
     }
 }

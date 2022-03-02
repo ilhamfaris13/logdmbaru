@@ -24,8 +24,17 @@ class Nilai extends Model
 		'id_dm',
 		'nilai_akhir'
     ];
-	protected $hidden = [
-        'id_dm',
-       
+	 //protected $table = 'nilai';
+    public $timestamps = false;
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password',
+        'remember_token',
+        'two_factor_recovery_codes',
+        'two_factor_secret',
     ];
 }

@@ -147,7 +147,7 @@
             </li>
           <?php else: ?>
           <li class="nav-item">
-            <a href="https://forms.gle/MmW8V24bKiSp4JwL6" class="nav-link" target="_blank">
+            <a href="<?php echo e(url('/pnilai')); ?>" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Daftar Nilai

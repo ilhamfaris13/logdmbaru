@@ -133,6 +133,7 @@ Route::get('nilai/{id}',[PenilaianController::class, 'nilai']);
 Route::post('/nilai/create',[PenilaianController::class, 'create_nilai'])->name('nilai.create');
 Route::get('/pnilai',[PenilaianController::class, 'index']);
 Route::get('/pnilai/export_excel',[PenilaianController::class, 'export_excel']);
+Route::post('/pnilai/import_nilai',[PenilaianController::class, 'import_nilai']);
 /*
 | 
 |--------------------------------------------------------------------------
