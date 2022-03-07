@@ -39,7 +39,7 @@
                     <tr class="data-row">
                     <td class="align-middle">
                       <a class="btn btn-primary btn-sm" href="/detail_dm_kegiatan/{{ $log->id_dm }}" target="_blank"><i class="far fa-eye"></i></a>
-                      <a class="btn btn-success btn-sm" href="/nilai/{{ $log->id_dm }}"><i class="fas fa-edit"></i></a>
+                      <a class="btn btn-success btn-sm" href="/nilai/{{ $log->nim }}"><i class="fas fa-edit"></i></a>
                     </td>
                     <td class="align-middle ">{{ $log->nama }}</td>
                     <td class="align-middle ">{{ $log->nim }}</td>

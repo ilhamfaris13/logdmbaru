@@ -25,7 +25,7 @@
                     <tr class="data-row">
                     <td class="align-middle">
                       <a class="btn btn-primary btn-sm" href="/detail_dm_kegiatan/{{ $log->id }}" target="_blank"><i class="far fa-eye"></i></a>
-                      <a class="btn btn-success btn-sm" href="/nilai/{{ $log->id }}"><i class="fas fa-edit"></i>Nilai</a>
+                      <a class="btn btn-success btn-sm" href="/nilai/{{ $log->username }}"><i class="fas fa-edit"></i>Nilai</a>
                     </td>
                     <td class="align-middle ">{{ $log->name }}</td>
                     <td class="align-middle ">{{ $log->username }}</td>

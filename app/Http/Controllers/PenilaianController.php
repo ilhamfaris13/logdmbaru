@@ -119,7 +119,7 @@ class PenilaianController extends Controller
         elseif($userAuth->level =='dosen') {
             $user2 = DB::table('nilai')
             //->orderBy('id','desc')
-            ->where('id_dm','=',$id)
+            ->where('nim','=',$id)
             ->get();
             
             return view('penilaian.nilai',compact('user2'));

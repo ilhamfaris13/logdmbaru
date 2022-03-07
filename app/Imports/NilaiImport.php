@@ -11,7 +11,8 @@ use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\SkipsErrors;
 use Maatwebsite\Excel\Concerns\SkipsOnError;
 use App\Models\Nilai;
-class NilaiImport implements ToModel, WithHeadingRow,SkipsOnError
+use Maatwebsite\Excel\Concerns\WithCalculatedFormulas;
+class NilaiImport implements ToModel, WithHeadingRow,SkipsOnError,WithCalculatedFormulas
 {
     /**
     * @param Collection $collection
@@ -33,7 +34,7 @@ class NilaiImport implements ToModel, WithHeadingRow,SkipsOnError
             'posttest' => $row['posttest'],
             'osce' => $row['osce'],
             'id_dm' => 0,
-			'nilai_akhir' =>(($row['atitude'] * 25/100) + ($row['longcase'] * 25/100))/2,
+			'nilai_akhir' =>(($row['atitude'] * 100/100) + ($row['longcase'] * 100/100)+($row['jurnal'] * 100/100)+($row['minicex'] * 100/100)+($row['derajat'] * 100/100)+($row['pengabdian'] * 100/100)+($row['prettest'] * 100/100)+($row['posttest'] * 100/100)+($row['osce'] * 100/100))/9,
         ]);
 		
     }

@@ -5,7 +5,7 @@ namespace App\Exports;
 use App\Models\Nilai;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\FromCollection;
-
+use DB;
 class NilaiExport implements FromCollection, WithHeadings
 {
     /**
@@ -13,7 +13,7 @@ class NilaiExport implements FromCollection, WithHeadings
     */
 	 public function headings():array{
         return[
-			'NO.',
+			
 			'NAMA',
 			'NIM',
 			'ATITUDE', //baru
@@ -30,7 +30,24 @@ class NilaiExport implements FromCollection, WithHeadings
     } 
     public function collection()
     {
-		
-        return Nilai::all();
+		$nilai = DB::table('nilai')
+            ->select(
+			
+			'nama',
+			'nim',
+			'atitude',
+			'longcase', 
+			'jurnal',
+			'minicex',
+			'derajat',
+			'pengabdian',
+			'prettest',
+			'posttest',
+			'osce',
+			'nilai_akhir'
+)
+            ->get();
+        return $nilai;
+		//return Nilai::all();
     }
 }
