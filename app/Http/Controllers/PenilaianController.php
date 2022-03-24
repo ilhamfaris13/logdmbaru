@@ -36,10 +36,35 @@ class PenilaianController extends Controller
        /*$logs = DB::table('nilai')
          ->get();*/
 		  $logs = Nilai::All();
-		   
+		  /* $logs = DB::table('nilai as n')
+          ->join('dm','n.nim','=','dm.nim_profesi_dokter')
+          ->select('n.*')
+          ->get();*/
  
         return view('Penilaian.index',compact('logs'));
 		//return view('Penilaian',['nilai'=>$logs]);
+    }
+    public function index_f(Request $request)
+    {
+        $userAuth = Auth::user();
+        $dosen = DB::table('users')
+        /*  ->join('dosen','dosen.NIP','=','users.username')
+         ->select('dosen.NAMA') */
+         ->select('name as NAMA')
+         ->get();
+       /*$logs = DB::table('nilai')
+         ->get();*/
+          $logs = DB::table('nilai as n')
+          ->join('dm','n.nim','=','dm.nim_profesi_dokter')
+          ->select('n.*')
+          ->where('dm.Kelompok','like','%'. $request->get('kelompok').'%')
+          ->get();
+          $kelompoks = DB::table('dm')->distinct()->get(['Kelompok']);
+          
+           
+ 
+        return view('Penilaian.nilai_filter',compact('logs','kelompoks'));
+        //return view('Penilaian',['nilai'=>$logs]);
     }
 	public function export_excel()
 	{
