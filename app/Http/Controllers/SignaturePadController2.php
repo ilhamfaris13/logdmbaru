@@ -6,7 +6,7 @@ use Auth;
 use PDF;
 use App\Models\User;
 use Illuminate\Http\Request;
-
+use Image;
 class SignaturePadController2 extends Controller
 {
     /**
@@ -69,11 +69,12 @@ class SignaturePadController2 extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    //SIGNATUR PAD YANG DIPAKAI
     public function store(Request $request)
     {
         //
         // We create a variable to define the name of the file
-        
+        /*
         $data = $request->all();
         $folderPath = public_path('upload/');
         $filename = date('mdYHis') . "-signature.png";
@@ -84,20 +85,60 @@ class SignaturePadController2 extends Controller
         ->update(
             [
             'ttdp' => $filename,
-            'status' => 1
+            'status' => 0
             ]           
         );
        // dd($data);
-      /*   DB::insert('insert into testdb (name,id_user) values (?,?)',[
-            $filename,
-           $request->get('id'),
-        ]); */
+     
         // We decode the image and store it in public folder
         $data_uri = $request->signature;
         
         $encoded_image = explode(",", $data_uri)[1];
         $decoded_image = base64_decode($encoded_image);
+        file_put_contents($file, $decoded_image);*/
+        $data = $request->all();
+        $text = date('d/m/Y');
+        $folderPath = public_path('upload/');
+        $filename = date('mdYHis') . "-signature.png";
+        $filenamejpg = date('mdYHis') . "-signature.jpg";
+        $file= $folderPath . $filename;
+        $tujuan_upload = public_path('upload/');
+        #create or update your data here
+        DB::table('kegiatan_log')
+        ->where('id', $request->get('id'))
+        ->update(
+            [
+            'ttdp' => $filename,
+            'status' => 1
+            ]           
+        );
+       // dd($data);
+     
+        // We decode the image and store it in public folder
+        $data_uri = $request->signature;
+
+        $encoded_image = explode(",", $data_uri)[1];
+        
+        $decoded_image = base64_decode($encoded_image);
+        
         file_put_contents($file, $decoded_image);
+
+        $img = Image::make($file);
+        $img->text($text, 80, 80, function($font) { 
+            $font->file(public_path('font/walkthemoon.ttf'));
+            $font->size(15);  
+            //$font->color('#000000');
+            $font->color([0, 0, 0, 0.5]);  
+            //$font->align('center');  
+            //$font->valign('bottom');  
+            //$font->angle(90); 
+        });
+        //$img->insert(public_path('upload/1648438388.png'), 'bottom-right', 3, 3);
+        //  $img->resize(512 , 512 );
+        //$imgFile->save($tujuan_upload,$userAuth->username . ".jpg");
+        $img->save($tujuan_upload.'/'.$filename );
+        //
+        
         return response()->json(['success'=>'Verifikasi berhasil']);
     }
 

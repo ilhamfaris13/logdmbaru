@@ -50,7 +50,7 @@
                       <th> STASE</th>
                       <th> TANGGAL</th>
                       <th> KETERANGAN</th>
-                      <th> DOSEN</th>
+                      <th> DOSEN PEMBIMBING KLINIK</th>
                       <th> TTDP</th>
                      
                       <th hidden> </th>
@@ -136,7 +136,7 @@
                       <th> RUMAH SAKIT</th>
                       <th> STASE</th>
                       <th> TANGGAL</th>
-                      <th> DOSEN</th>
+                      <th> DOSEN PEMBIMBING KLINIK</th>
                       <th> TTDP</th>
                       <th> </th>
                      
@@ -290,7 +290,7 @@
               <div class="row"> 
               <div class="col-md-6">
               <div class="form-group">
-              <label class="col-form-label" for="modal-input-sig" >Tanda Tangan </label>
+              <label class="col-form-label" for="modal-input-sig" >Tanda Tangan DPK </label>
               <div class="jumbotron">
                 <span class="success" style="color:green; margin-top:10px; margin-bottom: 10px;"></span>
                 <div class="alert alert-success" style="display:none"></div>

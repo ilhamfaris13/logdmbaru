@@ -48,7 +48,7 @@
                       <th> STASE</th>
                       <th> TANGGAL</th>
                       <th> KETERANGAN</th>
-                      <th> DOSEN</th>
+                      <th> DOSEN PEMBIMBING KLINIK</th>
                       <th> TTDP</th>
                       <th> </th>
                       <th hidden> </th>

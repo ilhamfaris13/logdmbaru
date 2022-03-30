@@ -13,34 +13,28 @@
             </div>
             <div class="card-body">
             
-            <table id="tabel1" class="table table-bordered table-hover">
-                <thead>
-                  
-                  <tr>
-                  <th> USERNAME</th>
-                    <th> NAMA</th>
-                    <th> LEVEL</th>
-                    
-                    <th> UBAH</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @foreach($user2 as $key => $log)
-                    <tr class="data-row">
-                    <td class="align-middle ">{{ $log->username }}</td>
-                    <td class="align-middle ">{{ $log->name }}</td>
-                    <td class="align-middle word-break" style="text-transform: capitalize;">{{ $log->level }}</td>
-                    <td class="align-middle">
-                    <a class="btn btn-primary btn-sm" href="admin/edit/{{$log->id}}" target="_blank"><i class="far fa-eye"></i></a>
-                    <a class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
-                    
-                    </td>
-                  
-                    </tr>
-                    
-                    @endforeach
-                  </tbody>
-            </table>
+            <form method="get" action="/fnilai/filter" enctype="multipart/form-data">
+          
+            <div class="form-group">
+             <label class="col-form-label" for="modal-input-sig" >Tanda Tangan </label>
+              <div class="jumbotron">
+                <span class="success" style="color:green; margin-top:10px; margin-bottom: 10px;"></span>
+                <div class="alert alert-success" style="display:none"></div>
+      
+                <div class="wrapper">
+                  <canvas id="signature-pad" class="signature-pad" style="border:1px;"></canvas>
+                </div>
+
+                <br>
+                <button class="btn btn-primary" id="simpan">Save</button>
+                <button class="btn btn-secondary" id="hapus">Clear</button>
+              </div>
+              <!-- Signaturepad -->
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Cari</button>
+            </div>
+           </form>
             </div>
         </div>
         <!-- END COL1-CARD 1 -->

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Auth;
 use Illuminate\Support\Facades\Hash;
+use Image;
 class DashboardController extends Controller
 {
     //
@@ -120,13 +121,13 @@ class DashboardController extends Controller
         
     }
     public function proses_upload(Request $request){
-        $userAuth = Auth::user();
-		// menyimpan data file yang diupload ke variabel $file
-		$file = $request->file('file');
-      	        // isi dengan nama folder tempat kemana file diupload
-		$tujuan_upload = public_path('upload/profile');
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/profile');
                 // upload file
-		$file->move($tujuan_upload,$userAuth->username . ".jpg");
+        $file->move($tujuan_upload,$userAuth->username . ".jpg");
         $foto = DB::table('users')
         ->where('id', $userAuth->id)
         ->update(
@@ -134,6 +135,7 @@ class DashboardController extends Controller
             'profile_photo_path' => $userAuth->username . ".jpg"
             ]           
         );
+        //return back()->with('success', 'Sukses Merubah Foto');
         return back()->with('success', 'Sukses Merubah Foto');
 	}
     public function ganti_pwd(Request $request){

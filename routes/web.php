@@ -124,6 +124,7 @@ Route::get('/downloadtemplate',[PanduanController::class, 'downloadtemplate']);
 */
 //Route::get('/nilai',[PenilaianController::class, 'index']);
 Route::get('evaluasi',[PenilaianController::class, 'evaluasi']);
+//Route::post('/evaluasi/post',[SignaturePadController2::class, 'store'])->name('evaluasi.store');
 Route::get('responsi',[PenilaianController::class, 'index']);
 Route::get('/responsi/post',[SignaturePadController2::class, 'create']);
 Route::post('/responsi/post',[PenilaianController::class, 'store'])->name('responsi.store');

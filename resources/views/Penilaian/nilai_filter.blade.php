@@ -12,6 +12,7 @@
             <h3 class="card-title">Daftar Nilai DM</h3>
         </div>
      <div class="card-body">
+     	<div class="row">
      	<div class="col-6 col-md-6">
      		<form method="get" action="/fnilai/filter" enctype="multipart/form-data">
 					
@@ -25,10 +26,21 @@
             </select>
           </div>
           <div class="modal-footer">
-							<button type="submit" class="btn btn-primary">Import</button>
+							<button type="submit" class="btn btn-primary">Cari</button>
+					</div>
+				</form>
 					</div>
          </div>
-          </form>
+         <div class="row">
+         	<div class="col-6 col-md-6">
+         		<button type="button" class="btn btn-success" onclick="tablesToExcel(['tabel1'], ['ProductDay1'], 'TestBook.xls', 'Excel')">Export </button>
+			<button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
+			IMPORT EXCEL
+			</button>
+         	</div>
+         </div>
+          
+          
        </div>
      </div>
     </div>
@@ -45,10 +57,9 @@
             <h3 class="card-title">Daftar Nilai DM</h3>
         </div>
             <div class="card-body">
-			<a href="/pnilai/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
-			<button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
-			IMPORT EXCEL
-			</button>
+			<!-- <a href="/pnilai/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a> -->
+			
+
             <table id="tabel1" class="table table-bordered table-hover">
                   <thead>
                     <tr>
@@ -131,5 +142,6 @@
     
   });
 </script>
+<script src="{{URL::to('js/export.js')}}"></script>
 @endsection
 
