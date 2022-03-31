@@ -1,1 +1,0 @@
-<?php /**PATH C:\xampp\htdocs\log_dm\logdm\resources\views//rekmedis/index.blade.php ENDPATH**/ ?>

@@ -1,1 +1,0 @@
-<img src="/assets/dist/img/logo-uht-1.png" width="100" height="100"><?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/blog/resources/views/vendor/jetstream/components/authentication-card-logo.blade.php ENDPATH**/ ?>

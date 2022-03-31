@@ -113,6 +113,9 @@ Route::get('pdfview', [SignaturePadController::class, 'pdfView']);
 */
 Route::get('panduan', [PanduanController::class, 'index']);
 Route::get('/downloadfile',[PanduanController::class, 'downloadfile']);
+Route::get('/formcutistase',[PanduanController::class, 'cutistase']);
+Route::get('/formisolasi',[PanduanController::class, 'isolasi']);
+Route::get('/formakademik',[PanduanController::class, 'akademik']);
 Route::get('/downloadtemplate',[PanduanController::class, 'downloadtemplate']);
 /*
 | 

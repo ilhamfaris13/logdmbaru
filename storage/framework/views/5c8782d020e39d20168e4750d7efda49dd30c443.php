@@ -1,1 +1,0 @@
-<img src="/upload/wait.png" width="100" height="100"><?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/blog/resources/views/vendor/jetstream/components/application-mark.blade.php ENDPATH**/ ?>

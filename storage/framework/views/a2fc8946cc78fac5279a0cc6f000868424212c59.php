@@ -1,1 +1,0 @@
-<img src="/assets/dist/img/logo-uht-1.png" width="50" height="50"><?php /**PATH C:\xampp\htdocs\logdmbaru\resources\views/vendor/jetstream/components/application-mark.blade.php ENDPATH**/ ?>

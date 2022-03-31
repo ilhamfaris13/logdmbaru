@@ -17,6 +17,12 @@
     <ul>
         <li><a href="/downloadfile">Download Buku Panduan</a></li>
         <li><a href="http://fk.hangtuah.ac.id/feedback-website/">Form Feedback</a></li>
+        <li><a href="https://forms.gle/PfwbmhkQh2Ezbcs6A">Kuesioner Evaluasi Pembelajaran Dokter Muda </a></li>
+        
+        <li><a href="/formcutistase">Form Cuti Stase</a></li>
+        <li><a href="/formisolasi">Form Izin Isolasi Mandiri</a></li>
+        <li><a href="/formakademik">Form Cuti Akademik</a></li>
+
         
     </ul>
     </div>

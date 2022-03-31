@@ -127,12 +127,14 @@ class DashboardController extends Controller
                 // isi dengan nama folder tempat kemana file diupload
         $tujuan_upload = public_path('upload/profile');
                 // upload file
-        $file->move($tujuan_upload,$userAuth->username . ".jpg");
+        $namaFile = time().$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
         $foto = DB::table('users')
         ->where('id', $userAuth->id)
         ->update(
             [
-            'profile_photo_path' => $userAuth->username . ".jpg"
+            'profile_photo_path' => $namaFile 
             ]           
         );
         //return back()->with('success', 'Sukses Merubah Foto');

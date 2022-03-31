@@ -8,8 +8,8 @@
             <div class="card card-primary card-outline">
               <div class="card-body box-profile">
                 <div class="text-center">
-                 <!--  <img class="profile-user-img img-fluid img-circle"
-                  src="/upload/profile/1143203.jpg" alt="{{ Auth::user()->name }}"
+                   <!-- <img class="profile-user-img img-fluid img-circle"
+                  src="/upload/profile/164869164020150410110.jpg" alt="{{ Auth::user()->name }}"
                    > -->
                    <img class="profile-user-img img-responsive img-circle"
                   src="/upload/profile/{{ Auth::user()->profile_photo_path}}" alt="{{ Auth::user()->name }}"

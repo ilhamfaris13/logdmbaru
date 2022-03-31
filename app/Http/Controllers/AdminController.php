@@ -51,14 +51,40 @@ class AdminController extends Controller
     {
         //$user = Auth::user();
         
-        DB::insert('insert into users (name,username,email,password,level) values (?,?,?,?,?)',[
+        DB::insert('insert into users (name,username,email,password,level,profile_photo_path) values (?,?,?,?,?,?)',[
             $request->get('nama'),
             $request->get('username'),
             $request->get('email'),
             Hash::make($request->get('password')),
             $request->get('level'),
-            
+            "default.png",
         ]);
+        if($request->get('level') == 'dosen'){
+            DB::insert('insert into dosen ( NAMA, NIP, NIDN, NIDK, KETERANGAN, Status, RS) values (?,?,?,?,?,?,?)',[
+            $request->get('nama'),
+            $request->get('username'),
+            $request->get('username'),
+            $request->get('username'),
+            "",
+            "",
+            "",
+        ]);        
+        }
+        elseif ($request->get('level') == 'dm'){
+            DB::insert('insert into dm ( NAMA, nim_s1_kedokteran, nim_profesi_dokter, Kelompok, Sex, Keterangan, masa_kerja, alamat_rumah, alamat_orang_tua, ttd, foto) values (?,?,?,?,?,?,?,?,?,?,?)',[
+            $request->get('nama'),
+            $request->get('username'),
+            $request->get('username'),
+            "-",
+            "",
+            "",
+            NULL,
+            "",
+            "",
+            "",
+            "",
+             ]);
+        }
        // return back()->with('success', 'success Full upload signature');
        return redirect()->back()->with('success', 'Berhasil Menambah User ');
     }
