@@ -19,14 +19,14 @@
                         <?php echo csrf_field(); ?>
             <div class="card text-black bg-light mb-0">
                 <div class="card-header">
-                    <h2 class="m-0">Tambah Bimbingan Soal UKDI</h2>
+                    <h2 class="m-0">Tambah Bimbingan Soal UKMPPD</h2>
                 </div>
             </div>
             <div class="card-body">
             <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Jenis Kepaniteraan </label>
                 <select name="jenis" class="form-control" id="jenis" onChange="SelectRedirect();" >
-                <option value="Bimbingan Soal UKDI" selected>Bimbingan Soal UKDI</option>
+                <option value="Bimbingan Soal UKDI" selected>Bimbingan Soal UKMPPD</option>
                 <?php $__currentLoopData = $jenis; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rss): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <option value="<?php echo e($rss->jenis); ?>" ><?php echo e($rss->jenis); ?></option>
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -102,7 +102,7 @@
 
       switch(document.getElementById('jenis').value)
       {
-      case "Bimbingan Soal UKDI":
+      case "Bimbingan Soal UKMPPD":
       window.location="<?php echo e(url('/create_bimbingan')); ?>";
       break;
       case "Ketramplian Klinis":

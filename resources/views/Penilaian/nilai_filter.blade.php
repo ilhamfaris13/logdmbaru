@@ -33,10 +33,11 @@
          </div>
          <div class="row">
          	<div class="col-6 col-md-6">
-         		<button type="button" class="btn btn-success" onclick="tablesToExcel(['tabel1'], ['ProductDay1'], 'TestBook.xls', 'Excel')">Export </button>
-			<button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
+         		<button type="button" class="btn btn-success" onclick="tablesToExcel(['tabel2'], ['nilai_dm'], 'nilai_dm.xls', 'Excel')">Export </button>
+            <a type="button" class="btn btn-info" href="/panduannilai">Panduan Nilai</a>
+			<!-- <button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
 			IMPORT EXCEL
-			</button>
+			</button> -->
          	</div>
          </div>
           
@@ -54,15 +55,15 @@
       <!-- COL 2- CARD 1 -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Daftar Nilai DM</h3>
+            <h3 class="card-title">Daftar Nilai DM {{$getKel}}</h3>
         </div>
             <div class="card-body">
 			<!-- <a href="/pnilai/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a> -->
 			
-
             <table id="tabel1" class="table table-bordered table-hover">
                   <thead>
-                    <tr>
+             
+            <tr>
 						<th>AKSI</th>
 						<th> NAMA</th>
 						<th> NIM</th> 
@@ -74,6 +75,7 @@
 						<th> Pengabdian</th> 
 						<th> Prettest</th>
 						<th> Posttest</th>
+            <th> DOPS</th>
 						<th> OSCE</th>
 						<th> Nilai Akhir</th>
                     </tr>
@@ -83,7 +85,7 @@
                     <tr class="data-row">
                     <td class="align-middle">
                       <a class="btn btn-primary btn-sm" href="/detail_dm_kegiatan/{{ $log->id_dm }}" target="_blank"><i class="far fa-eye"></i></a>
-                      <a class="btn btn-success btn-sm" href="/nilai/{{ $log->nim }}"><i class="fas fa-edit"></i></a>
+                      <!-- <a class="btn btn-success btn-sm" href="/nilai/{{ $log->nim }}"><i class="fas fa-edit"></i></a> -->
                     </td>
                     <td class="align-middle ">{{ $log->nama }}</td>
                     <td class="align-middle ">{{ $log->nim }}</td>
@@ -95,9 +97,61 @@
 					<td class="align-middle ">{{ $log->pengabdian }}</td>
 					<td class="align-middle ">{{ $log->prettest }}</td>
 					<td class="align-middle ">{{ $log->posttest }}</td>
-					<td class="align-middle ">{{ $log->osce }}</td>
+					<td class="align-middle ">{{ $log->dops }}</td>
+          <td class="align-middle ">{{ $log->osce }}</td>
 					<td class="align-middle ">{{ $log->nilai_akhir }}</td>
 					<!-- <td class="align-middle ">0</td>-->
+                    </tr>
+                    @endforeach
+                  </tbody>
+                  <tfoot>
+                  </tfoot>
+                </table>
+
+                <table id="tabel2" class="table table-bordered table-hover" hidden>
+                  <thead>
+              <tr>
+                <th colspan="14">NILAI KEPANITERAAN</th>
+              </tr>
+              <tr>
+                <th colspan="7">KELOMPOK : {{$getKel}} </th>
+                <th colspan="7">STASE : </th>
+              </tr>
+            <tr>
+            
+            <th> NAMA</th>
+            <th> NIM</th> 
+            <th> Atitude</th>   
+            <th> Longcase</th>
+            <th> Jurnal</th> 
+            <th> Minicex</th> 
+            <th> Derajat</th> 
+            <th> Pengabdian</th> 
+            <th> Prettest</th>
+            <th> Posttest</th>
+            <th> DOPS</th>
+            <th> OSCE</th>
+            <th> Nilai Akhir</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  @foreach($logs as $key => $log)
+                    <tr class="data-row">
+                    
+                    <td class="align-middle ">{{ $log->nama }}</td>
+                    <td class="align-middle ">{{ $log->nim }}</td>
+          <td class="align-middle ">{{ $log->atitude }}</td>
+          <td class="align-middle ">{{ $log->longcase }}</td>
+          <td class="align-middle ">{{ $log->jurnal }}</td>
+          <td class="align-middle ">{{ $log->minicex }}</td>
+          <td class="align-middle ">{{ $log->derajat }}</td>
+          <td class="align-middle ">{{ $log->pengabdian }}</td>
+          <td class="align-middle ">{{ $log->prettest }}</td>
+          <td class="align-middle ">{{ $log->posttest }}</td>
+          <td class="align-middle ">{{ $log->dops }}</td>
+          <td class="align-middle ">{{ $log->osce }}</td>
+          <td class="align-middle ">{{ $log->nilai_akhir }}</td>
+          <!-- <td class="align-middle ">0</td>-->
                     </tr>
                     @endforeach
                   </tbody>

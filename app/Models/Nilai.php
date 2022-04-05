@@ -20,6 +20,7 @@ class Nilai extends Model
         'pengabdian',
         'prettest',
         'posttest',
+        'dops',
         'osce',
 		'id_dm',
 		'nilai_akhir'

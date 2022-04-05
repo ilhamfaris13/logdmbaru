@@ -60,10 +60,10 @@ class PenilaianController extends Controller
           ->where('dm.Kelompok','like','%'. $request->get('kelompok').'%')
           ->get();
           $kelompoks = DB::table('dm')->distinct()->get(['Kelompok']);
-          
+          $getKel=$request->get('kelompok');
            
  
-        return view('Penilaian.nilai_filter',compact('logs','kelompoks'));
+        return view('Penilaian.nilai_filter',compact('logs','kelompoks','getKel'));
         //return view('Penilaian',['nilai'=>$logs]);
     }
 	public function export_excel()

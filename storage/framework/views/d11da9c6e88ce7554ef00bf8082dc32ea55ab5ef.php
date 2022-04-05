@@ -11,7 +11,7 @@
     <div class="col-12">
     <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Bimbingan Soal UKDI</h3>
+                <h3 class="card-title">Bimbingan Soal UKMPPD</h3>
                 
               </div>
               
@@ -27,7 +27,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Daftar Bimbingan Soal UKDI</h3>
+                <h3 class="card-title">Bimbingan Soal UKMPPD</h3>
                 
               </div>
              
@@ -50,8 +50,8 @@
                       <th> STASE</th>
                       <th> TANGGAL</th>
                       <th> JUMLAH SOAL</th>
-                      <th> DOSEN</th>
-                      <th> TTDP</th>
+                      <th> DOSEN PENGUJI KLINIS</th>
+                      <th> TTD DPK</th>
                      
                       <th hidden> </th>
                      
@@ -139,8 +139,8 @@
                       <th> RUMAH SAKIT</th>
                       <th> STASE</th>
                       <th> TANGGAL</th>
-                      <th> DOSEN</th>
-                      <th> TTDP</th>
+                      <th> DOSEN PENGUJI KLINIS</th>
+                      <th> TTD DPK</th>
                       <th> </th>
                      
                     </tr>

@@ -44,14 +44,14 @@
                       <th> NAMA</th>
                       <th> NIM</th>
                       <?php endif; ?>
-                      <th> JENIS KEPANITERAAN</th>
+                      <th> KEGIATAN KEPANITERAAN</th>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
                       <th> STASE</th>
                       <th> TANGGAL</th>
                       <th> KETERANGAN</th>
                       <th> DOSEN PEMBIMBING KLINIK</th>
-                      <th> TTDP</th>
+                      <th> TTD DPK</th>
                      
                       <th hidden> </th>
                      
@@ -131,13 +131,13 @@
                       <th>STATUS</th>
                       
                      
-                      <th> JENIS KEPANITERAAN</th>
+                      <th> KEGIATAN KEPANITERAAN</th>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
                       <th> STASE</th>
                       <th> TANGGAL</th>
                       <th> DOSEN PEMBIMBING KLINIK</th>
-                      <th> TTDP</th>
+                      <th> TTD DPK</th>
                       <th> </th>
                      
                     </tr>

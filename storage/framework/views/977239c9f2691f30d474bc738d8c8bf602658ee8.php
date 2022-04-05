@@ -131,7 +131,7 @@
             <a href="<?php echo e(url('/bimbingan')); ?>" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                Soal UKDI
+                Soal UKMPPD
                 <i class="right fas fa-angle-right"></i>
               </p>
             </a>
@@ -147,7 +147,7 @@
             </li>
           <?php else: ?>
           <li class="nav-item">
-            <a href="<?php echo e(url('/pnilai')); ?>" class="nav-link">
+            <a href="<?php echo e(url('/fnilai')); ?>" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Daftar Nilai
@@ -179,7 +179,7 @@
             </ul>
 			PENILAIAN -->
           </li>
-          <li class="nav-item ">
+         <!--  <li class="nav-item ">
             <a href="<?php echo e(url('/dm_kegiatan')); ?>" class="nav-link">
               <i class="nav-icon fa fa-book-open"></i>
               <p>
@@ -187,7 +187,7 @@
                 <i class="right fas fa-angle-right"></i>
               </p>
             </a>
-          </li>
+          </li> -->
           <?php endif; ?>
           <!-- /PENILIAIAN -->
          

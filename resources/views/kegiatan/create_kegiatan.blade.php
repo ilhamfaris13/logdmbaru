@@ -23,7 +23,7 @@
             </div>
             <div class="card-body">
             <div class="form-group">
-                <label class="col-form-label" for="modal-input-id">Jenis Kepaniteraan </label>
+                <label class="col-form-label" for="modal-input-id">Kegiatan Kepaniteraan </label>
                 <select name="jenis" class="form-control" id="jenis" onChange="SelectRedirect();" >
                <!-- <select name="jenis" class="form-control" id="jenis" onChange="SelectRedirect();" >
                  <option value="Tugas Jaga Ruang" >Tugas Jaga Ruang</option>
@@ -76,14 +76,20 @@
                 </select>
               </div>
               <div class="form-group">
-                <label class="col-form-label" for="modal-input-id">Dosen </label>
-                <select name="dosen" class="form-control" id="dosen">
+                <label class="col-form-label" for="modal-input-id">Dosen Pembimbing Klinik </label>
+              <!--   <select name="dosen" class="form-control" id="dosen">
                 @foreach($dosen as $key => $rss)
                   <option value="{{$rss->NIP}}" >{{$rss->NAMA}}</option>
                   @endforeach
-                </select>
+                </select> -->
+              <input name="dosen" list="dosen"  class="form-control">
+              <datalist id="dosen">
+                @foreach($dosen as $key => $rss)
+                  <option value="{{$rss->NIP}}" >{{$rss->NAMA}}</option>
+                @endforeach
+              </datalist>   
               </div>
-              
+             
               <div class="form-group">
               <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Submit" />
              </div>
@@ -102,7 +108,7 @@
 
       switch(document.getElementById('jenis').value)
       {
-      case "Bimbingan Soal UKDI":
+      case "Bimbingan Soal UKMPPD":
       window.location="{{url('/create_bimbingan')}}";
       break;
       case "Ketramplian Klinis":

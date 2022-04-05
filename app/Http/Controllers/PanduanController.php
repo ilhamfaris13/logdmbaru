@@ -39,4 +39,9 @@ class PanduanController extends Controller
         $filepath = public_path('upload/panduan/import dm.xlsx');
         return Response::download($filepath); 
     }
+    public function panduannilai()
+    {
+        $filepath = public_path('upload/panduan/Lembar Penilaian DM .pdf');
+        return Response::download($filepath); 
+    }
 }

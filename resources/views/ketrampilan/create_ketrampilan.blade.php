@@ -101,7 +101,7 @@
 
       switch(document.getElementById('jenis').value)
       {
-      case "Bimbingan Soal UKDI":
+      case "Bimbingan Soal UKMPPD":
       window.location="{{url('/create_bimbingan')}}";
       break;
       case "Ketramplian Klinis":

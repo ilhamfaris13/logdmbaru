@@ -35,7 +35,7 @@
                     <b>NIM</b> <a class="float-right">{{$users->username}}</a>
                   </li>
                   
-                  @foreach($paru as $key => $parus)
+                  <!-- @foreach($paru as $key => $parus)
                   <li class="list-group-item">
                     <b>RM</b> <a class="float-right">{{$parus->nomor_rm}}</a>
                     <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/paru1_view.php?editid1={{$parus->Id_paru}}&" target="_blank"><i class="far fa-eye"></i></a>
@@ -100,7 +100,7 @@
                     <b>RM</b> <a class="float-right">{{$rms->nomor_rm}}</a>
                     <a class="btn btn-primary btn-sm" href="http://103.112.123.217/rm/tht1_view.php?editid1={{$rms->id_tht}}&" target="_blank"><i class="far fa-eye"></i></a>
                   </li>  
-                  @endforeach
+                  @endforeach -->
                   
                 </ul>
               </div>

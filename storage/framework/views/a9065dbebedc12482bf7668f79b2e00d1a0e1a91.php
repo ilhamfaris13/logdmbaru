@@ -30,6 +30,7 @@
 						<th> Pengabdian</th> 
 						<th> Prettest</th>
 						<th> Posttest</th>
+						<th> DOPS</th>
 						<th> OSCE</th>
 						<th> Nilai Akhir</th>
                     </tr>
@@ -51,6 +52,7 @@
 					<td class="align-middle "><?php echo e($log->pengabdian); ?></td>
 					<td class="align-middle "><?php echo e($log->prettest); ?></td>
 					<td class="align-middle "><?php echo e($log->posttest); ?></td>
+					<td class="align-middle "><?php echo e($log->dops); ?></td>
 					<td class="align-middle "><?php echo e($log->osce); ?></td>
 					<td class="align-middle "><?php echo e($log->nilai_akhir); ?></td>
 					<!-- <td class="align-middle ">0</td>-->
