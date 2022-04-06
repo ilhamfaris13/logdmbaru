@@ -19,10 +19,16 @@
         <li><a href="http://fk.hangtuah.ac.id/feedback-website/">Form Feedback</a></li>
         <li><a href="https://forms.gle/PfwbmhkQh2Ezbcs6A">Kuesioner Evaluasi Pembelajaran Dokter Muda </a></li>
         
-        <li><a href="/formcutistase">Form Cuti Stase</a></li>
-        <li><a href="/formisolasi">Form Izin Isolasi Mandiri</a></li>
-        <li><a href="/formakademik">Form Cuti Akademik</a></li>
-
+        <?php if( Auth::user()->level == "dosen"): ?>
+        <li><a href="/panduankep"><h1>Buku Panduan Kepaniteraan</h1></a></li>
+        <li><a href="/panduannilai"><h1>Buku Panduan Penilaian</h1></a></li>
+        <li><a href="/pedoman"><h1>Buku Pedoman Akademik</h1></a></li>
+        <li><a href="/jadwalsiklus"><h1>Jadwal Siklus DM</h1></a></li>
+        <?php else: ?>
+        <li><a href="/formcutistase"><h1>Form Cuti Stase</h1></a></li>
+        <li><a href="/formisolasi"><h1>Form Izin Isolasi Mandiri</h1></a></li>
+        <li><a href="/formakademik"><h1>Form Cuti Akademik</h1></a></li>
+        <?php endif; ?>
         
     </ul>
     </div>

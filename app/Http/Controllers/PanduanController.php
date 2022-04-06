@@ -44,4 +44,19 @@ class PanduanController extends Controller
         $filepath = public_path('upload/panduan/Lembar Penilaian DM .pdf');
         return Response::download($filepath); 
     }
+    public function panduankep()
+    {
+        $filepath = public_path('upload/panduan/Buku-Pedoman-Kepaniteraan-Klinik-2020.pdf');
+        return Response::download($filepath); 
+    }
+    public function pedoman()
+    {
+        $filepath = public_path('upload/panduan/Lembar Penilaian DM .pdf');
+        return Response::download($filepath); 
+    }
+    public function jadwalsiklus()
+    {
+        $filepath = public_path('upload/panduan/Lembar Penilaian DM .pdf');
+        return Response::download($filepath); 
+    }
 }

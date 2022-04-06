@@ -118,6 +118,9 @@ Route::get('/formisolasi',[PanduanController::class, 'isolasi']);
 Route::get('/formakademik',[PanduanController::class, 'akademik']);
 Route::get('/downloadtemplate',[PanduanController::class, 'downloadtemplate']);
 Route::get('/panduannilai',[PanduanController::class, 'panduannilai']);
+Route::get('/panduankep',[PanduanController::class, 'panduankep']);
+Route::get('/pedoman',[PanduanController::class, 'pedoman']);
+Route::get('/jadwalsiklus',[PanduanController::class, 'jadwalsiklus']);
 /*
 | 
 |--------------------------------------------------------------------------
