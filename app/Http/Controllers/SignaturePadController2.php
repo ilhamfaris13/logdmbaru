@@ -159,9 +159,18 @@ class SignaturePadController2 extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+		//dd($request);
+        DB::table('kegiatan_log')
+        ->where('id', $request->get('id'))
+        ->update(
+            [
+            
+            'status' => 1
+            ]           
+        );
+		return back()->with('success', 'Verifikasi Sukses');
     }
 
     /**

@@ -38,7 +38,8 @@
                   <thead>
                   
                     <tr>
-                      <th>AKSI</th>
+                      <th>AKSI/STATUS</th>
+					  
                       @if( Auth::user()->level == "dm")
                       @else
                       <th> NAMA</th>
@@ -51,7 +52,7 @@
                       <th> TANGGAL</th>
                       <th> KETERANGAN</th>
                       <th> DOSEN PEMBIMBING KLINIK</th>
-                      <th> TTD DPK</th>
+                     
                      
                       <th hidden> </th>
                      
@@ -63,10 +64,15 @@
                     @if( Auth::user()->level == "dosen")
                       <td class="align-middle">
                       @if($log->status == 0)
-                        <button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Verifikasi</button>
-                       
+                         <!--<button type="button" class="btn btn-warning" id="edit-item" data-item-id="{{ $log->id }}">Verifikasi</button>-->
+					 <form id="edit-form" method="POST" action="{{ route('signature.edit') }}">
+					 @csrf
+					 <input type="text" name="id" class="form-control" id="id" value="{{ $log->id }}" hidden>
+						<input  class="btn btn-small btn-info" type="submit" value="Verifikasi" />
+					<!--<input type="checkbox" name="status[{{ $log->id }}]" >-->
+					</form>
                       @else  
-                      <span class="badge bg-green">Sudah di Verifikasi</span>
+                      <span class="badge bg-green">Sudah diverifikasi</span>
                       @endif
                       @else
                       <!--status-->
@@ -89,7 +95,6 @@
                       <td class="align-middle tanggal">{{date('d-m-Y', strtotime($log->tanggal))}}</td>
                       <td class="align-middle keterangan">{{$log->keterangan}}</td>
                       <td class="align-middle word-break dosen">{{ $log->dosen }}</td>
-                      <td class="align-middle id" ><img src="/upload/{{ $log->ttdp }}" width="100" height="100"></td>
                       <td class="align-middle foto" hidden>{{ $log->profile_photo_path }}</td>
                      
                       </td>
@@ -185,6 +190,7 @@
         @else
         @endif
       </div>
+	  
       <!-- /.container-fluid -->
   <!-- heading -->
   
@@ -227,7 +233,7 @@
                 <!-- /.widget-user-image -->
                 
               </div>
-           
+			
               <!-- /name -->
               <div class="form-group">
               <label class="col-form-label" for="modal-input-name" >Nama </label>
@@ -285,11 +291,14 @@
                 <input type="text" name="keterangan" class="form-control" id="modal-input-keterangan" disabled>
               </div>
               <!-- /description -->
+			  <button class="btn btn-primary" id="simpan">Save</button>
             </div>
               </div>
-              <div class="row"> 
-              <div class="col-md-6">
-              <div class="form-group">
+             
+			 
+			  
+			  </form>
+             <!--  <div class="form-group">
               <label class="col-form-label" for="modal-input-sig" >Tanda Tangan DPK </label>
               <div class="jumbotron">
                 <span class="success" style="color:green; margin-top:10px; margin-bottom: 10px;"></span>
@@ -302,8 +311,8 @@
                 <br>
                 <button class="btn btn-primary" id="simpan">Save</button>
                 <button class="btn btn-secondary" id="hapus">Clear</button>
-              </div>
-              <!-- Signaturepad -->
+              </div> 
+               Signaturepad -->
               </div>
               </div>
               </div>

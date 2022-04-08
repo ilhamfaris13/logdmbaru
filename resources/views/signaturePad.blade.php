@@ -49,8 +49,8 @@
                       <th> TANGGAL</th>
                       <th> KETERANGAN</th>
                       <th> DOSEN PEMBIMBING KLINIK</th>
-                      <th> TTD DPK</th>
-                      <th> </th>
+                     
+                      <th>STATUS </th>
                       <th hidden> </th>
                      
                     </tr>
@@ -71,7 +71,7 @@
                       <td class="align-middle tanggal">{{date('d-m-Y', strtotime($log->tanggal))}}</td>
                       <td class="align-middle keterangan">{{$log->keterangan}}</td>
                       <td class="align-middle word-break dosen">{{ $log->dosen }}</td>
-                      <td class="align-middle id" ><img src="/upload/{{ $log->ttdp }}" width="100" height="100"></td>
+                      
                       <td class="align-middle foto" hidden>/upload/profile/{{ $log->profile_photo_path }}</td>
                       @if( Auth::user()->level == "dosen")
                       <td class="align-middle">
@@ -133,8 +133,8 @@
                       <th> STASE</th>
                       <th> TANGGAL</th>
                       <th> DOSEN</th>
-                      <th> TTD DPK</th>
-                      <th> </th>
+                     
+                      <th> STATUS </th>
                      
                     </tr>
                   </thead>
@@ -151,7 +151,7 @@
                       <td class="align-middle word-break ">{{ $log->stase_ }}</td>
                       <td class="align-middle ">{{date('d-m-Y', strtotime($log->tanggal))}}</td>
                       <td class="align-middle word-break ">{{ $log->dosen }}</td>
-                      <td class="align-middle " ><img src="/upload/{{ $log->ttdp }}" width="100" height="100"></td>
+                    
                       <!--status-->
                       @if($log->status == 0)
                       <td class="align-middle word-break "><span class="badge bg-red">Belum Verifikasi</span></td>

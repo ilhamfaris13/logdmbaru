@@ -76,7 +76,7 @@ Route::post('create_kegiatan',[kegiatanController::class, 'create'])->name('kegi
 //Route::get('/signature/post', 'SignatureController2@store');
 Route::get('/signature/post',[SignaturePadController2::class, 'create']);
 Route::post('/signature/post',[SignaturePadController2::class, 'store'])->name('signature.store');
-
+Route::post('/signature/edit',[SignaturePadController2::class, 'edit'])->name('signature.edit');
 Route::get('/kegiatan/store',[SignaturePadController2::class, 'create']);
 Route::post('/kegiatan/store',[SignaturePadController2::class, 'store'])->name('kegiatan.store');
 /*
