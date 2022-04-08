@@ -161,16 +161,40 @@ class SignaturePadController2 extends Controller
      */
     public function edit(Request $request)
     {
-		//dd($request);
-        DB::table('kegiatan_log')
+        $sts="";
+        $pesan = "";
+		//dd($request->input('cekVerif'));
+        if(!empty($request->get('cekVerif'))){
+            $index = [];
+            foreach($request->get('cekVerif') as $key => $value){
+                //array_push($index,['cekVerif' => $value]);
+                //dd($value);
+                DB::table('kegiatan_log')
+            ->where('id', $value)
+            ->update(
+                    [
+                    
+                    'status' => 1
+                    ]           
+                 );
+            }
+            $sts = 'success';
+            $pesan ='Verifikasi Sukses';
+        }
+        else{
+            $sts = 'warning';
+            $pesan ='Pilih Kegiatan Terlebih dahulu';
+        }
+        /*DB::table('kegiatan_log')
         ->where('id', $request->get('id'))
         ->update(
             [
             
             'status' => 1
             ]           
-        );
-		return back()->with('success', 'Verifikasi Sukses');
+        );*/
+		//return back()->with('success', 'Verifikasi Sukses');
+        return back()->with($sts, $pesan);
     }
 
     /**

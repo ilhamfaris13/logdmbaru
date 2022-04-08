@@ -1,0 +1,1 @@
+<img src="/assets/dist/img/logo atas bawah.png" width="500" height="500"><?php /**PATH D:\Xampp\htdocs\logdmbaru\resources\views/vendor/jetstream/components/authentication-card-logo.blade.php ENDPATH**/ ?>
