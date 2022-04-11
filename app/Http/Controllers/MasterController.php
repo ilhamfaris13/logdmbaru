@@ -517,7 +517,7 @@ class MasterController extends Controller
             ->where('id','=',$id)
             ->get();
             /*REKAM MEDIS*/
-            $paru=DB::table('paru')
+            /*$paru=DB::table('paru')
             ->where('Id_User', '=',$id)
             ->orderBy('Id_paru','desc')
             ->get();
@@ -562,7 +562,7 @@ class MasterController extends Controller
             ->where('id_tht', '=',$id)
             //->orderBy('id_Jiwa ','desc')
             ->get();
-            
+            */
             /* STASE IPD */
             $logs = DB::table('kegiatan_log')
             ->join('users','users.id','=','kegiatan_log.id_user')
@@ -723,7 +723,7 @@ class MasterController extends Controller
             ->where('kegiatan_log.stase', '=',"28")
             ->orderBy('kegiatan_log.status','asc')
             ->get();
-                return view('admin.detail_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi','paru','andrologi','ginekologi','interna','jiwa1','kulit1','mata1','neurologi','obstetri','pediatri1','tht1'));
+                return view('admin.detail_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi'));
         }
         elseif($userAuth->level =='admin') {
             
@@ -732,7 +732,7 @@ class MasterController extends Controller
             ->where('id','=',$id)
             ->get();
             /*REKAM MEDIS*/
-            $paru=DB::table('paru')
+            /*$paru=DB::table('paru')
             ->where('Id_User', '=',$id)
             ->orderBy('Id_paru','desc')
             ->get();
@@ -776,7 +776,7 @@ class MasterController extends Controller
             $tht1=DB::table('tht')
             ->where('id_tht', '=',$id)
             //->orderBy('id_Jiwa ','desc')
-            ->get();
+            ->get();*/
             
             /* STASE IPD */
             $logs = DB::table('kegiatan_log')
@@ -938,7 +938,7 @@ class MasterController extends Controller
             ->where('kegiatan_log.stase', '=',"28")
             ->orderBy('kegiatan_log.status','asc')
             ->get();
-                return view('admin.detail_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi','paru','andrologi','ginekologi','interna','jiwa1','kulit1','mata1','neurologi','obstetri','pediatri1','tht1'));
+                return view('admin.detail_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi'));
         }
         else{
             abort(403, 'Tidak Diizinkan');
@@ -1100,7 +1100,7 @@ class MasterController extends Controller
             ->where('id','=',$id)
             ->get();
             /*REKAM MEDIS*/
-            $paru=DB::table('paru')
+            /*$paru=DB::table('paru')
             ->where('Id_User', '=',$id)
             ->orderBy('Id_paru','desc')
             ->get();
@@ -1144,7 +1144,7 @@ class MasterController extends Controller
             $tht1=DB::table('tht')
             ->where('id_tht', '=',$id)
             //->orderBy('id_Jiwa ','desc')
-            ->get();
+            ->get();*/
             
             /* STASE IPD */
             $logs = DB::table('kegiatan_log')
@@ -1306,7 +1306,7 @@ class MasterController extends Controller
             ->where('kegiatan_log.stase', '=',"28")
             ->orderBy('kegiatan_log.status','asc')
             ->get();
-                return view('Penilaian.detail_dm_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi','paru','andrologi','ginekologi','interna','jiwa1','kulit1','mata1','neurologi','obstetri','pediatri1','tht1'));
+                return view('Penilaian.detail_dm_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi',));
         }
         elseif($userAuth->level =='admin') {
             abort(403, 'Tidak Diizinkan');

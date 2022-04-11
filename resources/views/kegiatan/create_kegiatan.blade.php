@@ -32,6 +32,7 @@
                 <option value="Kegiatan Asistensi di Ruang Oprasi" >Kegiatan Asistensi di Ruang Oprasi</option>
                 <option value="Kegiatan Kuliah Pakar" >Kegiatan Kuliah Pakar</option>
                 <option value="Tugas pada Dinas Luar" >Tugas pada Dinas Luar</option> -->
+                <option value=""  >Pilih Kegiatan</option>
                 @foreach($jenis as $key => $rss)
                   <option value="{{$rss->jenis}}" >{{$rss->jenis}}</option>
                   @endforeach

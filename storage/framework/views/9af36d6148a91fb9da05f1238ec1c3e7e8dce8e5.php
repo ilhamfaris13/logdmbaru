@@ -33,6 +33,7 @@
                 <option value="Kegiatan Asistensi di Ruang Oprasi" >Kegiatan Asistensi di Ruang Oprasi</option>
                 <option value="Kegiatan Kuliah Pakar" >Kegiatan Kuliah Pakar</option>
                 <option value="Tugas pada Dinas Luar" >Tugas pada Dinas Luar</option> -->
+                <option value=""  >Pilih</option>
                 <?php $__currentLoopData = $jenis; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rss): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <option value="<?php echo e($rss->jenis); ?>" ><?php echo e($rss->jenis); ?></option>
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

@@ -33,7 +33,7 @@
                     <b>Nama</b> <a class="float-right">{{Auth::user()->name}}</a>
                   </li>
                   <li class="list-group-item">
-                    <b>NIM</b> <a class="float-right">{{Auth::user()->username}}</a>
+                    <b>Username</b> <a class="float-right">{{Auth::user()->username}}</a>
                   </li>
                   @if( Auth::user()->level == "dm")
                   <li class="list-group-item">
@@ -59,7 +59,7 @@
                     </div>  
                     </li>
                     <li class="list-group-item">
-                    <b>IPD/ITEKNA</b>
+                    <b>IPD/ITERNA</b>
                     @if($ipd==0)
                     <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
                     @else

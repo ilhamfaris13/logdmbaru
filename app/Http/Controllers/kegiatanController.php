@@ -79,6 +79,7 @@ class kegiatanController extends Controller
         $dosen = DB::table('dosen')
         ->get();
         $jenis = DB::table('table_jenis')
+        ->orderBy('jenis','asc')
         ->get();
         $mata=DB::table('mata')
         ->where('Id_User', '=',$userAuth->id)
