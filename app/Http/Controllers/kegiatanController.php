@@ -77,6 +77,7 @@ class kegiatanController extends Controller
         $stase = DB::table('stase')
         ->get();
         $dosen = DB::table('dosen')
+        ->orderBy('NAMA','asc')
         ->get();
         $jenis = DB::table('table_jenis')
         ->orderBy('jenis','asc')
@@ -89,6 +90,22 @@ class kegiatanController extends Controller
         //dd(count($dosen));
         // ActivityLog::all();
         return view('/kegiatan/create_kegiatan',compact('logs','rs','stase','dosen','jenis','mata'));
+    }
+    public function dataAjax(Request $request)
+    {
+        $data = [];
+
+
+        if($request->has('q')){
+            $search = $request->q;
+            $data = DB::table("dosen")
+                    ->select("id_dosen","NAMA")
+                    ->where('NAMA','LIKE',"%$search%")
+                    ->get();
+        }
+
+
+        return response()->json($data);
     }
     public function create(Request $request)
     {

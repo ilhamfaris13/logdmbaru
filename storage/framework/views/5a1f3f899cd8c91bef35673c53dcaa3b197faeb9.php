@@ -33,7 +33,7 @@
                     <b>Nama</b> <a class="float-right"><?php echo e(Auth::user()->name); ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>NIM</b> <a class="float-right"><?php echo e(Auth::user()->username); ?></a>
+                    <b>Username</b> <a class="float-right"><?php echo e(Auth::user()->username); ?></a>
                   </li>
                   <?php if( Auth::user()->level == "dm"): ?>
                   <li class="list-group-item">
@@ -59,7 +59,7 @@
                     </div>  
                     </li>
                     <li class="list-group-item">
-                    <b>IPD/ITEKNA</b>
+                    <b>IPD/ITERNA</b>
                     <?php if($ipd==0): ?>
                     <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
                     <?php else: ?>

@@ -71,6 +71,7 @@ Route::get('dashboard1', [SignaturePadController2::class, 'index']);
 | Kegiatan Controller
 */
 Route::get('create_kegiatan',[kegiatanController::class, 'view']);
+Route::get('select2-autocomplete-ajax', 'kegiatanController@dataAjax');
 Route::get('kegiatan',[kegiatanController::class, 'index']);
 Route::post('create_kegiatan',[kegiatanController::class, 'create'])->name('kegiatan.create');
 //Route::get('/signature/post', 'SignatureController2@store');

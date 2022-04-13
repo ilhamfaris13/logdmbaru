@@ -25,18 +25,15 @@
             <div class="card-body">
             <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Kegiatan Kepaniteraan </label>
-                <select name="jenis" class="form-control" id="jenis" onChange="SelectRedirect();" >
-               <!-- <select name="jenis" class="form-control" id="jenis" onChange="SelectRedirect();" >
-                 <option value="Tugas Jaga Ruang" >Tugas Jaga Ruang</option>
-                <option value="Keterampilan / Kegiatan di Poliklinik" >Keterampilan / Kegiatan di Poliklinik</option>
-                <option value="Unit Gawat Darurat" >Unit Gawat Darurat</option>
-                <option value="Kegiatan Asistensi di Ruang Oprasi" >Kegiatan Asistensi di Ruang Oprasi</option>
-                <option value="Kegiatan Kuliah Pakar" >Kegiatan Kuliah Pakar</option>
-                <option value="Tugas pada Dinas Luar" >Tugas pada Dinas Luar</option> -->
+                <!-- <select name="jenis" class="form-control" id="jenis" onChange="SelectRedirect();" > -->
+                <select name="jenis" class="form-control" id="jenis" onchange="showfield(this.options[this.selectedIndex].value)">
+                <option value=""  >Pilih Kegiatan</option>
                 <?php $__currentLoopData = $jenis; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rss): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <option value="<?php echo e($rss->jenis); ?>" ><?php echo e($rss->jenis); ?></option>
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  <option value="Lainnya">Lainnya</option>
                 </select>
+                <div class="form-group" id="div1"></div>
               </div>
               <!-- id -->
               <div class="form-group">
@@ -78,19 +75,22 @@
               </div>
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Dosen Pembimbing Klinik </label>
-              <!--   <select name="dosen" class="form-control" id="dosen">
+                <!--  <select name="dosen" class="form-control" id="dosen">
                 <?php $__currentLoopData = $dosen; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rss): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <option value="<?php echo e($rss->NIP); ?>" ><?php echo e($rss->NAMA); ?></option>
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                </select> -->
-              <input name="dosen" list="dosen"  class="form-control">
+                </select>  -->
+                
+             <!--  <input name="dosen" list="dosen"  class="form-control">
               <datalist id="dosen">
                 <?php $__currentLoopData = $dosen; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rss): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <option value="<?php echo e($rss->NIP); ?>" ><?php echo e($rss->NAMA); ?></option>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               </datalist>   
               </div>
-             
+              -->
+              <button type="button" data-toggle="modal" id="edit-item" class="btn btn-primary btn-sm cari-karyawan px-3">Cari</button>
+              <p id="dosen"></p>
               <div class="form-group">
               <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Submit" />
              </div>
@@ -101,6 +101,49 @@
         </form>
     </div>
     </div>
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="edit-modal-label">Edit Data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="attachment-body-content">
+        <table id="tabel1" class="table table-bordered table-hover">
+                <thead>
+                  
+                  <tr>
+                    <th> NIP</th>
+                    <th> NAMA</th>
+                    
+                    <th> UBAH</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php $__currentLoopData = $dosen; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <tr class="data-row">
+                        <td class="align-middle nip"><?php echo e($log->NIP); ?></td>
+                        <td class="align-middle "><?php echo e($log->NAMA); ?></td>
+                       
+                        <td class="align-middle">
+                            <button class="btn btn-sm btn-primary nip" data-nip="<?php echo e($log->NIP); ?>" id="btnPilih">Pilih</button>
+                            <a  href="" onclick="add('<?php echo e($log->NIP); ?>');"><i class="fa fa-pencil"></i></a> 
+                        </td>
+                  
+                    </tr>
+                    
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  </tbody>
+            </table>
+      </div>
+    </div>
+  </div>
+</div>
+  
+    
+      
+      
     </section>
     <script language="javascript">
       function SelectRedirect(){
@@ -130,6 +173,66 @@
       }
       ////////////////// 
     </script>
+   <script type="text/javascript">
+function showfield(name){
+  if(name=='Lainnya')document.getElementById('div1').innerHTML='Lainnya: <input type="text"  class="form-control"  name="jenis" />';
+  else document.getElementById('div1').innerHTML='';
+}
+
+
+</script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": false,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": false,
+    });
+
+    $('#tabel1').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": true,
+      "responsive": true,
+    });
+    
+  });
+
+  $('.cari-karyawan').on('click', function () {
+
+  $("#edit-modal").modal("show");
+  function add(id)
+  {
+    alert(id);
+    document.getElementById("dosen").innerHTML = id;
+  }
+  
+  
+
+
+
+});
+/*$(".btnPilih").each(function(){
+  $(this).click(function(){
+  var nip = $(this).data("NIP");
+  document.getElementById("dosen").value = nip;
+  })
+});*/
+</script>
+<script>
+
+</script>
 <?php $__env->stopSection(); ?>
 
 
