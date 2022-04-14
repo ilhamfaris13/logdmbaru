@@ -31,9 +31,9 @@
                     <td class="align-middle ">{{ $log->name }}</td>
                     <td class="align-middle word-break" style="text-transform: capitalize;">{{ $log->level }}</td>
                     <td class="align-middle">
-                    <a class="btn btn-primary btn-sm" href="admin/edit/{{$log->id}}" target="_blank"><i class="far fa-eye"></i></a>
-                    <a class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
-                    
+                    <a class="btn btn-warning btn-sm" href="admin/edit/{{$log->id}}" target="_blank"><i class="far fa-edit"></i></a>
+                   <a href="/user/{{$log->id}}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                   
                     </td>
                   
                     </tr>

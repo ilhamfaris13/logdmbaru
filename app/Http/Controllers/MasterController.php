@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Response;
 use App\Imports\DmImport;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Models\User;
 class MasterController extends Controller
 {
     /**
@@ -972,7 +973,7 @@ class MasterController extends Controller
  
 		// alihkan halaman kembali
 		//return redirect('/masterimport');
-        return back()->with('success', 'Data Siswa Berhasil Diimport!');
+        
     }
     /**
      * Show the form for creating a new resource.
@@ -1037,7 +1038,9 @@ class MasterController extends Controller
      */
     public function destroy($id)
     {
-        //
+         $user = User::where('id', $id)->firstorfail()->delete();
+          
+          return back()->with('success', 'Data User Berhasil Hapus!');
     }
     public function index_dm_kegiatan()
     {

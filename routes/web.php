@@ -218,6 +218,7 @@ Route::get('masterimport', [MasterController::class, 'index_import']);
 Route::post('/dm/import_excel',[MasterController::class, 'import_excel']);
 Route::get('tarikdb', [MasterController::class, 'index_tarik']);
 Route::post('tarikdb', [MasterController::class, 'create_dm'])->name('tarikdb.create');
+Route::get('/user/{id}', [MasterController::class, 'destroy'])->name('users.destroy');
 //Route::post('tarikdb', [MasterController::class, 'createResetPwd'])->name('reset.create');
 /*
 | 
