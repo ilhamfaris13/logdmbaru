@@ -54,7 +54,7 @@
               <!-- /name -->
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Keterangan </label>
-                <input type="text" name="keterangan" class="form-control" id="keterangan" required>
+                <textarea type="text" name="keterangan" class="form-control" id="keterangan" required></textarea> 
               </div>
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Rumah Sakit </label>
@@ -75,6 +75,36 @@
               </div>
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Dosen Pembimbing Klinik </label>
+                <div class="card">
+                  <div class="card-header">
+                      <h3 class="card-title">Daftar Dosen</h3>
+                  </div>
+                  <div class="card-body">
+                    <table id="tabel1" class="table table-bordered table-hover">
+                <thead>
+                  
+                  <tr>
+                    <th> AKSI</th>
+                    <th> NAMA</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php $__currentLoopData = $dosen; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <tr class="data-row">
+                      <td class="align-middle ">
+                        <input type="radio" id="dosen" name="dosen" value="<?php echo e($log->NIP); ?>">
+                      </td>
+                      
+                      <td class="align-middle "><?php echo e($log->NAMA); ?></td>
+                    </tr>
+                    
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                  </tbody>
+            </table>
+                  </div>
+                </div>
+                
                 <!--  <select name="dosen" class="form-control" id="dosen">
                 <?php $__currentLoopData = $dosen; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rss): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <option value="<?php echo e($rss->NIP); ?>" ><?php echo e($rss->NAMA); ?></option>
@@ -89,8 +119,7 @@
               </datalist>   
               </div>
               -->
-              <button type="button" data-toggle="modal" id="edit-item" class="btn btn-primary btn-sm cari-karyawan px-3">Cari</button>
-              <p id="dosen"></p>
+              
               <div class="form-group">
               <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Submit" />
              </div>
@@ -152,7 +181,7 @@
 
       switch(document.getElementById('jenis').value)
       {
-      case "Bimbingan Soal UKMPPD":
+      /*case "Bimbingan Soal UKMPPD":
       window.location="<?php echo e(url('/create_bimbingan')); ?>";
       break;
       case "Ketramplian Klinis":
@@ -160,7 +189,7 @@
       break;
       case "Ujian Akhir CO-SCHAAP":
       window.location="<?php echo e(url('/create_ujian')); ?>";
-      break;
+      break;*/
 
 
 

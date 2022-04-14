@@ -106,16 +106,16 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Keterampilan / Kegiatan di Poliklinik</h3>
+                <h3 class="card-title">ILMU PENYAKIT DALAM</h3>
                 </center>
             </caption>
             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
-                      <th> STASE</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -126,17 +126,9 @@
               <tr >
                         <td >{{ $log->tempat }}</td>
                         <td >{{ $log->rumah_sakit_ }}</td>
-                        <td >{{ $log->stase_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                        <td >
-                            <span>
-                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen }}
-                        </span>
-                        </td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -164,16 +156,16 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Kegiatan Kuliah Pakar</h3>
+                <h3 class="card-title">ILMU KESEHATAN ANAK (IKA)</h3>
                 </center>
             </caption>
             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
-                      <th> STASE</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -184,17 +176,9 @@
               <tr >
                         <td >{{ $log->tempat }}</td>
                         <td >{{ $log->rumah_sakit_ }}</td>
-                        <td >{{ $log->stase_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                        <td >
-                            <span>
-                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen }}
-                        </span>
-                        </td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -222,16 +206,16 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Tugas Jaga Ruang</h3>
+                <h3 class="card-title">BEDAH</h3>
                 </center>
             </caption>
-            <thead>  
+             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
-                      <th> STASE</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -242,17 +226,9 @@
               <tr >
                         <td >{{ $log->tempat }}</td>
                         <td >{{ $log->rumah_sakit_ }}</td>
-                        <td >{{ $log->stase_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                        <td >
-                            <span>
-                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen }}
-                        </span>
-                        </td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -281,16 +257,16 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Unit Gawat Darurat</h3>
+                <h3 class="card-title">KULIT</h3>
                 </center>
             </caption>
-            <thead>  
+             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
-                      <th> STASE</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -301,17 +277,9 @@
               <tr >
                         <td >{{ $log->tempat }}</td>
                         <td >{{ $log->rumah_sakit_ }}</td>
-                        <td >{{ $log->stase_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                        <td >
-                            <span>
-                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen }}
-                        </span>
-                        </td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -339,17 +307,17 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Kegiatan Asistensi di Ruang Operasi</h3>
+                <h3 class="card-title">THT</h3>
                 </center>
               </div>
             </caption>
-            <thead>  
+             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
-                      <th> STASE</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -360,17 +328,9 @@
               <tr >
                         <td >{{ $log->tempat }}</td>
                         <td >{{ $log->rumah_sakit_ }}</td>
-                        <td >{{ $log->stase_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                        <td >
-                            <span>
-                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen }}
-                        </span>
-                        </td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -398,16 +358,16 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Tugas pada Dinas Luar</h3>
+                <h3 class="card-title">MATA</h3>
                 </center>
             </caption>
-            <thead>  
+             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
-                      <th> STASE</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -418,17 +378,9 @@
               <tr >
                         <td >{{ $log->tempat }}</td>
                         <td >{{ $log->rumah_sakit_ }}</td>
-                        <td >{{ $log->stase_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                        <td >
-                            <span>
-                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen }}
-                        </span>
-                        </td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -457,16 +409,16 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Presentasi Kasus / Responsi</h3>
+                <h3 class="card-title">SARAF</h3>
                 </center>
             </caption>
-            <thead>  
+             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
-                      <th> STASE</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -477,17 +429,9 @@
               <tr >
                         <td >{{ $log->tempat }}</td>
                         <td >{{ $log->rumah_sakit_ }}</td>
-                        <td >{{ $log->stase_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                        <td >
-                            <span>
-                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen }}
-                        </span>
-                        </td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -516,16 +460,16 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Karya Tulis / Referat</h3>
+                <h3 class="card-title">JIWA</h3>
                 </center>
             </caption>
-            <thead>  
+             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
-                      <th> STASE</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -536,17 +480,9 @@
               <tr >
                         <td >{{ $log->tempat }}</td>
                         <td >{{ $log->rumah_sakit_ }}</td>
-                        <td >{{ $log->stase_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                        <td >
-                            <span>
-                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen }}
-                        </span>
-                        </td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -575,16 +511,16 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Bimbingan Soal UKDI</h3>
+                <h3 class="card-title">FORENSIK</h3>
                 </center>
             </caption>
-            <thead>  
+             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
-                      <th> STASE</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -595,17 +531,9 @@
               <tr >
                         <td >{{ $log->tempat }}</td>
                         <td >{{ $log->rumah_sakit_ }}</td>
-                        <td >{{ $log->stase_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                        <td >
-                            <span>
-                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen }}
-                        </span>
-                        </td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -634,16 +562,16 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Ketramplian Klinis</h3>
+                <h3 class="card-title">ANESTESI</h3>
                 </center>
             </caption>
-            <thead>  
+             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
-                      <th> STASE</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -654,17 +582,9 @@
               <tr >
                         <td >{{ $log->tempat }}</td>
                         <td >{{ $log->rumah_sakit_ }}</td>
-                        <td >{{ $log->stase_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                        <td >
-                            <span>
-                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen }}
-                        </span>
-                        </td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -693,16 +613,16 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Prolonged Exam</h3>
+                <h3 class="card-title">RADIOLOGI</h3>
                 </center>
             </caption>
-            <thead>  
+             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
                       <th> RUMAH SAKIT</th>
-                      <th> STASE</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      <th> TTDP</th>
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -713,17 +633,9 @@
               <tr >
                         <td >{{ $log->tempat }}</td>
                         <td >{{ $log->rumah_sakit_ }}</td>
-                        <td >{{ $log->stase_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                        <td >
-                            <span>
-                            <img src="{{ public_path('upload/'.$log->ttdp.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen }}
-                        </span>
-                        </td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -753,16 +665,16 @@
           <table id="example1" class='table table-bordered'>
             <caption>
               <center>
-                <h3 class="card-title">Ujian Akhir CO-SCHAAP</h3>
+                <h3 class="card-title">REHAB MEDIK</h3>
                 </center>
             </caption>
-            <thead>  
+             <thead>  
                     <tr>
                       <th> TEMPAT/ TINDAKAN / KASUS</th>
-                      <th> PEMBIMBING 1</th>
-                      <th> PEMBIMBING 2</th>
+                      <th> RUMAH SAKIT</th>
+                      <th> DPK</th>
                       <th> TANGGAL</th>
-                      
+                      <th> STATUS</th>
                       
                      
                     </tr>
@@ -771,29 +683,11 @@
               @php $i=1 @endphp
               @foreach($data12 as $log)
               <tr >
-                        <td >{{ $log->kasus }}</td>
-                        <td >
-                        <span>
-                            <img src="{{ public_path('upload/'.$log->ttd_penguji_1.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                        {{ $log->dosen1}}
-                        </span>
-                        </td>
-                        
-                        <td >
-                        <span>
-                            <img src="{{ public_path('upload/'.$log->ttd_penguji_2.'') }}" width="100" height="100">
-                            </span>
-                            <br>
-                        <span>
-                            {{ $log->dosen1 }}
-                        </span>
-                        {{ $log->dosen2}}</td>
-                        
+                        <td >{{ $log->tempat }}</td>
+                        <td >{{ $log->rumah_sakit_ }}</td>
+                        <td >{{ $log->dosen }}</td>
                         <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                       
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
                           
                          
         
@@ -809,6 +703,212 @@
     <!-- col -->
   </div>
   <!-- row -->
+  <div style="page-break-before:always">&nbsp;</div> 
+  <!-- FARMASI -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class='table table-bordered'>
+            <caption>
+              <center>
+                <h3 class="card-title">FARMASI</h3>
+                </center>
+            </caption>
+             <thead>  
+                    <tr>
+                      <th> TEMPAT/ TINDAKAN / KASUS</th>
+                      <th> RUMAH SAKIT</th>
+                      <th> DPK</th>
+                      <th> TANGGAL</th>
+                      <th> STATUS</th>
+                      
+                     
+                    </tr>
+                  </thead>
+            <tbody>
+              @php $i=1 @endphp
+              @foreach($data13 as $log)
+              <tr >
+                        <td >{{ $log->tempat }}</td>
+                        <td >{{ $log->rumah_sakit_ }}</td>
+                        <td >{{ $log->dosen }}</td>
+                        <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
+                          
+                         
+        
+                        </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        <!-- card Body -->
+      </div>
+      <!-- card -->
+    </div>
+    <!-- col -->
+  </div>
+  <!-- row -->
+  <div style="page-break-before:always">&nbsp;</div> 
+  <!-- IKM -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class='table table-bordered'>
+            <caption>
+              <center>
+                <h3 class="card-title">ILMU KESEHATAN MASYARAKAT</h3>
+                </center>
+            </caption>
+             <thead>  
+                    <tr>
+                      <th> TEMPAT/ TINDAKAN / KASUS</th>
+                      <th> RUMAH SAKIT</th>
+                      <th> DPK</th>
+                      <th> TANGGAL</th>
+                      <th> STATUS</th>
+                      
+                     
+                    </tr>
+                  </thead>
+            <tbody>
+              @php $i=1 @endphp
+              @foreach($data14 as $log)
+              <tr >
+                        <td >{{ $log->tempat }}</td>
+                        <td >{{ $log->rumah_sakit_ }}</td>
+                        <td >{{ $log->dosen }}</td>
+                        <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
+                          
+                         
+        
+                        </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        <!-- card Body -->
+      </div>
+      <!-- card -->
+    </div>
+    <!-- col -->
+  </div>
+  <!-- row -->
+  <div style="page-break-before:always">&nbsp;</div> 
+  <!-- LAKESLA -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class='table table-bordered'>
+            <caption>
+              <center>
+                <h3 class="card-title">LAKESLA</h3>
+                </center>
+            </caption>
+             <thead>  
+                    <tr>
+                      <th> TEMPAT/ TINDAKAN / KASUS</th>
+                      <th> RUMAH SAKIT</th>
+                      <th> DPK</th>
+                      <th> TANGGAL</th>
+                      <th> STATUS</th>
+                      
+                     
+                    </tr>
+                  </thead>
+            <tbody>
+              @php $i=1 @endphp
+              @foreach($data15 as $log)
+              <tr >
+                        <td >{{ $log->tempat }}</td>
+                        <td >{{ $log->rumah_sakit_ }}</td>
+                        <td >{{ $log->dosen }}</td>
+                        <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
+                          
+                         
+        
+                        </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        <!-- card Body -->
+      </div>
+      <!-- card -->
+    </div>
+    <!-- col -->
+  </div>
+  <!-- row -->
+  <div style="page-break-before:always">&nbsp;</div> 
+  <!-- OBSTETRI DAN GINEKOLOGI -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class='table table-bordered'>
+            <caption>
+              <center>
+                <h3 class="card-title">OBSTETRI DAN GINEKOLOGI</h3>
+                </center>
+            </caption>
+             <thead>  
+                    <tr>
+                      <th> TEMPAT/ TINDAKAN / KASUS</th>
+                      <th> RUMAH SAKIT</th>
+                      <th> DPK</th>
+                      <th> TANGGAL</th>
+                      <th> STATUS</th>
+                      
+                     
+                    </tr>
+                  </thead>
+            <tbody>
+              @php $i=1 @endphp
+              @foreach($data16 as $log)
+              <tr >
+                        <td >{{ $log->tempat }}</td>
+                        <td >{{ $log->rumah_sakit_ }}</td>
+                        <td >{{ $log->dosen }}</td>
+                        <td >{{date('d-m-Y', strtotime($log->tanggal))}}</td>
+                         <td class="align-middle word-break description"><img src="{{ public_path('/upload/profile/check.png') }}" width="24" height="24"></td>
+                          
+                         
+        
+                        </tr>
+              @endforeach
+            </tbody>
+          </table>
+        </div>
+        <!-- card Body -->
+      </div>
+      <!-- card -->
+    </div>
+    <!-- col -->
+  </div>
+  <!-- row -->
+  <div style="page-break-before:always">&nbsp;</div> 
+
   </div>
 	<script>
     $(function () {

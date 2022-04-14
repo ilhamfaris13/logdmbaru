@@ -19,16 +19,16 @@
                   <tr>
                     <th> NIP</th>
                     <th> NAMA</th>
-                    <th> NIDN</th>
+                    <th> RUMAH SAKIT</th>
                     <th> UBAH</th>
-                  </tr>
+                  </tr> 
                 </thead>
                 <tbody>
                   @foreach($user2 as $key => $log)
                     <tr class="data-row">
                         <td class="align-middle ">{{ $log->NIP }}</td>
                         <td class="align-middle ">{{ $log->NAMA }}</td>
-                        <td class="align-middle word-break" style="text-transform: capitalize;">{{ $log->NIDN }}</td>
+                        <td class="align-middle word-break" style="text-transform: capitalize;">{{ $log->_rs }}</td>
                         <td class="align-middle">
                             <a class="btn btn-primary btn-sm" href="#" target="_blank"><i class="far fa-eye"></i></a>
                             <a class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>

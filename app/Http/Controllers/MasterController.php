@@ -86,6 +86,8 @@ class MasterController extends Controller
         }
         elseif($userAuth->level =='admin') {
             $user2 = DB::table('dosen')
+            ->join('rumah_sakit','dosen.RS','=','rumah_sakit.id')
+            ->select('dosen.*','rumah_sakit.nama as _rs')
             ->orderBy('id_dosen','desc')
             ->get();
             
