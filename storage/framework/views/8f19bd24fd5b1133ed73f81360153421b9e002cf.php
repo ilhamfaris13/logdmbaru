@@ -1,7 +1,5 @@
 
-<?php $__env->startPush('meta'); ?>
-<meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
-<?php $__env->stopPush(); ?>
+
 <?php $__env->startSection('content'); ?>
 <section class="content">
   <!-- main -->
@@ -86,16 +84,21 @@
                     </form>
                   </tbody>
                   <tfoot>
+                     
                   </tfoot>
+
                 </table>
+                <?php echo e($logs->links('pagination::bootstrap-4')); ?>
+
               </div>
+              
               <!-- /.card-body -->
             </div>
           </div>
           <!-- /.col -->
         </div>
       </div>
-	  
+	 
     
 
 </section>
@@ -111,45 +114,9 @@
  });
  </script>
 
-<script src="<?php echo e(url('js/app.js')); ?> " charset="utf-8"></script>
-<script src="http://code.jquery.com/jquery-3.3.1.min.js"
-               integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-               crossorigin="anonymous">
-      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
 
 
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": false,
-      "autoWidth": false,
-      "searching": true,
-       "ordering": false,
-    });
-    $('#example2').DataTable({
-      "paging": false,
-      "lengthChange": false,
-      "searching": true,
-      "ordering": false,
-      "info": false,
-      "autoWidth": false,
-      "responsive": false,
-    });
 
-    $('#tabel1').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": false,
-      "info": true,
-      "autoWidth": false,
-      "responsive": false,
-    });
-    
-  });
-</script>
 
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\logdmbaru\resources\views//kegiatan/index.blade.php ENDPATH**/ ?>

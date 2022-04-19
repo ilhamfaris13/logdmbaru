@@ -36,7 +36,8 @@ class AdminController extends Controller
          ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
          ->orderBy('kegiatan_log.status','asc')
          ->get();
-        return view('admin.index',compact('user2','logs'));
+         
+        return view('admin.index',compact('user2','logs','rs'));
         } else{
             abort(403, 'Tidak Diizinkan');
         }
@@ -60,6 +61,7 @@ class AdminController extends Controller
             "default.png",
         ]);
         if($request->get('level') == 'dosen'){
+            //dd($request);
             DB::insert('insert into dosen ( NAMA, NIP, NIDN, NIDK, KETERANGAN, Status, RS) values (?,?,?,?,?,?,?)',[
             $request->get('nama'),
             $request->get('username'),
@@ -67,7 +69,7 @@ class AdminController extends Controller
             $request->get('username'),
             "",
             "",
-            "",
+            $request->get('rs'),
         ]);        
         }
         elseif ($request->get('level') == 'dm'){

@@ -54,6 +54,7 @@
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Keterangan </label>
                 <textarea type="text" name="keterangan" class="form-control" id="keterangan" required></textarea> 
+                <p>*Apabila nama DPK tidak ada didalam daftar, maka tulislah nama DPK anda di keterangan dan pada bagian kolom Dosen Pembimbing Klinik pilih "Dosen Pembimbing". Untuk bukti kegiatan silahkan kirim ke WA IT FKUHT agar kegiatan anda segera diverifikasi.</p>
               </div>
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Rumah Sakit </label>
@@ -230,7 +231,7 @@ function showfield(name){
       "lengthChange": true,
       "searching": true,
       "ordering": true,
-      "info": true,
+      "info": false,
       "autoWidth": true,
       "responsive": true,
     });

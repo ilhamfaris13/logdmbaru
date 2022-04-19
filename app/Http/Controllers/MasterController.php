@@ -39,8 +39,8 @@ class MasterController extends Controller
             $user2 = DB::table('dm')
             ->orderBy('Id_dm','desc')
             ->get();
-            
-            return view('admin.master_dm',compact('user2'));
+            $rs = DB::table('rumah_sakit')-get();
+            return view('admin.master_dm',compact('user2','rs'));
         }
         else{
             abort(403, 'Tidak Diizinkan');
@@ -434,8 +434,8 @@ class MasterController extends Controller
             $user2 = DB::table('users')
         ->orderBy('id','desc')
         ->get();
-            
-            return view('admin.master_user',compact('user2'));
+            $rs = DB::table('rumah_sakit')->get();
+            return view('admin.master_user',compact('user2','rs'));
         }
         else{
             abort(403, 'Tidak Diizinkan');

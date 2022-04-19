@@ -84,7 +84,9 @@
                       @else
                       <!--status-->
                       @if($log->status == 0)
-                      <td class="align-middle word-break description"><span class="badge bg-red">Belum Verifikasi</span></td>
+                      <td class="align-middle word-break description"><span class="badge bg-red">Belum Verifikasi</span>
+                        <a href="/signaturepad/{{$log->id}}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a></td>
+
                       @else
                       <td class="align-middle word-break description"><span class="badge bg-green">Sudah Verifikasi</span></td>
                       @endif

@@ -57,6 +57,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[DashboardCont
 | Signature Pad Controller
 */
 Route::get('signaturepad', [SignaturePadController::class, 'index']);
+Route::get('/signaturepad/{id}',[SignaturePadController::class, 'destroy'])->name('kegiatan.delete');
 Route::post('signaturepad', [SignaturePadController::class, 'upload'])->name('signaturepad.upload');
 
 Route::get('dashboard1', [SignaturePadController2::class, 'index']);
@@ -196,6 +197,7 @@ Route::get('admin', [AdminController::class, 'index']);
 Route::get('admin/edit/{id}', [AdminController::class, 'show']);
 //Route::get('register', [AdminController::class, 'index']);
 Route::post('create_user',[AdminController::class, 'create'])->name('admin.create');
+Route::post('create_user_dosen',[AdminController::class, 'create_dosen'])->name('admin.createdosen');
 Route::post('edit_user',[AdminController::class, 'edit'])->name('admin.edit');
 Route::post('reset_user',[AdminController::class, 'reset'])->name('admin.reset');
 Route::get('/admin/post',[AdminController::class, 'create']);

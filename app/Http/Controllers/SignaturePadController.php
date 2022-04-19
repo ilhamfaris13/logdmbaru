@@ -28,7 +28,7 @@ class SignaturePadController extends Controller
          ->select('dosen.NAMA') */
          ->select('name as NAMA')
          ->get();
-       $logs = DB::table('kegiatan_log')
+      /* $logs = DB::table('kegiatan_log')
         ->join('users','users.id','=','kegiatan_log.id_user')
         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
         ->join('stase','stase.id','=','kegiatan_log.stase')
@@ -38,7 +38,16 @@ class SignaturePadController extends Controller
         ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
         ->where('kegiatan_log.id_user', '=',$userAuth->id)
         ->orWhere('kegiatan_log.id_dosen', '=',$userAuth->username)
-        ->get();
+        ->get();*/
+         $logs = DB::table('kegiatan_log')
+         ->join('users','users.id','=','kegiatan_log.id_user')
+         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+         ->join('stase','stase.id','=','kegiatan_log.stase')
+         ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+         ->where('kegiatan_log.status', '=',0)
+         ->where('kegiatan_log.id_user', '=',$userAuth->id)
+         ->get();
 
         $verif = DB::table('kegiatan_log')
         ->join('users','users.id','=','kegiatan_log.id_user')
@@ -95,6 +104,12 @@ class SignaturePadController extends Controller
      *
      * @return response()
      */
+    public function destroy($id)
+    {
+         $user = DB::table('kegiatan_log')->where('id', $id)->delete();
+          
+          return back()->with('success', 'Data Kegiatan Berhasil dihapus!');
+    }
     public function upload(Request $request)
     {
         dd($request);
