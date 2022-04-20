@@ -67,7 +67,7 @@
               </div>
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">STASE </label>
-                <select name="stase" class="form-control" id="stase">
+                <select name="stase" class="form-control" id="stase" required>
                 @foreach($stase as $key => $rss)
                   <option value="{{$rss->id}}" >{{$rss->stase}}</option>
                   @endforeach
@@ -93,7 +93,7 @@
                   @foreach($dosen as $key => $log)
                     <tr class="data-row">
                       <td class="align-middle ">
-                        <input type="radio" id="dosen" name="dosen" value="{{ $log->NIP }}">
+                        <input type="radio" id="dosen" name="dosen" value="{{ $log->NIP }}" required>
                       </td>
                       
                       <td class="align-middle ">{{ $log->NAMA }}</td>

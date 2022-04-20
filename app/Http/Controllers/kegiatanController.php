@@ -52,7 +52,7 @@ class kegiatanController extends Controller
          ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
          //->where('kegiatan_log.status', '=',0)
          ->where('kegiatan_log.id_dosen', '=',$userAuth->username)
-         ->paginate(2);
+         ->paginate(5);
          //->get();
  
          $verif = DB::table('kegiatan_log')

@@ -68,7 +68,7 @@
               </div>
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">STASE </label>
-                <select name="stase" class="form-control" id="stase">
+                <select name="stase" class="form-control" id="stase" required>
                 <?php $__currentLoopData = $stase; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $rss): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <option value="<?php echo e($rss->id); ?>" ><?php echo e($rss->stase); ?></option>
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -94,7 +94,7 @@
                   <?php $__currentLoopData = $dosen; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr class="data-row">
                       <td class="align-middle ">
-                        <input type="radio" id="dosen" name="dosen" value="<?php echo e($log->NIP); ?>">
+                        <input type="radio" id="dosen" name="dosen" value="<?php echo e($log->NIP); ?>" required>
                       </td>
                       
                       <td class="align-middle "><?php echo e($log->NAMA); ?></td>
