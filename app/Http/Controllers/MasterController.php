@@ -473,7 +473,17 @@ class MasterController extends Controller
          ->orderBy('kegiatan_log.status','asc')
          ->distinct()
          ->get();
-            return view('admin.master_kegiatan',compact('user2','logs'));
+         $logs2 = DB::table('kegiatan_log')
+         ->join('users','users.id','=','kegiatan_log.id_user')
+         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+         ->join('stase','stase.id','=','kegiatan_log.stase')
+         ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+         //->where('kegiatan_log.status', '=',0)
+         ->where('kegiatan_log.id_dosen', '=',$userAuth->username)
+         ->get();
+         //->get();
+            return view('admin.master_kegiatan',compact('user2','logs','Logs2'));
         }
         elseif($userAuth->level =='admin') {
         $user2 = DB::table('users')
@@ -492,9 +502,18 @@ class MasterController extends Controller
          //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
          //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
          ->orderBy('kegiatan_log.status','asc')
-         ->distinct()
          ->get();
-            return view('admin.master_kegiatan',compact('user2','logs'));
+         $logs2 = DB::table('kegiatan_log')
+         ->join('users','users.id','=','kegiatan_log.id_user')
+         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+         ->join('stase','stase.id','=','kegiatan_log.stase')
+         ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+         //->where('kegiatan_log.status', '=',0)
+         //->where('kegiatan_log.id_dosen', '=',$userAuth->username)
+         //->paginate(5);
+         ->get();
+            return view('admin.master_kegiatan',compact('user2','logs','logs2'));
         }
         else{
             abort(403, 'Tidak Diizinkan');

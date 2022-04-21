@@ -14,6 +14,10 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $userAuth = Auth::user();
@@ -37,7 +41,7 @@ class AdminController extends Controller
          ->orderBy('kegiatan_log.status','asc')
          ->get();
          
-        return view('admin.index',compact('user2','logs','rs'));
+        return view('admin.index',compact('user2','logs'));
         } else{
             abort(403, 'Tidak Diizinkan');
         }
