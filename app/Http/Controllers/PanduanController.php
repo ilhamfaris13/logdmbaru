@@ -63,4 +63,24 @@ class PanduanController extends Controller
         $filepath = public_path('upload/panduan/Lembar Penilaian DM .pdf');
         return Response::download($filepath); 
     }
+    public function nilaiukp()
+    {
+        $filepath = public_path('upload/panduan/UKP.docx');
+        return Response::download($filepath); 
+    }
+    public function nilaiukm()
+    {
+        $filepath = public_path('upload/panduan/UKM.docx');
+        return Response::download($filepath); 
+    }
+    public function bukukerja()
+    {
+        $filepath = public_path('upload/panduan/BUKU_KERJA.doc');
+        return Response::download($filepath); 
+    }
+    public function atitudeikm()
+    {
+        $filepath = public_path('upload/panduan/Attitude.doc');
+        return Response::download($filepath); 
+    }
 }

@@ -70,13 +70,18 @@
                 </div>
                 <div class="form-group">
                     <label class="col-form-label" for="modal-input-level">Level</label>
-                    <select name="level" class="form-control" id="level">
+                    <select name="level" class="form-control" id="level" onchange="showfield(this.options[this.selectedIndex].value)">
                     <option value="" disabled selected>Pilih</option>
                     <option value="admin" >Admin</option>
                     <option value="dosen" >Dosen/Dokter</option>
                     <option value="dm" >Dokter Muda</option>
                      </select>
+
+                     <div class="form-group" id="div1">
+                       
+                     </div>
                 </div>
+
                 <div class="form-group">
                     <label class="col-form-label" for="modal-input-password">Password</label>
                     <input type="password" name="password" class="form-control" id="password" required>
@@ -96,13 +101,49 @@
     </div>
     
   </div>
-  
+   <!-- ROW 2 -->
+ <!--  <div class="row">
+      <div class="col-7 col-md-7">
+          <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Tambah Dosen</h3>
+            </div>
+            <div class="card-body">
+            <form method="POST" action="<?php echo e(route('admin.createdosen')); ?>" >
+            <?php echo csrf_field(); ?>
+               
+                <div class="form-group">
+                    <label class="col-form-label" for="modal-input-nama">Nama </label>
+                    <input type="text" name="nama" class="form-control" id="nama" required>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="modal-input-email">NIP </label>
+                    <input type="text" name="nip" class="form-control" id="nip" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-form-label" for="modal-input-password">Rumah Sakit</label>
+                    <input type="text" name="rs" class="form-control" id="rs" required>
+                </div>
+              
+                <div class="form-group">
+              <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Submit" />
+             </div>
+            </form>
+            </div>
+        </div>
+      </div>
+  </div> -->
 </div>
 
 
 
 </section>
 <script>
+    function showfield(name){
+  if(name=='dosen')document.getElementById('div1').innerHTML='  <select name="rs" class="form-control" id="rs" ><?php $__currentLoopData = $rs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($log->id); ?>" ><?php echo e($log->nama); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> </select>';
+  else document.getElementById('div1').innerHTML='';
+}
   $(function () {
     $("#example1").DataTable({
       "responsive": false,

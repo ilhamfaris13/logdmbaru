@@ -123,6 +123,10 @@ Route::get('/panduannilai',[PanduanController::class, 'panduannilai']);
 Route::get('/panduankep',[PanduanController::class, 'panduankep']);
 Route::get('/pedoman',[PanduanController::class, 'pedoman']);
 Route::get('/jadwalsiklus',[PanduanController::class, 'jadwalsiklus']);
+Route::get('/nilaiukp',[PanduanController::class, 'nilaiukp']);
+Route::get('/nilaiukm',[PanduanController::class, 'nilaiukm']);
+Route::get('/bukukerja',[PanduanController::class, 'bukukerja']);
+Route::get('/atitudeikm',[PanduanController::class, 'atitudeikm']);
 /*
 | 
 |--------------------------------------------------------------------------

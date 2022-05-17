@@ -25,20 +25,54 @@
                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </select>
           </div>
-          <div class="modal-footer">
-							<button type="submit" class="btn btn-primary">Cari</button>
+
+          <div class="form-group">
+							<button type="submit" class="btn btn-primary">Terapkan</button>
 					</div>
 				</form>
+        <div class="form-group">
+        <button type="button" class="btn btn-success" onclick="tablesToExcel(['tabel2'], ['nilai_dm'], 'nilai_dm.xls', 'Excel')">Download Template </button>
+            <a type="button" class="btn btn-info" href="/panduannilai">Panduan Nilai</a>
+          </div>
 					</div>
+           <div class="col-6 col-md-6">
+            <div class="form-group">
+            <button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
+              UPLOAD NILAI
+              </button>
+            </div>
+            <div class="form-group">
+            <a type="button" class="btn btn-warning" href="/nilaiukp">IKM_DM LEMBAR PENILAIAN UKP</a>
+            </div>
+            <div class="form-group">
+            <a type="button" class="btn btn-warning" href="/nilaiukm">IKM_DM LEMBAR PENILAIAN UKM</a>
+            </div>
+            <div class="form-group">
+            <a type="button" class="btn btn-warning" href="/bukukerja">IKM_Buku Kerja Dokter Muda Bagian IKM</a>
+            </div>
+            <div class="form-group">
+            <a type="button" class="btn btn-warning" href="/atitudeikm">Lembar Penilaian Attitude</a>
+            </div>
+             <!--  <form method="post" action="/dm/import_excel" enctype="multipart/form-data">
+            <?php echo csrf_field(); ?>
+          <label>Upload Nilai</label>
+            <div class="form-group">
+              <input type="file" name="file" required="required">
+            </div>
+          <button type="submit" class="btn btn-primary">Upload</button>
+      </form> -->
+            </div>
          </div>
          <div class="row">
          	<div class="col-6 col-md-6">
-         		<button type="button" class="btn btn-success" onclick="tablesToExcel(['tabel2'], ['nilai_dm'], 'nilai_dm.xls', 'Excel')">Export </button>
-            <a type="button" class="btn btn-info" href="/panduannilai">Panduan Nilai</a>
+         		<!-- <button type="button" class="btn btn-success" onclick="tablesToExcel(['tabel2'], ['nilai_dm'], 'nilai_dm.xls', 'Excel')">Download Template </button>
+            <a type="button" class="btn btn-info" href="/panduannilai">Panduan Nilai</a> -->
 			<!-- <button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
 			IMPORT EXCEL
 			</button> -->
+      
          	</div>
+           
          </div>
           
           
@@ -161,7 +195,32 @@
             </div>
         </div>
         <!-- END COL 2- CARD 1 -->
-        
+      <div class="modal fade" id="importExcel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <form method="post" action="/pnilai/import_nilai" enctype="multipart/form-data">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Import Excel</h5>
+            </div>
+            <div class="modal-body">
+ 
+              <?php echo e(csrf_field()); ?>
+
+ 
+              <label>Pilih file excel</label>
+              <div class="form-group">
+                <input type="file" name="file" required="required">
+              </div>
+ 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Import</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
     </div>
 
 

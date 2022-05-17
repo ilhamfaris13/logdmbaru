@@ -19,16 +19,16 @@
                   <tr>
                     <th> NIP</th>
                     <th> NAMA</th>
-                    <th> NIDN</th>
+                    <th> RUMAH SAKIT</th>
                     <th> UBAH</th>
-                  </tr>
+                  </tr> 
                 </thead>
                 <tbody>
                   <?php $__currentLoopData = $user2; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr class="data-row">
                         <td class="align-middle "><?php echo e($log->NIP); ?></td>
                         <td class="align-middle "><?php echo e($log->NAMA); ?></td>
-                        <td class="align-middle word-break" style="text-transform: capitalize;"><?php echo e($log->NIDN); ?></td>
+                        <td class="align-middle word-break" style="text-transform: capitalize;"><?php echo e($log->_rs); ?></td>
                         <td class="align-middle">
                             <a class="btn btn-primary btn-sm" href="#" target="_blank"><i class="far fa-eye"></i></a>
                             <a class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
