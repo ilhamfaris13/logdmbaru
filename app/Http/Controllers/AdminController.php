@@ -148,6 +148,12 @@ class AdminController extends Controller
             'username' => $request->get('username'),
             'email' => $request->get('email'),
             'level' => $request->get('level')
+            ]  );  
+        DB::table('dosen')
+        ->where('NIP', $request->get('username'))
+        ->update(
+            [
+            'NAMA' => $request->get('nama'),
             ]  );    
        // return back()->with('success', 'success Full upload signature');
        return redirect('admin')->with('success', 'Berhasil Merubah User ');

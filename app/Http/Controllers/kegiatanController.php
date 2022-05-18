@@ -20,7 +20,7 @@ class kegiatanController extends Controller
     {
         $this->middleware('auth');
     }
-    public function index()
+    public function index(Request $request)
     {
         //
         $userAuth = Auth::user();
@@ -31,19 +31,7 @@ class kegiatanController extends Controller
         ->get();
         $jenis = DB::table('table_jenis')
         ->get();
-        /*$logs = DB::table('kegiatan_log')
-         ->join('users','users.id','=','kegiatan_log.id_user')
-         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
-         ->join('stase','stase.id','=','kegiatan_log.stase')
-         ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
-         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
-         ->where('kegiatan_log.status', '=',0)
-         //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
-         ->where('kegiatan_log.id_user', '=',$userAuth->id)
-         ->orWhere('kegiatan_log.id_dosen', '=',$userAuth->username)
-         ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
-         ->orderBy('kegiatan_log.status','asc')
-         ->get();*/
+        
          $logs = DB::table('kegiatan_log')
          ->join('users','users.id','=','kegiatan_log.id_user')
          ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
@@ -52,9 +40,10 @@ class kegiatanController extends Controller
          ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
          //->where('kegiatan_log.status', '=',0)
          ->where('kegiatan_log.id_dosen', '=',$userAuth->username)
+         ->where('users.username','like','%'. $request->get('nim').'%')
          ->paginate(5);
          //->get();
- 
+        
          $verif = DB::table('kegiatan_log')
          ->join('users','users.id','=','kegiatan_log.id_user')
          ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')

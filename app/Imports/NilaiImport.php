@@ -11,6 +11,7 @@ use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\SkipsErrors;
 use Maatwebsite\Excel\Concerns\SkipsOnError;
 use App\Models\Nilai;
+use DB;
 use Maatwebsite\Excel\Concerns\WithCalculatedFormulas;
 class NilaiImport implements ToCollection, WithHeadingRow
 {
@@ -18,7 +19,7 @@ class NilaiImport implements ToCollection, WithHeadingRow
     {
         foreach ($rows as $row) 
         {
-            Nilai::updateOrCreate(
+            /*Nilai::updateOrCreate(
                 [
                    'nama' => $row['nama'],
 		            'nim' => $row['nim'],
@@ -35,7 +36,39 @@ class NilaiImport implements ToCollection, WithHeadingRow
 		            'id_dm' => 0,
 		            'nilai_akhir' =>0,
                 ]
-            );
+            );*/
+            /*Nilai::where('nim', $row['nim'])
+                ->update([
+                    'atitude' => $row['atitude'],
+		            'longcase' => $row['longcase'], 
+		            'jurnal' => $row['jurnal'], 
+		            'minicex' => $row['minicex'],
+		            'derajat' => $row['derajat'],
+		            'pengabdian' => $row['pengabdian'],
+		            'prettest' => $row['prettest'],
+		            'posttest' => $row['posttest'],
+		            'dops' => $row['dops'],
+		            'osce' => $row['osce'],
+		            'id_dm' => 0,
+		            'nilai_akhir' =>0,
+                ]);*/
+                DB::table('nilai')
+		        ->where('nim',  $row['nim'])
+		        ->update(
+		            [
+		            'atitude' => $row['atitude'],
+		            'longcase' => $row['longcase'], 
+		            'jurnal' => $row['jurnal'], 
+		            'minicex' => $row['minicex'],
+		            'derajat' => $row['derajat'],
+		            'pengabdian' => $row['pengabdian'],
+		            'prettest' => $row['prettest'],
+		            'posttest' => $row['posttest'],
+		            'dops' => $row['dops'],
+		            'osce' => $row['osce'],
+		            'id_dm' => 0,
+		            'nilai_akhir' =>0,
+		            ]  );  
         }
     }
      public function headingRow(): int

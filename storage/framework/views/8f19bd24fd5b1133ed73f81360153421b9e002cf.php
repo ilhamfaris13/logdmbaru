@@ -6,7 +6,9 @@
   <div class="container-fluid">
  <!--row tabel-->
         <div class="row">
+           
           <div class="col-12">
+           
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Daftar Buku Kegiatan Kepaniteraan</h3>
@@ -15,7 +17,16 @@
              
               <!-- /.card-header -->
               <div class="card-body">
-             
+              <form method="get" action="kegiatan/filter" enctype="multipart/form-data">
+          
+              <div class="input-group">
+                <input type="text" name="nim" placeholder="Cari NIM..." class="form-control">
+                <span class="input-group-append">
+                <button type="submit" class="btn btn-primary">Cari</button>
+                <a type="button" class="btn btn-info" href="/kegiatan"><i class="fa fa-retweet"></i></a>
+                </span>
+              </div>
+        </form>
                 <table id="ex" class="table table-responsive table-bordered table-hover">
                   <thead>
                   
