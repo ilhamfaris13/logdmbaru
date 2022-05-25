@@ -7,6 +7,7 @@ use DB;
 use Auth;
 use Illuminate\Support\Facades\Hash;
 use Image;
+use App\Models\BayarStase;
 class DashboardController extends Controller
 {
     //
@@ -87,8 +88,23 @@ class DashboardController extends Controller
         ->where('Id_User', '=',$userAuth->id)
         ->where('stase', '=',28)
         ->count();
+        $ikm=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
+        ->where('stase', '=',29)
+        ->count();
+        $lakesla=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
+        ->where('stase', '=',30)
+        ->count();
+        $obgin=DB::table('kegiatan_log')
+        ->where('Id_User', '=',$userAuth->id)
+        ->where('stase', '=',31)
+        ->count();
+        $bayar=DB::table('bayar_stase')
+        ->where('nim', '=',$userAuth->username)
+        ->get();
        
-        return view('dashboard',compact('user','mata','ipd','ika','bedah','kulit','tht','mata1','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi'));
+        return view('dashboard',compact('user','mata','ipd','ika','bedah','kulit','tht','mata1','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi','ikm','lakesla','obgin'));
         } 
         elseif($userAuth->level =='dosen') {
         $user=DB::table('users')
@@ -153,4 +169,46 @@ class DashboardController extends Controller
       );
         return back()->with('success', 'Sukses Merubah Password');
 	}
+    public function upload_ipd(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "ipd".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 1,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Merubah Foto');
+    }
+    public function upload_ika(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "ika".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 2,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto IKA');
+    }
 }

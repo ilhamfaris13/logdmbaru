@@ -32,6 +32,8 @@
 				</form>
         <div class="form-group">
         <button type="button" class="btn btn-success" onclick="tablesToExcel(['tabel2'], ['nilai_dm'], 'nilai_dm.xls', 'Excel')">Download Template </button>
+       
+        
             <a type="button" class="btn btn-info" href="/panduannilai">Panduan Nilai</a>
           </div>
 					</div>
@@ -120,6 +122,7 @@
                     <td class="align-middle">
                       <a class="btn btn-primary btn-sm" href="/detail_dm_kegiatan/{{ $log->id_dm }}" target="_blank"><i class="far fa-eye"></i></a>
                       <!-- <a class="btn btn-success btn-sm" href="/nilai/{{ $log->nim }}"><i class="fas fa-edit"></i></a> -->
+                      <a href="/hpsnilai/{{$log->id}}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                     </td>
                     <td class="align-middle ">{{ $log->nama }}</td>
                     <td class="align-middle ">{{ $log->nim }}</td>
@@ -150,6 +153,7 @@
               <tr>
                 <th colspan="7">KELOMPOK : {{$getKel}} </th>
                 <th colspan="7">STASE : </th>
+                <th colspan="7">Setelah mengisi nilai, silahkan di save ke format XLSX</th>
               </tr>
             <tr>
             
@@ -255,5 +259,12 @@
   });
 </script>
 <script src="{{URL::to('js/export.js')}}"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", type="text/javascript">
+  function Export() {
+    $("#table1").table2excel({
+      filename: "file.xls"
+    });
+  }
+</script> -->
 @endsection
 

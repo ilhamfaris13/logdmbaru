@@ -36,6 +36,8 @@ Route::get('/',[DashboardController::class, 'index'], function () {
     return view('dashboard');
 });
 Route::post('/upload/foto', [DashboardController::class, 'proses_upload']);
+Route::post('/upload/ipd', [DashboardController::class, 'upload_ipd']);
+Route::post('/upload/ika', [DashboardController::class, 'upload_ika']);
 Route::post('/ganti/pwd', [DashboardController::class, 'ganti_pwd']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[DashboardController::class, 'index'], function () {
     return view('dashboard');
@@ -151,6 +153,7 @@ Route::get('/pnilai/export_excel',[PenilaianController::class, 'export_excel']);
 Route::post('/pnilai/import_nilai',[PenilaianController::class, 'import_nilai']);
 Route::get('/fnilai',[PenilaianController::class, 'index_f']);
 Route::get('/fnilai/filter',[PenilaianController::class, 'index_f']);
+Route::get('/hpsnilai/{id}', [PenilaianController::class, 'destroy'])->name('hpsnilai.destroy');
 /*
 | 
 |--------------------------------------------------------------------------

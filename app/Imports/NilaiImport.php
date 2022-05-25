@@ -52,6 +52,7 @@ class NilaiImport implements ToCollection, WithHeadingRow
 		            'id_dm' => 0,
 		            'nilai_akhir' =>0,
                 ]);*/
+                //dd($row['nim']);
                 DB::table('nilai')
 		        ->where('nim',  $row['nim'])
 		        ->update(
@@ -71,7 +72,7 @@ class NilaiImport implements ToCollection, WithHeadingRow
 		            ]  );  
         }
     }
-     public function headingRow(): int
+    public function headingRow(): int
     {
         return 3;
     }

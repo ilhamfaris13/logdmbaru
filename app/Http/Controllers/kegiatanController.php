@@ -41,7 +41,7 @@ class kegiatanController extends Controller
          //->where('kegiatan_log.status', '=',0)
          ->where('kegiatan_log.id_dosen', '=',$userAuth->username)
          ->where('users.username','like','%'. $request->get('nim').'%')
-         ->paginate(5);
+         ->paginate(30);
          //->get();
         
          $verif = DB::table('kegiatan_log')

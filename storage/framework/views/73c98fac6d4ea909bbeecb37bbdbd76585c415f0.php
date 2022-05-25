@@ -146,6 +146,7 @@
                       <p>RS Jejaring</p>
                     </a>
                   </li>
+                 
                   
                 </ul>
           </li>
@@ -189,6 +190,15 @@
               </p>
             </a>
           </li>
+           <li class="nav-item ">
+                    <a href="<?php echo e(url('/kegiatan')); ?>" class="nav-link">
+                      <i class="nav-icon fa fa-briefcase"></i>
+                      <p>
+                        Daftar Kegiatan
+                        <i class="right fas fa-angle-right"></i>
+                      </p>
+                    </a>
+                  </li>
          </ul>
           
       </nav>

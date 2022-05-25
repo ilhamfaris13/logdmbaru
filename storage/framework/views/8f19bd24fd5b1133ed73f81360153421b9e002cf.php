@@ -17,7 +17,7 @@
              
               <!-- /.card-header -->
               <div class="card-body">
-              <form method="get" action="kegiatan/filter" enctype="multipart/form-data">
+              <form method="get" action="/kegiatan/filter" enctype="multipart/form-data">
           
               <div class="input-group">
                 <input type="text" name="nim" placeholder="Cari NIM..." class="form-control">
@@ -116,13 +116,19 @@
 
 
  <script>
- 
- $(function(e){
   $('#chkAll').click(function(){
     $('.chkVerif').prop('checked',$(this).prop('checked'));
   })
-
- });
+ 
+ $('#ex').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": false,
+      "info": true,
+      "autoWidth": true,
+      "responsive": true,
+    });
  </script>
 
 

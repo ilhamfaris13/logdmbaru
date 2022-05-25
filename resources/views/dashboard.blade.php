@@ -51,122 +51,7 @@
                   @endif
                   
                 </ul>
-                <ul class="list-group list-group-unbordered mb-3">
-                    @if( Auth::user()->level == "dm")
-                    <li class="list-group-item">
-                    <div class="text-center">
-                      <b>Stase Yang Diambil</b> 
-                    </div>  
-                    </li>
-                    <li class="list-group-item">
-                    <b>IPD/ITERNA</b>
-                    @if($ipd==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>ILMU KESEHATAN ANAK (IKA)</b>
-                    @if($ika==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>BEDAH</b> 
-                    @if($bedah==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>KULIT</b>
-                    @if($kulit==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>THT</b>
-                    @if($tht==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>MATA</b>
-                    @if($mata1==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>SARAF</b>
-                    @if($saraf==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>JIWA</b>
-                    @if($jiwa==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>FORENSIK</b>
-                    @if($forensik==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>ANESTESI</b>
-                    @if($anestesi==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>RADIOLOGI</b>
-                    @if($radiologi==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>REHAB MEDIK</b>
-                    @if($rehab==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    <li class="list-group-item">
-                    <b>FARMASI</b>
-                    @if($farmasi==0)
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    @else
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    @endif
-                    </li>
-                    @else
-
-                    @endif
-                    
-                  </ul>
+                
                 
               </div>
               <!-- /.card-body -->
@@ -184,7 +69,7 @@
                       <input type="file" name="file">
                     </div>
                     <input type="submit" value="Upload" class="btn btn-primary">
-                  </form>
+            </form>
             </div>
             
         </div>
@@ -225,6 +110,100 @@
 
         @endforeach
         </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-primary card-outline">
+                <div class="card-body box-profile">
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>IPD/ITERNA</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/ipd" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/ipd{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- @if($ipd==0)
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    @else
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    @endif -->
+                    </li>
+                </div>
+            </div>
+            <div class="card card-primary card-outline">
+                <div class="card-body box-profile">
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>IKA</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/ika" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/ika{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- @if($ipd==0)
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    @else
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    @endif -->
+                    </li>
+                </div>
+            </div>
         </div>
     </div>
+</div>
     @endsection

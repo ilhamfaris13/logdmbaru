@@ -51,122 +51,7 @@
                   <?php endif; ?>
                   
                 </ul>
-                <ul class="list-group list-group-unbordered mb-3">
-                    <?php if( Auth::user()->level == "dm"): ?>
-                    <li class="list-group-item">
-                    <div class="text-center">
-                      <b>Stase Yang Diambil</b> 
-                    </div>  
-                    </li>
-                    <li class="list-group-item">
-                    <b>IPD/ITERNA</b>
-                    <?php if($ipd==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>ILMU KESEHATAN ANAK (IKA)</b>
-                    <?php if($ika==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>BEDAH</b> 
-                    <?php if($bedah==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>KULIT</b>
-                    <?php if($kulit==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>THT</b>
-                    <?php if($tht==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>MATA</b>
-                    <?php if($mata1==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>SARAF</b>
-                    <?php if($saraf==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>JIWA</b>
-                    <?php if($jiwa==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>FORENSIK</b>
-                    <?php if($forensik==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>ANESTESI</b>
-                    <?php if($anestesi==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>RADIOLOGI</b>
-                    <?php if($radiologi==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>REHAB MEDIK</b>
-                    <?php if($rehab==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <li class="list-group-item">
-                    <b>FARMASI</b>
-                    <?php if($farmasi==0): ?>
-                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
-                    <?php else: ?>
-                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
-                    <?php endif; ?>
-                    </li>
-                    <?php else: ?>
-
-                    <?php endif; ?>
-                    
-                  </ul>
+                
                 
               </div>
               <!-- /.card-body -->
@@ -185,7 +70,7 @@
                       <input type="file" name="file">
                     </div>
                     <input type="submit" value="Upload" class="btn btn-primary">
-                  </form>
+            </form>
             </div>
             
         </div>
@@ -228,7 +113,103 @@
 
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-primary card-outline">
+                <div class="card-body box-profile">
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>IPD/ITERNA</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/ipd" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/ipd<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
+                </div>
+            </div>
+            <div class="card card-primary card-outline">
+                <div class="card-body box-profile">
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>IKA</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/ika" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/ika<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
+                </div>
+            </div>
         </div>
     </div>
+</div>
     <?php $__env->stopSection(); ?>
 <?php echo $__env->make('admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\logdmbaru\resources\views/dashboard.blade.php ENDPATH**/ ?>
