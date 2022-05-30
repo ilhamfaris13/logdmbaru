@@ -113,12 +113,24 @@
 
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
+
     </div>
+    
     <div class="row">
         <div class="col-md-6">
-            <div class="card card-primary card-outline">
-                <div class="card-body box-profile">
-                <div class="text-center">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <b>BUKTI PEMBAYARAN STASE IPD</b>
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+               <div class="text-center">
                
                   <b>BUKTI PEMBAYARAN STASE</b>
                 </div>
@@ -146,7 +158,8 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/ipd<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+
+                    <a href="/upload/ipd<?php echo e(Auth::user()->username); ?>.jpg" target="_blank"><img id="modal-input-foto" style="float: right;" class="img" src="/upload/ipd<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150"></a>
                     </div>
                         </td>
                         </tr>
@@ -160,10 +173,19 @@
                     <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
                     <?php endif; ?> -->
                     </li>
-                </div>
+              </div>
             </div>
-            <div class="card card-primary card-outline">
-                <div class="card-body box-profile">
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <b>BUKTI PEMBAYARAN STASE IKA</b> 
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
                 <div class="text-center">
                
                   <b>BUKTI PEMBAYARAN STASE</b>
@@ -206,9 +228,53 @@
                     <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
                     <?php endif; ?> -->
                     </li>
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <b>BUKTI PEMBAYARAN STASE BEDAH</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <b>BUKTI PEMBAYARAN STASE KULIT</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE THT</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
         </div>
+    </div>
     </div>
 </div>
     <?php $__env->stopSection(); ?>
