@@ -39,7 +39,7 @@ class MasterController extends Controller
             $user2 = DB::table('dm')
             ->orderBy('Id_dm','desc')
             ->get();
-            $rs = DB::table('rumah_sakit')-get();
+            $rs = DB::table('rumah_sakit')->get();
             return view('admin.master_dm',compact('user2','rs'));
         }
         else{

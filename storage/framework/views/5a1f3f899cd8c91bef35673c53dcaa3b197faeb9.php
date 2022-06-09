@@ -115,7 +115,7 @@
         </div>
 
     </div>
-    
+    <?php if( Auth::user()->level == "dm"): ?>
     <div class="row">
         <div class="col-md-6">
         <div id="accordion">
@@ -241,7 +241,7 @@
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                Masih Belum Tersedia
               </div>
             </div>
           </div>
@@ -255,7 +255,7 @@
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                Masih Belum Tersedia
               </div>
             </div>
           </div>
@@ -269,13 +269,170 @@
             </div>
             <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
               <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                Masih Belum Tersedia
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE MATA</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Masih Belum Tersedia
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE SARAF</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Masih Belum Tersedia
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE JIWA</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Masih Belum Tersedia
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE FORENSIK</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Masih Belum Tersedia
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE ANESTESI</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Masih Belum Tersedia
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE RADIOLOGI</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Masih Belum Tersedia
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE REHAB MEDIK</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Masih Belum Tersedia
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE FARMASI</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Masih Belum Tersedia
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE IKM</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Masih Belum Tersedia
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE LAKESLA</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Masih Belum Tersedia
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                  <b>BUKTI PEMBAYARAN STASE OBGYN</b>
+                </button>
+              </h5>
+            </div>
+            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                Masih Belum Tersedia
               </div>
             </div>
           </div>
         </div>
     </div>
     </div>
-</div>
+    <?php else: ?>
+    <?php endif; ?>
+
     <?php $__env->stopSection(); ?>
 <?php echo $__env->make('admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\logdmbaru\resources\views/dashboard.blade.php ENDPATH**/ ?>
