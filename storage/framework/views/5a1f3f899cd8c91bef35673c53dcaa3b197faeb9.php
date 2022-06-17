@@ -241,7 +241,48 @@
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>IKA</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/bedah" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/bedah<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
@@ -255,7 +296,48 @@
             </div>
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>IKA</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/kulit" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/kulit<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
@@ -269,162 +351,654 @@
             </div>
             <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>THT</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/tht" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/tht<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
         </div>
         <div class="card">
-            <div class="card-header" id="headingfive">
+            <div class="card-header" id="headingmata">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsemata" aria-expanded="false" aria-controls="collapsefive">
                   <b>BUKTI PEMBAYARAN STASE MATA</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div id="collapsemata" class="collapse" aria-labelledby="headingmata" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>MATA</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/mata" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/mata<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="headingfive">
+            <div class="card-header" id="headingsaraf">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsesaraf" aria-expanded="false" aria-controls="collapsefive">
                   <b>BUKTI PEMBAYARAN STASE SARAF</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div id="collapsesaraf" class="collapse" aria-labelledby="headingsaraf" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>SARAF</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/saraf" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/saraf<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="headingfive">
+            <div class="card-header" id="headingjiwa">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsejiwa" aria-expanded="false" aria-controls="collapsefive">
                   <b>BUKTI PEMBAYARAN STASE JIWA</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div id="collapsejiwa" class="collapse" aria-labelledby="headingjiwa" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>JIWA</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/jiwa" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/jiwa<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="headingfive">
+            <div class="card-header" id="headingforensik">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseforensik" aria-expanded="false" aria-controls="collapseforensik">
                   <b>BUKTI PEMBAYARAN STASE FORENSIK</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div id="collapseforensik" class="collapse" aria-labelledby="headingdorensik" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>FORENSIK</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/forensik" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/forensik<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="headingfive">
+            <div class="card-header" id="headinganestesi">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseanestesi" aria-expanded="false" aria-controls="collapseanestesi">
                   <b>BUKTI PEMBAYARAN STASE ANESTESI</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div id="collapseanestesi" class="collapse" aria-labelledby="headinganestesi" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                 <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>ANESTESI</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/anestesi" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/anestesi<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="headingfive">
+            <div class="card-header" id="headingradiologi">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseradiologi" aria-expanded="false" aria-controls="collapseradiologi">
                   <b>BUKTI PEMBAYARAN STASE RADIOLOGI</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div id="collapseradiologi" class="collapse" aria-labelledby="headingradiologi" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                 <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>RADIOLOGI</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/radiologi" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/radiologi<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="headingfive">
+            <div class="card-header" id="headingrehab">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapserehab" aria-expanded="false" aria-controls="collapserehab">
                   <b>BUKTI PEMBAYARAN STASE REHAB MEDIK</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div id="collapserehab" class="collapse" aria-labelledby="headingrehab" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                 <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>REHAB MEDIS</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/rehab" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/rehab<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="headingfive">
+            <div class="card-header" id="h">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefarmasi" aria-expanded="false" aria-controls="collapsefiveFarmasi">
                   <b>BUKTI PEMBAYARAN STASE FARMASI</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div id="collapsefive" class="collapse" aria-labelledby="headingfarmasi" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                 <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>FARMASI</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/farmasi" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/farmasi<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="headingfive">
+            <div class="card-header" id="headingikm">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseikm" aria-expanded="false" aria-controls="collapseikm">
                   <b>BUKTI PEMBAYARAN STASE IKM</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div id="collapseikm" class="collapse" aria-labelledby="headingikm" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+               <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>IKM</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/ikm" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/ocp-/ikm<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="headingfive">
+            <div class="card-header" id="headinglakesla">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapselakesla" aria-expanded="false" aria-controls="collapselakesla">
                   <b>BUKTI PEMBAYARAN STASE LAKESLA</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div id="collapselakesla" class="collapse" aria-labelledby="headinglakesla" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>LAKESLA</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/lakesla" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/lakesla<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="headingfive">
+            <div class="card-header" id="headingobgyn">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseobgyn" aria-expanded="false" aria-controls="collapseobgyn">
                   <b>BUKTI PEMBAYARAN STASE OBGYN</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div id="collapseobgyn" class="collapse" aria-labelledby="headingobgyn" data-parent="#accordion">
               <div class="card-body">
-                Masih Belum Tersedia
+                <div class="text-center">
+               
+                  <b>BUKTI PEMBAYARAN STASE</b>
+                </div>
+                    <li class="list-group-item">
+                    <div class="text-center">
+                    <b>OBSGYN</b>
+                    </div>
+                    <table id="" class="table table-bordered table-hover">
+                         <tr>
+                        <th>AKSI</th>
+                        <th> FOTO</th>
+                        </tr>
+                        <tr class="data-row">
+                        <td class="align-middle">
+                            <form action="/upload/obgyn" method="POST" enctype="multipart/form-data">
+                    <?php echo e(csrf_field()); ?>
+
+          
+                    <div class="form-group">
+                      <b>UPLOAD BUKTI PEMBAYARAN</b><br/>
+                      <input type="file" name="file">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
+                        </td>
+                        <td>
+                            <div class="widget-user-image">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/obgyn<?php echo e(Auth::user()->username); ?>.jpg" alt="" width="150" height="150">
+                    </div>
+                        </td>
+                        </tr>
+                    </table>
+                     
+                    
+                   
+                    <!-- <?php if($ipd==0): ?>
+                    <a class="btn btn-danger btn-sm float-right"><i class="fas fa-times"></i></a>
+                    <?php else: ?>
+                    <a class="btn btn-success btn-sm float-right"><i class="fas fa-check"></i></a>
+                    <?php endif; ?> -->
+                    </li>
               </div>
             </div>
           </div>

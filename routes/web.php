@@ -38,6 +38,21 @@ Route::get('/',[DashboardController::class, 'index'], function () {
 Route::post('/upload/foto', [DashboardController::class, 'proses_upload']);
 Route::post('/upload/ipd', [DashboardController::class, 'upload_ipd']);
 Route::post('/upload/ika', [DashboardController::class, 'upload_ika']);
+Route::post('/upload/bedah', [DashboardController::class, 'upload_bedah']);
+Route::post('/upload/kulit', [DashboardController::class, 'upload_kulit']);
+Route::post('/upload/tht', [DashboardController::class, 'upload_tht']);
+Route::post('/upload/mata', [DashboardController::class, 'upload_mata']);
+Route::post('/upload/saraf', [DashboardController::class, 'upload_saraf']);
+Route::post('/upload/jiwa', [DashboardController::class, 'upload_jiwa']);
+Route::post('/upload/forensik', [DashboardController::class, 'upload_forensik']);
+Route::post('/upload/anestesi', [DashboardController::class, 'upload_anestesi']);
+Route::post('/upload/radiologi', [DashboardController::class, 'upload_radiologi']);
+Route::post('/upload/rehabmedik', [DashboardController::class, 'upload_rehabmedik']);
+Route::post('/upload/farmasi', [DashboardController::class, 'upload_farmasi']);
+Route::post('/upload/rehabmedik', [DashboardController::class, 'upload_rehabmedik']);
+Route::post('/upload/ikm', [DashboardController::class, 'upload_ikm']);
+Route::post('/upload/lakesla', [DashboardController::class, 'upload_lakesla']);
+Route::post('/upload/obgyn', [DashboardController::class, 'upload_obgyn']);
 Route::post('/ganti/pwd', [DashboardController::class, 'ganti_pwd']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[DashboardController::class, 'index'], function () {
     return view('dashboard');
