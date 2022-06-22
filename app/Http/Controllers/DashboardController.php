@@ -211,4 +211,298 @@ class DashboardController extends Controller
         //return back()->with('success', 'Sukses Merubah Foto');
         return back()->with('success', 'Sukses Menambah Foto IKA');
     }
+    public function upload_bedah(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "bedah".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 3,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto Bedah');
+    }
+    public function upload_kulit(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "kulit".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 4,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto kulit');
+    }
+    public function upload_tht(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "tht".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 5,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto THT');
+    }
+    public function upload_mata(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "mata".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 6,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto Mata');
+    }
+    public function upload_saraf(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "saraf".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 7,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto Saraf');
+    }
+    public function upload_jiwa(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "jiwa".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 8,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto Jiwa');
+    }
+    public function upload_forensik(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "forensik".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 9,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto forensik');
+    }
+    public function upload_anestesi(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "anestesi".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 10,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto anestesi');
+    }
+    public function upload_radiologi(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "radiologi".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 11,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto radiologi');
+    }
+    public function upload_rehabmedik(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "rehabmedik".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 12,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto Rehab Medik');
+    }
+    public function upload_farmasi(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "farmasi".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 28,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto Farmasi');
+    }
+    public function upload_ikm(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "ikm".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 29,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto IKM');
+    }
+    public function upload_lakesla(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "lakesla".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 30,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto lakesla');
+    }
+    public function upload_obgyn(Request $request){
+         $userAuth = Auth::user();
+        // menyimpan data file yang diupload ke variabel $file
+        $file = $request->file('file');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile = "obgyn".$userAuth->username . ".jpg";
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+        
+        $foto = BayarStase::updateOrCreate(
+            ['nim' => $userAuth->username,
+             'stase' => 31,
+             'foto' => $namaFile,
+             'status' => 0
+         ]
+        );
+        //return back()->with('success', 'Sukses Merubah Foto');
+        return back()->with('success', 'Sukses Menambah Foto obgyn');
+    }
 }

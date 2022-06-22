@@ -13,6 +13,7 @@ class BayarStase extends Model
         'stase',
         'foto', //baru
         'status', //baru'
+        'status_bayar', //baru'
         
     ];
     protected $table = 'bayar_stase';

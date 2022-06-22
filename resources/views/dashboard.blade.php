@@ -155,7 +155,7 @@
                         <td>
                             <div class="widget-user-image">
 
-                    <a href="/upload/ipd{{ Auth::user()->username}}.jpg" target="_blank"><img id="modal-input-foto" style="float: right;" class="img" src="/upload/ipd{{ Auth::user()->username}}.jpg" alt="" width="150" height="150"></a>
+                    <a href="/upload/ipd{{ Auth::user()->username}}.jpg" target="_blank"><img id="modal-input-foto" style="float: right;" class="img" src="/upload/ipd{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150"></a>
                     </div>
                         </td>
                         </tr>
@@ -209,7 +209,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/ika{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/ika{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -263,7 +263,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/bedah{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/bedah{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -317,7 +317,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/kulit{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/kulit{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -371,7 +371,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/tht{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/tht{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -388,11 +388,11 @@
               </div>
             </div>
           </div>
-        </div>
+        
         <div class="card">
             <div class="card-header" id="headingmata">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsemata" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsemata" aria-expanded="false" aria-controls="collapsemata">
                   <b>BUKTI PEMBAYARAN STASE MATA</b>
                 </button>
               </h5>
@@ -426,7 +426,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/mata{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/mata{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -446,7 +446,7 @@
           <div class="card">
             <div class="card-header" id="headingsaraf">
               <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsesaraf" aria-expanded="false" aria-controls="collapsefive">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsesaraf" aria-expanded="false" aria-controls="headingsaraf">
                   <b>BUKTI PEMBAYARAN STASE SARAF</b>
                 </button>
               </h5>
@@ -480,7 +480,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/saraf{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/saraf{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -534,7 +534,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/jiwa{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/jiwa{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -588,7 +588,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/forensik{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/forensik{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -642,7 +642,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/anestesi{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/anestesi{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -696,7 +696,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/radiologi{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/radiologi{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -750,7 +750,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/rehab{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/rehab{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -768,14 +768,14 @@
             </div>
           </div>
           <div class="card">
-            <div class="card-header" id="h">
+            <div class="card-header" id="headingfarmasi">
               <h5 class="mb-0">
                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefarmasi" aria-expanded="false" aria-controls="collapsefiveFarmasi">
                   <b>BUKTI PEMBAYARAN STASE FARMASI</b>
                 </button>
               </h5>
             </div>
-            <div id="collapsefive" class="collapse" aria-labelledby="headingfarmasi" data-parent="#accordion">
+            <div id="collapsefarmasi" class="collapse" aria-labelledby="headingfarmasi" data-parent="#accordion">
               <div class="card-body">
                  <div class="text-center">
                
@@ -804,7 +804,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/farmasi{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/farmasi{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -858,7 +858,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/ocp-/ikm{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/ocp-/ikm{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -912,7 +912,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/lakesla{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/lakesla{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
@@ -966,7 +966,7 @@
                         </td>
                         <td>
                             <div class="widget-user-image">
-                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/obgyn{{ Auth::user()->username}}.jpg" alt="" width="150" height="150">
+                    <img id="modal-input-foto" style="float: right;" class="img" src="/upload/obgyn{{ Auth::user()->username}}.jpg" onerror="this.src = '/upload/wait.png';" alt="" width="150" height="150">
                     </div>
                         </td>
                         </tr>
