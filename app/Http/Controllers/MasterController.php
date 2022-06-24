@@ -264,6 +264,8 @@ class MasterController extends Controller
 				 'pengabdian' => 0,
 				 'prettest' => 0,
 				 'posttest' => 0,
+                 'dops' =>0,
+                 'responsi' =>0,
 				 'osce' =>0,
 				 'id_dm' => $u->id,
 				 'nilai_akhir' =>0

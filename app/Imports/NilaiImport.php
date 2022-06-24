@@ -67,6 +67,7 @@ class NilaiImport implements ToCollection, WithHeadingRow
 		            'posttest' => $row['posttest'],
 		            'dops' => $row['dops'],
 		            'osce' => $row['osce'],
+		            'responsi' => $row['responsi'],
 		            'id_dm' => 0,
 		            'nilai_akhir' =>0,
 		            ]  );  

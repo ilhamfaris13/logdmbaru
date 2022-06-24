@@ -154,7 +154,7 @@
               </p>
             </a>
             </li>
-            <li class="nav-item">
+           <!--  <li class="nav-item">
             <a href="{{url('/snilai')}}" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
@@ -162,7 +162,7 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            </li>
+            </li> -->
 			<!--
             <ul class="nav nav-treeview">
               <li class="nav-item">

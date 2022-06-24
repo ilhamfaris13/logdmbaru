@@ -113,6 +113,7 @@
 						<th> Posttest</th>
             <th> DOPS</th>
 						<th> OSCE</th>
+            <th> Responsi</th>
 						<th> Nilai Akhir</th>
                     </tr>
                   </thead>
@@ -136,6 +137,7 @@
 					<td class="align-middle "><?php echo e($log->posttest); ?></td>
 					<td class="align-middle "><?php echo e($log->dops); ?></td>
           <td class="align-middle "><?php echo e($log->osce); ?></td>
+          <td class="align-middle "><?php echo e($log->responsi); ?></td>
 					<td class="align-middle "><?php echo e($log->nilai_akhir); ?></td>
 					<!-- <td class="align-middle ">0</td>-->
                     </tr>
@@ -169,6 +171,7 @@
             <th> Posttest</th>
             <th> DOPS</th>
             <th> OSCE</th>
+            <th> Responsi</th>
             <th> Nilai Akhir</th>
                     </tr>
                   </thead>
@@ -188,6 +191,7 @@
           <td class="align-middle "><?php echo e($log->posttest); ?></td>
           <td class="align-middle "><?php echo e($log->dops); ?></td>
           <td class="align-middle "><?php echo e($log->osce); ?></td>
+          <td class="align-middle "><?php echo e($log->responsi); ?></td>
           <td class="align-middle "><?php echo e($log->nilai_akhir); ?></td>
           <!-- <td class="align-middle ">0</td>-->
                     </tr>
