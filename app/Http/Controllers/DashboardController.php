@@ -137,7 +137,10 @@ class DashboardController extends Controller
         
     }
     public function proses_upload(Request $request){
-         $userAuth = Auth::user();
+       
+        //return back()->with('success', 'Sukses Merubah Foto');
+        if ($request->hasFile('file')) {
+              $userAuth = Auth::user();
         // menyimpan data file yang diupload ke variabel $file
         $file = $request->file('file');
                 // isi dengan nama folder tempat kemana file diupload
@@ -153,8 +156,11 @@ class DashboardController extends Controller
             'profile_photo_path' => $namaFile 
             ]           
         );
-        //return back()->with('success', 'Sukses Merubah Foto');
-        return back()->with('success', 'Sukses Merubah Foto');
+           return back()->with('success', 'Sukses Merubah Foto');
+        } else {
+            return back()->with('failed', 'Tidak ada foto');
+        }
+       // return back()->with('success', 'Sukses Merubah Foto');
 	}
     public function ganti_pwd(Request $request){
       //  dd('GANTI PWD '.$request->password);

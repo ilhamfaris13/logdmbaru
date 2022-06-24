@@ -14,8 +14,8 @@
 					 {{ session('status') }}
 					</div>
 					@endif
-          <form id="edit-form" method="POST" action="{{ route('kegiatan.create') }}">
-                        @csrf
+          <form id="edit-form" method="POST" action="{{ route('kegiatan.create') }}" enctype="multipart/form-data">
+                        {{ csrf_field() }}
             <div class="card text-black bg-light mb-0">
                 <div class="card-header">
                     <h2 class="m-0">Tambah Kegiatan</h2>
@@ -73,6 +73,7 @@
                   @endforeach
                 </select>
               </div>
+             
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Dosen Pembimbing Klinik </label>
                 <div class="card">
@@ -119,7 +120,11 @@
               </datalist>   
               </div>
               -->
-              
+               <div class="form-group">
+                <label class="col-form-label" for="modal-input-id">UPLOAD LAMPIRAN (Apabila ada) </label>
+                  
+                  <input type="file" class="form-control" name="lampiran" id="lampiran">
+              </div>
               <div class="form-group">
               <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Submit" />
              </div>

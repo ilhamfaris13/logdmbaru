@@ -15,8 +15,9 @@
 
 					</div>
 					<?php endif; ?>
-          <form id="edit-form" method="POST" action="<?php echo e(route('kegiatan.create')); ?>">
-                        <?php echo csrf_field(); ?>
+          <form id="edit-form" method="POST" action="<?php echo e(route('kegiatan.create')); ?>" enctype="multipart/form-data">
+                        <?php echo e(csrf_field()); ?>
+
             <div class="card text-black bg-light mb-0">
                 <div class="card-header">
                     <h2 class="m-0">Tambah Kegiatan</h2>
@@ -74,6 +75,7 @@
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </select>
               </div>
+             
               <div class="form-group">
                 <label class="col-form-label" for="modal-input-id">Dosen Pembimbing Klinik </label>
                 <div class="card">
@@ -120,7 +122,11 @@
               </datalist>   
               </div>
               -->
-              
+               <div class="form-group">
+                <label class="col-form-label" for="modal-input-id">UPLOAD LAMPIRAN (Apabila ada) </label>
+                  
+                  <input type="file" class="form-control" name="lampiran" id="lampiran">
+              </div>
               <div class="form-group">
               <input style="background-color: #4EB1BA; color: black" class="btn btn-small btn-success" type="submit" value="Submit" />
              </div>

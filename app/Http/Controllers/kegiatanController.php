@@ -109,8 +109,51 @@ class kegiatanController extends Controller
     public function create(Request $request)
     {
         $user = Auth::user();
-        //dd($request);
-        DB::insert('insert into kegiatan_log (jenis,tempat,tanggal,nama,ttdp,keterangan,datamasuk,id_user,rumah_sakit,stase,status,id_dosen) values (?,?,?,?,?,?,?,?,?,?,?,?)',[
+        //dd($request->file('lampiran'));
+       // dd($request->file('lampiran')->getClientOriginalName());
+        if (Request()->hasFile('lampiran')) {
+             $file = $request->file('lampiran');
+                // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = public_path('upload/');
+                // upload file
+        $namaFile =  $user->username.'-'.$request->file('lampiran')->getClientOriginalName();
+        //dd($namaFile);
+        $file->move($tujuan_upload,$namaFile);
+             DB::insert('insert into kegiatan_log (jenis,tempat,tanggal,nama,ttdp,keterangan,datamasuk,id_user,rumah_sakit,stase,status,id_dosen,lampiran) values (?,?,?,?,?,?,?,?,?,?,?,?,?)',[
+            $request->get('jenis'),
+            $request->get('tempat'),
+            $request->get('tanggal'),
+            $user->name,
+            'wait.png',
+            $request->get('keterangan'),
+            $request->get('tanggal'),
+            $user->id,
+            $request->get('rumahsakit'),
+            $request->get('stase'),
+            '0',
+            $request->get('dosen'),
+            $namaFile
+        ]);
+        //return 'ada';
+        } else {
+            DB::insert('insert into kegiatan_log (jenis,tempat,tanggal,nama,ttdp,keterangan,datamasuk,id_user,rumah_sakit,stase,status,id_dosen,lampiran) values (?,?,?,?,?,?,?,?,?,?,?,?,?)',[
+            $request->get('jenis'),
+            $request->get('tempat'),
+            $request->get('tanggal'),
+            $user->name,
+            'wait.png',
+            $request->get('keterangan'),
+            $request->get('tanggal'),
+            $user->id,
+            $request->get('rumahsakit'),
+            $request->get('stase'),
+            '0',
+            $request->get('dosen'),
+            NULL
+        ]);
+        //return 'kosong';
+        }
+       /* DB::insert('insert into kegiatan_log (jenis,tempat,tanggal,nama,ttdp,keterangan,datamasuk,id_user,rumah_sakit,stase,status,id_dosen) values (?,?,?,?,?,?,?,?,?,?,?,?)',[
             $request->get('jenis'),
             $request->get('tempat'),
             $request->get('tanggal'),
@@ -123,8 +166,8 @@ class kegiatanController extends Controller
             $request->get('stase'),
             '0',
             $request->get('dosen')
-        ]);
-       // return back()->with('success', 'success Full upload signature');
+        ]);*/
+       
        return Redirect::to('/signaturepad')->with('success', 'Berhasil Menambahkan Data ');
     }
 
