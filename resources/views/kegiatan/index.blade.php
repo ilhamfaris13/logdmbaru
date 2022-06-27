@@ -81,7 +81,7 @@
                       <td class="align-middle word-break rs">{{ $log->rumah_sakit_ }}</td>
                       <td class="align-middle word-break stase">{{ $log->stase_ }}</td>
                       <td class="align-middle tanggal">{{date('d-m-Y', strtotime($log->tanggal))}}</td>
-                      <td class="align-middle keterangan">{{$log->keterangan}}</td>
+                      <td class="align-middle keterangan">{{$log->keterangan}} <br>Lampiran : <a href="/upload/{{$log->lampiran}}" target="_blank">{{$log->lampiran}}</a> </td>
                       <td class="align-middle word-break dosen">{{ $log->dosen }}</td>
                       <td class="align-middle foto" hidden>{{ $log->profile_photo_path }}</td>
                      

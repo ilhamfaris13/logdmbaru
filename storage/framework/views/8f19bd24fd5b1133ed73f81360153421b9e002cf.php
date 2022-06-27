@@ -81,7 +81,7 @@
                       <td class="align-middle word-break rs"><?php echo e($log->rumah_sakit_); ?></td>
                       <td class="align-middle word-break stase"><?php echo e($log->stase_); ?></td>
                       <td class="align-middle tanggal"><?php echo e(date('d-m-Y', strtotime($log->tanggal))); ?></td>
-                      <td class="align-middle keterangan"><?php echo e($log->keterangan); ?></td>
+                      <td class="align-middle keterangan"><?php echo e($log->keterangan); ?> <br>Lampiran : <a href="/upload/<?php echo e($log->lampiran); ?>" target="_blank"><?php echo e($log->lampiran); ?></a> </td>
                       <td class="align-middle word-break dosen"><?php echo e($log->dosen); ?></td>
                       <td class="align-middle foto" hidden><?php echo e($log->profile_photo_path); ?></td>
                      
@@ -116,19 +116,13 @@
 
 
  <script>
+ 
+ $(function(e){
   $('#chkAll').click(function(){
     $('.chkVerif').prop('checked',$(this).prop('checked'));
   })
- 
- $('#ex').DataTable({
-      "paging": true,
-      "lengthChange": true,
-      "searching": true,
-      "ordering": false,
-      "info": true,
-      "autoWidth": true,
-      "responsive": true,
-    });
+
+ });
  </script>
 
 
