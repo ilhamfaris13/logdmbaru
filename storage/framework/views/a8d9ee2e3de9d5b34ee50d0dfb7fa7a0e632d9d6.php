@@ -25,7 +25,7 @@
                     <tr class="data-row">
                     <td class="align-middle">
                       <a class="btn btn-primary btn-sm" href="/detail_kegiatan/<?php echo e($log->id); ?>" target="_blank"><i class="far fa-eye"></i></a>
-                      
+                       
                     </td>
                     <td class="align-middle "><?php echo e($log->name); ?></td>
                     <td class="align-middle "><?php echo e($log->username); ?></td>

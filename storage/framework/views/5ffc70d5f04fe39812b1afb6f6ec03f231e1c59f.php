@@ -789,6 +789,176 @@
             <!-- /.card -->
         </div>
          <!-- /.col -->
+         <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">ILMU KESEHATAN MASYARAKAT</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-02">
+                <div class="table-responsive">
+                  <table class="table m-0"id="example13">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php $__currentLoopData = $ikm; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <tr>
+                      <td><?php echo e($log->rumah_sakit_); ?></td>
+                      <td><?php echo e($log->dosen); ?></td>
+                        <?php if($log->status == 1): ?>
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        <?php else: ?>
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        <?php endif; ?>
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20"><?php echo e(date('d-m-Y', strtotime($log->tanggal))); ?></div>
+                      </td>
+                    </tr>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+         <!-- /.col -->
+         <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">LAKESLA</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-02">
+                <div class="table-responsive">
+                  <table class="table m-0"id="example13">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php $__currentLoopData = $lakesla; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <tr>
+                      <td><?php echo e($log->rumah_sakit_); ?></td>
+                      <td><?php echo e($log->dosen); ?></td>
+                        <?php if($log->status == 1): ?>
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        <?php else: ?>
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        <?php endif; ?>
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20"><?php echo e(date('d-m-Y', strtotime($log->tanggal))); ?></div>
+                      </td>
+                    </tr>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
+         <!-- /.col -->
+         <div class="col-md-12">
+        <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">OBSTETRI DAN GINEKOLOGI</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-02">
+                <div class="table-responsive">
+                  <table class="table m-0"id="example13">
+                    <thead>
+                    <tr>
+                      <th>Rumah Sakit</th>
+                      <th>Dosen/Dokter</th>
+                      <th>Status</th>
+                      <th>Tanggal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php $__currentLoopData = $obgyn; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <tr>
+                      <td><?php echo e($log->rumah_sakit_); ?></td>
+                      <td><?php echo e($log->dosen); ?></td>
+                        <?php if($log->status == 1): ?>
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        <?php else: ?>
+                        <td><span class="badge badge-danger"><i class="fas fa-times"></i></span></td>
+                        <?php endif; ?>
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20"><?php echo e(date('d-m-Y', strtotime($log->tanggal))); ?></div>
+                      </td>
+                    </tr>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <!-- <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
+                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a> -->
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
+        </div>
+         <!-- /.col -->
     </div>
 </div>
 

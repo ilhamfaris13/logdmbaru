@@ -190,7 +190,7 @@
               </p>
             </a>
           </li>
-           <li class="nav-item ">
+           <!-- <li class="nav-item ">
                     <a href="<?php echo e(url('/kegiatan')); ?>" class="nav-link">
                       <i class="nav-icon fa fa-briefcase"></i>
                       <p>
@@ -198,7 +198,7 @@
                         <i class="right fas fa-angle-right"></i>
                       </p>
                     </a>
-                  </li>
+                  </li> -->
          </ul>
           
       </nav>
