@@ -55,6 +55,17 @@
         <li><a href="/pedoman" target="_blank"><h2>Buku Pedoman Akademik</h2></a></li>
         <li><a href="/jadwalsiklus" target="_blank"><h2>Jadwal Siklus DM</h2></a></li>
     </ul>
+    <ul>
+        <li><a href="/l_penelitian" target="_blank"><h2>Format Laporan Penelitian</h2></a></li>
+        <li><a href="/l_penelitianCase" target="_blank"><h2>Format Laporan Penelitian Case Report</h2></a></li>
+        <li><a href="/u_penelitian" target="_blank"><h2>Format Usulan Penelitian</h2></a></li>
+        <li><a href="/u_penelitianCase" target="_blank"><h2>Format Usulan Penelitian Case Report</h2></a></li>
+
+         <li><a href="/format_ref" target="_blank"><h2>Format Referat DM FK UHT</h2></a></li>
+        <li><a href="/format_penmas" target="_blank"><h2>Format Laporan Penmas</h2></a></li>
+
+    </ul>
+
     </div>
     <div class="col-6" style ="padding: 50px;">
      <ul>

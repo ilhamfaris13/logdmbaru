@@ -758,6 +758,10 @@ class MasterController extends Controller
             ->orderBy('id','desc')
             ->where('id','=',$id)
             ->get();
+             $bayar = DB::table('bayar_stase')
+            ->orderBy('id','desc')
+            ->where('nim','=',$user2->get('username'))
+            ->get();
             /*REKAM MEDIS*/
             /*$paru=DB::table('paru')
             ->where('Id_User', '=',$id)
@@ -1001,7 +1005,7 @@ class MasterController extends Controller
             ->where('kegiatan_log.stase', '=',"31")
             ->orderBy('kegiatan_log.status','asc')
             ->get();
-                return view('admin.detail_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi','ikm','lakesla','obgyn'));
+                return view('admin.detail_kegiatan',compact('user2','logs','ika','bedah','kulit','tht','mata','saraf','jiwa','forensik','anestesi','radiologi','rehab','farmasi','ikm','lakesla','obgyn','bayar'));
         }
         else{
             abort(403, 'Tidak Diizinkan');
@@ -1164,6 +1168,7 @@ class MasterController extends Controller
             ->orderBy('id','desc')
             ->where('id','=',$id)
             ->get();
+            
             /*REKAM MEDIS*/
             /*$paru=DB::table('paru')
             ->where('Id_User', '=',$id)

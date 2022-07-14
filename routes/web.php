@@ -145,6 +145,13 @@ Route::get('/nilaiukp',[PanduanController::class, 'nilaiukp']);
 Route::get('/nilaiukm',[PanduanController::class, 'nilaiukm']);
 Route::get('/bukukerja',[PanduanController::class, 'bukukerja']);
 Route::get('/atitudeikm',[PanduanController::class, 'atitudeikm']);
+Route::get('/l_penelitian',[PanduanController::class, 'l_penelitian']);
+Route::get('/l_penelitianCase',[PanduanController::class, 'l_penelitianCase']);
+Route::get('/u_penelitian',[PanduanController::class, 'u_penelitian']);
+Route::get('/u_penelitianCase',[PanduanController::class, 'u_penelitianCase']);
+Route::get('/format_ref',[PanduanController::class, 'format_ref']);
+Route::get('/format_penmas',[PanduanController::class, 'format_penmas']);
+
 /*
 | 
 |--------------------------------------------------------------------------

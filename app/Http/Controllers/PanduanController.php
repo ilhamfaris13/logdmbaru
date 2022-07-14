@@ -83,4 +83,34 @@ class PanduanController extends Controller
         $filepath = public_path('upload/panduan/Attitude.doc');
         return Response::download($filepath); 
     }
+    public function l_penelitian()
+    {
+        $filepath = public_path('upload/panduan/Bid 1_Format laporan penelitian DM.docx');
+        return Response::download($filepath); 
+    }
+    public function l_penelitianCase()
+    {
+        $filepath = public_path('upload/panduan/Bid 1_Format laporan penelitian DM_case report.docx');
+        return Response::download($filepath); 
+    }
+    public function u_penelitian()
+    {
+        $filepath = public_path('upload/panduan/Bid 1_Format usulan penelitian DM.docx');
+        return Response::download($filepath); 
+    }
+    public function u_penelitianCase()
+    {
+        $filepath = public_path('upload/panduan/Bid 1_Format usulan penelitian DM_case report.docx');
+        return Response::download($filepath); 
+    }
+    public function format_ref()
+    {
+        $filepath = public_path('upload/panduan/Bid 1_Format referat DM FK UHT.docx');
+        return Response::download($filepath); 
+    }
+    public function format_penmas()
+    {
+        $filepath = public_path('upload/panduan/Bid 1_Format laporan penmas DM.docx');
+        return Response::download($filepath); 
+    }
 }

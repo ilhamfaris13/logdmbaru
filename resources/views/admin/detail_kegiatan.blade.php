@@ -48,6 +48,7 @@
           
         </div> -->
         @endforeach
+        
         <!-- COL -->
         <div class="col-md-12">
         <div class="card">
