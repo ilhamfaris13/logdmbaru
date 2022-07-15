@@ -45,7 +45,7 @@ class PanduanController extends Controller
     }
     public function panduannilai()
     {
-        $filepath = public_path('upload/panduan/Lembar Penilaian DM .pdf');
+        $filepath = public_path('upload/panduan/Bid 1_Lembar Penilaian DM lengkap (1).pdf');
         return Response::download($filepath); 
     }
     public function panduankep()
@@ -55,7 +55,7 @@ class PanduanController extends Controller
     }
     public function pedoman()
     {
-        $filepath = public_path('upload/panduan/Lembar Penilaian DM .pdf');
+        $filepath = public_path('upload/panduan/Bid 1 FK UHT_Buku Pedoman Akademik Pendidikan Prodi Profesi 2021.pdf');
         return Response::download($filepath); 
     }
     public function jadwalsiklus()
