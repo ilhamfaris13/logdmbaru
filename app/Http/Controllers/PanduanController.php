@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use File;
 use Response;
 use DB;
-
+ 
 class PanduanController extends Controller
 {
     public function __construct()
