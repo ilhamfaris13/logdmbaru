@@ -758,10 +758,16 @@ class MasterController extends Controller
             ->orderBy('id','desc')
             ->where('id','=',$id)
             ->get();
+            $user3 = DB::table('users')
+            ->orderBy('id','desc')
+            ->where('id','=',$id)
+            ->first();
+            //dd($user3->username);
              $bayar = DB::table('bayar_stase')
             ->orderBy('id','desc')
-            ->where('nim','=',$user2->get('username'))
+            ->where('nim','=',$user3->username)
             ->get();
+            //dd($bayar);
             /*REKAM MEDIS*/
             /*$paru=DB::table('paru')
             ->where('Id_User', '=',$id)

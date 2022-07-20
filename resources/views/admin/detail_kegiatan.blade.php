@@ -34,8 +34,27 @@
                   <li class="list-group-item">
                     <b>NIM</b> <a class="float-right">{{$users->username}}</a>
                   </li>
-                  
-                  
+                   <table id="" class="table table-bordered table-hover">
+                     <tr>
+                      <th>FOTO</th>
+                      <th>AKSI</th>
+                      
+                    </tr>
+                   @foreach($bayar as $key => $users)
+                  <tr>
+                      <td> <a href="/upload/{{$users->foto}}" target="_blank"><h5>{{$users->foto}}</h5></a></td>
+                      @if($users->status_bayar == 1)
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        @else
+                        <td><button type="button" class="btn btn-primary" >
+                      Verif Pembayaran
+                  </button></td>
+                        @endif
+                     
+                  </tr>
+                   
+                   @endforeach      
+                 </table>
                   
                 </ul>
               </div>
@@ -49,6 +68,8 @@
         </div> -->
         @endforeach
         
+                
+                
         <!-- COL -->
         <div class="col-md-12">
         <div class="card">
@@ -63,9 +84,11 @@
                     <i class="fas fa-times"></i>
                   </button>
                 </div>
+                       
               </div>
               <!-- /.card-header -->
               <div class="card-body p-2">
+                 
                 <div class="table-responsive">
                   <table class="table m-0" id="example1">
                     <thead>

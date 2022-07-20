@@ -34,8 +34,27 @@
                   <li class="list-group-item">
                     <b>NIM</b> <a class="float-right"><?php echo e($users->username); ?></a>
                   </li>
-                  
-                  
+                   <table id="" class="table table-bordered table-hover">
+                     <tr>
+                      <th>FOTO</th>
+                      <th>AKSI</th>
+                      
+                    </tr>
+                   <?php $__currentLoopData = $bayar; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $users): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                  <tr>
+                      <td> <a href="/upload/<?php echo e($users->foto); ?>" target="_blank"><h5><?php echo e($users->foto); ?></h5></a></td>
+                      <?php if($users->status_bayar == 1): ?>
+                        <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
+                        <?php else: ?>
+                        <td><button type="button" class="btn btn-primary" >
+                      Verif Pembayaran
+                  </button></td>
+                        <?php endif; ?>
+                     
+                  </tr>
+                   
+                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>      
+                 </table>
                   
                 </ul>
               </div>
@@ -48,6 +67,9 @@
           
         </div> -->
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        
+                
+                
         <!-- COL -->
         <div class="col-md-12">
         <div class="card">
@@ -62,9 +84,11 @@
                     <i class="fas fa-times"></i>
                   </button>
                 </div>
+                       
               </div>
               <!-- /.card-header -->
               <div class="card-body p-2">
+                 
                 <div class="table-responsive">
                   <table class="table m-0" id="example1">
                     <thead>

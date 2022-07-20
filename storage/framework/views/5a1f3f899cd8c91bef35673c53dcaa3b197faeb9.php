@@ -752,7 +752,7 @@
                         </tr>
                         <tr class="data-row">
                         <td class="align-middle">
-                            <form action="/upload/rehab" method="POST" enctype="multipart/form-data">
+                            <form action="/upload/rehabmedik" method="POST" enctype="multipart/form-data">
                     <?php echo e(csrf_field()); ?>
 
           
