@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Response;
 use App\Imports\DmImport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Models\User;
+use App\Models\BayarStase;
 class MasterController extends Controller
 {
     /**
@@ -524,7 +525,13 @@ class MasterController extends Controller
             abort(403, 'Tidak Diizinkan');
         }
     }
-    
+    public function verif_bayar($id)
+    {
+        //dd($id);
+        $verif = BayarStase::where('id', $id)
+        ->update(['status' => 1]);
+        return back()->with('success', 'Sukses Verifikasi Pembayaran');
+    }
     public function index_detail_kegiatan($id)
     {
          //

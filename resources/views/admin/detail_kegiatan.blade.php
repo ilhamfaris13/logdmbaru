@@ -43,12 +43,12 @@
                    @foreach($bayar as $key => $users)
                   <tr>
                       <td> <a href="/upload/{{$users->foto}}" target="_blank"><h5>{{$users->foto}}</h5></a></td>
-                      @if($users->status_bayar == 1)
+                      @if($users->status == 1)
                         <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
                         @else
-                        <td><button type="button" class="btn btn-primary" >
-                      Verif Pembayaran
-                  </button></td>
+                        <td>
+                          <a class="btn btn-primary" href="/verif_bayar/{{$users->id}}" target="_blank"></i>Verif Pembayaran</a>
+                  </td>
                         @endif
                      
                   </tr>

@@ -43,12 +43,12 @@
                    <?php $__currentLoopData = $bayar; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $users): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <tr>
                       <td> <a href="/upload/<?php echo e($users->foto); ?>" target="_blank"><h5><?php echo e($users->foto); ?></h5></a></td>
-                      <?php if($users->status_bayar == 1): ?>
+                      <?php if($users->status == 1): ?>
                         <td><span class="badge badge-success"><i class="fas fa-check"></i></span></td>
                         <?php else: ?>
-                        <td><button type="button" class="btn btn-primary" >
-                      Verif Pembayaran
-                  </button></td>
+                        <td>
+                          <a class="btn btn-primary" href="/verif_bayar/<?php echo e($users->id); ?>" target="_blank"></i>Verif Pembayaran</a>
+                  </td>
                         <?php endif; ?>
                      
                   </tr>
