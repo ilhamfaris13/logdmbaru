@@ -131,8 +131,26 @@ class DashboardController extends Controller
          ->get();
         return view('admin.index',compact('user2','logs'));
         }
+        elseif($userAuth->level =='admin_b') {
+            $user2 = DB::table('users')
+        ->orderBy('id','desc')
+        ->get();
+        $logs = DB::table('kegiatan_log')
+         ->join('users','users.id','=','kegiatan_log.id_user')
+         ->join('rumah_sakit','rumah_sakit.id','=','kegiatan_log.rumah_sakit')
+         ->join('stase','stase.id','=','kegiatan_log.stase')
+         ->join('dosen','dosen.nip','=','kegiatan_log.id_dosen')
+         ->select('users.*','rumah_sakit.nama as rumah_sakit_','stase.stase as stase_','dosen.NAMA as dosen','kegiatan_log.*')
+         ->where('kegiatan_log.status', '=',0)
+         //->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         ->where('kegiatan_log.jenis', '!=',"Presentasi Kasus / Responsi")
+         ->orderBy('kegiatan_log.status','asc')
+         ->get();
+
+        return view('admin.index',compact('user2','logs'));
+        }
         else{
-            abort(403, 'Tidak Diizinkan');
+            abort(403, 'Tidak Diizinkan Masuk');
         }
         
     }

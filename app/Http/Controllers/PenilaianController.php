@@ -66,7 +66,7 @@ class PenilaianController extends Controller
         return view('Penilaian.nilai_filter',compact('logs','kelompoks','getKel'));
         //return view('Penilaian',['nilai'=>$logs]);
     }
-    public function index_s(Request $request)
+    public function index_n_ipd(Request $request)
     {
         $userAuth = Auth::user();
         $dosen = DB::table('users')
@@ -86,7 +86,7 @@ class PenilaianController extends Controller
           $getKel=$request->get('kelompok');
            
  
-        return view('Penilaian.nilai_stase',compact('logs','kelompoks','getKel','stase'));
+        return view('nstase.nilai_filter',compact('logs','kelompoks','getKel','stase'));
         //return view('Penilaian',['nilai'=>$logs]);
     }
 	public function export_excel()

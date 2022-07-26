@@ -34,6 +34,8 @@
                   <li class="list-group-item">
                     <b>NIM</b> <a class="float-right"><?php echo e($users->username); ?></a>
                   </li>
+                  <?php if( Auth::user()->level == "admin_b"): ?>
+                  <?php else: ?>
                    <table id="" class="table table-bordered table-hover">
                      <tr>
                       <th>FOTO</th>
@@ -55,7 +57,7 @@
                    
                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>      
                  </table>
-                  
+                  <?php endif; ?>
                 </ul>
               </div>
               <!-- /.card-body -->

@@ -41,7 +41,23 @@
           </div>
 					</div>
            <div class="col-6 col-md-6">
-         
+              <div class="form-group">
+            <button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
+              UPLOAD NILAI
+              </button>
+            </div>
+            <div class="form-group">
+            <a type="button" class="btn btn-warning" href="/nilaiukp">IKM_DM LEMBAR PENILAIAN UKP</a>
+            </div>
+            <div class="form-group">
+            <a type="button" class="btn btn-warning" href="/nilaiukm">IKM_DM LEMBAR PENILAIAN UKM</a>
+            </div>
+            <div class="form-group">
+            <a type="button" class="btn btn-warning" href="/bukukerja">IKM_Buku Kerja Dokter Muda Bagian IKM</a>
+            </div>
+            <div class="form-group">
+            <a type="button" class="btn btn-warning" href="/atitudeikm">Lembar Penilaian Attitude</a>
+            </div>
             </div>
          </div>
          <div class="row">

@@ -155,6 +155,112 @@
               </p>
             </a>
             </li>
+            <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Nilai Per STASE
+                <i class="right fas fa-angle-down"></i>
+              </p>
+            </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaiipd')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>IPD</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaiika')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>IKA</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaibedah')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>BEDAH</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaikulit')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>KULIT</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaitht')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>THT</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaimata')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>MATA</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaisaraf')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>SARAF</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaijiwa')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>JIWA</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaiforensik')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>FORENSIK</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaianestesi')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>ANESTESI</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilairadiologi')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>RADIOLOGI</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilairehab')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>REHAB MEDIK</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaifarmasi')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>FARMASI</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaiikm')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>IKM</p>
+                    </a>
+                  </li><li class="nav-item">
+                    <a href="<?php echo e(url('/nilailakesla')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>LAKESLA</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo e(url('/nilaiobgyn')); ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>OBGYN</p>
+                    </a>
+                  </li>
+                </ul>
+          </li>
            <!--  <li class="nav-item">
             <a href="<?php echo e(url('/snilai')); ?>" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>

@@ -34,6 +34,8 @@
                   <li class="list-group-item">
                     <b>NIM</b> <a class="float-right">{{$users->username}}</a>
                   </li>
+                  @if( Auth::user()->level == "admin_b")
+                  @else
                    <table id="" class="table table-bordered table-hover">
                      <tr>
                       <th>FOTO</th>
@@ -55,7 +57,7 @@
                    
                    @endforeach      
                  </table>
-                  
+                  @endif
                 </ul>
               </div>
               <!-- /.card-body -->

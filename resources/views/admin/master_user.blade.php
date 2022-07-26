@@ -75,6 +75,7 @@
                     <option value="admin" >Admin</option>
                     <option value="dosen" >Dosen/Dokter</option>
                     <option value="dm" >Dokter Muda</option>
+                    <option value="admin_b" >Admin Bagian</option>
                      </select>
 
                      <div class="form-group" id="div1">
