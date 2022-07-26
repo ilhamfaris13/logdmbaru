@@ -68,7 +68,28 @@ class MasterController extends Controller
             abort(403, 'Tidak Diizinkan');
         }
     }
-
+    public function masternilai(Request $request)
+    {
+        $userAuth = Auth::user();
+        $dosen = DB::table('users')
+        /*  ->join('dosen','dosen.NIP','=','users.username')
+         ->select('dosen.NAMA') */
+         ->select('name as NAMA')
+         ->get();
+       /*$logs = DB::table('nilai')
+         ->get();*/
+          $logs = DB::table('nilai as n')
+          ->join('dm','n.nim','=','dm.nim_profesi_dokter')
+          ->select('n.*')
+          ->where('dm.Kelompok','like','%'. $request->get('kelompok').'%')
+          ->get();
+          $kelompoks = DB::table('dm')->distinct()->get(['Kelompok']);
+          $getKel=$request->get('kelompok');
+           
+ 
+        return view('admin.master_nilai',compact('logs','kelompoks','getKel'));
+        //return view('Penilaian',['nilai'=>$logs]);
+    }
     public function index_dosen()
     {
          //

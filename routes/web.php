@@ -253,6 +253,8 @@ Route::get('tarikdb', [MasterController::class, 'index_tarik']);
 Route::post('tarikdb', [MasterController::class, 'create_dm'])->name('tarikdb.create');
 Route::get('/user/{id}', [MasterController::class, 'destroy'])->name('users.destroy');
 Route::get('/verif_bayar/{id}', [MasterController::class, 'verif_bayar']);
+Route::get('masternilai', [MasterController::class, 'masternilai']);
+Route::get('/masternilai/filter',[MasterController::class, 'masternilai']);
 //Route::post('tarikdb', [MasterController::class, 'createResetPwd'])->name('reset.create');
 /*
 | 

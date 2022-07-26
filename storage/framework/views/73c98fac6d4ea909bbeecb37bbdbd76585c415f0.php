@@ -146,8 +146,6 @@
                       <p>RS Jejaring</p>
                     </a>
                   </li>
-                 
-                  
                 </ul>
           </li>
           <li class="nav-item">
@@ -177,8 +175,6 @@
                       <p>Import User</p>
                     </a>
                   </li>
-                  
-                  
                 </ul>
           </li>
           <li class="nav-item ">
@@ -186,6 +182,15 @@
               <i class="nav-icon fa fa-book-open"></i>
               <p>
                 Buku Kegiatan
+                <i class="right fas fa-angle-right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="<?php echo e(url('/masternilai')); ?>" class="nav-link">
+              <i class="nav-icon fa fa-book-open"></i>
+              <p>
+                Daftar Nilai
                 <i class="right fas fa-angle-right"></i>
               </p>
             </a>
