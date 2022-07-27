@@ -76,17 +76,17 @@ class PenilaianController extends Controller
          ->get();
        /*$logs = DB::table('nilai')
          ->get();*/
-          $logs = DB::table('nilai as n')
-          ->join('dm','n.nim','=','dm.nim_profesi_dokter')
-          ->select('n.*')
-          ->where('dm.Kelompok','like','%'. $request->get('kelompok').'%')
+          $logs = DB::table('dm as d')
+          ->leftjoin('nilai_ipd','d.nim_profesi_dokter','=','nilai_ipd.id_dm')
+          ->select('d.NAMA','d.nim_profesi_dokter','d.Kelompok','nilai_ipd.*')
+          ->where('d.Kelompok','like','%'. $request->get('kelompok').'%')
           ->get();
           $kelompoks = DB::table('dm')->distinct()->get(['Kelompok']);
           $stase = DB::table('stase')->get();
           $getKel=$request->get('kelompok');
            
  
-        return view('nstase.nilai_filter',compact('logs','kelompoks','getKel','stase'));
+        return view('nstase.nilai_ipd',compact('logs','kelompoks','getKel','stase'));
         //return view('Penilaian',['nilai'=>$logs]);
     }
 	public function export_excel()

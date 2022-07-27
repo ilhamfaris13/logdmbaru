@@ -122,11 +122,11 @@
                     <tr class="data-row">
                     <td class="align-middle">
                       <a class="btn btn-primary btn-sm" href="/detail_dm_kegiatan/<?php echo e($log->id_dm); ?>" target="_blank"><i class="far fa-eye"></i></a>
-                      <!-- <a class="btn btn-success btn-sm" href="/nilai/<?php echo e($log->nim); ?>"><i class="fas fa-edit"></i></a> -->
+                     
                       <a href="/hpsnilai/<?php echo e($log->id); ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                     </td>
-                    <td class="align-middle "><?php echo e($log->nama); ?></td>
-                    <td class="align-middle "><?php echo e($log->nim); ?></td>
+                    <td class="align-middle "><?php echo e($log->NAMA); ?></td>
+                    <td class="align-middle "><?php echo e($log->nim_profesi_dokter); ?></td>
 					<td class="align-middle "><?php echo e($log->atitude); ?></td>
 					<td class="align-middle "><?php echo e($log->longcase); ?></td>
 					<td class="align-middle "><?php echo e($log->jurnal); ?></td>
@@ -179,8 +179,8 @@
                   <?php $__currentLoopData = $logs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $log): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr class="data-row">
                     
-                    <td class="align-middle "><?php echo e($log->nama); ?></td>
-                    <td class="align-middle "><?php echo e($log->nim); ?></td>
+                    <td class="align-middle "><?php echo e($log->NAMA); ?></td>
+                    <td class="align-middle "><?php echo e($log->nim_profesi_dokter); ?></td>
           <td class="align-middle "><?php echo e($log->atitude); ?></td>
           <td class="align-middle "><?php echo e($log->longcase); ?></td>
           <td class="align-middle "><?php echo e($log->jurnal); ?></td>
