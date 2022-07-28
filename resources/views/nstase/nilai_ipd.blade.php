@@ -9,7 +9,7 @@
       <!-- COL 2- CARD 1 -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Daftar Nilai DM</h3>
+            <h3 class="card-title">Daftar Nilai INTERNA</h3>
         </div>
      <div class="card-body">
      	<div class="row">
@@ -91,7 +91,7 @@
       <!-- COL 2- CARD 1 -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Daftar Nilai DM {{$getKel}}</h3>
+            <h3 class="card-title">Daftar Nilai INTERNA DM {{$getKel}}</h3>
         </div>
             <div class="card-body">
 			<!-- <a href="/pnilai/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a> -->
@@ -203,7 +203,7 @@
               </tr>
               <tr>
                 <th colspan="7">KELOMPOK : {{$getKel}} </th>
-                <th colspan="7">STASE : </th>
+                <th colspan="7">STASE : IPD</th>
                 <th colspan="7">Setelah mengisi nilai, silahkan di save ke format XLSX</th>
               </tr>
             <tr>
@@ -301,7 +301,7 @@
         <!-- END COL 2- CARD 1 -->
       <div class="modal fade" id="importExcel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <form method="post" action="/pnilai/import_nilai" enctype="multipart/form-data">
+        <form method="post" action="/pnilai/import_nilai_ipd" enctype="multipart/form-data">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Import Excel</h5>

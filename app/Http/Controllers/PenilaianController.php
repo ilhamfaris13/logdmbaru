@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
 use App\Imports\NilaiImport;
+use App\Imports\NilaiIpd;
 
 class PenilaianController extends Controller
 {
@@ -87,6 +88,122 @@ class PenilaianController extends Controller
            
  
         return view('nstase.nilai_ipd',compact('logs','kelompoks','getKel','stase'));
+        //return view('Penilaian',['nilai'=>$logs]);
+    }
+    public function index_n_ika(Request $request)
+    {
+        $userAuth = Auth::user();
+        $dosen = DB::table('users')
+        /*  ->join('dosen','dosen.NIP','=','users.username')
+         ->select('dosen.NAMA') */
+         ->select('name as NAMA')
+         ->get();
+       /*$logs = DB::table('nilai')
+         ->get();*/
+          $logs = DB::table('dm as d')
+          ->leftjoin('nilai_ika','d.nim_profesi_dokter','=','nilai_ika.id_dm')
+          ->select('d.NAMA','d.nim_profesi_dokter','d.Kelompok','nilai_ika.*')
+          ->where('d.Kelompok','like','%'. $request->get('kelompok').'%')
+          ->get();
+          $kelompoks = DB::table('dm')->distinct()->get(['Kelompok']);
+          $stase = DB::table('stase')->get();
+          $getKel=$request->get('kelompok');
+           
+ 
+        return view('nstase.nilai_ika',compact('logs','kelompoks','getKel','stase'));
+        //return view('Penilaian',['nilai'=>$logs]);
+    }
+    public function index_n_bedah(Request $request)
+    {
+        $userAuth = Auth::user();
+        $dosen = DB::table('users')
+        /*  ->join('dosen','dosen.NIP','=','users.username')
+         ->select('dosen.NAMA') */
+         ->select('name as NAMA')
+         ->get();
+       /*$logs = DB::table('nilai')
+         ->get();*/
+          $logs = DB::table('dm as d')
+          ->leftjoin('nilai_bedah','d.nim_profesi_dokter','=','nilai_bedah.id_dm')
+          ->select('d.NAMA','d.nim_profesi_dokter','d.Kelompok','nilai_bedah.*')
+          ->where('d.Kelompok','like','%'. $request->get('kelompok').'%')
+          ->get();
+          $kelompoks = DB::table('dm')->distinct()->get(['Kelompok']);
+          $stase = DB::table('stase')->get();
+          $getKel=$request->get('kelompok');
+           
+ 
+        return view('nstase.nilai_bedah',compact('logs','kelompoks','getKel','stase'));
+        //return view('Penilaian',['nilai'=>$logs]);
+    }
+   
+    public function index_n_kulit(Request $request)
+    {
+        $userAuth = Auth::user();
+        $dosen = DB::table('users')
+        /*  ->join('dosen','dosen.NIP','=','users.username')
+         ->select('dosen.NAMA') */
+         ->select('name as NAMA')
+         ->get();
+       /*$logs = DB::table('nilai')
+         ->get();*/
+          $logs = DB::table('dm as d')
+          ->leftjoin('nilai_kulit','d.nim_profesi_dokter','=','nilai_kulit.id_dm')
+          ->select('d.NAMA','d.nim_profesi_dokter','d.Kelompok','nilai_kulit.*')
+          ->where('d.Kelompok','like','%'. $request->get('kelompok').'%')
+          ->get();
+          $kelompoks = DB::table('dm')->distinct()->get(['Kelompok']);
+          $stase = DB::table('stase')->get();
+          $getKel=$request->get('kelompok');
+           
+ 
+        return view('nstase.nilai_kulit',compact('logs','kelompoks','getKel','stase'));
+        //return view('Penilaian',['nilai'=>$logs]);
+    }
+    public function index_n_tht(Request $request)
+    {
+        $userAuth = Auth::user();
+        $dosen = DB::table('users')
+        /*  ->join('dosen','dosen.NIP','=','users.username')
+         ->select('dosen.NAMA') */
+         ->select('name as NAMA')
+         ->get();
+       /*$logs = DB::table('nilai')
+         ->get();*/
+          $logs = DB::table('dm as d')
+          ->leftjoin('nilai_tht','d.nim_profesi_dokter','=','nilai_tht.id_dm')
+          ->select('d.NAMA','d.nim_profesi_dokter','d.Kelompok','nilai_tht.*')
+          ->where('d.Kelompok','like','%'. $request->get('kelompok').'%')
+          ->get();
+          $kelompoks = DB::table('dm')->distinct()->get(['Kelompok']);
+          $stase = DB::table('stase')->get();
+          $getKel=$request->get('kelompok');
+           
+ 
+        return view('nstase.nilai_tht',compact('logs','kelompoks','getKel','stase'));
+        //return view('Penilaian',['nilai'=>$logs]);
+    }
+    public function index_n_mata(Request $request)
+    {
+        $userAuth = Auth::user();
+        $dosen = DB::table('users')
+        /*  ->join('dosen','dosen.NIP','=','users.username')
+         ->select('dosen.NAMA') */
+         ->select('name as NAMA')
+         ->get();
+       /*$logs = DB::table('nilai')
+         ->get();*/
+          $logs = DB::table('dm as d')
+          ->leftjoin('nilai_mata','d.nim_profesi_dokter','=','nilai_mata.id_dm')
+          ->select('d.NAMA','d.nim_profesi_dokter','d.Kelompok','nilai_mata.*')
+          ->where('d.Kelompok','like','%'. $request->get('kelompok').'%')
+          ->get();
+          $kelompoks = DB::table('dm')->distinct()->get(['Kelompok']);
+          $stase = DB::table('stase')->get();
+          $getKel=$request->get('kelompok');
+           
+ 
+        return view('nstase.nilai_mata',compact('logs','kelompoks','getKel','stase'));
         //return view('Penilaian',['nilai'=>$logs]);
     }
 	public function export_excel()
@@ -354,6 +471,32 @@ class PenilaianController extends Controller
  
 		// alihkan halaman kembali
 		//return redirect('/masterimport');
+        return back()->with('success', 'Data Nilai Berhasil Diimport!');
+    }
+    public function import_nilai_ipd(Request $request)
+    {
+        // validasi
+        $this->validate($request, [
+            'file' => 'required|mimes:csv,xls,xlsx'
+        ]);
+ 
+        // menangkap file excel
+        $file = $request->file('file');
+ 
+        // membuat nama file unik
+        $nama_file = rand().$file->getClientOriginalName();
+ 
+        // upload ke folder file_siswa di dalam folder public
+        $file->move('upload',$nama_file);
+ 
+        // import data
+        Excel::import(new NilaiIpd, public_path('/upload/'.$nama_file));
+ 
+        // notifikasi dengan session
+        //Session::flash('sukses','Data Siswa Berhasil Diimport!');
+ 
+        // alihkan halaman kembali
+        //return redirect('/masterimport');
         return back()->with('success', 'Data Nilai Berhasil Diimport!');
     }
 }
