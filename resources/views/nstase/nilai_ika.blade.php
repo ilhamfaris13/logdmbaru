@@ -9,34 +9,34 @@
       <!-- COL 2- CARD 1 -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Daftar Nilai DM</h3>
+            <h3 class="card-title">Daftar Nilai IKA</h3>
         </div>
      <div class="card-body">
-     	<div class="row">
-     	<div class="col-6 col-md-6">
-     		<form method="get" action="/nilaiipd/filter" enctype="multipart/form-data">
-					
+      <div class="row">
+      <div class="col-6 col-md-6">
+        <form method="get" action="/nilaiika/filter" enctype="multipart/form-data">
+          
           <div class="form-group">
             <label class="col-form-label" for="modal-input-nama">Kelompok </label>
             <select name="kelompok" class="form-control" id="kelompok">
-            	<option value="" disabled selected>Pilih</option>
-            	@foreach($kelompoks as $key => $log)
+              <option value="" disabled selected>Pilih</option>
+              @foreach($kelompoks as $key => $log)
                     <option value="{{ $log->Kelompok }}">{{ $log->Kelompok }}</option>
                @endforeach
             </select>
           </div>
 
           <div class="form-group">
-							<button type="submit" class="btn btn-primary">Terapkan</button>
-					</div>
-				</form>
+              <button type="submit" class="btn btn-primary">Terapkan</button>
+          </div>
+        </form>
         <div class="form-group">
-        <button type="button" class="btn btn-success" onclick="tablesToExcel(['tabel2'], ['nilai_dm'], 'nilai_dm.xls', 'Excel')">Download Template </button>
+        <button type="button" class="btn btn-success" onclick="tablesToExcel(['tabel2'], ['nilai_dm'], 'nilai_dm_ika.xls', 'Excel')">Download Template </button>
        
         
             <a type="button" class="btn btn-info" href="/panduannilai">Panduan Nilai</a>
           </div>
-					</div>
+          </div>
            <div class="col-6 col-md-6">
             <div class="form-group">
             <button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
@@ -66,14 +66,14 @@
             </div>
          </div>
          <div class="row">
-         	<div class="col-6 col-md-6">
-         		<!-- <button type="button" class="btn btn-success" onclick="tablesToExcel(['tabel2'], ['nilai_dm'], 'nilai_dm.xls', 'Excel')">Download Template </button>
+          <div class="col-6 col-md-6">
+            <!-- <button type="button" class="btn btn-success" onclick="tablesToExcel(['tabel2'], ['nilai_dm'], 'nilai_dm.xls', 'Excel')">Download Template </button>
             <a type="button" class="btn btn-info" href="/panduannilai">Panduan Nilai</a> -->
-			<!-- <button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
-			IMPORT EXCEL
-			</button> -->
+      <!-- <button type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#importExcel">
+      IMPORT EXCEL
+      </button> -->
       
-         	</div>
+          </div>
            
          </div>
           
@@ -91,30 +91,30 @@
       <!-- COL 2- CARD 1 -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Daftar Nilai DM {{$getKel}}</h3>
+            <h3 class="card-title">Daftar Nilai IKA DM {{$getKel}}</h3>
         </div>
             <div class="card-body">
-			<!-- <a href="/pnilai/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a> -->
-			
+      <!-- <a href="/pnilai/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a> -->
+      
             <table id="tabel1" class="table table-bordered table-hover">
                   <thead>
              
             <tr>
-						<th>AKSI</th>
-						<th> NAMA</th>
-						<th> NIM</th> 
-						<th> Atitude</th> 	
-						<th> Longcase</th>
-						<th> Jurnal</th> 
-						<th> Minicex</th> 
-						<th> Derajat</th> 
-						<th> Pengabdian</th> 
-						<th> Prettest</th>
-						<th> Posttest</th>
+            <th>AKSI</th>
+            <th> NAMA</th>
+            <th> NIM</th> 
+            <th> Atitude</th>   
+            <th> Longcase</th>
+            <th> Jurnal</th> 
+            <th> Minicex</th> 
+            <th> Derajat</th> 
+            <th> Pengabdian</th> 
+            <th> Prettest</th>
+            <th> Posttest</th>
             <th> DOPS</th>
-						<th> OSCE</th>
+            <th> OSCE</th>
             <th> Responsi</th>
-						<th> Nilai Akhir</th>
+            <th> Nilai Akhir</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -123,56 +123,56 @@
                     <td class="align-middle">
                       <a class="btn btn-primary btn-sm" href="/detail_dm_kegiatan/{{ $log->id_dm }}" target="_blank"><i class="far fa-eye"></i></a>
                      
-                      <a href="/hpsnilai/{{$log->id}}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                      <a href="/hpsnilai/{{$log->id_dm}}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                     </td>
                     <td class="align-middle ">{{ $log->NAMA }}</td>
                     <td class="align-middle ">{{ $log->nim_profesi_dokter }}</td>
                     @if($log->atitude== null)
                     <td class="align-middle ">0</td>
                     @else
-          					<td class="align-middle ">{{ $log->atitude }}</td>
+                    <td class="align-middle ">{{ $log->atitude }}</td>
                     @endif
                     @if($log->longcase== null)
                     <td class="align-middle ">0</td>
                     @else
                     <td class="align-middle ">{{ $log->longcase }}</td>
                     @endif
-          					 @if($log->jurnal== null)
+                     @if($log->jurnal== null)
                     <td class="align-middle ">0</td>
                     @else
                     <td class="align-middle ">{{ $log->jurnal }}</td>
                     @endif
-          					 @if($log->minicex== null)
+                     @if($log->minicex== null)
                     <td class="align-middle ">0</td>
                     @else
                     <td class="align-middle ">{{ $log->minicex }}</td>
                     @endif
-          					 @if($log->derajat== null)
+                     @if($log->derajat== null)
                     <td class="align-middle ">0</td>
                     @else
                     <td class="align-middle ">{{ $log->derajat }}</td>
                     @endif
-          					 @if($log->pengabdian== null)
+                     @if($log->pengabdian== null)
                     <td class="align-middle ">0</td>
                     @else
                     <td class="align-middle ">{{ $log->pengabdian }}</td>
                     @endif
-          					 @if($log->prettest== null)
+                     @if($log->prettest== null)
                     <td class="align-middle ">0</td>
                     @else
                     <td class="align-middle ">{{ $log->prettest }}</td>
                     @endif
-          					 @if($log->posttest== null)
+                     @if($log->posttest== null)
                     <td class="align-middle ">0</td>
                     @else
                     <td class="align-middle ">{{ $log->posttest }}</td>
                     @endif
-          					 @if($log->dops== null)
+                     @if($log->dops== null)
                     <td class="align-middle ">0</td>
                     @else
                     <td class="align-middle ">{{ $log->dops }}</td>
                     @endif
-          					 @if($log->osce== null)
+                     @if($log->osce== null)
                     <td class="align-middle ">0</td>
                     @else
                     <td class="align-middle ">{{ $log->osce }}</td>
@@ -187,8 +187,8 @@
                     @else
                     <td class="align-middle ">{{ $log->nilai_akhir }}</td>
                     @endif
-          				
-					<!-- <td class="align-middle ">0</td>-->
+                  
+          <!-- <td class="align-middle ">0</td>-->
                     </tr>
                     @endforeach
                   </tbody>
@@ -203,7 +203,7 @@
               </tr>
               <tr>
                 <th colspan="7">KELOMPOK : {{$getKel}} </th>
-                <th colspan="7">STASE : </th>
+                <th colspan="7">STASE : IKA</th>
                 <th colspan="7">Setelah mengisi nilai, silahkan di save ke format XLSX</th>
               </tr>
             <tr>
@@ -301,7 +301,7 @@
         <!-- END COL 2- CARD 1 -->
       <div class="modal fade" id="importExcel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <form method="post" action="/pnilai/import_nilai" enctype="multipart/form-data">
+        <form method="post" action="/pnilai/import_nilai_ika" enctype="multipart/form-data">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Import Excel</h5>

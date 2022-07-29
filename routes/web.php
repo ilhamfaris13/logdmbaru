@@ -173,58 +173,74 @@ Route::post('/nilai/create',[PenilaianController::class, 'create_nilai'])->name(
 Route::get('/pnilai',[PenilaianController::class, 'index']);
 Route::get('/pnilai/export_excel',[PenilaianController::class, 'export_excel']);
 Route::post('/pnilai/import_nilai',[PenilaianController::class, 'import_nilai']);
-Route::post('/pnilai/import_nilai_ipd',[PenilaianController::class, 'import_nilai_ipd']);
+
 Route::get('/fnilai',[PenilaianController::class, 'index_f']);
 Route::get('/snilai',[PenilaianController::class, 'index_s']);
 Route::get('/fnilai/filter',[PenilaianController::class, 'index_f']);
 //IPD
 Route::get('/nilaiipd',[PenilaianController::class, 'index_n_ipd']);
 Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::post('/pnilai/import_nilai_ipd',[PenilaianController::class, 'import_nilai_ipd']);
 //IKA
-Route::get('/nilaiika',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiika/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaiika',[PenilaianController::class, 'index_n_ika']);
+Route::get('/nilaiika/filter',[PenilaianController::class, 'index_n_ika']);
+Route::post('/pnilai/import_nilai_ika',[PenilaianController::class, 'import_nilai_ika']);
 //BEDAH
-Route::get('/nilaibedah',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaibedah',[PenilaianController::class, 'index_n_bedah']);
+Route::get('/nilaibedah/filter',[PenilaianController::class, 'index_n_bedah']);
+Route::post('/pnilai/import_nilai_bedah',[PenilaianController::class, 'import_nilai_bedah']);
 //KULIT
-Route::get('/nilaikulit',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaikulit',[PenilaianController::class, 'index_n_kulit']);
+Route::get('/nilaikulit/filter',[PenilaianController::class, 'index_n_kulit']);
+Route::post('/pnilai/import_nilai_kulit',[PenilaianController::class, 'import_nilai_kulit']);
 //THT
-Route::get('/nilaitht',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaitht',[PenilaianController::class, 'index_n_tht']);
+Route::get('/nilaitht/filter',[PenilaianController::class, 'index_n_tht']);
+Route::post('/pnilai/import_nilai_tht',[PenilaianController::class, 'import_nilai_tht']);
 //MATA
-Route::get('/nilaimata',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaimata',[PenilaianController::class, 'index_n_mata']);
+Route::get('/nilaimata/filter',[PenilaianController::class, 'index_n_mata']);
+Route::post('/pnilai/import_nilai_mata',[PenilaianController::class, 'import_nilai_mata']);
 //SARAF
-Route::get('/nilaisaraf',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaisaraf',[PenilaianController::class, 'index_n_saraf']);
+Route::get('/nilaisaraf/filter',[PenilaianController::class, 'index_n_saraf']);
+Route::post('/pnilai/import_nilai_saraf',[PenilaianController::class, 'import_nilai_saraf']);
 //JIWA
-Route::get('/nilaijiwa',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaijiwa',[PenilaianController::class, 'index_n_jiwa']);
+Route::get('/nilaijiwa/filter',[PenilaianController::class, 'index_n_jiwa']);
+Route::post('/pnilai/import_nilai_jiwa',[PenilaianController::class, 'import_nilai_jiwa']);
 //FORENSIK
-Route::get('/nilaiforensik',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaiforensik',[PenilaianController::class, 'index_n_forensik']);
+Route::get('/nilaiforensik/filter',[PenilaianController::class, 'index_n_forensik']);
+Route::post('/pnilai/import_nilai_forensik',[PenilaianController::class, 'import_nilai_forensik']);
 //ANESTESI
-Route::get('/nilaianestesi',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaianestesi',[PenilaianController::class, 'index_n_anestesi']);
+Route::get('/nilaianestesi/filter',[PenilaianController::class, 'index_n_anestesi']);
+Route::post('/pnilai/import_nilai_anestesi',[PenilaianController::class, 'import_nilai_anestesi']);
 //RADIOLOGI
-Route::get('/nilairadiologi',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilairadiologi',[PenilaianController::class, 'index_n_radiologi']);
+Route::get('/nilairadiologi/filter',[PenilaianController::class, 'index_n_radiologi']);
+Route::post('/pnilai/import_nilai_radiologi',[PenilaianController::class, 'import_nilai_radiologi']);
 //REHAB
-Route::get('/nilairehab',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilairehab',[PenilaianController::class, 'index_n_rehab']);
+Route::get('/nilairehab/filter',[PenilaianController::class, 'index_n_rehab']);
+Route::post('/pnilai/import_nilai_rehab',[PenilaianController::class, 'import_nilai_rehab']);
 //FARMASI
-Route::get('/nilaifarmasi',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaifarmasi',[PenilaianController::class, 'index_n_farmasi']);
+Route::get('/nilaifarmasi/filter',[PenilaianController::class, 'index_n_farmasi']);
+Route::post('/pnilai/import_nilai_farmasi',[PenilaianController::class, 'import_nilai_farmasi']);
 //IKM
-Route::get('/nilaiikm',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaiikm',[PenilaianController::class, 'index_n_ikm']);
+Route::get('/nilaiikm/filter',[PenilaianController::class, 'index_n_ikm']);
+Route::post('/pnilai/import_nilai_ikm',[PenilaianController::class, 'import_nilai_ikm']);
 //LAKESLA
-Route::get('/nilailakesla',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilailakesla',[PenilaianController::class, 'index_n_lakesla']);
+Route::get('/nilailakesla/filter',[PenilaianController::class, 'index_n_lakesla']);
+Route::post('/pnilai/import_nilai_lakesla',[PenilaianController::class, 'import_nilai_lakesla']);
 //OBGYN
-Route::get('/nilaiobgyn',[PenilaianController::class, 'index_n_ipd']);
-Route::get('/nilaiipd/filter',[PenilaianController::class, 'index_n_ipd']);
+Route::get('/nilaiobgyn',[PenilaianController::class, 'index_n_obgyn']);
+Route::get('/nilaiobgyn/filter',[PenilaianController::class, 'index_n_obgyn']);
+Route::post('/pnilai/import_nilai_obgyn',[PenilaianController::class, 'import_nilai_obgyn']);
 
 Route::get('/hpsnilai/{id}', [PenilaianController::class, 'destroy'])->name('hpsnilai.destroy');
 /*

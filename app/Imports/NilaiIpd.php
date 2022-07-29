@@ -27,8 +27,32 @@ class NilaiIpd implements ToCollection, WithHeadingRow
                 ->select('Id_dm')
                 ->first();
                 //dd($get_id->Id_dm);
+                $check = DB::table('nilai_ipd')
+                ->where('id_dm', $get_id->Id_dm)
+                ->select('id_dm')
+                ->first();
+                if($check === null){
                 DB::table('nilai_ipd')
-                ->where('id',  $get_id->Id_dm)
+                ->insert(
+                    [
+                    'atitude' => $row['atitude'],
+                    'longcase' => $row['longcase'], 
+                    'jurnal' => $row['jurnal'], 
+                    'minicex' => $row['minicex'],
+                    'derajat' => $row['derajat'],
+                    'pengabdian' => $row['pengabdian'],
+                    'prettest' => $row['prettest'],
+                    'posttest' => $row['posttest'],
+                    'dops' => $row['dops'],
+                    'osce' => $row['osce'],
+                    'responsi' => $row['responsi'],
+                    'id_dm' => $get_id->Id_dm,
+                    'nilai_akhir' =>$row['nilai_akhir'],
+                    ]  );  
+                }
+                else {
+                DB::table('nilai_ipd')
+                ->where('id_dm',  $get_id->Id_dm)
                 ->update(
                     [
                     'atitude' => $row['atitude'],
@@ -42,9 +66,28 @@ class NilaiIpd implements ToCollection, WithHeadingRow
                     'dops' => $row['dops'],
                     'osce' => $row['osce'],
                     'responsi' => $row['responsi'],
-                    'id_dm' => 0,
+                    'id_dm' => $get_id->Id_dm,
+                    'nilai_akhir' =>$row['nilai_akhir'],
+                    ]  ); 
+                }
+               /* DB::table('nilai_ipd')
+                ->where('id',  $get_id->Id_dm)
+                ->updateOrInsert(
+                    [
+                    'atitude' => $row['atitude'],
+                    'longcase' => $row['longcase'], 
+                    'jurnal' => $row['jurnal'], 
+                    'minicex' => $row['minicex'],
+                    'derajat' => $row['derajat'],
+                    'pengabdian' => $row['pengabdian'],
+                    'prettest' => $row['prettest'],
+                    'posttest' => $row['posttest'],
+                    'dops' => $row['dops'],
+                    'osce' => $row['osce'],
+                    'responsi' => $row['responsi'],
+                    'id_dm' => $get_id->Id_dm,
                     'nilai_akhir' =>0,
-                    ]  );  
+                    ]  );  */
         }
     }
     public function headingRow(): int
