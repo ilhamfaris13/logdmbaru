@@ -13,6 +13,7 @@ USE `newrm2`;
 
 CREATE TABLE `nilai_anestesi` (
   `Id` int(11) NOT NULL,
+  `id_dm` int(11) NOT NULL,
   `atitude` double DEFAULT NULL,
   `longcase` double DEFAULT NULL,
   `jurnal` double DEFAULT NULL,
@@ -30,6 +31,7 @@ CREATE TABLE `nilai_anestesi` (
 
 CREATE TABLE `nilai_bedah` (
   `Id` int(11) NOT NULL,
+  `id_dm` int(11) NOT NULL,
   `atitude` double DEFAULT NULL,
   `longcase` double DEFAULT NULL,
   `jurnal` double DEFAULT NULL,
@@ -46,6 +48,7 @@ CREATE TABLE `nilai_bedah` (
 
 CREATE TABLE `nilai_farmasi` (
   `Id` int(11) NOT NULL,
+  `id_dm` int(11) NOT NULL,
   `atitude` double DEFAULT NULL,
   `longcase` double DEFAULT NULL,
   `jurnal` double DEFAULT NULL,
@@ -62,6 +65,7 @@ CREATE TABLE `nilai_farmasi` (
 
 CREATE TABLE `nilai_forensik` (
   `Id` int(11) NOT NULL,
+  `id_dm` int(11) NOT NULL,
   `atitude` double DEFAULT NULL,
   `longcase` double DEFAULT NULL,
   `jurnal` double DEFAULT NULL,

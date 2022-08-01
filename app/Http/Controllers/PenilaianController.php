@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\File;
 use App\Imports\NilaiImport;
 use App\Imports\NilaiIpd;
 use App\Imports\NilaiIka;
+use App\Imports\NilaiBedah;
 
 class PenilaianController extends Controller
 {
@@ -543,7 +544,7 @@ class PenilaianController extends Controller
         $file->move('upload',$nama_file);
  
         // import data
-        Excel::import(new NilaiIka, public_path('/upload/'.$nama_file));
+        Excel::import(new NilaiBedah, public_path('/upload/'.$nama_file));
  
         // notifikasi dengan session
         //Session::flash('sukses','Data Siswa Berhasil Diimport!');
@@ -552,4 +553,5 @@ class PenilaianController extends Controller
         //return redirect('/masterimport');
         return back()->with('success', 'Data Nilai Berhasil Diimport!');
     }
+
 }
