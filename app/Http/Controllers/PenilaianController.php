@@ -16,6 +16,9 @@ use App\Imports\NilaiImport;
 use App\Imports\NilaiIpd;
 use App\Imports\NilaiIka;
 use App\Imports\NilaiBedah;
+use App\Imports\NilaiKulit;
+use App\Imports\NilaiTht;
+use App\Imports\NilaiMata;
 
 class PenilaianController extends Controller
 {
@@ -545,6 +548,84 @@ class PenilaianController extends Controller
  
         // import data
         Excel::import(new NilaiBedah, public_path('/upload/'.$nama_file));
+ 
+        // notifikasi dengan session
+        //Session::flash('sukses','Data Siswa Berhasil Diimport!');
+ 
+        // alihkan halaman kembali
+        //return redirect('/masterimport');
+        return back()->with('success', 'Data Nilai Berhasil Diimport!');
+    }
+    public function import_nilai_kulit(Request $request)
+    {
+        // validasi
+        $this->validate($request, [
+            'file' => 'required|mimes:csv,xls,xlsx'
+        ]);
+ 
+        // menangkap file excel
+        $file = $request->file('file');
+ 
+        // membuat nama file unik
+        $nama_file = rand().$file->getClientOriginalName();
+ 
+        // upload ke folder file_siswa di dalam folder public
+        $file->move('upload',$nama_file);
+ 
+        // import data
+        Excel::import(new NilaiKulit, public_path('/upload/'.$nama_file));
+ 
+        // notifikasi dengan session
+        //Session::flash('sukses','Data Siswa Berhasil Diimport!');
+ 
+        // alihkan halaman kembali
+        //return redirect('/masterimport');
+        return back()->with('success', 'Data Nilai Berhasil Diimport!');
+    }
+    public function import_nilai_tht(Request $request)
+    {
+        // validasi
+        $this->validate($request, [
+            'file' => 'required|mimes:csv,xls,xlsx'
+        ]);
+ 
+        // menangkap file excel
+        $file = $request->file('file');
+ 
+        // membuat nama file unik
+        $nama_file = rand().$file->getClientOriginalName();
+ 
+        // upload ke folder file_siswa di dalam folder public
+        $file->move('upload',$nama_file);
+ 
+        // import data
+        Excel::import(new NilaiTht, public_path('/upload/'.$nama_file));
+ 
+        // notifikasi dengan session
+        //Session::flash('sukses','Data Siswa Berhasil Diimport!');
+ 
+        // alihkan halaman kembali
+        //return redirect('/masterimport');
+        return back()->with('success', 'Data Nilai Berhasil Diimport!');
+    }
+    public function import_nilai_mata(Request $request)
+    {
+        // validasi
+        $this->validate($request, [
+            'file' => 'required|mimes:csv,xls,xlsx'
+        ]);
+ 
+        // menangkap file excel
+        $file = $request->file('file');
+ 
+        // membuat nama file unik
+        $nama_file = rand().$file->getClientOriginalName();
+ 
+        // upload ke folder file_siswa di dalam folder public
+        $file->move('upload',$nama_file);
+ 
+        // import data
+        Excel::import(new NilaiMata, public_path('/upload/'.$nama_file));
  
         // notifikasi dengan session
         //Session::flash('sukses','Data Siswa Berhasil Diimport!');

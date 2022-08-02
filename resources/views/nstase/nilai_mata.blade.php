@@ -9,12 +9,12 @@
       <!-- COL 2- CARD 1 -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Daftar Nilai DM</h3>
+            <h3 class="card-title">Daftar Nilai DM Mata</h3>
         </div>
      <div class="card-body">
      	<div class="row">
      	<div class="col-6 col-md-6">
-     		<form method="get" action="/nilaiipd/filter" enctype="multipart/form-data">
+     		<form method="get" action="/nilaimata/filter" enctype="multipart/form-data">
 					
           <div class="form-group">
             <label class="col-form-label" for="modal-input-nama">Kelompok </label>
@@ -123,7 +123,7 @@
                     <td class="align-middle">
                       <a class="btn btn-primary btn-sm" href="/detail_dm_kegiatan/{{ $log->id_dm }}" target="_blank"><i class="far fa-eye"></i></a>
                      
-                      <a href="/hpsnilai/{{$log->id}}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                      <a href="/hpsnilai/{{$log->id_dm}}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                     </td>
                     <td class="align-middle ">{{ $log->NAMA }}</td>
                     <td class="align-middle ">{{ $log->nim_profesi_dokter }}</td>
@@ -203,7 +203,7 @@
               </tr>
               <tr>
                 <th colspan="7">KELOMPOK : {{$getKel}} </th>
-                <th colspan="7">STASE : </th>
+                <th colspan="7">STASE : Mata</th>
                 <th colspan="7">Setelah mengisi nilai, silahkan di save ke format XLSX</th>
               </tr>
             <tr>
@@ -301,7 +301,7 @@
         <!-- END COL 2- CARD 1 -->
       <div class="modal fade" id="importExcel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <form method="post" action="/pnilai/import_nilai" enctype="multipart/form-data">
+        <form method="post" action="/pnilai/import_nilai_mata" enctype="multipart/form-data">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Import Excel</h5>
